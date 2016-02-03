@@ -15,12 +15,14 @@ var context = ..;
 // create the magic reverse service
 var service = new CSOMReverseService();
 
-// reverse the SharePoint site intp M2 model
-var result = service.ReverseSiteModel(context, ReverseOptions.Default);
+// reverse the SharePoint site and web into M2 model
+var siteModelResult = service.ReverseSiteModel(context, ReverseOptions.Default);
+var webModelResult = service.ReverseWebModel(context, ReverseOptions.Default);
 
-// here we go, your M2 model backed for you
+// here we go, your M2 models backed for you
 // deploy later to other SharePoint site, farm or serialize and keep it for the future
-var model = result.Model;
+var siteModel = siteModelResult.Model;
+var webModel = webModelResult.Model;
 
 ```
 Stay tuned, releasing fiest versions Feb, 2016. 
