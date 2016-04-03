@@ -10,7 +10,9 @@ using Microsoft.SharePoint.Client;
 using SPMeta2.Containers.Consts;
 using SPMeta2.Containers.Services;
 using SPMeta2.Containers.Utils;
+using SPMeta2.CSOM.Standard.Services;
 using SPMeta2.Definitions;
+using SPMeta2.Exceptions;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.Foundation.ReverseHosts;
 using SPMeta2.Reverse.CSOM.Foundation.Services;
@@ -19,6 +21,10 @@ using SPMeta2.Standard.Definitions.Taxonomy;
 using SPMeta2.Standard.Syntax;
 using SPMeta2.Utils;
 using SPMeta2.Reverse.Tests.Services;
+using SPMeta2.CSOM.ModelHosts;
+using SPMeta2.Reverse.CSOM.Standard.Services;
+using SPMeta2.Reverse.Services;
+using SPMeta2.Reverse.Regression.Base;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
@@ -28,6 +34,11 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public ReverseTestBase()
         {
+            SiteUrl = RunnerEnvironmentUtils.GetEnvironmentVariables(EnvironmentConsts.O365_SiteUrls).First();
+
+            UserName = RunnerEnvironmentUtils.GetEnvironmentVariable(EnvironmentConsts.O365_UserName);
+            UserPassword = RunnerEnvironmentUtils.GetEnvironmentVariable(EnvironmentConsts.O365_Password);
+
             AssertService = new VSAssertService();
 
             ModelGeneratorService = new ModelGeneratorService();
@@ -61,25 +72,107 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public void DeployReverseAndTestModel(IEnumerable<ModelNode> models)
         {
-            foreach (var model in models)
+            foreach (var deployedModel in models)
             {
-                // deploy model, TODO
+                // deploy model
+                DeployModel(deployedModel);
 
-
-                // reverse model, TODO
+                // reverse model
+                var reversedModel = ReverseModel(deployedModel);
 
                 // validate model
                 var reverseRegressionService = new ReverseValidationService();
+                reverseRegressionService.DeployModel(new ReverseValidationModeHost
+                {
+                    OriginalModel = deployedModel,
+                    ReversedModel = reversedModel,
+                }, null);
 
-                //reverseRegressionService.DeployModel();
-                
                 // assert model
-                var hasMissedOrInvalidProps = ReverseRegressionAssertService.ResolveModelValidation(model);
+                var hasMissedOrInvalidProps = ReverseRegressionAssertService.ResolveModelValidation(deployedModel);
                 AssertService.IsFalse(hasMissedOrInvalidProps);
             }
+        }
 
+        private ModelNode ReverseModel(ModelNode deployedModel)
+        {
+            ReverseResult reverseResut = null;
 
+            WithCSOMContext(context =>
+            {
+                var reverseService = new StandardCSOMReverseService();
 
+                if (deployedModel.Value.GetType() == typeof(FarmDefinition))
+                {
+                    throw new SPMeta2NotImplementedException(
+                        string.Format("Runner does not support model of type: [{0}]", deployedModel.Value.GetType()));
+                }
+                else if (deployedModel.Value.GetType() == typeof(WebApplicationDefinition))
+                {
+                    throw new SPMeta2NotImplementedException(
+                        string.Format("Runner does not support model of type: [{0}]", deployedModel.Value.GetType()));
+                }
+                else if (deployedModel.Value.GetType() == typeof(SiteDefinition))
+                {
+                    reverseResut = reverseService.ReverseSiteModel(context, ReverseOptions.Default);
+                }
+                else if (deployedModel.Value.GetType() == typeof(WebDefinition))
+                {
+                    reverseResut = reverseService.ReverseWebModel(context, ReverseOptions.Default);
+                }
+                else if (deployedModel.Value.GetType() == typeof(ListDefinition))
+                {
+                    throw new SPMeta2NotImplementedException(
+                        string.Format("Runner does not support model of type: [{0}]", deployedModel.Value.GetType()));
+                }
+                else
+                {
+                    throw new SPMeta2NotImplementedException(
+                        string.Format("Runner does not support model of type: [{0}]", deployedModel.Value.GetType()));
+
+                }
+
+            });
+
+            return reverseResut.Model;
+        }
+
+        private void DeployModel(ModelNode model)
+        {
+            WithCSOMContext(context =>
+            {
+                var provisionService = new StandardCSOMProvisionService();
+
+                if (model.Value.GetType() == typeof(FarmDefinition))
+                {
+                    throw new SPMeta2NotImplementedException(
+                        string.Format("Runner does not support model of type: [{0}]", model.Value.GetType()));
+                }
+                else if (model.Value.GetType() == typeof(WebApplicationDefinition))
+                {
+                    throw new SPMeta2NotImplementedException(
+                     string.Format("Runner does not support model of type: [{0}]", model.Value.GetType()));
+                }
+                else if (model.Value.GetType() == typeof(SiteDefinition))
+                {
+                    provisionService.DeployModel(SiteModelHost.FromClientContext(context), model);
+                }
+                else if (model.Value.GetType() == typeof(WebDefinition))
+                {
+                    provisionService.DeployModel(WebModelHost.FromClientContext(context), model);
+                }
+                else if (model.Value.GetType() == typeof(ListDefinition))
+                {
+                    throw new SPMeta2NotImplementedException(
+                     string.Format("Runner does not support model of type: [{0}]", model.Value.GetType()));
+                }
+                else
+                {
+                    throw new SPMeta2NotImplementedException(
+                        string.Format("Runner does not support model of type: [{0}]", model.Value.GetType()));
+
+                }
+            });
         }
 
         #endregion

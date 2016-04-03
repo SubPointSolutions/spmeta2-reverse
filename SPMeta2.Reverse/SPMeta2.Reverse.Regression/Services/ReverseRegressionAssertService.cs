@@ -1,17 +1,15 @@
-﻿using SPMeta2.Containers.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using SPMeta2.Containers.Assertion;
 using SPMeta2.Containers.Extensions;
+using SPMeta2.Containers.Services;
 using SPMeta2.Definitions;
 using SPMeta2.Models;
 
-namespace SPMeta2.Reverse.Tests.Services
+namespace SPMeta2.Reverse.Regression.Services
 {
     public class ReverseRegressionAssertService : RegressionAssertService
     {

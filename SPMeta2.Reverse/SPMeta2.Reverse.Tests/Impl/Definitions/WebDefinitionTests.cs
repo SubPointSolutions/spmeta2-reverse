@@ -23,7 +23,26 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
             {
                 site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
                 site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
-                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
+            });
+
+            DeployReverseAndTestModel(model);
+        }
+
+        [TestMethod]
+        [TestCategory("Webs")]
+        public void Can_Reverse_Webs_Hierarchy()
+        {
+            var model = SPMeta2Model.NewSiteModel(site =>
+            {
+                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>(), w =>
+                {
+                    w.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
+                });
+
+                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>(), w =>
+                {
+                    w.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
+                });
             });
 
             DeployReverseAndTestModel(model);

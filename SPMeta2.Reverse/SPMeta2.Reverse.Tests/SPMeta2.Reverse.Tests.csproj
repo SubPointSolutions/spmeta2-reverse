@@ -87,8 +87,6 @@
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceFactory.cs" />
-    <Compile Include="Services\ReverseRegressionAssertService.cs" />
     <Compile Include="Services\VSAssertService.cs" />
   </ItemGroup>
   <ItemGroup>
