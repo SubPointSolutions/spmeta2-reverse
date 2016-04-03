@@ -47,11 +47,13 @@
       <HintPath>..\packages\SPMeta2.Core.1.2.40\lib\net45\SPMeta2.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SPMeta2.Containers">
-      <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Regression\SPMeta2.Containers.dll</HintPath>
+    <Reference Include="SPMeta2.Containers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Containers\SPMeta2.Containers.dll</HintPath>
     </Reference>
-    <Reference Include="SPMeta2.Containers.Standard">
-      <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Regression\SPMeta2.Containers.Standard.dll</HintPath>
+    <Reference Include="SPMeta2.Containers.Standard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Containers\SPMeta2.Containers.Standard.dll</HintPath>
     </Reference>
     <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
       <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.40\lib\net45\SPMeta2.CSOM.dll</HintPath>
