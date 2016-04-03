@@ -23,7 +23,6 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
             {
                 site.AddRandomField();
                 site.AddRandomField();
-                site.AddRandomField();
             });
 
             DeployReverseAndTestModel(model);
@@ -35,7 +34,6 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         {
             var model = SPMeta2Model.NewWebModel(site =>
             {
-                site.AddRandomField();
                 site.AddRandomField();
                 site.AddRandomField();
             });
