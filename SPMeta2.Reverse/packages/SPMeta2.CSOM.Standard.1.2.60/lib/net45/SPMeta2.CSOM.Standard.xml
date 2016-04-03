@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPMeta2.CSOM.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:SPMeta2.CSOM.Standard.PublishingPageTemplates">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SPMeta2.CSOM.Standard.PublishingPageTemplates.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SPMeta2.CSOM.Standard.PublishingPageTemplates.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:SPMeta2.CSOM.Standard.PublishingPageTemplates.RedirectionPageMarkup">
+            <summary>
+              Looks up a localized string similar to &lt;%@ Page Inherits=&quot;Microsoft.SharePoint.Publishing.TemplateRedirectionPage,Microsoft.SharePoint.Publishing,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c&quot; %&gt; &lt;%@ Reference VirtualPath=&quot;~TemplatePageUrl&quot; %&gt; &lt;%@ Reference VirtualPath=&quot;~masterurl/custom.master&quot; %&gt;.
+            </summary>
+        </member>
+    </members>
+</doc>
