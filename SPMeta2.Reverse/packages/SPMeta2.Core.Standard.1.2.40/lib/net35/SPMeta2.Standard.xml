@@ -1,0 +1,1377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPMeta2.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions">
+            <summary>
+            Out of the box SharePoint definitions.
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.RatingCount">
+            <summary>
+            Corresponds to built-in field with Title [Number of Ratings], ID [b1996002-9167-45e5-a4df-b2c41c6723c7] and Group: [Content Feedback]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingPageImage">
+            <summary>
+            Corresponds to built-in field with Title [Page Image], ID [3de94b06-4120-41a5-b907-88773e493458] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingHidden">
+            <summary>
+            Corresponds to built-in field with Title [Hidden Page], ID [7581e709-5d87-42e7-9fe6-698ef5e86dd3] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheDisplayName">
+            <summary>
+            Corresponds to built-in field with Title [Display Name], ID [983f490b-fc53-4820-9354-e8de646b4b82] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingContactName">
+            <summary>
+            Corresponds to built-in field with Title [Contact Name], ID [7546ad0d-6c33-4501-b470-fb3003ca14ba] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Title">
+            <summary>
+            Corresponds to built-in field with Title [Title], ID [fa564e0f-0c70-4ab9-b863-0177e6ddd247] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingPageLayout">
+            <summary>
+            Corresponds to built-in field with Title [Page Layout], ID [0f800910-b30d-4c8f-b011-8189b2297094] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.SummaryLinks2">
+            <summary>
+            Corresponds to built-in field with Title [Summary Links 2], ID [27761311-936a-40ba-80cd-ca5e7a540a36] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingVaryByCustom">
+            <summary>
+            Corresponds to built-in field with Title [Vary by Custom Parameter], ID [4689a812-320e-4623-aab9-10ad68941126] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingStartDate">
+            <summary>
+            Corresponds to built-in field with Title [Scheduling Start Date], ID [51d39414-03dc-4bd0-b777-d3e20cb350f7] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._dlc_Exempt">
+            <summary>
+            Corresponds to built-in field with Title [Exempt from Policy], ID [b0227f1a-b179-4d45-855b-a18f03706bcb] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingVaryByRights">
+            <summary>
+            Corresponds to built-in field with Title [Vary by User Rights], ID [d4a6af1d-c6d7-4045-8def-cefa25b9ec30] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._vti_ItemDeclaredRecord">
+            <summary>
+            Corresponds to built-in field with Title [Declared Record], ID [f9a44731-84eb-43a4-9973-cd2953ad8646] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.HeaderStyleDefinitions">
+            <summary>
+            Corresponds to built-in field with Title [Style Definitions], ID [a932ec3f-94c1-48b1-b6dc-41aaa6eb7e54] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingPageIcon">
+            <summary>
+            Corresponds to built-in field with Title [Page Icon], ID [3894ec3f-4674-4924-a440-8872bec40cf9] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ReusableText">
+            <summary>
+            Corresponds to built-in field with Title [Reusable Text], ID [890e9d41-5a0e-4988-87bf-0fb9d80f60df] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingExpirationDate">
+            <summary>
+            Corresponds to built-in field with Title [Scheduling End Date], ID [a990e64f-faa3-49c1-aafa-885fda79de62] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingAssociatedVariations">
+            <summary>
+            Corresponds to built-in field with Title [Variations], ID [d211d750-4fe6-4d92-90e8-eb16dff196c8] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheAllowWriters">
+            <summary>
+            Corresponds to built-in field with Title [Allow writers to view cached content], ID [773ed051-58db-4ff2-879b-08b21ab001e0] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Author">
+            <summary>
+            Corresponds to built-in field with Title [Created By], ID [1df5e554-ec7e-46a6-901d-d85a3881cb18] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ContentType">
+            <summary>
+            Corresponds to built-in field with Title [Content Type], ID [c042a256-787d-4a6f-8a8a-cf6ab767f12d] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishedLinksDisplayName">
+            <summary>
+            Corresponds to built-in field with Title [Display Name], ID [c80f535b-a430-4273-8f4f-f3e95507b62a] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingContactPicture">
+            <summary>
+            Corresponds to built-in field with Title [Contact Picture], ID [dc47d55f-9bf9-494a-8d5b-e619214dd19a] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingVaryByParam">
+            <summary>
+            Corresponds to built-in field with Title [Vary by Query String Parameters], ID [b8abfc64-c2bd-4c88-8cef-b040c1b9d8c0] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishedLinksURL">
+            <summary>
+            Corresponds to built-in field with Title [Url], ID [70b38565-a310-4546-84a7-709cfdc140cf] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Audience">
+            <summary>
+            Corresponds to built-in field with Title [Target Audiences], ID [61cbb965-1e04-4273-b658-eedaa662f48d] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheEnabled">
+            <summary>
+            Corresponds to built-in field with Title [Enabled], ID [d8f18167-7cff-4c4e-bdbe-e7b0f01678f3] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingPreviewImage">
+            <summary>
+            Corresponds to built-in field with Title [Preview Image], ID [188ce56c-61e0-4d2a-9d3e-7561390668f7] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.RedirectURL">
+            <summary>
+            Corresponds to built-in field with Title [Redirect URL], ID [ac57186e-e90b-4711-a038-b6c6a62a57dc] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheDisplayDescription">
+            <summary>
+            Corresponds to built-in field with Title [Display Description], ID [9550e77a-4d10-464f-bc0c-102d5b1aec42] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheCheckForChanges">
+            <summary>
+            Corresponds to built-in field with Title [Check for Changes], ID [5b4d927c-d383-496b-bc79-1e61bd383019] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishedLinksDescription">
+            <summary>
+            Corresponds to built-in field with Title [Description], ID [92bba27e-eef6-41aa-b728-6dd9caf2bde2] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingVariationGroupID">
+            <summary>
+            Corresponds to built-in field with Title [Variation Group ID], ID [914fdb80-7d4f-4500-bf4c-ce46ad7484a4] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ContentTypeId">
+            <summary>
+            Corresponds to built-in field with Title [Content Type ID], ID [03e45e84-1992-4d42-9116-26f756012634] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingPageContent">
+            <summary>
+            Corresponds to built-in field with Title [Page Content], ID [f55c4d88-1f2e-4ad9-aaa8-819af4ee7ee8] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Comments">
+            <summary>
+            Corresponds to built-in field with Title [Comments], ID [9da97a8a-1da5-4a77-98d3-4bc10456e700] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._dlc_ExpireDateSaved">
+            <summary>
+            Corresponds to built-in field with Title [Original Expiration Date], ID [74e6ae8a-0e3e-4dcb-bbff-b5a016d74d64] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingContactEmail">
+            <summary>
+            Corresponds to built-in field with Title [Contact E-Mail Address], ID [c79dba91-e60b-400e-973d-c6d06f192720] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingVariationRelationshipLinkFieldID">
+            <summary>
+            Corresponds to built-in field with Title [Variation Relationship Link], ID [766da693-38e5-4b1b-997f-e830b6dfcc7b] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.AutomaticUpdate">
+            <summary>
+            Corresponds to built-in field with Title [Automatic Update], ID [e977ed93-da24-4fcc-b77d-ac34eea7288f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._PublishingMigratedGuid">
+            <summary>
+            Corresponds to built-in field with Title [Migrated GUID], ID [75bed596-0661-4edd-9724-1d607ab8d3b5] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ContentCategory">
+            <summary>
+            Corresponds to built-in field with Title [Content Category], ID [3a4b7f98-8d14-4800-8bf5-9ad1dd6a82ee] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ShowInRibbon">
+            <summary>
+            Corresponds to built-in field with Title [Show in drop-down menu], ID [32e03f99-6949-466a-a4a6-057c21d4b516] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCachePerformACLCheck">
+            <summary>
+            Corresponds to built-in field with Title [Perform ACL Check], ID [db03cb99-cf1e-40b8-adc7-913f7181dac3] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.AverageRating">
+            <summary>
+            Corresponds to built-in field with Title [Rating (0-5)], ID [5a14d1ab-1513-48c7-97b3-657a5ba6c742] and Group: [Content Feedback]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheability">
+            <summary>
+            Corresponds to built-in field with Title [Cacheability], ID [18f165be-6285-4a57-b3ab-4e9f913d299f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ReusableHtml">
+            <summary>
+            Corresponds to built-in field with Title [Reusable HTML], ID [82dd22bf-433e-4260-b26e-5b8360dd9105] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingAssociatedContentType">
+            <summary>
+            Corresponds to built-in field with Title [Associated Content Type], ID [b510aac1-bba3-4652-ab70-2d756c29540f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingCacheDuration">
+            <summary>
+            Corresponds to built-in field with Title [Duration], ID [bdd1b3c3-18db-4acf-a963-e70ef4227fbc] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Modified">
+            <summary>
+            Corresponds to built-in field with Title [Modified], ID [28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._vti_ItemHoldRecordStatus">
+            <summary>
+            Corresponds to built-in field with Title [Hold and Record Status], ID [3afcc5c7-c6ef-44f8-9479-3561d72f9e8e] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ArticleByLine">
+            <summary>
+            Corresponds to built-in field with Title [Byline], ID [d3429cc9-adc4-439b-84a8-5679070f84cb] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Created">
+            <summary>
+            Corresponds to built-in field with Title [Created], ID [8c06beca-0777-48f7-91c7-6da68bc07b69] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingRollupImage">
+            <summary>
+            Corresponds to built-in field with Title [Rollup Image], ID [543bc2cf-1f30-488e-8f25-6fe3b689d9ac] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.IconOverlay">
+            <summary>
+            Corresponds to built-in field with Title [IconOverlay], ID [b77cdbcf-5dce-4937-85a7-9fc202705c91] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.Editor">
+            <summary>
+            Corresponds to built-in field with Title [Modified By], ID [d31655d1-1d5b-4511-95a1-7a09e9b75bf2] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingContact">
+            <summary>
+            Corresponds to built-in field with Title [Contact], ID [aea1a4dd-0f19-417d-8721-95a1d28762ab] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._dlc_ExpireDate">
+            <summary>
+            Corresponds to built-in field with Title [Expiration Date], ID [acd16fdf-052f-40f7-bb7e-564c269c9fbc] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions._vti_ItemIsLocked">
+            <summary>
+            Corresponds to built-in field with Title [Is Locked For Edit], ID [740931e6-d79e-44a6-a752-a06eb23c11b0] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingAuthenticatedUse">
+            <summary>
+            Corresponds to built-in field with Title [Safe for Authenticated Use], ID [0a90b5e8-185a-4dec-bf3c-e60aae08373f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingImageCaption">
+            <summary>
+            Corresponds to built-in field with Title [Image Caption], ID [66f500e9-7955-49ab-abb1-663621727d10] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.ArticleStartDate">
+            <summary>
+            Corresponds to built-in field with Title [Article Date], ID [71316cea-40a0-49f3-8659-f0cefdbdbd4f] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.PublishingVaryByHeader">
+            <summary>
+            Corresponds to built-in field with Title [Vary by HTTP Header], ID [89587dfd-b9ca-4fae-8eb9-ba779e917d48] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.BuiltInDefinitions.BuiltInPublishingFieldDefinitions.SummaryLinks">
+            <summary>
+            Corresponds to built-in field with Title [Summary Links], ID [b3525efe-59b5-4f0f-b1e4-6e26cb6ef6aa] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.DisplayTemplates.FilterDisplayTemplateDefinition">
+            <summary>
+            Allows to define and deploy item display template.
+            </summary>
+            
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.DisplayTemplates.ControlDisplayTemplateDefinition">
+            <summary>
+            Allows to define and deploy control display template.
+            </summary>
+            
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.ManagedPropertyMappping">
+            <summary>
+            Allows to define and deploy SharePoint managed property.
+            </summary>
+            
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.MetadataNavigationSettingsDefinition">
+            <summary>
+            Allows to define and deploy managed metadata navigation settting to the target list.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.CategoryWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'CategoryWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.CommunityAdminWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'CommunityAdminWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.CommunityJoinWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'CommunityJoinWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.DocumentSetContentsWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'DocumentSetContentsWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.DocumentSetPropertiesWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'DocumentSetPropertiesWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.MyMembershipWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'MyMembershipWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.ProjectSummaryWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'ProjectSummaryWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.RefinementScriptWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'RefinementScriptWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.RSSAggregatorWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'RSSAggregatorWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.SearchBoxScriptWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'SearchBoxScriptWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.SearchNavigationWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'SearchNavigationWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.SiteDocumentsDefinition">
+            <summary>
+            Allows to define and deploy 'SiteDocuments' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.SocialCommentWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'SocialCommentWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.TableOfContentsWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'TableOfContentsWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.TagCloudWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'TagCloudWebPart' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Enumerations.BuiltInContentClass">
+            <summary>
+            Predefined ContentClass values for search queries.
+            Based on the following MSDN blog - http://blogs.msdn.com/b/mvpawardprogram/archive/2015/02/16/sharepoint-power-searching-using-contentclass.aspx
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSListingNews">
+            <summary>
+            News Listing
+            urn:content-class:SPSListing:News
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSPeople">
+            <summary>
+            People                                  
+            urn:content-class:SPSPeople
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSSearchQuery">
+            <summary>
+            Search Query
+            urn:content-class:SPSSearchQuery
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSCategory">
+            <summary>
+            Category
+            urn:content-classes:SPSCategory
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSListing">
+            <summary>
+            Listing
+            urn:content-classes:SPSListing
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSPersonListing">
+            <summary>
+            Person Listing
+            urn:content-classes:SPSPersonListing
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSSiteListing">
+            <summary>
+            Site Listing
+            urn:content-classes:SPSSiteListing
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSSiteRegistry">
+            <summary>
+            Site Registry Listing
+            urn:content-classes:SPSSiteRegistry
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.URN.SPSTextListing">
+            <summary>
+            Text Listing
+            urn:content-classes:SPSTextListing
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List">
+            <summary>
+            GenericList
+            STS_List
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_DocumentLibrary">
+            <summary>
+            DocumentLibrary
+            STS_List_DocumentLibrary
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Survey">
+            <summary>
+            Survey
+            STS_List_Survey
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Links">
+            <summary>
+            Links
+            STS_List_Links
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Announcements">
+            <summary>
+            Announcements
+            STS_List_Announcements
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Contacts">
+            <summary>
+            Contacts
+            STS_List_Contacts
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Events">
+            <summary>
+            Events
+            STS_List_Events
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Tasks">
+            <summary>
+            DocumentLibrary
+            Tasks
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_DiscussionBoard">
+            <summary>
+            DiscussionBoard
+            STS_List_DiscussionBoard
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_PictureLibrary">
+            <summary>
+            PictureLibrary
+            STS_List_PictureLibrary
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_XMLForm">
+            <summary>
+            XMLForm
+            STS_List_XMLForm
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_WebPageLibrary">
+            <summary>
+            WebPageLibrary
+            STS_List_WebPageLibrary
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_DataConnectionLibrary">
+            <summary>
+            DataConnectionLibrary
+            STS_List_DataConnectionLibrary
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_131">
+            <summary>
+            Preservation Hold Library
+            STS_List_131
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_GanttTasks">
+            <summary>
+            GanttTasks
+            STS_List_GanttTasks
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_170">
+            <summary>
+            Promoted Links
+            STS_List_170
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_TasksWithTimelineAndHierarchy">
+            <summary>
+            TasksWithTimelineAndHierarchy
+            STS_List_TasksWithTimelineAndHierarchy
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Agenda">
+            <summary>
+            Agenda
+            STS_List_Agenda
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_MeetingUser">
+            <summary>
+            MeetingUser
+            STS_List_MeetingUser
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Decision">
+            <summary>
+            Decision
+            STS_List_Decision
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_MeetingObjective">
+            <summary>
+            MeetingObjective
+            STS_List_MeetingObjective
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_TextBox">
+            <summary>
+            TextBox
+            STS_List_TextBox
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_ThingsToBring">
+            <summary>
+            ThingsToBring
+            STS_List_ThingsToBring
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Posts">
+            <summary>
+            Posts
+            STS_List_Posts
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Comments">
+            <summary>
+            Comments
+            STS_List_Comments
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Categories">
+            <summary>
+            Categories
+            STS_List_Categories
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_330">
+            <summary>
+            App Catalog
+            STS_List_330
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_332">
+            <summary>
+            Apps for Office
+            STS_List_332
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_333">
+            <summary>
+            App Requests
+            STS_List_333
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_398">
+            <summary>
+            USysApplicationLog - Access
+            STS_List_398
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_399">
+            <summary>
+            MSysASO - Access
+            STS_List_399
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Facility">
+            <summary>
+            Facility
+            STS_List_Facility
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Whereabouts">
+            <summary>
+            Whereabouts
+            STS_List_Whereabouts
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_CallTrack">
+            <summary>
+            CallTrack
+            STS_List_CallTrack
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_Circulation">
+            <summary>
+            Circulation
+            STS_List_Circulation
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_TimeCard">
+            <summary>
+            Timecard
+            STS_List_TimeCard
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_432">
+            <summary>
+            StatusIndicatorList / KPIs
+            STS_List_432
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_433">
+            <summary>
+            Report Library
+            STS_List_433
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_450">
+            <summary>
+            Dashboard content
+            STS_List_450
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_460">
+            <summary>
+            Data Sources - Perfomance Point
+            STS_List_460
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_480">
+            <summary>
+            Dashboards
+            STS_List_480
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_500">
+            <summary>
+            Categories - community site
+            STS_List_500
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_506">
+            <summary>
+            Visio Repository Site Process Diagrams
+            STS_List_506
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_544">
+            <summary>
+            MicroBlogList (MicroFeed)
+            STS_List_544
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_MySiteDocumentLibrary">
+            <summary>
+            MySiteDocumentLibrary
+            STS_List_MySiteDocumentLibrary
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_751">
+            <summary>
+            Product Catalog
+            STS_List_751
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_850">
+            <summary>
+            Pages
+            STS_List_850
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_851">
+            <summary>
+            Asset Library / Video Channel
+            STS_List_851
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_852">
+            <summary>
+            Video Channel Settings
+            STS_List_852
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_853">
+            <summary>
+            Hub Settings
+            STS_List_853
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_880">
+            <summary>
+            Members - community site
+            STS_List_880
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_IssueTracking">
+            <summary>
+            IssueTracking
+            STS_List_IssueTracking
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_DeveloperSiteDraftApps">
+            <summary>
+            DeveloperSiteDraftApps
+            STS_List_DeveloperSiteDraftApps
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_1305">
+            <summary>
+            EDiscoverySources
+            STS_List_1305
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_1307">
+            <summary>
+            EDiscoverySourceGroups / Sets
+            STS_List_1307
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_1308">
+            <summary>
+            EDiscoveryCustodians
+            STS_List_1308
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_1309">
+            <summary>
+            Custom Lists / Queries
+            STS_List_1309
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_1310">
+            <summary>
+            EDiscoveryExports
+            STS_List_1310
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_2100">
+            <summary>
+            Slide Library
+            STS_List_2100
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInContentClass.Lists.STS_List_10099">
+            <summary>
+            Acquisition History List
+            STS_List_10099
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Enumerations.BuiltInManagedDataType">
+            <summary>
+            Addresses Microsoft.Office.Server.Search.Administration.ManagedDataType type.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.CustomDocumentIdProviderDefinition">
+            <summary>
+            Allows to define and deploy custom document id provider.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.DisplayTemplates.JavaScriptDisplayTemplateDefinition">
+            <summary>
+            Allows to define and deploy item display template.
+            </summary>
+            
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.DisplayTemplates.ItemDisplayTemplateDefinition">
+            <summary>
+            Allows to define and deploy item display template.
+            </summary>
+            
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Fields.MediaFieldDefinition">
+            <summary>
+            Allows to define and deploy SharePoint HTML field.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Fields.SummaryLinkFieldDefinition">
+            <summary>
+            Allows to define and deploy SharePoint HTML field.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Fields.LinkFieldDefinition">
+            <summary>
+            Allows to define and deploy SharePoint link field.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Fields.ImageFieldDefinition">
+            <summary>
+            Allows to define and deploy SharePoint image field.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Fields.HTMLFieldDefinition">
+            <summary>
+            Allows to define and deploy SharePoint HTML field.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.PageLayoutAndSiteTemplateSettingsDefinition">
+            <summary>
+            Allows to define and deploy page layout and site template setting for the target web site.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.AudienceDefinition">
+            <summary>
+            Allows to define and deploy SharePoint audience.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Fields.TaxonomyFieldDefinition">
+            <summary>
+            Allows to define and deploy taxonomy field.
+            </summary>
+            
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.ImageRenditionDefinition">
+            <summary>
+            Allows to define and deploy SharePoint image rendition.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.PublishingPageLayoutDefinition">
+            <summary>
+            Allows to define and deploy SharePoint publishing page.
+            </summary>
+            
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageLayoutDefinition.Title">
+            <summary>
+            Title of the target page.
+            </summary>
+            
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageLayoutDefinition.Description">
+            <summary>
+            Description of the target publishing page.
+            </summary>
+            
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageLayoutDefinition.Content">
+            <summary>
+            Content of the target publishing page layout.
+            </summary>
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageLayoutDefinition.AssociatedContentTypeId">
+            <summary>
+            Associated content type of the target publishing page layout.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.PublishingPageDefinition">
+            <summary>
+            Allows to define and deploy SharePoint publishing page.
+            </summary>
+            
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageDefinition.PageLayoutFileName">
+            <summary>
+            Page layout name of the target publishing page.
+            </summary>
+            
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageDefinition.Description">
+            <summary>
+            Description of the target publishing page.
+            </summary>
+            
+        </member>
+        <member name="P:SPMeta2.Standard.Definitions.PublishingPageDefinition.Content">
+            <summary>
+            Content of the target publishing page.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.SearchResultDefinition">
+            <summary>
+            Allows to define and deploy SharePoint Search Result
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.SearchSettingsDefinition">
+            <summary>
+            Allows to define and deploy SharePoint audience.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermLabelDefinition">
+            <summary>
+            Allows to define and deploy taxonomy term.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.ContactFieldControlDefinition">
+            <summary>
+            Allows to define and deploy 'Contact' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.ContentBySearchWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'Content by Query' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.ContentByQueryWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'Content by Query' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.ResultScriptWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'Site Feed' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.SiteFeedWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'Site Feed' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Webparts.SummaryLinkWebPartDefinition">
+            <summary>
+            Allows to define and deploy 'Site Feed' web part.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Enumerations.BuiltInPublishingFieldTypes">
+            <summary>
+            Out of the box SharePoint publishing field types.
+            Correcponds to fldtypes_publishing.xml in TEMPLATE\XML folder.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames">
+            <summary>
+            Out of the box SharePoint publishing field internal names.
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.RatingCount">
+            <summary>
+            Corresponds to built-in field with Title [Number of Ratings], ID [b1996002-9167-45e5-a4df-b2c41c6723c7] and Group: [Content Feedback]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingPageImage">
+            <summary>
+            Corresponds to built-in field with Title [Page Image], ID [3de94b06-4120-41a5-b907-88773e493458] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingHidden">
+            <summary>
+            Corresponds to built-in field with Title [Hidden Page], ID [7581e709-5d87-42e7-9fe6-698ef5e86dd3] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheDisplayName">
+            <summary>
+            Corresponds to built-in field with Title [Display Name], ID [983f490b-fc53-4820-9354-e8de646b4b82] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingContactName">
+            <summary>
+            Corresponds to built-in field with Title [Contact Name], ID [7546ad0d-6c33-4501-b470-fb3003ca14ba] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Title">
+            <summary>
+            Corresponds to built-in field with Title [Title], ID [fa564e0f-0c70-4ab9-b863-0177e6ddd247] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingPageLayout">
+            <summary>
+            Corresponds to built-in field with Title [Page Layout], ID [0f800910-b30d-4c8f-b011-8189b2297094] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.SummaryLinks2">
+            <summary>
+            Corresponds to built-in field with Title [Summary Links 2], ID [27761311-936a-40ba-80cd-ca5e7a540a36] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingVaryByCustom">
+            <summary>
+            Corresponds to built-in field with Title [Vary by Custom Parameter], ID [4689a812-320e-4623-aab9-10ad68941126] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingStartDate">
+            <summary>
+            Corresponds to built-in field with Title [Scheduling Start Date], ID [51d39414-03dc-4bd0-b777-d3e20cb350f7] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._dlc_Exempt">
+            <summary>
+            Corresponds to built-in field with Title [Exempt from Policy], ID [b0227f1a-b179-4d45-855b-a18f03706bcb] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingVaryByRights">
+            <summary>
+            Corresponds to built-in field with Title [Vary by User Rights], ID [d4a6af1d-c6d7-4045-8def-cefa25b9ec30] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._vti_ItemDeclaredRecord">
+            <summary>
+            Corresponds to built-in field with Title [Declared Record], ID [f9a44731-84eb-43a4-9973-cd2953ad8646] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.HeaderStyleDefinitions">
+            <summary>
+            Corresponds to built-in field with Title [Style Definitions], ID [a932ec3f-94c1-48b1-b6dc-41aaa6eb7e54] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingPageIcon">
+            <summary>
+            Corresponds to built-in field with Title [Page Icon], ID [3894ec3f-4674-4924-a440-8872bec40cf9] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ReusableText">
+            <summary>
+            Corresponds to built-in field with Title [Reusable Text], ID [890e9d41-5a0e-4988-87bf-0fb9d80f60df] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingExpirationDate">
+            <summary>
+            Corresponds to built-in field with Title [Scheduling End Date], ID [a990e64f-faa3-49c1-aafa-885fda79de62] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingAssociatedVariations">
+            <summary>
+            Corresponds to built-in field with Title [Variations], ID [d211d750-4fe6-4d92-90e8-eb16dff196c8] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheAllowWriters">
+            <summary>
+            Corresponds to built-in field with Title [Allow writers to view cached content], ID [773ed051-58db-4ff2-879b-08b21ab001e0] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Author">
+            <summary>
+            Corresponds to built-in field with Title [Created By], ID [1df5e554-ec7e-46a6-901d-d85a3881cb18] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ContentType">
+            <summary>
+            Corresponds to built-in field with Title [Content Type], ID [c042a256-787d-4a6f-8a8a-cf6ab767f12d] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishedLinksDisplayName">
+            <summary>
+            Corresponds to built-in field with Title [Display Name], ID [c80f535b-a430-4273-8f4f-f3e95507b62a] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingContactPicture">
+            <summary>
+            Corresponds to built-in field with Title [Contact Picture], ID [dc47d55f-9bf9-494a-8d5b-e619214dd19a] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingVaryByParam">
+            <summary>
+            Corresponds to built-in field with Title [Vary by Query String Parameters], ID [b8abfc64-c2bd-4c88-8cef-b040c1b9d8c0] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishedLinksURL">
+            <summary>
+            Corresponds to built-in field with Title [Url], ID [70b38565-a310-4546-84a7-709cfdc140cf] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Audience">
+            <summary>
+            Corresponds to built-in field with Title [Target Audiences], ID [61cbb965-1e04-4273-b658-eedaa662f48d] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheEnabled">
+            <summary>
+            Corresponds to built-in field with Title [Enabled], ID [d8f18167-7cff-4c4e-bdbe-e7b0f01678f3] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingPreviewImage">
+            <summary>
+            Corresponds to built-in field with Title [Preview Image], ID [188ce56c-61e0-4d2a-9d3e-7561390668f7] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.RedirectURL">
+            <summary>
+            Corresponds to built-in field with Title [Redirect URL], ID [ac57186e-e90b-4711-a038-b6c6a62a57dc] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheDisplayDescription">
+            <summary>
+            Corresponds to built-in field with Title [Display Description], ID [9550e77a-4d10-464f-bc0c-102d5b1aec42] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheCheckForChanges">
+            <summary>
+            Corresponds to built-in field with Title [Check for Changes], ID [5b4d927c-d383-496b-bc79-1e61bd383019] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishedLinksDescription">
+            <summary>
+            Corresponds to built-in field with Title [Description], ID [92bba27e-eef6-41aa-b728-6dd9caf2bde2] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingVariationGroupID">
+            <summary>
+            Corresponds to built-in field with Title [Variation Group ID], ID [914fdb80-7d4f-4500-bf4c-ce46ad7484a4] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ContentTypeId">
+            <summary>
+            Corresponds to built-in field with Title [Content Type ID], ID [03e45e84-1992-4d42-9116-26f756012634] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingPageContent">
+            <summary>
+            Corresponds to built-in field with Title [Page Content], ID [f55c4d88-1f2e-4ad9-aaa8-819af4ee7ee8] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Comments">
+            <summary>
+            Corresponds to built-in field with Title [Comments], ID [9da97a8a-1da5-4a77-98d3-4bc10456e700] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._dlc_ExpireDateSaved">
+            <summary>
+            Corresponds to built-in field with Title [Original Expiration Date], ID [74e6ae8a-0e3e-4dcb-bbff-b5a016d74d64] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingContactEmail">
+            <summary>
+            Corresponds to built-in field with Title [Contact E-Mail Address], ID [c79dba91-e60b-400e-973d-c6d06f192720] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingVariationRelationshipLinkFieldID">
+            <summary>
+            Corresponds to built-in field with Title [Variation Relationship Link], ID [766da693-38e5-4b1b-997f-e830b6dfcc7b] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.AutomaticUpdate">
+            <summary>
+            Corresponds to built-in field with Title [Automatic Update], ID [e977ed93-da24-4fcc-b77d-ac34eea7288f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._PublishingMigratedGuid">
+            <summary>
+            Corresponds to built-in field with Title [Migrated GUID], ID [75bed596-0661-4edd-9724-1d607ab8d3b5] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ContentCategory">
+            <summary>
+            Corresponds to built-in field with Title [Content Category], ID [3a4b7f98-8d14-4800-8bf5-9ad1dd6a82ee] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ShowInRibbon">
+            <summary>
+            Corresponds to built-in field with Title [Show in drop-down menu], ID [32e03f99-6949-466a-a4a6-057c21d4b516] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCachePerformACLCheck">
+            <summary>
+            Corresponds to built-in field with Title [Perform ACL Check], ID [db03cb99-cf1e-40b8-adc7-913f7181dac3] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.AverageRating">
+            <summary>
+            Corresponds to built-in field with Title [Rating (0-5)], ID [5a14d1ab-1513-48c7-97b3-657a5ba6c742] and Group: [Content Feedback]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheability">
+            <summary>
+            Corresponds to built-in field with Title [Cacheability], ID [18f165be-6285-4a57-b3ab-4e9f913d299f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ReusableHtml">
+            <summary>
+            Corresponds to built-in field with Title [Reusable HTML], ID [82dd22bf-433e-4260-b26e-5b8360dd9105] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingAssociatedContentType">
+            <summary>
+            Corresponds to built-in field with Title [Associated Content Type], ID [b510aac1-bba3-4652-ab70-2d756c29540f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingCacheDuration">
+            <summary>
+            Corresponds to built-in field with Title [Duration], ID [bdd1b3c3-18db-4acf-a963-e70ef4227fbc] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Modified">
+            <summary>
+            Corresponds to built-in field with Title [Modified], ID [28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._vti_ItemHoldRecordStatus">
+            <summary>
+            Corresponds to built-in field with Title [Hold and Record Status], ID [3afcc5c7-c6ef-44f8-9479-3561d72f9e8e] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ArticleByLine">
+            <summary>
+            Corresponds to built-in field with Title [Byline], ID [d3429cc9-adc4-439b-84a8-5679070f84cb] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Created">
+            <summary>
+            Corresponds to built-in field with Title [Created], ID [8c06beca-0777-48f7-91c7-6da68bc07b69] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingRollupImage">
+            <summary>
+            Corresponds to built-in field with Title [Rollup Image], ID [543bc2cf-1f30-488e-8f25-6fe3b689d9ac] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.IconOverlay">
+            <summary>
+            Corresponds to built-in field with Title [IconOverlay], ID [b77cdbcf-5dce-4937-85a7-9fc202705c91] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.Editor">
+            <summary>
+            Corresponds to built-in field with Title [Modified By], ID [d31655d1-1d5b-4511-95a1-7a09e9b75bf2] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingContact">
+            <summary>
+            Corresponds to built-in field with Title [Contact], ID [aea1a4dd-0f19-417d-8721-95a1d28762ab] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._dlc_ExpireDate">
+            <summary>
+            Corresponds to built-in field with Title [Expiration Date], ID [acd16fdf-052f-40f7-bb7e-564c269c9fbc] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames._vti_ItemIsLocked">
+            <summary>
+            Corresponds to built-in field with Title [Is Locked For Edit], ID [740931e6-d79e-44a6-a752-a06eb23c11b0] and Group: [Document and Record Management Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingAuthenticatedUse">
+            <summary>
+            Corresponds to built-in field with Title [Safe for Authenticated Use], ID [0a90b5e8-185a-4dec-bf3c-e60aae08373f] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingImageCaption">
+            <summary>
+            Corresponds to built-in field with Title [Image Caption], ID [66f500e9-7955-49ab-abb1-663621727d10] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.ArticleStartDate">
+            <summary>
+            Corresponds to built-in field with Title [Article Date], ID [71316cea-40a0-49f3-8659-f0cefdbdbd4f] and Group: [Publishing Columns]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.PublishingVaryByHeader">
+            <summary>
+            Corresponds to built-in field with Title [Vary by HTTP Header], ID [89587dfd-b9ca-4fae-8eb9-ba779e917d48] and Group: [_Hidden]'
+            </summary>
+        </member>
+        <member name="F:SPMeta2.Standard.Enumerations.BuiltInInternalPublishingFieldNames.SummaryLinks">
+            <summary>
+            Corresponds to built-in field with Title [Summary Links], ID [b3525efe-59b5-4f0f-b1e4-6e26cb6ef6aa] and Group: [Page Layout Columns]'
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Enumerations.BuiltInPublishingPageLayoutNames">
+            <summary>
+            Out of the box SharePoint publishing layout names.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermDefinition">
+            <summary>
+            Allows to define and deploy taxonomy term.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermGroupDefinition">
+            <summary>
+            Allows to define and taxonomy term group.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermSetDefinition">
+            <summary>
+            Allows to define and taxonomy termset.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermStoreDefinition">
+            <summary>
+            Allows to define and taxonomy store.
+            Does not actualy deploy new taxonomy store, but used as 'model host' for other taxonomy related models - term roups, termsets, terms.
+            </summary>
+        </member>
+        <member name="T:SPMeta2.Standard.Services.Webparts.ContentByQueryWebPartBindingService">
+            <summary>
+            Enables fluent API to setup 'Content by Query' web part.
+            </summary>
+        </member>
+    </members>
+</doc>

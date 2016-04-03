@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse", "SPMeta2.Reverse\SPMeta2.Reverse.csproj", "{3AD69FA0-71A0-4849-AD5D-8C1049669607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.CSOM.Foundation", "SPMeta2.Reverse.CSOM.Foundation\SPMeta2.Reverse.CSOM.Foundation.csproj", "{8366B470-81DE-403C-AA0C-BC715C9246E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.CSOM.Standard", "SPMeta2.Reverse.CSOM.Standard\SPMeta2.Reverse.CSOM.Standard.csproj", "{9F07C965-524B-4532-A407-55D6B13A4417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reverse", "Reverse", "{A7A8C119-B49C-482C-811A-2D07CF090ECC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{19D693DB-C686-4561-8F77-88680D3DCD18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{59C7E6B9-ED22-4D50-8DD7-E2E6539F2099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.Tests", "SPMeta2.Reverse.Tests\SPMeta2.Reverse.Tests.csproj", "{014B85CE-2498-4A86-90DA-B1239993612C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EC4E6DE4-6938-464B-A1D9-82055F9C3088}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_3rd party", "_3rd party", "{C1109EB9-33BE-4934-B48B-1C104183753C}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.Dependencies", "SPMeta2.Reverse.Dependencies\SPMeta2.Reverse.Dependencies.csproj", "{43BDB8E7-692C-46B3-9B69-B30CA0BE53D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSOM", "CSOM", "{4E2FBF89-CD9A-48E1-A851-86A0E6352C23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AD69FA0-71A0-4849-AD5D-8C1049669607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD69FA0-71A0-4849-AD5D-8C1049669607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD69FA0-71A0-4849-AD5D-8C1049669607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD69FA0-71A0-4849-AD5D-8C1049669607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8366B470-81DE-403C-AA0C-BC715C9246E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8366B470-81DE-403C-AA0C-BC715C9246E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8366B470-81DE-403C-AA0C-BC715C9246E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8366B470-81DE-403C-AA0C-BC715C9246E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F07C965-524B-4532-A407-55D6B13A4417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F07C965-524B-4532-A407-55D6B13A4417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F07C965-524B-4532-A407-55D6B13A4417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F07C965-524B-4532-A407-55D6B13A4417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014B85CE-2498-4A86-90DA-B1239993612C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014B85CE-2498-4A86-90DA-B1239993612C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014B85CE-2498-4A86-90DA-B1239993612C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014B85CE-2498-4A86-90DA-B1239993612C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BDB8E7-692C-46B3-9B69-B30CA0BE53D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BDB8E7-692C-46B3-9B69-B30CA0BE53D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BDB8E7-692C-46B3-9B69-B30CA0BE53D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3AD69FA0-71A0-4849-AD5D-8C1049669607} = {59C7E6B9-ED22-4D50-8DD7-E2E6539F2099}
+		{8366B470-81DE-403C-AA0C-BC715C9246E0} = {4E2FBF89-CD9A-48E1-A851-86A0E6352C23}
+		{9F07C965-524B-4532-A407-55D6B13A4417} = {4E2FBF89-CD9A-48E1-A851-86A0E6352C23}
+		{014B85CE-2498-4A86-90DA-B1239993612C} = {19D693DB-C686-4561-8F77-88680D3DCD18}
+		{43BDB8E7-692C-46B3-9B69-B30CA0BE53D2} = {C1109EB9-33BE-4934-B48B-1C104183753C}
+		{4E2FBF89-CD9A-48E1-A851-86A0E6352C23} = {A7A8C119-B49C-482C-811A-2D07CF090ECC}
+	EndGlobalSection
+EndGlobal
