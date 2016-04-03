@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SPMeta2.Containers;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers;
 using SPMeta2.Reverse.CSOM.Foundation.Services;
@@ -18,17 +19,28 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         [TestCategory("Fields")]
         public void Can_Reverse_Site_Fields()
         {
-            WithCSOMContext(context =>
+            var model = SPMeta2Model.NewSiteModel(site =>
             {
-                var service = new CSOMReverseService();
-
-                service.Handlers.Clear();
-                service.Handlers.Add(new SiteReverseHandler());
-
-                service.Handlers.Add(new FieldReverseHandler());
-
-                var result = service.ReverseSiteModel(context, ReverseOptions.Default);
+                site.AddRandomField();
+                site.AddRandomField();
+                site.AddRandomField();
             });
+
+            DeployReverseAndTestModel(model);
+        }
+
+        [TestMethod]
+        [TestCategory("Fields")]
+        public void Can_Reverse_Web_Fields()
+        {
+            var model = SPMeta2Model.NewWebModel(site =>
+            {
+                site.AddRandomField();
+                site.AddRandomField();
+                site.AddRandomField();
+            });
+
+            DeployReverseAndTestModel(model);
         }
 
         #endregion

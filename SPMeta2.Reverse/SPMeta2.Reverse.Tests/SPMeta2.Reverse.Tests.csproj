@@ -44,7 +44,7 @@
     <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPMeta2.Core.1.2.40\lib\net45\SPMeta2.dll</HintPath>
+      <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net45\SPMeta2.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SPMeta2.Containers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -56,15 +56,15 @@
       <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Containers\SPMeta2.Containers.Standard.dll</HintPath>
     </Reference>
     <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.40\lib\net45\SPMeta2.CSOM.dll</HintPath>
+      <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.60\lib\net45\SPMeta2.CSOM.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SPMeta2.CSOM.Standard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPMeta2.CSOM.Standard.1.2.40\lib\net45\SPMeta2.CSOM.Standard.dll</HintPath>
+      <HintPath>..\packages\SPMeta2.CSOM.Standard.1.2.60\lib\net45\SPMeta2.CSOM.Standard.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SPMeta2.Standard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPMeta2.Core.Standard.1.2.40\lib\net45\SPMeta2.Standard.dll</HintPath>
+      <HintPath>..\packages\SPMeta2.Core.Standard.1.2.60\lib\net45\SPMeta2.Standard.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -83,17 +83,16 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base\ReverseTestBase.cs" />
+    <Compile Include="Impl\Definitions\WebDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceFactory.cs" />
+    <Compile Include="Services\ReverseRegressionAssertService.cs" />
+    <Compile Include="Services\VSAssertService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SPMeta2.Reverse.CSOM.Foundation\SPMeta2.Reverse.CSOM.Foundation.csproj">
@@ -103,6 +102,10 @@
     <ProjectReference Include="..\SPMeta2.Reverse.CSOM.Standard\SPMeta2.Reverse.CSOM.Standard.csproj">
       <Project>{9f07c965-524b-4532-a407-55d6b13a4417}</Project>
       <Name>SPMeta2.Reverse.CSOM.Standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMeta2.Reverse.Regression\SPMeta2.Reverse.Regression.csproj">
+      <Project>{ABABA893-DC65-4DDB-844E-9C3C1C94DB55}</Project>
+      <Name>SPMeta2.Reverse.Regression</Name>
     </ProjectReference>
     <ProjectReference Include="..\SPMeta2.Reverse\SPMeta2.Reverse.csproj">
       <Project>{3ad69fa0-71a0-4849-ad5d-8c1049669607}</Project>

@@ -14,9 +14,11 @@ using SPMeta2.Definitions;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.Foundation.ReverseHosts;
 using SPMeta2.Reverse.CSOM.Foundation.Services;
+using SPMeta2.Reverse.Regression.Services;
 using SPMeta2.Standard.Definitions.Taxonomy;
 using SPMeta2.Standard.Syntax;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Tests.Services;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
@@ -26,6 +28,8 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public ReverseTestBase()
         {
+            AssertService = new VSAssertService();
+
             ModelGeneratorService = new ModelGeneratorService();
 
             ModelGeneratorService.RegisterDefinitionGenerators(typeof(FieldDefinition).Assembly);
@@ -44,6 +48,8 @@ namespace SPMeta2.Reverse.Tests.Base
         public string UserPassword { get; set; }
 
 
+        public AssertServiceBase AssertService { get; set; }
+
         #endregion
 
         #region methods
@@ -59,7 +65,21 @@ namespace SPMeta2.Reverse.Tests.Base
             {
                 // deploy model, TODO
 
+
+                // reverse model, TODO
+
+                // validate model
+                var reverseRegressionService = new ReverseValidationService();
+
+                //reverseRegressionService.DeployModel();
+                
+                // assert model
+                var hasMissedOrInvalidProps = ReverseRegressionAssertService.ResolveModelValidation(model);
+                AssertService.IsFalse(hasMissedOrInvalidProps);
             }
+
+
+
         }
 
         #endregion
