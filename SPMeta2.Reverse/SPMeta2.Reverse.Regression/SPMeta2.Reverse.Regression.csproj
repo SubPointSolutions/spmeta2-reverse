@@ -53,6 +53,7 @@
     <Compile Include="ServiceFactory.cs" />
     <Compile Include="Services\ReverseRegressionAssertService.cs" />
     <Compile Include="Services\ReverseValidationService.cs" />
+    <Compile Include="Validation\ContentTypeDefinitionValidator.cs" />
     <Compile Include="Validation\SiteDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
     <Compile Include="Validation\WebDefinitionValidator.cs" />
