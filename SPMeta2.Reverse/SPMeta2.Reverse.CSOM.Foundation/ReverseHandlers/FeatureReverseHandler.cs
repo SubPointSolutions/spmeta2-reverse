@@ -29,7 +29,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition)
+                    typeof(SiteDefinition),
+                    typeof(WebDefinition),
                 };
             }
         }
@@ -44,9 +45,6 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var siteHost = parentHost as SiteReverseHost;
             var webHost = parentHost as WebReverseHost;
 
-            var site = siteHost.HostSite;
-            var web = siteHost.HostSite;
-
             var context = siteHost.HostClientContext;
 
             FeatureCollection items = null;
@@ -56,14 +54,14 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             if (webHost != null)
             {
-                items = web.Features;
+                items = webHost.HostWeb.Features;
 
                 isWebLevel = true;
                 isSiteLevel = false;
             }
             else if (siteHost != null)
             {
-                items = site.Features;
+                items = siteHost.HostSite.Features;
 
                 isWebLevel = false;
                 isSiteLevel = true;

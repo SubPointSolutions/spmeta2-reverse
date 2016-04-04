@@ -11,6 +11,7 @@ using SPMeta2.Reverse.Services;
 using SPMeta2.Utils;
 using SPMeta2.Syntax.Default;
 using SPMeta2.ModelHosts;
+using System.Xml.Linq;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
@@ -71,9 +72,16 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             var def = new ListViewDefinition();
 
-            def.Title = item.Title;
+            var xmlDoc = XDocument.Parse(item.ListViewXml);
+            var url = xmlDoc.Descendants("View")
+                            .First()
+                            .Attribute("Url")
+                            .Value
+                            .Split('/')
+                            .LastOrDefault();
 
-            // TODO, fix up props
+            def.Title = item.Title;
+            def.Url = url;
 
             return new ListViewModelNode
             {
