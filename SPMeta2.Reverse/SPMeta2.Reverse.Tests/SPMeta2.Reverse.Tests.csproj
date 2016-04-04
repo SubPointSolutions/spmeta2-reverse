@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Base\ReverseTestBase.cs" />
     <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ListViewDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\SecurityRoleDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\SecurityGroupDefinitionTests.cs" />
