@@ -25,7 +25,12 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 web.AddTopNavigationNode(ModelGeneratorService.GetRandomDefinition<TopNavigationNodeDefinition>());
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, new[]
+            {
+                typeof(SiteReverseHandler),
+                typeof(WebReverseHandler),
+                typeof(TopNavigationNodeDefinitionReverseHandler),
+            });
         }
 
         // TODO, add tests to revere lists and libraries

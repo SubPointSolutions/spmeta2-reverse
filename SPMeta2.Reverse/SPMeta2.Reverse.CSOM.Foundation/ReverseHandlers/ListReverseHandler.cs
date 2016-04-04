@@ -49,7 +49,16 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             var items = web.Lists;
 
-            context.Load(items);
+            //context.Load(items, i => i.Include(r => r.RootFolder, r => r.RootFolder.Properties));
+            context.Load(items,
+                i => i.Include(r => r.RootFolder,
+                                    r => r.Title,
+                                    r => r.Description,
+                                    r => r.Hidden,
+                                    r => r.BaseTemplate,
+                                    r => r.ContentTypesEnabled)
+
+                );
             context.ExecuteQuery();
 
             result.AddRange(items.ToArray().Select(i =>
@@ -65,6 +74,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
+            var web = (reverseHost as ListReverseHost).HostWeb;
             var item = (reverseHost as ListReverseHost).HostList;
 
             var def = new ListDefinition();
@@ -72,8 +82,25 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             def.Title = item.Title;
             def.Description = item.Description;
 
-            // TODO, fix up custom URL
-            //def.CustomUrl = 
+            var listServerRelativeUrl = item.RootFolder.ServerRelativeUrl;
+
+            if (!web.IsObjectPropertyInstantiated("ServerRelativeUrl"))
+            {
+                web.Context.Load(web, w => w.ServerRelativeUrl);
+                web.Context.ExecuteQuery();
+            }
+
+            var webServerRelativeUrl = web.ServerRelativeUrl;
+
+            var listWebRelativeUrl = listServerRelativeUrl;
+
+            // roort web / ?
+            if (webServerRelativeUrl.Length > 1)
+            {
+                listWebRelativeUrl = listServerRelativeUrl.Replace(webServerRelativeUrl, string.Empty);
+            }
+
+            def.CustomUrl = listWebRelativeUrl;
 
             // TODO, fix for lists based on custom list templates
             def.TemplateType = item.BaseTemplate;

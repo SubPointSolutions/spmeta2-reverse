@@ -28,7 +28,13 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 });
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, new[]
+            {
+                typeof(SiteReverseHandler),
+                 typeof(WebReverseHandler),
+                  typeof(ListReverseHandler),
+                 typeof(ListViewReverseHandler)
+            });
         }
 
         // TODO, add tests to revere list view with CAML queries and so on

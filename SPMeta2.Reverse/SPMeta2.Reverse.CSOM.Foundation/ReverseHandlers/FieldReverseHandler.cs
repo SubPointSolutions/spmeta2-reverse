@@ -36,22 +36,26 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         #region methods
 
-
-
-        #endregion
-
-        #region methods
-
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
             var result = new List<FieldReverseHost>();
 
-            var typedHost = parentHost.WithAssertAndCast<SiteReverseHost>("reverseHost", value => value.RequireNotNull());
+            var siteHost = parentHost as SiteReverseHost;
+            var webHost = parentHost as WebReverseHost;
 
-            var site = typedHost.HostSite;
-            var context = typedHost.HostClientContext;
+            var site = siteHost.HostSite;
+            var context = siteHost.HostClientContext;
 
-            var items = site.RootWeb.Fields;
+            FieldCollection items = null;
+
+            if (webHost != null)
+            {
+                items = webHost.HostWeb.Fields;
+            }
+            else
+            {
+                items = siteHost.HostSite.RootWeb.Fields;
+            }
 
             context.Load(items);
             context.ExecuteQuery();
@@ -76,6 +80,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             def.Title = item.Title;
             def.InternalName = item.InternalName;
             def.Id = item.Id;
+
+            def.FieldType = item.TypeAsString;
 
             def.DefaultValue = item.DefaultValue;
 

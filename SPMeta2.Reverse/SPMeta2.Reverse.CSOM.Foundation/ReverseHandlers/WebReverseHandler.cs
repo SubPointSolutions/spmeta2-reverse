@@ -43,11 +43,10 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             Web web = null;
 
-            if (parentHost is SiteReverseHost)
-                web = (parentHost as SiteReverseHost).HostWeb;
-
             if (parentHost is WebReverseHost)
                 web = (parentHost as WebReverseHost).HostWeb;
+            else if (parentHost is SiteReverseHost)
+                web = (parentHost as SiteReverseHost).HostWeb;
 
             var context = (parentHost as CSOMReverseHostBase).HostClientContext;
 

@@ -26,6 +26,7 @@ using SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base;
 using SPMeta2.Reverse.CSOM.Standard.Services;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Regression.Base;
+using SPMeta2.Containers.Services.Rnd;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
@@ -46,6 +47,8 @@ namespace SPMeta2.Reverse.Tests.Base
 
             ModelGeneratorService.RegisterDefinitionGenerators(typeof(FieldDefinition).Assembly);
             ModelGeneratorService.RegisterDefinitionGenerators(typeof(TaxonomyTermDefinition).Assembly);
+
+            Rnd = new DefaultRandomService();
         }
 
         #endregion
@@ -53,6 +56,8 @@ namespace SPMeta2.Reverse.Tests.Base
         #region properties
 
         public ModelGeneratorService ModelGeneratorService { get; set; }
+
+        public RandomService Rnd { get; set; }
 
         public string SiteUrl { get; set; }
 

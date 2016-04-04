@@ -24,6 +24,8 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Title, r => r.Title)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
 
+                .ShouldBeEqual(s => s.CustomUrl, r => r.CustomUrl)
+
                 .ShouldBeEqual(s => s.TemplateType, r => r.TemplateType)
                 .ShouldBeEqual(s => s.Hidden, r => r.Hidden)
                 .ShouldBeEqual(s => s.ContentTypesEnabled, r => r.ContentTypesEnabled)

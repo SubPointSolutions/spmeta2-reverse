@@ -22,11 +22,15 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
-                site.AddSiteFeature(BuiltInSiteFeatures.BasicWebParts.Enable().Clone<FeatureDefinition>());
-                site.AddSiteFeature(BuiltInSiteFeatures.Workflows.Enable().Clone<FeatureDefinition>());
+                site.AddSiteFeature(BuiltInSiteFeatures.BasicWebParts.Enable().ForceActivate().Clone<FeatureDefinition>());
+                site.AddSiteFeature(BuiltInSiteFeatures.Workflows.Enable().ForceActivate().Clone<FeatureDefinition>());
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, new[]
+            {
+                typeof(SiteReverseHandler),
+                typeof(FeatureReverseHandler),
+            });
         }
 
         [TestMethod]
@@ -35,11 +39,16 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         {
             var model = SPMeta2Model.NewWebModel(web =>
             {
-                web.AddWebFeature(BuiltInWebFeatures.MinimalDownloadStrategy.Enable().Clone<FeatureDefinition>());
-                web.AddWebFeature(BuiltInWebFeatures.WikiPageHomePage.Enable().Clone<FeatureDefinition>());
+                web.AddWebFeature(BuiltInWebFeatures.MinimalDownloadStrategy.Enable().ForceActivate().Clone<FeatureDefinition>());
+                web.AddWebFeature(BuiltInWebFeatures.WikiPageHomePage.Enable().ForceActivate().Clone<FeatureDefinition>());
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, new[]
+            {
+                typeof(SiteReverseHandler),
+                typeof(WebReverseHandler),
+                typeof(FeatureReverseHandler),
+            });
         }
 
         #endregion

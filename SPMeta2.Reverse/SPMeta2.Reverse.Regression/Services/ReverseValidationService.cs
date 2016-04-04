@@ -70,7 +70,7 @@ namespace SPMeta2.Reverse.Regression.Services
 
                 if (reversedNode == null)
                     throw new SPMeta2ReverseException(
-                        string.Format("Cannot find node of type:[{0}] by hash:[{1}]. Original definition is:[{2}]",
+                        string.Format("Cannot find node of type:[{0}] by identity id:[{1}]. Original definition is:[{2}]",
                             originalDefinition.GetType(), originalDefinitionId, originalDefinition));
 
                 var definitionValidator = ResolveModelHandlerForNode(originalNode);
