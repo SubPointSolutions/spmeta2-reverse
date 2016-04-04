@@ -11,32 +11,38 @@ using SPMeta2.Models;
 
 namespace SPMeta2.Reverse.Regression.Services
 {
+
+    public class ModelValidationResult
+    {
+        public ModelValidationResult()
+        {
+            Properties = new List<PropertyValidationResult>();
+        }
+
+        public DefinitionBase Model { get; set; }
+
+        public List<PropertyValidationResult> Properties { get; set; }
+    }
+
     public class ReverseRegressionAssertService : RegressionAssertService
     {
         #region classes
 
-        public class ModelValidationResult
-        {
-            public ModelValidationResult()
-            {
-                Properties = new List<PropertyValidationResult>();
-            }
-
-            public DefinitionBase Model { get; set; }
-            public List<PropertyValidationResult> Properties { get; set; }
-        }
 
         #endregion
 
         #region properties
 
-        private static List<ModelValidationResult> ModelValidations = new List<ModelValidationResult>();
+        public static List<ModelValidationResult> ModelValidations { get; set; }
 
         #endregion
 
         static ReverseRegressionAssertService()
         {
+            ModelValidations = new List<ModelValidationResult>();
+
             RegExcludedDefinitionTypes = new List<Type>();
+
 
             ShowOnlyFalseResults = false;
             EnablePropertyValidation = true;

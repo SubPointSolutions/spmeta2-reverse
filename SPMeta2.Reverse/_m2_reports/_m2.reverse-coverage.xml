@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfReverseCoverageResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ReverseCoverageResult>
+    <Model xsi:type="UserCustomActionDefinition">
+      <PropertyBag />
+      <Name>6fcc088f9d204ccea16ce146d2bad005</Name>
+      <TitleResource />
+      <Description>23291412cf3e4003b0e06b88b5db78a5</Description>
+      <DescriptionResource />
+      <Group>552b2f157e3a4b4199a2905fd04c5c95</Group>
+      <Location>ScriptLink</Location>
+      <ScriptSrc>~site/style library/spmeta2.js</ScriptSrc>
+      <Sequence>85</Sequence>
+      <Rights />
+      <RegistrationType>None</RegistrationType>
+      <CommandUIExtensionResource />
+    </Model>
+    <ModelFullClassName>SPMeta2.Definitions.UserCustomActionDefinition</ModelFullClassName>
+    <ModelShortClassName>UserCustomActionDefinition</ModelShortClassName>
+    <Properties>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>6fcc088f9d204ccea16ce146d2bad005</SrcPropertyValue>
+        <SrcPropertyName>Name</SrcPropertyName>
+        <DstPropertyValue>6fcc088f9d204ccea16ce146d2bad005</DstPropertyValue>
+        <DstPropertyName>Name</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Title</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Title</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>ScriptBlock</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>ScriptBlock</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>~site/style library/spmeta2.js</SrcPropertyValue>
+        <SrcPropertyName>ScriptSrc</SrcPropertyName>
+        <DstPropertyValue>~site/style library/spmeta2.js</DstPropertyValue>
+        <DstPropertyName>ScriptSrc</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>ScriptLink</SrcPropertyValue>
+        <SrcPropertyName>Location</SrcPropertyName>
+        <DstPropertyValue>ScriptLink</DstPropertyValue>
+        <DstPropertyName>Location</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>85</SrcPropertyValue>
+        <SrcPropertyName>Sequence</SrcPropertyName>
+        <DstPropertyValue>85</DstPropertyValue>
+        <DstPropertyName>Sequence</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Url</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Url</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>RegistrationId</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>RegistrationId</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>None</SrcPropertyValue>
+        <SrcPropertyName>RegistrationType</SrcPropertyName>
+        <DstPropertyValue>None</DstPropertyValue>
+        <DstPropertyName>RegistrationType</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>23291412cf3e4003b0e06b88b5db78a5</SrcPropertyValue>
+        <SrcPropertyName>Description</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Description</DstPropertyName>
+        <IsValid>false</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>552b2f157e3a4b4199a2905fd04c5c95</SrcPropertyValue>
+        <SrcPropertyName>Group</SrcPropertyName>
+        <DstPropertyValue>552b2f157e3a4b4199a2905fd04c5c95</DstPropertyValue>
+        <DstPropertyName>Group</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+    </Properties>
+  </ReverseCoverageResult>
+</ArrayOfReverseCoverageResult>

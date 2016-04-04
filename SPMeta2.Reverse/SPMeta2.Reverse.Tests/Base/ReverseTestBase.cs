@@ -27,11 +27,114 @@ using SPMeta2.Reverse.CSOM.Standard.Services;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Containers.Services.Rnd;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SPMeta2.Reverse.Regression;
+using SPMeta2.Containers.Assertion;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
+    [Serializable]
+    public class ReverseCoverageResult
+    {
+        public ReverseCoverageResult()
+        {
+            Properties = new List<ReverseCoveragePropertyResult>();
+        }
+
+        public DefinitionBase Model { get; set; }
+        public string ModelFullClassName { get; set; }
+        public string ModelShortClassName { get; set; }
+
+        public List<ReverseCoveragePropertyResult> Properties { get; set; }
+    }
+
+    [Serializable]
+    public class ReverseCoveragePropertyResult
+    {
+        public string SrcPropertyValue { get; set; }
+        public string SrcPropertyName { get; set; }
+
+        public string DstPropertyValue { get; set; }
+        public string DstPropertyName { get; set; }
+
+        public bool IsValid { get; set; }
+        public string Message { get; set; }
+    }
+
+    [TestClass]
     public class ReverseTestBase
     {
+        #region static
+
+        static ReverseTestBase()
+        {
+            GlobalInternalInit();
+        }
+
+        private static void GlobalInternalInit()
+        {
+            RegressionAssertService.OnPropertyValidated += OnReversePropertyValidated;
+        }
+
+        private static void OnReversePropertyValidated(object sender, OnPropertyValidatedEventArgs e)
+        {
+            var validationResults = ReverseRegressionAssertService.ModelValidations;
+            var uniqueResults = new List<ReverseCoverageResult>();
+
+            foreach (var result in validationResults)
+            {
+                if (!uniqueResults.Any(r => r.Model.GetType() == result.Model.GetType()))
+                {
+                    var newResult = new ReverseCoverageResult();
+
+                    newResult.Model = result.Model;
+
+                    newResult.ModelFullClassName = result.Model.GetType().FullName;
+                    newResult.ModelShortClassName = result.Model.GetType().Name;
+
+                    foreach (var propResult in result.Properties)
+                    {
+                        var newPropResult = new ReverseCoveragePropertyResult();
+
+                        if (propResult.Src != null)
+                        {
+                            newPropResult.SrcPropertyName = propResult.Src.Name;
+                            newPropResult.SrcPropertyValue = ConvertUtils.ToString(propResult.Src.Value);
+                        }
+
+                        if (propResult.Dst != null)
+                        {
+                            newPropResult.DstPropertyName = propResult.Dst.Name;
+                            newPropResult.DstPropertyValue = ConvertUtils.ToString(propResult.Dst.Value);
+                        }
+
+                        newPropResult.IsValid = propResult.IsValid;
+                        newPropResult.Message = propResult.Message;
+
+                        newResult.Properties.Add(newPropResult);
+                    }
+
+                    uniqueResults.Add(newResult);
+                }
+            }
+
+            uniqueResults = uniqueResults.OrderBy(r => r.Model.GetType().Name)
+                                         .ToList();
+
+            var types = uniqueResults.Select(r => r.Model.GetType()).ToList();
+
+            types.AddRange(uniqueResults.Select(r => r.Model.GetType()).ToList());
+
+            types.Add(typeof(ModelValidationResult));
+            types.Add(typeof(PropertyValidationResult));
+
+            var xml = XmlSerializerUtils.SerializeToString(uniqueResults, types);
+
+            System.IO.File.WriteAllText("../../../_m2_reports/_m2.reverse-coverage.xml", xml);
+        }
+
+        #endregion
+
         #region constructors
 
         public ReverseTestBase()
@@ -99,7 +202,7 @@ namespace SPMeta2.Reverse.Tests.Base
 
                 // validate model
                 var reverseRegressionService = new ReverseValidationService();
-                
+
                 reverseRegressionService.DeployModel(new ReverseValidationModeHost
                 {
                     OriginalModel = deployedModel,

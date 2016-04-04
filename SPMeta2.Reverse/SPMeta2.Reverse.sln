@@ -37,6 +37,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Validators", "Validators", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.Regression", "SPMeta2.Reverse.Regression\SPMeta2.Reverse.Regression.csproj", "{ABABA893-DC65-4DDB-844E-9C3C1C94DB55}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_m2_reports", "_m2_reports", "{14E347BC-2C96-41CD-A00F-6D984ABCA7F5}"
+	ProjectSection(SolutionItems) = preProject
+		_m2_reports\_m2.reverse-coverage.xml = _m2_reports\_m2.reverse-coverage.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
