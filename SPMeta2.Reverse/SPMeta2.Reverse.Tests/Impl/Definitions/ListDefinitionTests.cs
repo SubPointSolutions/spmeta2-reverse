@@ -34,7 +34,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 {
                     (list.Value as ListDefinition).TemplateType = BuiltInListTemplateTypeId.GenericList;
                     (list.Value as ListDefinition).Url = null;
-                    (list.Value as ListDefinition).CustomUrl = string.Format("lists/{0}", Rnd.String());
+                    (list.Value as ListDefinition).CustomUrl = string.Format("Lists/{0}", Rnd.String());
                 });
             });
 

@@ -100,7 +100,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
                 listWebRelativeUrl = listServerRelativeUrl.Replace(webServerRelativeUrl, string.Empty);
             }
 
-            def.CustomUrl = listWebRelativeUrl;
+            def.CustomUrl = UrlUtility.RemoveStartingSlash(listWebRelativeUrl);
 
             // TODO, fix for lists based on custom list templates
             def.TemplateType = item.BaseTemplate;
