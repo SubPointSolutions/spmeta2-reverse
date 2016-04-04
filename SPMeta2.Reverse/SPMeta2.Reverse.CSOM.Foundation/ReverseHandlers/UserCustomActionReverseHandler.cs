@@ -82,8 +82,9 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var def = new UserCustomActionDefinition();
 
             def.Title = item.Title;
-            
             def.Name = item.Name;
+            def.Description = item.Description;
+
             def.Group = item.Group;
 
             def.ScriptSrc = item.ScriptSrc;
