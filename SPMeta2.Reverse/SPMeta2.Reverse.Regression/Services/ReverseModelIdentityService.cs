@@ -7,6 +7,7 @@ using SPMeta2.Attributes.Identity;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Exceptions;
 using SPMeta2.Utils;
+using SPMeta2.Definitions.Base;
 
 namespace SPMeta2.Reverse.Regression.Services
 {
@@ -33,7 +34,16 @@ namespace SPMeta2.Reverse.Regression.Services
                 var identityKeyNames = props
                     .Where(p => p.GetCustomAttributes(typeof(IdentityKeyAttribute), true).Any())
                     .Select(p => p.Name)
-                    .OrderBy(s => s);
+                    .OrderBy(s => s)
+                    .ToList();
+
+                // url gets transformed by SharePoint to the full one
+                // so that lookup by identity won't work
+                // rely only on title for the time being
+                if (def is NavigationNodeDefinitionBase)
+                {
+                    identityKeyNames.Remove("Url");
+                }
 
                 foreach (var keyName in identityKeyNames)
                 {
