@@ -7,6 +7,7 @@ using SPMeta2.Reverse.CSOM.Foundation.Services;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Tests.Base;
 using SPMeta2.Syntax.Default;
+using SPMeta2.Enumerations;
 
 namespace SPMeta2.Reverse.Tests.Impl.Definitions
 {
@@ -23,6 +24,10 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
             {
                 web.AddRandomList(list =>
                 {
+                    (list.Value as ListDefinition).TemplateType = BuiltInListTemplateTypeId.DocumentLibrary;
+                    (list.Value as ListDefinition).Url = null;
+                    (list.Value as ListDefinition).CustomUrl = Rnd.String();
+
                     list.AddRandomListView();
                     list.AddRandomListView();
                 });

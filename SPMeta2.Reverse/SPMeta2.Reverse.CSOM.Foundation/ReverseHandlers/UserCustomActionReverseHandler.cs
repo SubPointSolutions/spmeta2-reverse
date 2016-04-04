@@ -42,7 +42,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var result = new List<UserCustomActionReverseHost>();
 
             var siteHost = parentHost as SiteReverseHost;
-            var webHost = parentHost as SiteReverseHost;
+            var webHost = parentHost as WebReverseHost;
 
             var site = siteHost.HostSite;
             var web = siteHost.HostWeb;
@@ -54,7 +54,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
                 web = webHost.HostWeb;
                 items = web.UserCustomActions;
             }
-            else
+            else if(siteHost != null)
             {
                 items = site.UserCustomActions;
             }
@@ -90,6 +90,9 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             def.ScriptBlock = item.ScriptBlock;
 
             def.Location = item.Location;
+            def.Sequence = item.Sequence;
+
+            def.Url = item.Url;
 
             def.RegistrationId = item.RegistrationId;
             def.RegistrationType = item.RegistrationType.ToString();

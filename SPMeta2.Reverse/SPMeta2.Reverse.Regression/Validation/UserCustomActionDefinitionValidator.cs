@@ -29,6 +29,9 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.ScriptSrc, r => r.ScriptSrc)
 
                 .ShouldBeEqual(s => s.Location, r => r.Location)
+
+                .ShouldBeEqual(s => s.Sequence, r => r.Sequence)
+                .ShouldBeEqual(s => s.Url, r => r.Url)
                 
                 .ShouldBeEqual(s => s.RegistrationId, r => r.RegistrationId)
                 .ShouldBeEqual(s => s.RegistrationType, r => r.RegistrationType)
