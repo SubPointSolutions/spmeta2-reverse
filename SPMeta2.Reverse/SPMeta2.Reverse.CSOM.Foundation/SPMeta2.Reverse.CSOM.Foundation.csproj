@@ -61,6 +61,7 @@
     <Compile Include="ReverseHandlers\Base\CSOMReverseHandlerBase.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ListReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\SecurityRoleReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SecurityGroupReverseHandler.cs" />
     <Compile Include="ReverseHandlers\WebReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FieldReverseHandler.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="ReverseHosts\CSOMReverseHostBase.cs" />
     <Compile Include="ReverseHosts\ContentTypeReverseHost.cs" />
     <Compile Include="ReverseHosts\FieldReverseHost.cs" />
+    <Compile Include="ReverseHosts\SecurityRoleReverseHost.cs" />
     <Compile Include="ReverseHosts\SecurityGroupReverseHost.cs" />
     <Compile Include="ReverseHosts\ListReverseHost.cs" />
     <Compile Include="ReverseHosts\WebReverseHost.cs" />
