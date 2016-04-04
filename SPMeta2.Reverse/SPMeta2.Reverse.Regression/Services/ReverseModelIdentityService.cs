@@ -45,6 +45,12 @@ namespace SPMeta2.Reverse.Regression.Services
                     identityKeyNames.Remove("Url");
                 }
 
+                // skipping list view URLs fro the tiime being
+                if (def is ListViewDefinition)
+                {
+                    identityKeyNames.Remove("Url");
+                }
+
                 foreach (var keyName in identityKeyNames)
                 {
                     var prop = props.FirstOrDefault(p => p.Name == keyName);
