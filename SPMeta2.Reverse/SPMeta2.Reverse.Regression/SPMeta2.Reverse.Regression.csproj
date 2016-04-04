@@ -57,6 +57,7 @@
     <Compile Include="Validation\ListDefinitionValidator.cs" />
     <Compile Include="Validation\SiteDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\SecurityGroupDefinitionValidator.cs" />
     <Compile Include="Validation\WebDefinitionValidator.cs" />
   </ItemGroup>
   <ItemGroup>

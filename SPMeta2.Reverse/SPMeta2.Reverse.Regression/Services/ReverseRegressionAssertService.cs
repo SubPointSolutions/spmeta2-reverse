@@ -79,7 +79,7 @@ namespace SPMeta2.Reverse.Regression.Services
             var hasMissedOrInvalidProps = false;
 
             var model = modelNode.Value;
-            Trace.WriteLine(string.Format("[INF]{2}MODEL CHECK [{0}] - ( {1} )", model.GetType(), model.ToString(), start));
+            Trace.WriteLine(string.Format("[INF] {2}MODEL CHECK [{0}] - ( {1} )", model.GetType(), model.ToString(), start));
 
             //if (model.RequireSelfProcessing || modelNode.Options.RequireSelfProcessing)
             if (modelNode.Options.RequireSelfProcessing)
@@ -141,11 +141,11 @@ namespace SPMeta2.Reverse.Regression.Services
 
                     }
 
-                    Trace.WriteLine(string.Format("[INF]{0}PROPERTY CHECK", start));
+                    Trace.WriteLine(string.Format("[INF] {0}PROPERTY CHECK", start));
 
                     if (EnablePropertyValidation)
                     {
-                        Trace.WriteLine(string.Format("[INF]{0}EnablePropertyValidation == true. Checking...", start));
+                        Trace.WriteLine(string.Format("[INF] {0}EnablePropertyValidation == true. Checking...", start));
 
                         foreach (var shouldBeValidatedProp in shouldBeValidatedProperties.OrderBy(p => p.Name))
                         {
