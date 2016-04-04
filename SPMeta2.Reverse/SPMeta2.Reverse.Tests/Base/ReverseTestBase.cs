@@ -22,6 +22,7 @@ using SPMeta2.Standard.Syntax;
 using SPMeta2.Utils;
 using SPMeta2.Reverse.Tests.Services;
 using SPMeta2.CSOM.ModelHosts;
+using SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base;
 using SPMeta2.Reverse.CSOM.Standard.Services;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Regression.Base;
@@ -67,10 +68,21 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public void DeployReverseAndTestModel(ModelNode model)
         {
-            DeployReverseAndTestModel(new ModelNode[] { model });
+            DeployReverseAndTestModel(model, null);
+        }
+
+        public void DeployReverseAndTestModel(ModelNode model, IEnumerable<Type> reverseHandlers)
+        {
+            DeployReverseAndTestModel(new ModelNode[] { model }, reverseHandlers);
         }
 
         public void DeployReverseAndTestModel(IEnumerable<ModelNode> models)
+        {
+            DeployReverseAndTestModel(models, null);
+        }
+
+        public void DeployReverseAndTestModel(IEnumerable<ModelNode> models,
+            IEnumerable<Type> reverseHandlers)
         {
             foreach (var deployedModel in models)
             {
@@ -78,10 +90,11 @@ namespace SPMeta2.Reverse.Tests.Base
                 DeployModel(deployedModel);
 
                 // reverse model
-                var reversedModel = ReverseModel(deployedModel);
+                var reversedModel = ReverseModel(deployedModel, reverseHandlers);
 
                 // validate model
                 var reverseRegressionService = new ReverseValidationService();
+                
                 reverseRegressionService.DeployModel(new ReverseValidationModeHost
                 {
                     OriginalModel = deployedModel,
@@ -94,13 +107,27 @@ namespace SPMeta2.Reverse.Tests.Base
             }
         }
 
-        private ModelNode ReverseModel(ModelNode deployedModel)
+        private ModelNode ReverseModel(ModelNode deployedModel,
+            IEnumerable<Type> reverseHandlers)
         {
             ReverseResult reverseResut = null;
 
             WithCSOMContext(context =>
             {
                 var reverseService = new StandardCSOMReverseService();
+
+                if (reverseHandlers != null)
+                {
+                    reverseService.Handlers.Clear();
+
+                    foreach (var reverseHandler in reverseHandlers)
+                    {
+                        var reverseHandlerInstance = Activator.CreateInstance(reverseHandler)
+                            as CSOMReverseHandlerBase;
+
+                        reverseService.Handlers.Add(reverseHandlerInstance);
+                    }
+                }
 
                 if (deployedModel.Value.GetType() == typeof(FarmDefinition))
                 {

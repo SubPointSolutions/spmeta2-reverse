@@ -75,7 +75,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base
             def.Url = item.Url;
             def.IsExternal = item.IsExternal;
 
-            if (item is QuickLaunchNavigationNodeDefinition)
+            if (def is QuickLaunchNavigationNodeDefinition)
             {
                 return new QuickLaunchNavigationNodeModelNode
                 {
@@ -83,7 +83,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base
                     Value = def
                 };
             }
-            else if (item is TopNavigationNodeDefinition)
+            else if (def is TopNavigationNodeDefinition)
             {
                 return new TopNavigationNodeModelNode
                 {

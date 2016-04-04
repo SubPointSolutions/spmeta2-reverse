@@ -62,6 +62,7 @@
     <Compile Include="ReverseHandlers\Base\NavigationNodeDefinitionReverseHandlerBase.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\UserCustomActionReverseHandler.cs" />
     <Compile Include="ReverseHandlers\QuickLaunchNavigationNodeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\TopNavigationNodeDefinitionReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ListViewReverseHandler.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="ReverseHosts\SecurityRoleReverseHost.cs" />
     <Compile Include="ReverseHosts\SecurityGroupReverseHost.cs" />
     <Compile Include="ReverseHosts\ListReverseHost.cs" />
+    <Compile Include="ReverseHosts\UserCustomActionReverseHost.cs" />
     <Compile Include="ReverseHosts\WebReverseHost.cs" />
     <Compile Include="ReverseHosts\SiteReverseHost.cs" />
     <Compile Include="Services\CSOMReverseService.cs" />

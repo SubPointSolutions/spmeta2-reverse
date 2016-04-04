@@ -85,6 +85,7 @@
     <Compile Include="Base\ReverseTestBase.cs" />
     <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\TopNavigationNodeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\QuickLaunchNavigationNodeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ListViewDefinitionTests.cs" />
