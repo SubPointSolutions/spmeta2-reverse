@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\SPMeta2ReverseException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseHandlers\ReverseHandlerBase.cs" />
     <Compile Include="ReverseHosts\ReverseHostBase.cs" />

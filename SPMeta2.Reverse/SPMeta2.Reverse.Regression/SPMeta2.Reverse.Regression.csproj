@@ -55,6 +55,8 @@
     <Compile Include="Services\ReverseValidationService.cs" />
     <Compile Include="Validation\ContentTypeDefinitionValidator.cs" />
     <Compile Include="Validation\FeatureDefinitionValidator.cs" />
+    <Compile Include="Validation\TopNavigationNodeDefinitionValidator.cs" />
+    <Compile Include="Validation\QuickLaunchNavigationNodeDefinitionValidator.cs" />
     <Compile Include="Validation\ListViewDefinitionValidator.cs" />
     <Compile Include="Validation\ListDefinitionValidator.cs" />
     <Compile Include="Validation\SecurityRoleDefinitionValidator.cs" />
@@ -65,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPMeta2.Reverse\SPMeta2.Reverse.csproj">
+      <Project>{3AD69FA0-71A0-4849-AD5D-8C1049669607}</Project>
+      <Name>SPMeta2.Reverse</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -9,6 +9,7 @@ using SPMeta2.Exceptions;
 using SPMeta2.Extensions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
+using SPMeta2.Reverse.Exceptions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Utils;
@@ -63,7 +64,7 @@ namespace SPMeta2.Reverse.Regression.Services
                                     .First(n => ModelIdService.GetHashCode(n.Value) == originalDefinitionHash);
 
                 if (reversedNode == null)
-                    throw new SPMeta2Exception(
+                    throw new SPMeta2ReverseException(
                         string.Format("Cannot find node of type:[{0}] by hash:[{1}]. Original definition is:[{2}]",
                             originalDefinition.GetType(), originalDefinitionHash, originalDefinition));
 
