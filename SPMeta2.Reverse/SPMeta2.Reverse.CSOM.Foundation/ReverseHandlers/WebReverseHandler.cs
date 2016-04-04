@@ -78,6 +78,15 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             def.WebTemplate = item.WebTemplate;
 
+            if (item.Configuration > -1)
+            {
+                def.WebTemplate = string.Format("{0}#{1}",
+                    item.WebTemplate, item.Configuration);
+            }
+
+            // always web relative
+            def.Url = item.Url.Split('/').Last();
+
             return new WebModelNode
             {
                 Options = { RequireSelfProcessing = true },
