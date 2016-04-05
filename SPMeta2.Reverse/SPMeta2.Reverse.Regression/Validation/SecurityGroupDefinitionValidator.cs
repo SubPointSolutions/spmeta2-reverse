@@ -23,6 +23,15 @@ namespace SPMeta2.Reverse.Regression.Validation
             assert
                 .ShouldBeEqual(s => s.Name, r => r.Name)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
+
+                .SkipProperty(s => s.AllowMembersEditMembership, "")
+                .SkipProperty(s => s.AllowRequestToJoinLeave, "")
+                .SkipProperty(s => s.AutoAcceptRequestToJoinLeave, "")
+
+                .SkipProperty(s => s.DefaultUser, "")
+
+                .SkipProperty(s => s.Owner, "")
+                .SkipProperty(s => s.OnlyAllowMembersViewMembership, "")
                 ;
         }
     }
