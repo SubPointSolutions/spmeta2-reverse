@@ -78,6 +78,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var def = new FieldDefinition();
 
             def.Title = item.Title;
+            def.Description = item.Description;
+
             def.InternalName = item.InternalName;
             def.Id = item.Id;
 

@@ -70,6 +70,19 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             def.Name = item.Name;
             def.Description = item.Description;
 
+            var allPermissionNames = Enum.GetNames(typeof(PermissionKind));
+
+            foreach (var permissionName in allPermissionNames)
+            {
+                var permissionValue = (PermissionKind)Enum.Parse(typeof(PermissionKind), permissionName, true);
+
+                if (item.BasePermissions.Has(permissionValue))
+                {
+                    if (permissionValue != PermissionKind.EmptyMask)
+                        def.BasePermissions.Add(permissionName);
+                }
+            }
+
             return new SecurityRoleModelNode
             {
                 Options = { RequireSelfProcessing = true },

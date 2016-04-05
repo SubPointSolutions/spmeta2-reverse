@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Utils;
+using SPMeta2.Containers.Assertion;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -23,7 +24,31 @@ namespace SPMeta2.Reverse.Regression.Validation
             assert
                 .ShouldBeEqual(s => s.Name, r => r.Name)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
-                ;
+                .ShouldBeEqual((p, s, d) =>
+                {
+                    var isValid = true;
+
+                    var srcProp = s.GetExpressionValue(o => o.BasePermissions);
+                    var dstProp = d.GetExpressionValue(o => o.BasePermissions);
+
+                    foreach (var sourcePermission in s.BasePermissions)
+                    {
+                        if (!d.BasePermissions.Contains(sourcePermission))
+                        {
+                            isValid = false;
+                            break;
+                        }
+                    }
+
+                    return new PropertyValidationResult
+                    {
+                        Tag = p.Tag,
+                        Src = srcProp,
+                        Dst = dstProp,
+                        IsValid = isValid
+                    };
+                });
+            ;
         }
     }
 }

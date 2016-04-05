@@ -23,6 +23,11 @@ namespace SPMeta2.Reverse.Regression.Validation
             assert
                 .ShouldBeEqual(s => s.Title, r => r.Title)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
+                .ShouldBeEqual(s => s.InternalName, r => r.InternalName)
+                .ShouldBeEqual(s => s.FieldType, r => r.FieldType)
+                .ShouldBeEqual(s => s.DefaultValue, r => r.DefaultValue)
+                .ShouldBeEqual(s => s.Required, r => r.Required)
+                .ShouldBeEqual(s => s.Group, r => r.Group)
                 .ShouldBeEqual(s => s.Id, r => r.Id);
         }
     }
