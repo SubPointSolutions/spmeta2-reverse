@@ -32,12 +32,21 @@ namespace SPMeta2.Reverse.Regression.Validation
 
                 .ShouldBeEqual(s => s.Sequence, r => r.Sequence)
                 .ShouldBeEqual(s => s.Url, r => r.Url)
-                
+
                 .ShouldBeEqual(s => s.RegistrationId, r => r.RegistrationId)
                 .ShouldBeEqual(s => s.RegistrationType, r => r.RegistrationType)
 
                 .ShouldBeEqual(s => s.Description, r => r.Description)
-                .ShouldBeEqual(s => s.Group, r => r.Group);
+                .ShouldBeEqual(s => s.Group, r => r.Group)
+
+                .SkipProperty(s => s.TitleResource, "")
+                .SkipProperty(s => s.DescriptionResource, "")
+                .SkipProperty(s => s.CommandUIExtensionResource, "")
+
+                .SkipProperty(s => s.CommandUIExtension, "")
+
+                .SkipProperty(s => s.Rights, "")
+                ;
 
         }
     }

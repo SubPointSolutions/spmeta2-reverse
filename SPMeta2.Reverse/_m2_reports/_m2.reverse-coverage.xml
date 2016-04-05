@@ -1,70 +1,127 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ReverseCoverageResult>
-    <Model xsi:type="SecurityGroupDefinition">
+    <Model xsi:type="UserCustomActionDefinition">
       <PropertyBag />
-      <Name>c95842d6ebc74cddb8d7d105d865e273</Name>
-      <Description>84b12d650c764b13a9a49c669a549431</Description>
-      <Owner>support@subpointsolutions.com</Owner>
-      <DefaultUser>support@subpointsolutions.com</DefaultUser>
-      <OnlyAllowMembersViewMembership>true</OnlyAllowMembersViewMembership>
-      <IsAssociatedVisitorsGroup>false</IsAssociatedVisitorsGroup>
-      <IsAssociatedMemberGroup>false</IsAssociatedMemberGroup>
-      <IsAssociatedOwnerGroup>false</IsAssociatedOwnerGroup>
-      <AllowMembersEditMembership xsi:nil="true" />
-      <AllowRequestToJoinLeave>true</AllowRequestToJoinLeave>
-      <AutoAcceptRequestToJoinLeave xsi:nil="true" />
+      <Name>fef5840e42eb49beb867c5634ed19ddb</Name>
+      <TitleResource />
+      <Description>31ee5ae89fe34c6d8e76ca56b56ca5e7</Description>
+      <DescriptionResource />
+      <Group>d4949547a0484b8cb190d6bea7554be0</Group>
+      <Location>ScriptLink</Location>
+      <ScriptSrc>~site/style library/spmeta2.js</ScriptSrc>
+      <Sequence>78</Sequence>
+      <Rights />
+      <RegistrationType>None</RegistrationType>
+      <CommandUIExtensionResource />
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.SecurityGroupDefinition</ModelFullClassName>
-    <ModelShortClassName>SecurityGroupDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.UserCustomActionDefinition</ModelFullClassName>
+    <ModelShortClassName>UserCustomActionDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>c95842d6ebc74cddb8d7d105d865e273</SrcPropertyValue>
+        <SrcPropertyValue>fef5840e42eb49beb867c5634ed19ddb</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>c95842d6ebc74cddb8d7d105d865e273</DstPropertyValue>
+        <DstPropertyValue>fef5840e42eb49beb867c5634ed19ddb</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>84b12d650c764b13a9a49c669a549431</SrcPropertyValue>
+        <SrcPropertyValue />
+        <SrcPropertyName>Title</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Title</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>ScriptBlock</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>ScriptBlock</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>~site/style library/spmeta2.js</SrcPropertyValue>
+        <SrcPropertyName>ScriptSrc</SrcPropertyName>
+        <DstPropertyValue>~site/style library/spmeta2.js</DstPropertyValue>
+        <DstPropertyName>ScriptSrc</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>ScriptLink</SrcPropertyValue>
+        <SrcPropertyName>Location</SrcPropertyName>
+        <DstPropertyValue>ScriptLink</DstPropertyValue>
+        <DstPropertyName>Location</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>78</SrcPropertyValue>
+        <SrcPropertyName>Sequence</SrcPropertyName>
+        <DstPropertyValue>78</DstPropertyValue>
+        <DstPropertyName>Sequence</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Url</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Url</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>RegistrationId</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>RegistrationId</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>None</SrcPropertyValue>
+        <SrcPropertyName>RegistrationType</SrcPropertyName>
+        <DstPropertyValue>None</DstPropertyValue>
+        <DstPropertyName>RegistrationType</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>31ee5ae89fe34c6d8e76ca56b56ca5e7</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>84b12d650c764b13a9a49c669a549431</DstPropertyValue>
+        <DstPropertyValue>31ee5ae89fe34c6d8e76ca56b56ca5e7</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>d4949547a0484b8cb190d6bea7554be0</SrcPropertyValue>
+        <SrcPropertyName>Group</SrcPropertyName>
+        <DstPropertyValue>d4949547a0484b8cb190d6bea7554be0</DstPropertyValue>
+        <DstPropertyName>Group</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>TitleResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>DescriptionResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>CommandUIExtensionResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
         <SrcPropertyValue />
-        <SrcPropertyName>AllowMembersEditMembership</SrcPropertyName>
+        <SrcPropertyName>CommandUIExtension</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message />
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>AllowRequestToJoinLeave</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>AutoAcceptRequestToJoinLeave</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>support@subpointsolutions.com</SrcPropertyValue>
-        <SrcPropertyName>DefaultUser</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>support@subpointsolutions.com</SrcPropertyValue>
-        <SrcPropertyName>Owner</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>OnlyAllowMembersViewMembership</SrcPropertyName>
+        <SrcPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</SrcPropertyValue>
+        <SrcPropertyName>Rights</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message />
       </ReverseCoveragePropertyResult>
