@@ -138,7 +138,7 @@ namespace SPMeta2.Reverse.Tests.Base
 
             foreach (var result in uniqueResults.OrderBy(s => s.ModelShortClassName))
             {
-                report += string.Format("<h3>{0}</h3>", result.ModelShortClassName);
+                report += string.Format("<h4>{0}</h4>", result.ModelShortClassName);
 
                 report += "<table>";
 

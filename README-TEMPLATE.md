@@ -35,5 +35,5 @@ In case you have unexpected issues or keen to see new features please contact su
 
 * https://www.yammer.com/spmeta2feedback
 
-#### Current coverage support per definition
+### Current coverage support per definition
 [[COVERAGE-REPORT]]
