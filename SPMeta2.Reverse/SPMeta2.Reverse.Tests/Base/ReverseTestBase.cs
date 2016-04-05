@@ -131,6 +131,44 @@ namespace SPMeta2.Reverse.Tests.Base
             var xml = XmlSerializerUtils.SerializeToString(uniqueResults, types);
 
             System.IO.File.WriteAllText("../../../_m2_reports/_m2.reverse-coverage.xml", xml);
+
+            var report = string.Empty;
+
+            report += "<div class='m-reverse-report-cnt'>";
+
+            foreach (var result in uniqueResults.OrderBy(s => s.ModelShortClassName))
+            {
+                report += string.Format("<h3>{0}</h3>", result.ModelShortClassName);
+
+                report += "<table>";
+
+                report += "<thead>";
+                report += "<td>Property</td>";
+                report += "<td>Support</td>";
+                report += "<thead>";
+
+                report += "<tbody>";
+                foreach (var propResult in result.Properties)
+                {
+                    var propName = propResult.SrcPropertyName;
+
+                    // method calls, such as 's.Scope.ToString()	'
+                    if (propName.Contains("."))
+                        propName = propName.Split('.')[1];
+
+                    report += "<tr>";
+                    report += string.Format("<td>{0}</td>", propName);
+                    report += string.Format("<td>{0}</td>", propResult.IsValid);
+                    report += "</tr>";
+                }
+                report += "</tbody>";
+
+                report += "</table>";
+            }
+
+            report += "</div>";
+
+            System.IO.File.WriteAllText("../../../_m2_reports/_m2.reverse-coverage.html", report);
         }
 
         #endregion
