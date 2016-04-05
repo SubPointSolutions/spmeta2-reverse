@@ -11,10 +11,11 @@ using SPMeta2.Reverse.Services;
 using SPMeta2.Utils;
 using SPMeta2.Syntax.Default;
 using SPMeta2.ModelHosts;
+using FeatureDefinitionScope = SPMeta2.Definitions.FeatureDefinitionScope;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
-    public class FieldReverseHandler : CSOMReverseHandlerBase
+    public class FeatureReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
@@ -28,7 +29,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition)
+                    typeof(SiteDefinition),
+                    typeof(WebDefinition),
                 };
             }
         }
@@ -38,23 +40,31 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
-            var result = new List<FieldReverseHost>();
+            var result = new List<FeatureReverseHost>();
 
             var siteHost = parentHost as SiteReverseHost;
             var webHost = parentHost as WebReverseHost;
 
-            var site = siteHost.HostSite;
             var context = siteHost.HostClientContext;
 
-            FieldCollection items = null;
+            FeatureCollection items = null;
+
+            var isSiteLevel = false;
+            var isWebLevel = false;
 
             if (webHost != null)
             {
-                items = webHost.HostWeb.Fields;
+                items = webHost.HostWeb.Features;
+
+                isWebLevel = true;
+                isSiteLevel = false;
             }
-            else
+            else if (siteHost != null)
             {
-                items = siteHost.HostSite.RootWeb.Fields;
+                items = siteHost.HostSite.Features;
+
+                isWebLevel = false;
+                isSiteLevel = true;
             }
 
             context.Load(items);
@@ -62,9 +72,12 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             result.AddRange(items.ToArray().Select(i =>
             {
-                return ModelHostBase.Inherit<FieldReverseHost>(parentHost, h =>
+                return ModelHostBase.Inherit<FeatureReverseHost>(parentHost, h =>
                 {
-                    h.Field = i;
+                    h.Feature = i;
+
+                    h.IsSiteLevel = isSiteLevel;
+                    h.IsWebLevel = isWebLevel;
                 });
             }));
 
@@ -73,22 +86,25 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var item = (reverseHost as FieldReverseHost).Field;
+            var typedReverseHost = (reverseHost as FeatureReverseHost);
+            var item = typedReverseHost.Feature;
 
-            var def = new FieldDefinition();
+            var def = new FeatureDefinition();
 
-            def.Title = item.Title;
-            def.InternalName = item.InternalName;
-            def.Id = item.Id;
+            //def.Title = item.DefinitionId;
+            def.Id = item.DefinitionId;
 
-            def.FieldType = item.TypeAsString;
+            if (typedReverseHost.IsSiteLevel)
+                def.Scope = FeatureDefinitionScope.Site;
 
-            def.DefaultValue = item.DefaultValue;
+            if (typedReverseHost.IsWebLevel)
+                def.Scope = FeatureDefinitionScope.Web;
 
-            def.Required = item.Required;
-            def.Group = item.Group;
+            // TODO, hm... how to check if feature was enabled / disabled?
+            // seems there should be a list of 'known' features
+            // only by comparing it to the original collection we can make decision on enable / disable feature
 
-            return new FieldModelNode
+            return new FeatureModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def

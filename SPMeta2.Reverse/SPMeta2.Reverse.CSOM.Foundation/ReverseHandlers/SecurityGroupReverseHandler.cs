@@ -14,12 +14,12 @@ using SPMeta2.ModelHosts;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
-    public class WebReverseHandler : CSOMReverseHandlerBase
+    public class SecurityGroupReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(WebDefinition); }
+            get { return typeof(SecurityGroupDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -28,8 +28,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition),
-                    typeof(WebDefinition)
+                    typeof(SiteDefinition)
                 };
             }
         }
@@ -39,27 +38,23 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
-            var result = new List<WebReverseHost>();
+            var result = new List<SecurityGroupReverseHost>();
 
-            Web web = null;
+            var typedHost = parentHost.WithAssertAndCast<SiteReverseHost>("reverseHost", value => value.RequireNotNull());
 
-            if (parentHost is WebReverseHost)
-                web = (parentHost as WebReverseHost).HostWeb;
-            else if (parentHost is SiteReverseHost)
-                web = (parentHost as SiteReverseHost).HostWeb;
+            var site = typedHost.HostSite;
+            var context = typedHost.HostClientContext;
 
-            var context = (parentHost as CSOMReverseHostBase).HostClientContext;
-
-            var items = web.Webs;
+            var items = site.RootWeb.SiteGroups;
 
             context.Load(items);
             context.ExecuteQuery();
 
             result.AddRange(items.ToArray().Select(i =>
             {
-                return ModelHostBase.Inherit<WebReverseHost>(parentHost, h =>
+                return ModelHostBase.Inherit<SecurityGroupReverseHost>(parentHost, h =>
                 {
-                    h.HostWeb = i;
+                    h.HostGroup = i;
                 });
             }));
 
@@ -68,25 +63,14 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var item = (reverseHost as WebReverseHost).HostWeb;
+            var item = (reverseHost as SecurityGroupReverseHost).HostGroup;
 
-            var def = new WebDefinition();
+            var def = new SecurityGroupDefinition();
 
-            def.Title = item.Title;
+            def.Name = item.Title;
             def.Description = item.Description;
 
-            def.WebTemplate = item.WebTemplate;
-
-            if (item.Configuration > -1)
-            {
-                def.WebTemplate = string.Format("{0}#{1}",
-                    item.WebTemplate, item.Configuration);
-            }
-
-            // always web relative
-            def.Url = item.Url.Split('/').Last();
-
-            return new WebModelNode
+            return new SecurityGroupModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def

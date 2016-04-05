@@ -14,12 +14,12 @@ using SPMeta2.ModelHosts;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
-    public class WebReverseHandler : CSOMReverseHandlerBase
+    public class UserCustomActionReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(WebDefinition); }
+            get { return typeof(UserCustomActionDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -39,27 +39,36 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
-            var result = new List<WebReverseHost>();
+            var result = new List<UserCustomActionReverseHost>();
 
-            Web web = null;
+            var siteHost = parentHost as SiteReverseHost;
+            var webHost = parentHost as WebReverseHost;
 
-            if (parentHost is WebReverseHost)
-                web = (parentHost as WebReverseHost).HostWeb;
-            else if (parentHost is SiteReverseHost)
-                web = (parentHost as SiteReverseHost).HostWeb;
+            var site = siteHost.HostSite;
+            var web = siteHost.HostWeb;
 
-            var context = (parentHost as CSOMReverseHostBase).HostClientContext;
+            UserCustomActionCollection items = null;
 
-            var items = web.Webs;
+            if (webHost != null)
+            {
+                web = webHost.HostWeb;
+                items = web.UserCustomActions;
+            }
+            else if(siteHost != null)
+            {
+                items = site.UserCustomActions;
+            }
+
+            var context = siteHost.HostClientContext;
 
             context.Load(items);
             context.ExecuteQuery();
 
             result.AddRange(items.ToArray().Select(i =>
             {
-                return ModelHostBase.Inherit<WebReverseHost>(parentHost, h =>
+                return ModelHostBase.Inherit<UserCustomActionReverseHost>(parentHost, h =>
                 {
-                    h.HostWeb = i;
+                    h.HostUserCustomAction = i;
                 });
             }));
 
@@ -68,25 +77,28 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var item = (reverseHost as WebReverseHost).HostWeb;
+            var item = (reverseHost as UserCustomActionReverseHost).HostUserCustomAction;
 
-            var def = new WebDefinition();
+            var def = new UserCustomActionDefinition();
 
             def.Title = item.Title;
+            def.Name = item.Name;
             def.Description = item.Description;
 
-            def.WebTemplate = item.WebTemplate;
+            def.Group = item.Group;
 
-            if (item.Configuration > -1)
-            {
-                def.WebTemplate = string.Format("{0}#{1}",
-                    item.WebTemplate, item.Configuration);
-            }
+            def.ScriptSrc = item.ScriptSrc;
+            def.ScriptBlock = item.ScriptBlock;
 
-            // always web relative
-            def.Url = item.Url.Split('/').Last();
+            def.Location = item.Location;
+            def.Sequence = item.Sequence;
 
-            return new WebModelNode
+            def.Url = item.Url;
+
+            def.RegistrationId = item.RegistrationId;
+            def.RegistrationType = item.RegistrationType.ToString();
+
+            return new UserCustomActionModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def

@@ -11,15 +11,16 @@ using SPMeta2.Reverse.Services;
 using SPMeta2.Utils;
 using SPMeta2.Syntax.Default;
 using SPMeta2.ModelHosts;
+using System.Xml.Linq;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
-    public class WebReverseHandler : CSOMReverseHandlerBase
+    public class ListViewReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(WebDefinition); }
+            get { return typeof(ListViewDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -28,8 +29,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition),
-                    typeof(WebDefinition)
+                    typeof(ListDefinition)
                 };
             }
         }
@@ -39,27 +39,26 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
-            var result = new List<WebReverseHost>();
+            var result = new List<ListViewReverseHost>();
 
-            Web web = null;
+            var typedHost = parentHost.WithAssertAndCast<ListReverseHost>("reverseHost", value => value.RequireNotNull());
 
-            if (parentHost is WebReverseHost)
-                web = (parentHost as WebReverseHost).HostWeb;
-            else if (parentHost is SiteReverseHost)
-                web = (parentHost as SiteReverseHost).HostWeb;
+            var site = typedHost.HostSite;
+            var web = typedHost.HostWeb;
+            var list = typedHost.HostList;
 
-            var context = (parentHost as CSOMReverseHostBase).HostClientContext;
+            var context = typedHost.HostClientContext;
 
-            var items = web.Webs;
+            var items = list.Views;
 
             context.Load(items);
             context.ExecuteQuery();
 
             result.AddRange(items.ToArray().Select(i =>
             {
-                return ModelHostBase.Inherit<WebReverseHost>(parentHost, h =>
+                return ModelHostBase.Inherit<ListViewReverseHost>(parentHost, h =>
                 {
-                    h.HostWeb = i;
+                    h.HostListView = i;
                 });
             }));
 
@@ -68,25 +67,23 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var item = (reverseHost as WebReverseHost).HostWeb;
+            var list = (reverseHost as ListViewReverseHost).HostList;
+            var item = (reverseHost as ListViewReverseHost).HostListView;
 
-            var def = new WebDefinition();
+            var def = new ListViewDefinition();
+
+            var xmlDoc = XDocument.Parse(item.ListViewXml);
+            var url = xmlDoc.Descendants("View")
+                            .First()
+                            .Attribute("Url")
+                            .Value
+                            .Split('/')
+                            .LastOrDefault();
 
             def.Title = item.Title;
-            def.Description = item.Description;
+            def.Url = url;
 
-            def.WebTemplate = item.WebTemplate;
-
-            if (item.Configuration > -1)
-            {
-                def.WebTemplate = string.Format("{0}#{1}",
-                    item.WebTemplate, item.Configuration);
-            }
-
-            // always web relative
-            def.Url = item.Url.Split('/').Last();
-
-            return new WebModelNode
+            return new ListViewModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def

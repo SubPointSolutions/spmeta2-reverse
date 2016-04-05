@@ -11,42 +11,42 @@ using SPMeta2.Syntax.Default;
 namespace SPMeta2.Reverse.Tests.Impl.Definitions
 {
     [TestClass]
-    public class FieldDefinitionTests : ReverseTestBase
+    public class ContentTypeDefinitionTests : ReverseTestBase
     {
         #region tests
 
         [TestMethod]
-        [TestCategory("Fields")]
-        public void Can_Reverse_Site_Fields()
+        [TestCategory("ContentTypes")]
+        public void Can_Reverse_Site_ContentTypes()
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
-                site.AddRandomField();
-                site.AddRandomField();
+                site.AddRandomContentType();
+                site.AddRandomContentType();
             });
 
             DeployReverseAndTestModel(model, new[]
             {
                 typeof(SiteReverseHandler),
-                typeof(FieldReverseHandler),
+                typeof(ContentTypeReverseHandler),
             });
         }
 
         [TestMethod]
-        [TestCategory("Fields")]
-        public void Can_Reverse_Web_Fields()
+        [TestCategory("ContentTypes")]
+        public void Can_Reverse_Web_ContentTypes()
         {
-            var model = SPMeta2Model.NewWebModel(site =>
+            var model = SPMeta2Model.NewWebModel(web =>
             {
-                site.AddRandomField();
-                site.AddRandomField();
+                web.AddRandomContentType();
+                web.AddRandomContentType();
             });
 
             DeployReverseAndTestModel(model, new[]
             {
                 typeof(SiteReverseHandler),
-                 typeof(WebReverseHandler),
-                typeof(FieldReverseHandler),
+                typeof(WebReverseHandler),
+                typeof(ContentTypeReverseHandler),
             });
         }
 

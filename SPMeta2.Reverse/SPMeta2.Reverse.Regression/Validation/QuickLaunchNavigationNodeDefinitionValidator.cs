@@ -9,22 +9,21 @@ using SPMeta2.Utils;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
-    public class WebDefinitionValidator : TypedReverseDefinitionValidatorBase<WebDefinition>
+    public class QuickLaunchNavigationNodeDefinitionValidator : TypedReverseDefinitionValidatorBase<QuickLaunchNavigationNodeDefinition>
     {
         public override void DeployModel(object modelHost, DefinitionBase model)
         {
             var typedModelHost = modelHost.WithAssertAndCast<ReverseValidationModeHost>("modelHost", m => m.RequireNotNull());
 
-            var originalDefinition = typedModelHost.OriginalModel.Value.WithAssertAndCast<WebDefinition>("value", m => m.RequireNotNull());
-            var reversedDefinition = typedModelHost.ReversedModel.Value.WithAssertAndCast<WebDefinition>("value", m => m.RequireNotNull());
+            var originalDefinition = typedModelHost.OriginalModel.Value.WithAssertAndCast<QuickLaunchNavigationNodeDefinition>("value", m => m.RequireNotNull());
+            var reversedDefinition = typedModelHost.ReversedModel.Value.WithAssertAndCast<QuickLaunchNavigationNodeDefinition>("value", m => m.RequireNotNull());
 
             var assert = ServiceFactory.AssertService.NewAssert(originalDefinition, reversedDefinition);
 
             assert
                 .ShouldBeEqual(s => s.Title, r => r.Title)
-                .ShouldBeEqual(s => s.Description, r => r.Description)
-                .ShouldBeEqual(s => s.WebTemplate, r => r.WebTemplate)
-                .ShouldBeEqual(s => s.Url, r => r.Url);
+                .ShouldBeEqual(s => s.Url, r => r.Url)
+                .ShouldBeEqual(s => s.IsExternal, r => r.IsExternal);
         }
     }
 }

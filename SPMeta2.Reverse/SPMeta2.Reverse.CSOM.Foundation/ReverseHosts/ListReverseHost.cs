@@ -7,22 +7,26 @@ using Microsoft.SharePoint.Client;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHosts
 {
-    public class WebReverseHost : CSOMReverseHostBase
+    public class ListReverseHost : WebReverseHost
     {
         #region constructors
 
-        public WebReverseHost()
+        public ListReverseHost()
         {
 
         }
 
-        public WebReverseHost(ClientContext clientContext)
+        public ListReverseHost(ClientContext clientContext, List list)
+            : base(clientContext)
         {
             HostClientContext = clientContext;
-
-            HostWeb = clientContext.Web;
-            HostSite = clientContext.Site;
         }
+
+        #endregion
+
+        #region properties
+
+        public List HostList { get; set; }
 
         #endregion
 

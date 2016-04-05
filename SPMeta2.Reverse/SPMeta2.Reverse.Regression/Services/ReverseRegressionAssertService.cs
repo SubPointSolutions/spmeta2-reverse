@@ -1,44 +1,48 @@
-﻿using SPMeta2.Containers.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using SPMeta2.Containers.Assertion;
 using SPMeta2.Containers.Extensions;
+using SPMeta2.Containers.Services;
 using SPMeta2.Definitions;
 using SPMeta2.Models;
 
-namespace SPMeta2.Reverse.Tests.Services
+namespace SPMeta2.Reverse.Regression.Services
 {
+
+    public class ModelValidationResult
+    {
+        public ModelValidationResult()
+        {
+            Properties = new List<PropertyValidationResult>();
+        }
+
+        public DefinitionBase Model { get; set; }
+
+        public List<PropertyValidationResult> Properties { get; set; }
+    }
+
     public class ReverseRegressionAssertService : RegressionAssertService
     {
         #region classes
 
-        public class ModelValidationResult
-        {
-            public ModelValidationResult()
-            {
-                Properties = new List<PropertyValidationResult>();
-            }
-
-            public DefinitionBase Model { get; set; }
-            public List<PropertyValidationResult> Properties { get; set; }
-        }
 
         #endregion
 
         #region properties
 
-        private static List<ModelValidationResult> ModelValidations = new List<ModelValidationResult>();
+        public static List<ModelValidationResult> ModelValidations { get; set; }
 
         #endregion
 
         static ReverseRegressionAssertService()
         {
+            ModelValidations = new List<ModelValidationResult>();
+
             RegExcludedDefinitionTypes = new List<Type>();
+
 
             ShowOnlyFalseResults = false;
             EnablePropertyValidation = true;
@@ -81,7 +85,7 @@ namespace SPMeta2.Reverse.Tests.Services
             var hasMissedOrInvalidProps = false;
 
             var model = modelNode.Value;
-            Trace.WriteLine(string.Format("[INF]{2}MODEL CHECK [{0}] - ( {1} )", model.GetType(), model.ToString(), start));
+            Trace.WriteLine(string.Format("[INF] {2}MODEL CHECK [{0}] - ( {1} )", model.GetType(), model.ToString(), start));
 
             //if (model.RequireSelfProcessing || modelNode.Options.RequireSelfProcessing)
             if (modelNode.Options.RequireSelfProcessing)
@@ -143,11 +147,11 @@ namespace SPMeta2.Reverse.Tests.Services
 
                     }
 
-                    Trace.WriteLine(string.Format("[INF]{0}PROPERTY CHECK", start));
+                    Trace.WriteLine(string.Format("[INF] {0}PROPERTY CHECK", start));
 
                     if (EnablePropertyValidation)
                     {
-                        Trace.WriteLine(string.Format("[INF]{0}EnablePropertyValidation == true. Checking...", start));
+                        Trace.WriteLine(string.Format("[INF] {0}EnablePropertyValidation == true. Checking...", start));
 
                         foreach (var shouldBeValidatedProp in shouldBeValidatedProperties.OrderBy(p => p.Name))
                         {

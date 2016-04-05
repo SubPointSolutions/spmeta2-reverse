@@ -83,12 +83,19 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base\ReverseTestBase.cs" />
+    <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\TopNavigationNodeDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\QuickLaunchNavigationNodeDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\ListViewDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\SecurityRoleDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\SecurityGroupDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\ListDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\WebDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceFactory.cs" />
-    <Compile Include="Services\ReverseRegressionAssertService.cs" />
     <Compile Include="Services\VSAssertService.cs" />
   </ItemGroup>
   <ItemGroup>
