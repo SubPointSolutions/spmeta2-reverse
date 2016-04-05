@@ -28,7 +28,33 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.DefaultValue, r => r.DefaultValue)
                 .ShouldBeEqual(s => s.Required, r => r.Required)
                 .ShouldBeEqual(s => s.Group, r => r.Group)
-                .ShouldBeEqual(s => s.Id, r => r.Id);
+                .ShouldBeEqual(s => s.Id, r => r.Id)
+                .ShouldBeEqual(s => s.Hidden, r => r.Hidden)
+                
+                .ShouldBeEqual(s => s.StaticName, r => r.StaticName)
+                
+                .SkipProperty(s => s.TitleResource, "")
+                .SkipProperty(s => s.DescriptionResource, "")
+                
+                .SkipProperty(s => s.AddFieldOptions, "")
+                .SkipProperty(s => s.AdditionalAttributes, "")
+                .SkipProperty(s => s.AddToDefaultView, "")
+                .SkipProperty(s => s.AllowDeletion, "")
+                .SkipProperty(s => s.EnforceUniqueValues, "")
+                .SkipProperty(s => s.Indexed, "")
+                .SkipProperty(s => s.JSLink, "")
+                .SkipProperty(s => s.RawXml, "")
+
+                .SkipProperty(s => s.ShowInDisplayForm, "")
+                .SkipProperty(s => s.ShowInEditForm, "")
+                .SkipProperty(s => s.ShowInListSettings, "")
+                .SkipProperty(s => s.ShowInNewForm, "")
+                .SkipProperty(s => s.ShowInVersionHistory, "")
+                .SkipProperty(s => s.ShowInViewForms, "")
+
+                .SkipProperty(s => s.ValidationFormula, "")
+                .SkipProperty(s => s.ValidationMessage, "")
+                ;
         }
     }
 }

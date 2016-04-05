@@ -88,6 +88,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             def.DefaultValue = item.DefaultValue;
 
             def.Required = item.Required;
+            def.Hidden = item.Hidden;
+
             def.Group = item.Group;
 
             return new FieldModelNode
