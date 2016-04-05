@@ -169,6 +169,13 @@ namespace SPMeta2.Reverse.Tests.Base
             report += "</div>";
 
             System.IO.File.WriteAllText("../../../_m2_reports/_m2.reverse-coverage.html", report);
+
+            // updating readme
+            var readMeContent = System.IO.File.ReadAllText("../../../../README-TEMPLATE.md");
+            readMeContent = readMeContent.Replace("[[COVERAGE-REPORT]]", report);
+
+            System.IO.File.WriteAllText("../../../../README.md", readMeContent);
+
         }
 
         #endregion

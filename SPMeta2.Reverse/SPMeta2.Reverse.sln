@@ -26,6 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EC4E6D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_3rd party", "_3rd party", "{C1109EB9-33BE-4934-B48B-1C104183753C}"
 	ProjectSection(SolutionItems) = preProject
+		..\README-TEMPLATE.md = ..\README-TEMPLATE.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
