@@ -23,7 +23,11 @@ namespace SPMeta2.Reverse.Regression.Validation
             assert
                 .ShouldBeEqual(s => s.Title, r => r.Title)
                 .ShouldBeEqual(s => s.Url, r => r.Url)
-                .ShouldBeEqual(s => s.IsExternal, r => r.IsExternal);
+                .ShouldBeEqual(s => s.IsExternal, r => r.IsExternal)
+
+                .SkipProperty(s => s.TitleResource, "")
+                .SkipProperty(s => s.IsVisible, "")
+                ;
         }
     }
 }

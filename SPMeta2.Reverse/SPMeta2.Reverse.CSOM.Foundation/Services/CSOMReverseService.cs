@@ -116,8 +116,6 @@ namespace SPMeta2.Reverse.CSOM.Foundation.Services
 
         private void ReverseModel(ReverseContext context)
         {
-
-
             if (context.RootModelNode == null)
             {
                 Type rootTargetType = null;

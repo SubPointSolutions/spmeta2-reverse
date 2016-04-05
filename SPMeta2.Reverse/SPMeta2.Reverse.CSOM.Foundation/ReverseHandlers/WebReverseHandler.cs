@@ -16,6 +16,12 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
     public class WebReverseHandler : CSOMReverseHandlerBase
     {
+        #region static
+
+        public static bool UseRootWebOnly { get; set; }
+
+        #endregion
+
         #region properties
         public override Type ReverseType
         {
@@ -48,7 +54,19 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             else if (parentHost is SiteReverseHost)
                 web = (parentHost as SiteReverseHost).HostWeb;
 
+            var rootWeb = (parentHost as SiteReverseHost).HostSite.RootWeb;
             var context = (parentHost as CSOMReverseHostBase).HostClientContext;
+
+            
+            //if (!web.IsObjectPropertyInstantiated("ServerRelativeUrl"))
+            //{
+            //    context.Load(web, w => w.ServerRelativeUrl);
+            //    context.Load(rootWeb, w => w.ServerRelativeUrl);
+
+            //    context.ExecuteQuery();
+            //}
+
+            //var isRootWeb = web.ServerRelativeUrl == rootWeb.ServerRelativeUrl;
 
             var items = web.Webs;
 

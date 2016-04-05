@@ -68,11 +68,30 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
+            var web = (reverseHost as NavigationNodeReverseHost).HostWeb;
+
             var item = (reverseHost as NavigationNodeReverseHost).HostNavigationNode;
             var def = GetNavigationNodeDefinitionInstance();
 
             def.Title = item.Title;
-            def.Url = item.Url;
+
+            // should alway be web relative
+            if (!web.IsObjectPropertyInstantiated("ServerRelativeUrl"))
+            {
+                web.Context.Load(web, w => w.ServerRelativeUrl);
+                web.Context.ExecuteQuery();
+            }
+
+            var webServerRelativeUrl = web.ServerRelativeUrl;
+            var nodeServerRelativeUrl = item.Url;
+
+            // roort web / ?
+            if (webServerRelativeUrl.Length > 1)
+            {
+                nodeServerRelativeUrl = nodeServerRelativeUrl.Replace(webServerRelativeUrl, string.Empty);
+            }
+
+            def.Url = UrlUtility.RemoveStartingSlash(nodeServerRelativeUrl);
             def.IsExternal = item.IsExternal;
 
             if (def is QuickLaunchNavigationNodeDefinition)

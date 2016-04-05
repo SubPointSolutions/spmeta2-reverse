@@ -1,98 +1,36 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ReverseCoverageResult>
-    <Model xsi:type="UserCustomActionDefinition">
+    <Model xsi:type="TopNavigationNodeDefinition">
       <PropertyBag />
-      <Name>fef5840e42eb49beb867c5634ed19ddb</Name>
+      <Title>b4aa3c60067847d080983d5ab38c69e1</Title>
       <TitleResource />
-      <Description>31ee5ae89fe34c6d8e76ca56b56ca5e7</Description>
-      <DescriptionResource />
-      <Group>d4949547a0484b8cb190d6bea7554be0</Group>
-      <Location>ScriptLink</Location>
-      <ScriptSrc>~site/style library/spmeta2.js</ScriptSrc>
-      <Sequence>78</Sequence>
-      <Rights />
-      <RegistrationType>None</RegistrationType>
-      <CommandUIExtensionResource />
+      <Url>d3f7b905bd8c40efa2457bdfa2806c5b</Url>
+      <IsExternal>true</IsExternal>
+      <IsVisible>true</IsVisible>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.UserCustomActionDefinition</ModelFullClassName>
-    <ModelShortClassName>UserCustomActionDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.TopNavigationNodeDefinition</ModelFullClassName>
+    <ModelShortClassName>TopNavigationNodeDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>fef5840e42eb49beb867c5634ed19ddb</SrcPropertyValue>
-        <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>fef5840e42eb49beb867c5634ed19ddb</DstPropertyValue>
-        <DstPropertyName>Name</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
+        <SrcPropertyValue>b4aa3c60067847d080983d5ab38c69e1</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue />
+        <DstPropertyValue>b4aa3c60067847d080983d5ab38c69e1</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ScriptBlock</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>ScriptBlock</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>~site/style library/spmeta2.js</SrcPropertyValue>
-        <SrcPropertyName>ScriptSrc</SrcPropertyName>
-        <DstPropertyValue>~site/style library/spmeta2.js</DstPropertyValue>
-        <DstPropertyName>ScriptSrc</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>ScriptLink</SrcPropertyValue>
-        <SrcPropertyName>Location</SrcPropertyName>
-        <DstPropertyValue>ScriptLink</DstPropertyValue>
-        <DstPropertyName>Location</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>78</SrcPropertyValue>
-        <SrcPropertyName>Sequence</SrcPropertyName>
-        <DstPropertyValue>78</DstPropertyValue>
-        <DstPropertyName>Sequence</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
+        <SrcPropertyValue>d3f7b905bd8c40efa2457bdfa2806c5b</SrcPropertyValue>
         <SrcPropertyName>Url</SrcPropertyName>
-        <DstPropertyValue />
+        <DstPropertyValue>d3f7b905bd8c40efa2457bdfa2806c5b</DstPropertyValue>
         <DstPropertyName>Url</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>RegistrationId</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>RegistrationId</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>None</SrcPropertyValue>
-        <SrcPropertyName>RegistrationType</SrcPropertyName>
-        <DstPropertyValue>None</DstPropertyValue>
-        <DstPropertyName>RegistrationType</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>31ee5ae89fe34c6d8e76ca56b56ca5e7</SrcPropertyValue>
-        <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>31ee5ae89fe34c6d8e76ca56b56ca5e7</DstPropertyValue>
-        <DstPropertyName>Description</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>d4949547a0484b8cb190d6bea7554be0</SrcPropertyValue>
-        <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>d4949547a0484b8cb190d6bea7554be0</DstPropertyValue>
-        <DstPropertyName>Group</DstPropertyName>
+        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyName>IsExternal</SrcPropertyName>
+        <DstPropertyValue>True</DstPropertyValue>
+        <DstPropertyName>IsExternal</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
@@ -102,26 +40,8 @@
         <Message />
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>DescriptionResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>CommandUIExtensionResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>CommandUIExtension</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</SrcPropertyValue>
-        <SrcPropertyName>Rights</SrcPropertyName>
+        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyName>IsVisible</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message />
       </ReverseCoveragePropertyResult>
