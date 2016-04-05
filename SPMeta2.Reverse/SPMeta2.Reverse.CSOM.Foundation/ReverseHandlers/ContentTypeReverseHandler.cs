@@ -90,6 +90,12 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var def = new ContentTypeDefinition();
 
             def.Name = item.Name;
+            def.Hidden = item.Hidden;
+            def.Group = item.Group;
+
+            def.ReadOnly = item.ReadOnly;
+            def.Sealed = item.Sealed;
+
             def.Description = item.Description;
 
             var id = ExtractContentTypeIdAsGuid(item);
@@ -97,7 +103,9 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             if (id.HasValue)
             {
                 def.Id = id.Value;
-                def.ParentContentTypeId = item.StringId.Substring(item.StringId.Length - 32, 32);
+
+                // 32 - GUID + 2 as '00' glue
+                def.ParentContentTypeId = item.StringId.Substring(0, item.StringId.Length - 34);
             }
 
             def.Group = item.Group;

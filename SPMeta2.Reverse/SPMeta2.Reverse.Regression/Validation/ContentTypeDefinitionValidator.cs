@@ -25,7 +25,36 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Name, r => r.Name)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
                 .ShouldBeEqual(s => s.Group, r => r.Group)
-                .ShouldBeEqual(s => s.GetContentTypeId(), r => r.GetContentTypeId());
+
+                .ShouldBeEqual(s => s.Hidden, r => r.Hidden)
+
+                .ShouldBeEqual(s => s.Id, r => r.Id)
+                .ShouldBeEqual(s => s.ParentContentTypeId, r => r.ParentContentTypeId)
+
+                .SkipProperty(s => s.ParentContentTypeName, "Not implemented")
+                .SkipProperty(s => s.NameResource, "Not implemented")
+                .SkipProperty(s => s.DescriptionResource, "Not implemented")
+                .SkipProperty(s => s.DocumentTemplate, "Not implemented")
+                .SkipProperty(s => s.IdNumberValue, "Not implemented")
+                ;
+
+            if (originalDefinition.ReadOnly.HasValue)
+            {
+                assert.ShouldBeEqual(s => s.ReadOnly, r => r.ReadOnly);
+            }
+            else
+            {
+                assert.SkipProperty(s => s.ReadOnly, "Not implemented");
+            }
+
+            if (originalDefinition.Sealed.HasValue)
+            {
+                assert.ShouldBeEqual(s => s.Sealed, r => r.Sealed);
+            }
+            else
+            {
+                assert.SkipProperty(s => s.Sealed, "Not implemented");
+            }
         }
     }
 }

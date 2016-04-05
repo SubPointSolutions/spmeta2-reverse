@@ -174,8 +174,7 @@ namespace SPMeta2.Reverse.Tests.Base
             var readMeContent = System.IO.File.ReadAllText("../../../../README-TEMPLATE.md");
             readMeContent = readMeContent.Replace("[[COVERAGE-REPORT]]", report);
 
-            System.IO.File.WriteAllText("../../../../README.md", readMeContent);
-
+            //System.IO.File.WriteAllText("../../../../README.md", readMeContent);
         }
 
         #endregion

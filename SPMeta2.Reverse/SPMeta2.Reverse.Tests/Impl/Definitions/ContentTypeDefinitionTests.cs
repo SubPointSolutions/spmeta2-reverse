@@ -51,5 +51,11 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         }
 
         #endregion
+
+        #region content type types
+
+        // TODO, list/library/custom/hierarchy content types
+
+        #endregion
     }
 }
