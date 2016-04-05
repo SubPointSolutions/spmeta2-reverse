@@ -24,7 +24,19 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Title, r => r.Title)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
                 .ShouldBeEqual(s => s.WebTemplate, r => r.WebTemplate)
-                .ShouldBeEqual(s => s.Url, r => r.Url);
+                .ShouldBeEqual(s => s.Url, r => r.Url)
+
+                .SkipProperty(s => s.UseUniquePermission, "")
+                .SkipProperty(s => s.CustomWebTemplate, "")
+
+                .SkipProperty(s => s.AlternateCssUrl, "")
+                .SkipProperty(s => s.IndexedPropertyKeys, "")
+                .SkipProperty(s => s.SiteLogoUrl, "")
+                .SkipProperty(s => s.LCID, "")
+
+                .SkipProperty(s => s.TitleResource, "")
+                .SkipProperty(s => s.DescriptionResource, "")
+                ;
         }
     }
 }

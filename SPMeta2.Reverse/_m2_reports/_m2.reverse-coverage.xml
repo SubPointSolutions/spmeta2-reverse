@@ -1,106 +1,103 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ReverseCoverageResult>
-    <Model xsi:type="ContentTypeDefinition">
+    <Model xsi:type="WebDefinition">
       <PropertyBag />
-      <Id>767ee11c-369a-4e32-b174-ac3dce1c2841</Id>
-      <Name>eed36fa7954c451b80d2f2d49008aa7b</Name>
-      <NameResource />
-      <Description>26f01054d40548bfb1241a60225c8897</Description>
+      <Title>f9aae7f5c06f4d4789341c72dcafa56f</Title>
+      <TitleResource />
+      <Description>bb11d59c48f04f89809b8d0190bb1628</Description>
       <DescriptionResource />
-      <Group>c1b41e5558e949aa906e86f77d00abcf</Group>
-      <Hidden>false</Hidden>
-      <ParentContentTypeId>0x01</ParentContentTypeId>
-      <JSLink>6f5e5959502a4031a59ec5d5f502abce</JSLink>
-      <ReadOnly xsi:nil="true" />
-      <Sealed xsi:nil="true" />
+      <LCID>1033</LCID>
+      <UseUniquePermission>false</UseUniquePermission>
+      <ConvertIfThere>false</ConvertIfThere>
+      <Url>3f98cf87d5834972</Url>
+      <WebTemplate>STS#0</WebTemplate>
+      <IndexedPropertyKeys />
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.ContentTypeDefinition</ModelFullClassName>
-    <ModelShortClassName>ContentTypeDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.WebDefinition</ModelFullClassName>
+    <ModelShortClassName>WebDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>eed36fa7954c451b80d2f2d49008aa7b</SrcPropertyValue>
-        <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>eed36fa7954c451b80d2f2d49008aa7b</DstPropertyValue>
-        <DstPropertyName>Name</DstPropertyName>
+        <SrcPropertyValue>f9aae7f5c06f4d4789341c72dcafa56f</SrcPropertyValue>
+        <SrcPropertyName>Title</SrcPropertyName>
+        <DstPropertyValue>f9aae7f5c06f4d4789341c72dcafa56f</DstPropertyValue>
+        <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>26f01054d40548bfb1241a60225c8897</SrcPropertyValue>
+        <SrcPropertyValue>bb11d59c48f04f89809b8d0190bb1628</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>26f01054d40548bfb1241a60225c8897</DstPropertyValue>
+        <DstPropertyValue>bb11d59c48f04f89809b8d0190bb1628</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>c1b41e5558e949aa906e86f77d00abcf</SrcPropertyValue>
-        <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>c1b41e5558e949aa906e86f77d00abcf</DstPropertyValue>
-        <DstPropertyName>Group</DstPropertyName>
+        <SrcPropertyValue>STS#0</SrcPropertyValue>
+        <SrcPropertyName>WebTemplate</SrcPropertyName>
+        <DstPropertyValue>STS#0</DstPropertyValue>
+        <DstPropertyName>WebTemplate</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>3f98cf87d5834972</SrcPropertyValue>
+        <SrcPropertyName>Url</SrcPropertyName>
+        <DstPropertyValue>3f98cf87d5834972</DstPropertyValue>
+        <DstPropertyName>Url</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>Hidden</DstPropertyName>
+        <SrcPropertyName>UseUniquePermission</SrcPropertyName>
         <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>767ee11c-369a-4e32-b174-ac3dce1c2841</SrcPropertyValue>
-        <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>767ee11c-369a-4e32-b174-ac3dce1c2841</DstPropertyValue>
-        <DstPropertyName>Id</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>0x01</SrcPropertyValue>
-        <SrcPropertyName>ParentContentTypeId</SrcPropertyName>
-        <DstPropertyValue>0x01</DstPropertyValue>
-        <DstPropertyName>ParentContentTypeId</DstPropertyName>
-        <IsValid>true</IsValid>
+        <Message />
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue />
-        <SrcPropertyName>ParentContentTypeName</SrcPropertyName>
+        <SrcPropertyName>CustomWebTemplate</SrcPropertyName>
         <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>AlternateCssUrl</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>AlternateCssUrl</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.IndexedPropertyValue]</SrcPropertyValue>
+        <SrcPropertyName>IndexedPropertyKeys</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>SiteLogoUrl</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>1033</SrcPropertyValue>
+        <SrcPropertyName>LCID</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message />
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>NameResource</SrcPropertyName>
+        <SrcPropertyName>TitleResource</SrcPropertyName>
         <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
+        <Message />
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
         <SrcPropertyName>DescriptionResource</SrcPropertyName>
         <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>DocumentTemplate</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>IdNumberValue</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ReadOnly</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>Sealed</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented</Message>
+        <Message />
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>
