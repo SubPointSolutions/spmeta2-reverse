@@ -8,12 +8,58 @@ using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Tests.Base;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Enumerations;
+using Microsoft.SharePoint.Client;
 
 namespace SPMeta2.Reverse.Tests.Impl.Definitions
 {
     [TestClass]
     public class ListDefinitionTests : ReverseTestBase
     {
+        #region init
+
+        [TestInitialize]
+        public void InternalInit()
+        {
+            WithCSOMContext(context =>
+            {
+                var web = context.Web;
+
+                context.Load(web,
+                website => website.Webs,
+                website => website.Title);
+
+                context.ExecuteQuery();
+                for (int i = 0; i != web.Webs.Count; )
+                {
+                    DeleteAllSites(web.Webs[i]);
+                }
+            });
+        }
+
+        private static void DeleteAllSites(Web web)
+        {
+            var context = web.Context;
+
+            context.Load(web,
+                website => website.Webs,
+                website => website.Title
+            );
+
+            context.ExecuteQuery();
+
+            for (int i = 0; i != web.Webs.Count; )
+            {
+                DeleteAllSites(web.Webs[i]);
+            }
+
+            web.DeleteObject();
+            web.Update();
+
+            context.ExecuteQuery();
+        }
+
+        #endregion
+
         #region tests
 
         [TestMethod]

@@ -55,6 +55,7 @@
     <Compile Include="ReverseHosts\ReverseHostBase.cs" />
     <Compile Include="ReverseHosts\ReverseHostResolveContext.cs" />
     <Compile Include="Services\ReverseOptions.cs" />
+    <Compile Include="Services\ReverseOptionService.cs" />
     <Compile Include="Services\ReverseResult.cs" />
     <Compile Include="Services\ReverseServiceBase.cs" />
   </ItemGroup>
