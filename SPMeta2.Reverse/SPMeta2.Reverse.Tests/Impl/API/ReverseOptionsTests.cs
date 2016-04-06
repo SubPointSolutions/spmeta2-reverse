@@ -15,7 +15,22 @@ namespace SPMeta2.Reverse.Tests.API
         [TestMethod]
         [TestCategory("API.ReverseOptions")]
         [TestCategory("NET.Core")]
-        public void CanBuildReverseOptions()
+        public void CanBuildReverseDepthOptions()
+        {
+            var options = ReverseOptions.Default
+                                .AddFilterOption<FieldDefinition>(f => f.Title == "10")
+                                .AddFilterOption<WebDefinition>(f => f.Title == "10")
+                                
+                                .AddDepthOption<WebDefinition>(10);                               
+                                
+
+            Assert.AreEqual(3, options.Options.Count());
+        }
+
+        [TestMethod]
+        [TestCategory("API.ReverseOptions")]
+        [TestCategory("NET.Core")]
+        public void CanBuildReverseFilterOptions()
         {
             var options = ReverseOptions.Default
                                 .AddFilterOption<FieldDefinition>(f => f.Title == "10")
