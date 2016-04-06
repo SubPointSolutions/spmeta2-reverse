@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ReverseCoverageResult>
-    <Model xsi:type="TopNavigationNodeDefinition">
+    <Model xsi:type="FeatureDefinition">
       <PropertyBag />
-      <Title>b4aa3c60067847d080983d5ab38c69e1</Title>
-      <TitleResource />
-      <Url>d3f7b905bd8c40efa2457bdfa2806c5b</Url>
-      <IsExternal>true</IsExternal>
-      <IsVisible>true</IsVisible>
+      <Title>BasicWebParts</Title>
+      <Id>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</Id>
+      <ForceActivate>true</ForceActivate>
+      <Enable>true</Enable>
+      <Scope>Site</Scope>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.TopNavigationNodeDefinition</ModelFullClassName>
-    <ModelShortClassName>TopNavigationNodeDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.FeatureDefinition</ModelFullClassName>
+    <ModelShortClassName>FeatureDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>b4aa3c60067847d080983d5ab38c69e1</SrcPropertyValue>
-        <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>b4aa3c60067847d080983d5ab38c69e1</DstPropertyValue>
-        <DstPropertyName>Title</DstPropertyName>
+        <SrcPropertyValue>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</SrcPropertyValue>
+        <SrcPropertyName>Id</SrcPropertyName>
+        <DstPropertyValue>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</DstPropertyValue>
+        <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>d3f7b905bd8c40efa2457bdfa2806c5b</SrcPropertyValue>
-        <SrcPropertyName>Url</SrcPropertyName>
-        <DstPropertyValue>d3f7b905bd8c40efa2457bdfa2806c5b</DstPropertyValue>
-        <DstPropertyName>Url</DstPropertyName>
+        <SrcPropertyValue>Site</SrcPropertyValue>
+        <SrcPropertyName>s.Scope.ToString()</SrcPropertyName>
+        <DstPropertyValue>Site</DstPropertyValue>
+        <DstPropertyName>r.Scope.ToString()</DstPropertyName>
         <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>IsExternal</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
-        <DstPropertyName>IsExternal</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>TitleResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>IsVisible</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message />
+        <SrcPropertyName>Enable</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>Enable</DstPropertyName>
+        <IsValid>false</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>

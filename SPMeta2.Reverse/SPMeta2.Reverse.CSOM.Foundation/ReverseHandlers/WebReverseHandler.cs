@@ -57,7 +57,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var rootWeb = (parentHost as SiteReverseHost).HostSite.RootWeb;
             var context = (parentHost as CSOMReverseHostBase).HostClientContext;
 
-            
+
             //if (!web.IsObjectPropertyInstantiated("ServerRelativeUrl"))
             //{
             //    context.Load(web, w => w.ServerRelativeUrl);
@@ -67,6 +67,11 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             //}
 
             //var isRootWeb = web.ServerRelativeUrl == rootWeb.ServerRelativeUrl;
+
+            //if (UseRootWebOnly && isRootWeb)
+            //{
+            //    return new[] { parentHost };
+            //}
 
             var items = web.Webs;
 
@@ -89,6 +94,12 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var item = (reverseHost as WebReverseHost).HostWeb;
 
             var def = new WebDefinition();
+
+            if (!item.IsPropertyAvailable("Title"))
+            {
+                item.Context.Load(item);
+                item.Context.ExecuteQuery();
+            }
 
             def.Title = item.Title;
             def.Description = item.Description;

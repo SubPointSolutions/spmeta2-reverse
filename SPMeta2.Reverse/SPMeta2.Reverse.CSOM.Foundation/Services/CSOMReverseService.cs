@@ -129,6 +129,9 @@ namespace SPMeta2.Reverse.CSOM.Foundation.Services
                     rootTargetType = typeof(WebDefinition);
                 }
 
+                // TODO
+                // handle site, root web and web cases
+
                 var rootHandler = Handlers.First(h => h.ReverseType == rootTargetType);
 
                 var rootHost = rootHandler.ReverseHosts(context.ReverseHost, context.ReverseOptions).First();
