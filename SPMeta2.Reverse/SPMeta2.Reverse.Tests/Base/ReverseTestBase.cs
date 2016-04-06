@@ -32,36 +32,11 @@ using SPMeta2.Reverse.Regression;
 using SPMeta2.Containers.Assertion;
 using SPMeta2.Reverse.Regression.Consts;
 using System.IO;
+using System.Xml;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
-    [Serializable]
-    public class ReverseCoverageResult
-    {
-        public ReverseCoverageResult()
-        {
-            Properties = new List<ReverseCoveragePropertyResult>();
-        }
 
-        public DefinitionBase Model { get; set; }
-        public string ModelFullClassName { get; set; }
-        public string ModelShortClassName { get; set; }
-
-        public List<ReverseCoveragePropertyResult> Properties { get; set; }
-    }
-
-    [Serializable]
-    public class ReverseCoveragePropertyResult
-    {
-        public string SrcPropertyValue { get; set; }
-        public string SrcPropertyName { get; set; }
-
-        public string DstPropertyValue { get; set; }
-        public string DstPropertyName { get; set; }
-
-        public bool IsValid { get; set; }
-        public string Message { get; set; }
-    }
 
     [TestClass]
     public class ReverseTestBase
@@ -116,149 +91,9 @@ namespace SPMeta2.Reverse.Tests.Base
 
         private static void OnReversePropertyValidated(object sender, OnPropertyValidatedEventArgs e)
         {
-            // huge TODO :)
-            var reportsFolder = "../../../SPMeta2.Reverse.Tests/_coverage_reports";
-            var readMeFolder = "../../../..";
-
-            var validationResults = ReverseRegressionAssertService.ModelValidations;
-            var uniqueResults = new List<ReverseCoverageResult>();
-
-            foreach (var result in validationResults)
-            {
-                if (!uniqueResults.Any(r => r.Model.GetType() == result.Model.GetType()))
-                {
-                    var newResult = new ReverseCoverageResult();
-
-                    newResult.Model = result.Model;
-
-                    newResult.ModelFullClassName = result.Model.GetType().FullName;
-                    newResult.ModelShortClassName = result.Model.GetType().Name;
-
-                    foreach (var propResult in result.Properties)
-                    {
-                        var newPropResult = new ReverseCoveragePropertyResult();
-
-                        if (propResult.Src != null)
-                        {
-                            newPropResult.SrcPropertyName = propResult.Src.Name;
-                            newPropResult.SrcPropertyValue = ConvertUtils.ToString(propResult.Src.Value);
-                        }
-
-                        if (propResult.Dst != null)
-                        {
-                            newPropResult.DstPropertyName = propResult.Dst.Name;
-                            newPropResult.DstPropertyValue = ConvertUtils.ToString(propResult.Dst.Value);
-                        }
-
-                        newPropResult.IsValid = propResult.IsValid;
-                        newPropResult.Message = propResult.Message;
-
-                        newResult.Properties.Add(newPropResult);
-                    }
-
-                    uniqueResults.Add(newResult);
-                }
-            }
-
-            uniqueResults = uniqueResults.OrderBy(r => r.Model.GetType().Name)
-                                         .ToList();
-
-            var types = uniqueResults.Select(r => r.Model.GetType()).ToList();
-
-            types.AddRange(uniqueResults.Select(r => r.Model.GetType()).ToList());
-
-            types.Add(typeof(ModelValidationResult));
-            types.Add(typeof(PropertyValidationResult));
-
-            var xml = XmlSerializerUtils.SerializeToString(uniqueResults, types);
-            System.IO.File.WriteAllText(reportsFolder + "/_m2.reverse-coverage.xml", xml);
-
-            // save all reports for caching purposes
-            foreach (var result in uniqueResults.OrderBy(s => s.ModelShortClassName))
-            {
-                var definitionName = result.ModelShortClassName;
-                var fileName = string.Format("_m2.{0}.def-coverage.html", definitionName);
-
-                var reportContent = GenerateDefinitionCoverateTable(result);
-                System.IO.File.WriteAllText(reportsFolder + "/" + fileName, reportContent);
-            }
-
-            // generae the full report
-            var report = string.Empty;
-            report += "<div class='m-reverse-report-cnt'>";
-
-            var files = Directory.GetFiles(reportsFolder, "*.def-coverage.html")
-                                 .OrderBy(f => f);
-
-            foreach (var file in files)
-            {
-                report += System.IO.File.ReadAllText(file);
-            }
-
-            report += "</div>";
-
-            System.IO.File.WriteAllText(reportsFolder + "/_m2.reverse-coverage.html", report);
-
-            // updating readme
-            var readMeContent = System.IO.File.ReadAllText(readMeFolder + "/README-TEMPLATE.md");
-            readMeContent = readMeContent.Replace("[[COVERAGE-REPORT]]", report);
-
-            System.IO.File.WriteAllText(readMeFolder + "/README.md", readMeContent);
-        }
-
-        private static string GenerateDefinitionCoverateTable(ReverseCoverageResult result)
-        {
-            var report = string.Empty;
-
-            report += string.Format("<h4>{0}</h4>", result.ModelShortClassName);
-
-            report += "<table>";
-
-            report += "<thead>";
-            report += "<td>Property</td>";
-            report += "<td>Support</td>";
-            report += "<td>Comments</td>";
-            report += "<thead>";
-
-            report += "<tbody>";
-
-            foreach (var propResult in result.Properties.OrderBy(p =>
-            {
-                var localPropName = p.SrcPropertyName;
-
-                if (localPropName.Contains("."))
-                    localPropName = localPropName.Split('.')[1];
-
-                return localPropName;
-            }))
-            {
-                var propName = propResult.SrcPropertyName;
-
-                // method calls, such as 's.Scope.ToString()	'
-                if (propName.Contains("."))
-                    propName = propName.Split('.')[1];
-
-                report += "<tr>";
-                report += string.Format("<td>{0}</td>", propName);
-
-                if (propResult.Message == SkipMessages.NotImplemented)
-                {
-                    report += string.Format("<td>{0}</td>", false);
-                    report += string.Format("<td>{0}</td>", propResult.Message);
-                }
-                else
-                {
-                    report += string.Format("<td>{0}</td>", propResult.IsValid);
-                    report += string.Format("<td>{0}</td>", propResult.Message);
-                }
-
-                report += "</tr>";
-            }
-            report += "</tbody>";
-
-            report += "</table>";
-
-            return report;
+            var reportService = new DefaultCoverageReportService();
+            
+            reportService.RegenerateReports(ReverseRegressionAssertService.ModelValidations);
         }
 
         #endregion

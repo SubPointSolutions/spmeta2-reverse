@@ -68,6 +68,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -97,6 +99,7 @@
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
     <Compile Include="Impl\Services\ReverseOptionServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DefaultCoverageReportService.cs" />
     <Compile Include="Services\VSAssertService.cs" />
   </ItemGroup>
   <ItemGroup>
