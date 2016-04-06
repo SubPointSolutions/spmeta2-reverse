@@ -18,8 +18,8 @@ namespace SPMeta2.Reverse.Tests.API
         public void CanBuildReverseOptions()
         {
             var options = ReverseOptions.Default
-                                .AddOption<FieldDefinition>(f => f.Title == "10")
-                                .AddOption<WebDefinition>(f => f.Title == "10");
+                                .AddFilterOption<FieldDefinition>(f => f.Title == "10")
+                                .AddFilterOption<WebDefinition>(f => f.Title == "10");
 
             Assert.AreEqual(2, options.Options.Count());
         }
@@ -32,12 +32,12 @@ namespace SPMeta2.Reverse.Tests.API
             // still should be 2 - perunique definition
             var options = ReverseOptions.Default
 
-                                .AddOption<FieldDefinition>(f => f.Title == "10")
-                                .AddOption<FieldDefinition>(f => f.Title == "10")
-                                .AddOption<FieldDefinition>(f => f.Title == "10")
+                                .AddFilterOption<FieldDefinition>(f => f.Title == "10")
+                                .AddFilterOption<FieldDefinition>(f => f.Title == "10")
+                                .AddFilterOption<FieldDefinition>(f => f.Title == "10")
 
-                                .AddOption<WebDefinition>(f => f.Title == "10")
-                                .AddOption<WebDefinition>(f => f.Title == "10");
+                                .AddFilterOption<WebDefinition>(f => f.Title == "10")
+                                .AddFilterOption<WebDefinition>(f => f.Title == "10");
 
             Assert.AreEqual(2, options.Options.Count());
         }

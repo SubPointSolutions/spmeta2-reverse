@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace SPMeta2.Reverse.Services
 {
+
     public class ReverseFilter
     {
         public string PropertyName { get; set; }
         public string PropertyValue { get; set; }
         public string Operation { get; set; }
+
+        public int Depth { get; set; }
 
         public override string ToString()
         {

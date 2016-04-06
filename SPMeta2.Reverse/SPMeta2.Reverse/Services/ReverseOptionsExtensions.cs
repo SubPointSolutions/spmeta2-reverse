@@ -14,17 +14,21 @@ namespace SPMeta2.Reverse.Services
     /// </summary>
     public static class ReverseOptionsExtensions
     {
-        public static ReverseOptions AddOption<TDefinition>(
-            this ReverseOptions options, Expression<Func<TDefinition, bool>> filterExpression)
-            where TDefinition : DefinitionBase
+        #region core API
+
+        public static ReverseOptions AddFilterOption<TDefinition>(
+           this ReverseOptions options, Expression<Func<TDefinition, bool>> filterExpression)
+           where TDefinition : DefinitionBase
         {
             var definitionClassName = typeof(TDefinition).FullName;
             var existingOption = options.Options
-                                        .FirstOrDefault(o => o.DefinitionClassFullName == definitionClassName);
+                                        .FirstOrDefault(o =>
+                                            o.DefinitionClassFullName == definitionClassName
+                                            && o is ReverseFilterOption) as ReverseFilterOption;
 
             if (existingOption == null)
             {
-                existingOption = new ReverseOption();
+                existingOption = new ReverseFilterOption();
                 existingOption.DefinitionClassFullName = definitionClassName;
 
                 options.Options.Add(existingOption);
@@ -36,12 +40,37 @@ namespace SPMeta2.Reverse.Services
             return options;
         }
 
+        public static ReverseOptions AddDepthOption<TDefinition>(
+           this ReverseOptions options, int depth)
+           where TDefinition : DefinitionBase
+        {
+            var definitionClassName = typeof(TDefinition).FullName;
+            var existingOption = options.Options
+                                        .FirstOrDefault(o =>
+                                            o.DefinitionClassFullName == definitionClassName
+                                            && o is ReverseDepthOption) as ReverseDepthOption;
+
+            if (existingOption == null)
+            {
+                existingOption = new ReverseDepthOption();
+                existingOption.DefinitionClassFullName = definitionClassName;
+
+                options.Options.Add(existingOption);
+            }
+
+            existingOption.Depth = depth;
+
+            return options;
+        }
+
+        #endregion
+
         #region alternative syntax 1
 
         public static ReverseOptions WithWebs(
            this ReverseOptions options, Expression<Func<WebDefinition, bool>> filterExpression)
         {
-            options.AddOption<WebDefinition>(filterExpression);
+            options.AddFilterOption<WebDefinition>(filterExpression);
 
             return options;
         }
@@ -49,7 +78,7 @@ namespace SPMeta2.Reverse.Services
         public static ReverseOptions WithFields(
           this ReverseOptions options, Expression<Func<FieldDefinition, bool>> filterExpression)
         {
-            options.AddOption<FieldDefinition>(filterExpression);
+            options.AddFilterOption<FieldDefinition>(filterExpression);
 
             return options;
         }
@@ -57,7 +86,7 @@ namespace SPMeta2.Reverse.Services
         public static ReverseOptions WithContentTypes(
           this ReverseOptions options, Expression<Func<ContentTypeDefinition, bool>> filterExpression)
         {
-            options.AddOption<ContentTypeDefinition>(filterExpression);
+            options.AddFilterOption<ContentTypeDefinition>(filterExpression);
 
             return options;
         }
@@ -70,7 +99,7 @@ namespace SPMeta2.Reverse.Services
              this ReverseOptions options, Expression<Func<TDefinition, bool>> filterExpression)
              where TDefinition : DefinitionBase
         {
-            options.AddOption<TDefinition>(filterExpression);
+            options.AddFilterOption<TDefinition>(filterExpression);
 
             return options;
         }
