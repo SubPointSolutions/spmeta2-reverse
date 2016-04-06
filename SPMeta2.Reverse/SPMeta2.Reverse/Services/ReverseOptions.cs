@@ -12,7 +12,7 @@ namespace SPMeta2.Reverse.Services
 
         public ReverseOptions()
         {
-
+            Options = new List<ReverseOption>();
         }
 
         #endregion
@@ -27,6 +27,8 @@ namespace SPMeta2.Reverse.Services
         #endregion
 
         #region propeties
+
+        public List<ReverseOption> Options { get; set; }
 
         #endregion
 

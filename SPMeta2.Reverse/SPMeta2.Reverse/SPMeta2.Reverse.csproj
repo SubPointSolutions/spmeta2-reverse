@@ -54,8 +54,12 @@
     <Compile Include="ReverseHandlers\ReverseHandlerBase.cs" />
     <Compile Include="ReverseHosts\ReverseHostBase.cs" />
     <Compile Include="ReverseHosts\ReverseHostResolveContext.cs" />
+    <Compile Include="Services\ReverseFilter.cs" />
+    <Compile Include="Services\ReverseFilterOperation.cs" />
+    <Compile Include="Services\ReverseOption.cs" />
     <Compile Include="Services\ReverseOptions.cs" />
     <Compile Include="Services\ReverseOptionService.cs" />
+    <Compile Include="Services\ReverseOptionsExtensions.cs" />
     <Compile Include="Services\ReverseResult.cs" />
     <Compile Include="Services\ReverseServiceBase.cs" />
   </ItemGroup>
