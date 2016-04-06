@@ -20,42 +20,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         [TestInitialize]
         public void InternalInit()
         {
-            WithCSOMContext(context =>
-            {
-                var web = context.Web;
-
-                context.Load(web,
-                website => website.Webs,
-                website => website.Title);
-
-                context.ExecuteQuery();
-                for (int i = 0; i != web.Webs.Count; )
-                {
-                    DeleteAllSites(web.Webs[i]);
-                }
-            });
-        }
-
-        private static void DeleteAllSites(Web web)
-        {
-            var context = web.Context;
-
-            context.Load(web,
-                website => website.Webs,
-                website => website.Title
-            );
-
-            context.ExecuteQuery();
-
-            for (int i = 0; i != web.Webs.Count; )
-            {
-                DeleteAllSites(web.Webs[i]);
-            }
-
-            web.DeleteObject();
-            web.Update();
-
-            context.ExecuteQuery();
+            WithCSOMContext(context => DeleteAllSubWebs(context.Site.RootWeb));
         }
 
         #endregion

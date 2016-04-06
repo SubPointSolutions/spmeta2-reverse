@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ReverseCoverageResult>
-    <Model xsi:type="FeatureDefinition">
+    <Model xsi:type="SecurityRoleDefinition">
       <PropertyBag />
-      <Title>BasicWebParts</Title>
-      <Id>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</Id>
-      <ForceActivate>true</ForceActivate>
-      <Enable>true</Enable>
-      <Scope>Site</Scope>
+      <Name>50281b5f1afb402bb57c46ef5a195ce2</Name>
+      <Description>055f74af22af414ab9d2d8f46e26e0a9</Description>
+      <BasePermissions>
+        <string>AddListItems</string>
+        <string>EditListItems</string>
+        <string>OpenItems</string>
+        <string>ManageLists</string>
+      </BasePermissions>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.FeatureDefinition</ModelFullClassName>
-    <ModelShortClassName>FeatureDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.SecurityRoleDefinition</ModelFullClassName>
+    <ModelShortClassName>SecurityRoleDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</SrcPropertyValue>
-        <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</DstPropertyValue>
-        <DstPropertyName>Id</DstPropertyName>
+        <SrcPropertyValue>50281b5f1afb402bb57c46ef5a195ce2</SrcPropertyValue>
+        <SrcPropertyName>Name</SrcPropertyName>
+        <DstPropertyValue>50281b5f1afb402bb57c46ef5a195ce2</DstPropertyValue>
+        <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Site</SrcPropertyValue>
-        <SrcPropertyName>s.Scope.ToString()</SrcPropertyName>
-        <DstPropertyValue>Site</DstPropertyValue>
-        <DstPropertyName>r.Scope.ToString()</DstPropertyName>
+        <SrcPropertyValue>055f74af22af414ab9d2d8f46e26e0a9</SrcPropertyValue>
+        <SrcPropertyName>Description</SrcPropertyName>
+        <DstPropertyValue>055f74af22af414ab9d2d8f46e26e0a9</DstPropertyValue>
+        <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>Enable</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>Enable</DstPropertyName>
-        <IsValid>false</IsValid>
+        <SrcPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</SrcPropertyValue>
+        <SrcPropertyName>BasePermissions</SrcPropertyName>
+        <DstPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</DstPropertyValue>
+        <DstPropertyName>BasePermissions</DstPropertyName>
+        <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>

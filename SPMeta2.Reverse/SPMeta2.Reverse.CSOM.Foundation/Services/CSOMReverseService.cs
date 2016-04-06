@@ -119,23 +119,30 @@ namespace SPMeta2.Reverse.CSOM.Foundation.Services
             if (context.RootModelNode == null)
             {
                 Type rootTargetType = null;
+                ModelNode modelNode = null;
+                ReverseHandlerBase rootHandler = null;
+
+                var rootHost = context.ReverseHost;
+
+                // manually reverse a single 'root' model node
+                // update RequireSelfProcessing to false 
 
                 if (context.ReverseHost.GetType() == typeof(SiteReverseHost))
                 {
                     rootTargetType = typeof(SiteDefinition);
+                    rootHandler = Handlers.First(h => h.ReverseType == rootTargetType);
+
+                    modelNode = rootHandler.ReverseSingleHost(rootHost, context.ReverseOptions);
+                    modelNode.Options.RequireSelfProcessing = false;
                 }
                 else if (context.ReverseHost.GetType() == typeof(WebReverseHost))
                 {
                     rootTargetType = typeof(WebDefinition);
+                    rootHandler = Handlers.First(h => h.ReverseType == rootTargetType);
+
+                    modelNode = rootHandler.ReverseSingleHost(rootHost, context.ReverseOptions);
+                    modelNode.Options.RequireSelfProcessing = false;
                 }
-
-                // TODO
-                // handle site, root web and web cases
-
-                var rootHandler = Handlers.First(h => h.ReverseType == rootTargetType);
-
-                var rootHost = rootHandler.ReverseHosts(context.ReverseHost, context.ReverseOptions).First();
-                var modelNode = rootHandler.ReverseSingleHost(rootHost, context.ReverseOptions);
 
                 context.RootModelNode = modelNode;
                 context.CurrentModelNode = modelNode;

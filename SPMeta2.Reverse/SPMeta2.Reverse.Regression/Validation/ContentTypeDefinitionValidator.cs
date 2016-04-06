@@ -7,6 +7,7 @@ using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -31,11 +32,11 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Id, r => r.Id)
                 .ShouldBeEqual(s => s.ParentContentTypeId, r => r.ParentContentTypeId)
 
-                .SkipProperty(s => s.ParentContentTypeName, "Not implemented")
-                .SkipProperty(s => s.NameResource, "Not implemented")
-                .SkipProperty(s => s.DescriptionResource, "Not implemented")
-                .SkipProperty(s => s.DocumentTemplate, "Not implemented")
-                .SkipProperty(s => s.IdNumberValue, "Not implemented")
+                .SkipProperty(s => s.ParentContentTypeName, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.NameResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DescriptionResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DocumentTemplate, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.IdNumberValue, SkipMessages.NotImplemented)
                 ;
 
             if (originalDefinition.ReadOnly.HasValue)
@@ -44,7 +45,7 @@ namespace SPMeta2.Reverse.Regression.Validation
             }
             else
             {
-                assert.SkipProperty(s => s.ReadOnly, "Not implemented");
+                assert.SkipProperty(s => s.ReadOnly, SkipMessages.NotImplemented);
             }
 
             if (originalDefinition.Sealed.HasValue)
@@ -53,7 +54,7 @@ namespace SPMeta2.Reverse.Regression.Validation
             }
             else
             {
-                assert.SkipProperty(s => s.Sealed, "Not implemented");
+                assert.SkipProperty(s => s.Sealed, SkipMessages.NotImplemented);
             }
         }
     }

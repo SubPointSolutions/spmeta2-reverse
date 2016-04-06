@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -26,16 +27,16 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.WebTemplate, r => r.WebTemplate)
                 .ShouldBeEqual(s => s.Url, r => r.Url)
 
-                .SkipProperty(s => s.UseUniquePermission, "")
-                .SkipProperty(s => s.CustomWebTemplate, "")
+                .SkipProperty(s => s.UseUniquePermission, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.CustomWebTemplate, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.AlternateCssUrl, "")
-                .SkipProperty(s => s.IndexedPropertyKeys, "")
-                .SkipProperty(s => s.SiteLogoUrl, "")
-                .SkipProperty(s => s.LCID, "")
+                .SkipProperty(s => s.AlternateCssUrl, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.IndexedPropertyKeys, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.SiteLogoUrl, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.LCID, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.TitleResource, "")
-                .SkipProperty(s => s.DescriptionResource, "")
+                .SkipProperty(s => s.TitleResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DescriptionResource, SkipMessages.NotImplemented)
                 ;
         }
     }

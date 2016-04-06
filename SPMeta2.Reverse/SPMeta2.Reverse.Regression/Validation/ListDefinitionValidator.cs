@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -31,8 +32,37 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.ContentTypesEnabled, r => r.ContentTypesEnabled)
 
                 .ShouldBeEqual(s => s.OnQuickLaunch, r => r.OnQuickLaunch)
+
+                .SkipProperty(s => s.TitleResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DescriptionResource, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.TemplateName, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DocumentTemplateUrl, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.DraftVersionVisibility, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.EnableAttachments, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.EnableFolderCreation, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.EnableMinorVersions, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.EnableModeration, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.EnableVersioning, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.ForceCheckout, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.IndexedRootFolderPropertyKeys, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.IrmEnabled, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.IrmExpire, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.IrmReject, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.MajorVersionLimit, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.MajorWithMinorVersionsLimit, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.NoCrawl, SkipMessages.NotImplemented)
+
+                .SkipProperty(s => s.Url, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.WriteSecurity, SkipMessages.NotImplemented)
                 ;
-                
+
         }
     }
 }

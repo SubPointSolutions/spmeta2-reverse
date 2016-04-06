@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -24,14 +25,14 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Name, r => r.Name)
                 .ShouldBeEqual(s => s.Description, r => r.Description)
 
-                .SkipProperty(s => s.AllowMembersEditMembership, "")
-                .SkipProperty(s => s.AllowRequestToJoinLeave, "")
-                .SkipProperty(s => s.AutoAcceptRequestToJoinLeave, "")
+                .SkipProperty(s => s.AllowMembersEditMembership, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.AllowRequestToJoinLeave, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.AutoAcceptRequestToJoinLeave, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.DefaultUser, "")
+                .SkipProperty(s => s.DefaultUser, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.Owner, "")
-                .SkipProperty(s => s.OnlyAllowMembersViewMembership, "")
+                .SkipProperty(s => s.Owner, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.OnlyAllowMembersViewMembership, SkipMessages.NotImplemented)
                 ;
         }
     }

@@ -7,6 +7,7 @@ using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -39,13 +40,13 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Description, r => r.Description)
                 .ShouldBeEqual(s => s.Group, r => r.Group)
 
-                .SkipProperty(s => s.TitleResource, "")
-                .SkipProperty(s => s.DescriptionResource, "")
-                .SkipProperty(s => s.CommandUIExtensionResource, "")
+                .SkipProperty(s => s.TitleResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DescriptionResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.CommandUIExtensionResource, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.CommandUIExtension, "")
+                .SkipProperty(s => s.CommandUIExtension, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.Rights, "")
+                .SkipProperty(s => s.Rights, SkipMessages.NotImplemented)
                 ;
 
         }

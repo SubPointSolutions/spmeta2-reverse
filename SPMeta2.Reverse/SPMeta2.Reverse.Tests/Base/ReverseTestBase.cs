@@ -30,6 +30,8 @@ using SPMeta2.Containers.Services.Rnd;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPMeta2.Reverse.Regression;
 using SPMeta2.Containers.Assertion;
+using SPMeta2.Reverse.Regression.Consts;
+using System.IO;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
@@ -66,6 +68,42 @@ namespace SPMeta2.Reverse.Tests.Base
     {
         #region static
 
+        protected static void DeleteAllSubWebs(Web web)
+        {
+            var context = web.Context;
+
+            context.Load(web,
+            website => website.Webs,
+            website => website.Title);
+
+            context.ExecuteQuery();
+            for (int i = 0; i != web.Webs.Count; )
+            {
+                DeleteAllWebs(web.Webs[i]);
+            }
+        }
+        private static void DeleteAllWebs(Web web)
+        {
+            var context = web.Context;
+
+            context.Load(web,
+                website => website.Webs,
+                website => website.Title
+            );
+
+            context.ExecuteQuery();
+
+            for (int i = 0; i != web.Webs.Count; )
+            {
+                DeleteAllWebs(web.Webs[i]);
+            }
+
+            web.DeleteObject();
+            web.Update();
+
+            context.ExecuteQuery();
+        }
+
         static ReverseTestBase()
         {
             GlobalInternalInit();
@@ -78,6 +116,10 @@ namespace SPMeta2.Reverse.Tests.Base
 
         private static void OnReversePropertyValidated(object sender, OnPropertyValidatedEventArgs e)
         {
+            // huge TODO :)
+            var reportsFolder = "../../../SPMeta2.Reverse.Tests/_coverage_reports";
+            var readMeFolder = "../../../..";
+
             var validationResults = ReverseRegressionAssertService.ModelValidations;
             var uniqueResults = new List<ReverseCoverageResult>();
 
@@ -129,52 +171,94 @@ namespace SPMeta2.Reverse.Tests.Base
             types.Add(typeof(PropertyValidationResult));
 
             var xml = XmlSerializerUtils.SerializeToString(uniqueResults, types);
+            System.IO.File.WriteAllText(reportsFolder + "/_m2.reverse-coverage.xml", xml);
 
-            System.IO.File.WriteAllText("../../../_m2_reports/_m2.reverse-coverage.xml", xml);
-
-            var report = string.Empty;
-
-            report += "<div class='m-reverse-report-cnt'>";
-
+            // save all reports for caching purposes
             foreach (var result in uniqueResults.OrderBy(s => s.ModelShortClassName))
             {
-                report += string.Format("<h4>{0}</h4>", result.ModelShortClassName);
+                var definitionName = result.ModelShortClassName;
+                var fileName = string.Format("_m2.{0}.def-coverage.html", definitionName);
 
-                report += "<table>";
+                var reportContent = GenerateDefinitionCoverateTable(result);
+                System.IO.File.WriteAllText(reportsFolder + "/" + fileName, reportContent);
+            }
 
-                report += "<thead>";
-                report += "<td>Property</td>";
-                report += "<td>Support</td>";
-                report += "<thead>";
+            // generae the full report
+            var report = string.Empty;
+            report += "<div class='m-reverse-report-cnt'>";
 
-                report += "<tbody>";
-                foreach (var propResult in result.Properties)
-                {
-                    var propName = propResult.SrcPropertyName;
+            var files = Directory.GetFiles(reportsFolder, "*.def-coverage.html")
+                                 .OrderBy(f => f);
 
-                    // method calls, such as 's.Scope.ToString()	'
-                    if (propName.Contains("."))
-                        propName = propName.Split('.')[1];
-
-                    report += "<tr>";
-                    report += string.Format("<td>{0}</td>", propName);
-                    report += string.Format("<td>{0}</td>", propResult.IsValid);
-                    report += "</tr>";
-                }
-                report += "</tbody>";
-
-                report += "</table>";
+            foreach (var file in files)
+            {
+                report += System.IO.File.ReadAllText(file);
             }
 
             report += "</div>";
 
-            System.IO.File.WriteAllText("../../../_m2_reports/_m2.reverse-coverage.html", report);
+            System.IO.File.WriteAllText(reportsFolder + "/_m2.reverse-coverage.html", report);
 
             // updating readme
-            var readMeContent = System.IO.File.ReadAllText("../../../../README-TEMPLATE.md");
+            var readMeContent = System.IO.File.ReadAllText(readMeFolder + "/README-TEMPLATE.md");
             readMeContent = readMeContent.Replace("[[COVERAGE-REPORT]]", report);
 
-            //System.IO.File.WriteAllText("../../../../README.md", readMeContent);
+            System.IO.File.WriteAllText(readMeFolder + "/README.md", readMeContent);
+        }
+
+        private static string GenerateDefinitionCoverateTable(ReverseCoverageResult result)
+        {
+            var report = string.Empty;
+
+            report += string.Format("<h4>{0}</h4>", result.ModelShortClassName);
+
+            report += "<table>";
+
+            report += "<thead>";
+            report += "<td>Property</td>";
+            report += "<td>Support</td>";
+            report += "<td>Comments</td>";
+            report += "<thead>";
+
+            report += "<tbody>";
+
+            foreach (var propResult in result.Properties.OrderBy(p =>
+            {
+                var localPropName = p.SrcPropertyName;
+
+                if (localPropName.Contains("."))
+                    localPropName = localPropName.Split('.')[1];
+
+                return localPropName;
+            }))
+            {
+                var propName = propResult.SrcPropertyName;
+
+                // method calls, such as 's.Scope.ToString()	'
+                if (propName.Contains("."))
+                    propName = propName.Split('.')[1];
+
+                report += "<tr>";
+                report += string.Format("<td>{0}</td>", propName);
+
+                if (propResult.Message == SkipMessages.NotImplemented)
+                {
+                    report += string.Format("<td>{0}</td>", false);
+                    report += string.Format("<td>{0}</td>", propResult.Message);
+                }
+                else
+                {
+                    report += string.Format("<td>{0}</td>", propResult.IsValid);
+                    report += string.Format("<td>{0}</td>", propResult.Message);
+                }
+
+                report += "</tr>";
+            }
+            report += "</tbody>";
+
+            report += "</table>";
+
+            return report;
         }
 
         #endregion

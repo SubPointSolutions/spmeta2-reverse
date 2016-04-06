@@ -14,6 +14,16 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
     [TestClass]
     public class ListViewDefinitionTests : ReverseTestBase
     {
+        #region init
+
+        [TestInitialize]
+        public void InternalInit()
+        {
+            WithCSOMContext(context => DeleteAllSubWebs(context.Site.RootWeb));
+        }
+
+        #endregion
+
         #region tests
 
         [TestMethod]
@@ -31,8 +41,20 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                     (list.Value as ListDefinition).Url = null;
                     (list.Value as ListDefinition).CustomUrl = Rnd.String();
 
-                    list.AddRandomListView();
-                    list.AddRandomListView();
+                    // only one out of two list views!
+                    var isDefault = Rnd.Bool();
+
+                    list.AddRandomListView(view =>
+                    {
+                        (view.Value as ListViewDefinition).Url = Rnd.String() + ".aspx";
+                        (view.Value as ListViewDefinition).IsDefault = isDefault;
+                    });
+
+                    list.AddRandomListView(view =>
+                    {
+                        (view.Value as ListViewDefinition).Url = Rnd.String() + ".aspx";
+                        (view.Value as ListViewDefinition).IsDefault = isDefault;
+                    });
                 });
             });
 

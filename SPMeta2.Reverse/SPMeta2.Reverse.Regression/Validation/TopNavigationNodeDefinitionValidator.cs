@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -25,8 +26,8 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Url, r => r.Url)
                 .ShouldBeEqual(s => s.IsExternal, r => r.IsExternal)
 
-                .SkipProperty(s => s.TitleResource, "")
-                .SkipProperty(s => s.IsVisible,"")
+                .SkipProperty(s => s.TitleResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.IsVisible,SkipMessages.NotImplemented)
                 ;
         }
     }

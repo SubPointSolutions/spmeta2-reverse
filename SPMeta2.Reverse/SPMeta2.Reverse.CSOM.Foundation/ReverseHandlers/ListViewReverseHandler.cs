@@ -70,18 +70,44 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             var list = (reverseHost as ListViewReverseHost).HostList;
             var item = (reverseHost as ListViewReverseHost).HostListView;
 
+            if (!item.IsPropertyAvailable("Fields"))
+            {
+                item.Context.Load(item);
+                item.Context.Load(item, i => i.ViewFields);
+
+                item.Context.ExecuteQuery();
+            }
+
             var def = new ListViewDefinition();
 
             var xmlDoc = XDocument.Parse(item.ListViewXml);
-            var url = xmlDoc.Descendants("View")
-                            .First()
-                            .Attribute("Url")
-                            .Value
-                            .Split('/')
-                            .LastOrDefault();
+            var viewXmlNode = xmlDoc.Descendants("View").First();
+
+            var url = viewXmlNode.Attribute("Url")
+                                  .Value
+                                  .Split('/')
+                                  .LastOrDefault();
 
             def.Title = item.Title;
             def.Url = url;
+
+
+
+            def.Hidden = item.Hidden;
+
+            def.IsDefault = item.DefaultView;
+            def.IsPaged = item.Paged;
+
+            def.Scope = item.Scope.ToString();
+
+            def.RowLimit = (int)item.RowLimit;
+            def.Query = item.ViewQuery;
+
+            def.Type = viewXmlNode.Attribute("Type").Value;
+
+            def.Fields = new System.Collections.ObjectModel.Collection<string>(
+                item.ViewFields.ToArray()
+                );
 
             return new ListViewModelNode
             {

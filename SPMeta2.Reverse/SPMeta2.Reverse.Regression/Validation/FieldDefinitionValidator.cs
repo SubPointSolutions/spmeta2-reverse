@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Utils;
+using SPMeta2.Reverse.Regression.Consts;
 
 namespace SPMeta2.Reverse.Regression.Validation
 {
@@ -33,27 +34,27 @@ namespace SPMeta2.Reverse.Regression.Validation
                 
                 .ShouldBeEqual(s => s.StaticName, r => r.StaticName)
                 
-                .SkipProperty(s => s.TitleResource, "")
-                .SkipProperty(s => s.DescriptionResource, "")
+                .SkipProperty(s => s.TitleResource, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.DescriptionResource, SkipMessages.NotImplemented)
                 
-                .SkipProperty(s => s.AddFieldOptions, "")
-                .SkipProperty(s => s.AdditionalAttributes, "")
-                .SkipProperty(s => s.AddToDefaultView, "")
-                .SkipProperty(s => s.AllowDeletion, "")
-                .SkipProperty(s => s.EnforceUniqueValues, "")
-                .SkipProperty(s => s.Indexed, "")
-                .SkipProperty(s => s.JSLink, "")
-                .SkipProperty(s => s.RawXml, "")
+                .SkipProperty(s => s.AddFieldOptions, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.AdditionalAttributes, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.AddToDefaultView, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.AllowDeletion, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.EnforceUniqueValues, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.Indexed, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.JSLink, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.RawXml, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.ShowInDisplayForm, "")
-                .SkipProperty(s => s.ShowInEditForm, "")
-                .SkipProperty(s => s.ShowInListSettings, "")
-                .SkipProperty(s => s.ShowInNewForm, "")
-                .SkipProperty(s => s.ShowInVersionHistory, "")
-                .SkipProperty(s => s.ShowInViewForms, "")
+                .SkipProperty(s => s.ShowInDisplayForm, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.ShowInEditForm, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.ShowInListSettings, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.ShowInNewForm, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.ShowInVersionHistory, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.ShowInViewForms, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.ValidationFormula, "")
-                .SkipProperty(s => s.ValidationMessage, "")
+                .SkipProperty(s => s.ValidationFormula, SkipMessages.NotImplemented)
+                .SkipProperty(s => s.ValidationMessage, SkipMessages.NotImplemented)
                 ;
         }
     }
