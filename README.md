@@ -4,7 +4,7 @@ A library to provide reverse engineering of the existing SharePoint sites into S
 ### Build status
 [![Build status](https://ci.appveyor.com/api/projects/status/73pbufcanckaxnqi?svg=true)](https://ci.appveyor.com/project/SubPointSupport/spmeta2-reverse)
 
-### SPMeta2.Reverse in details
+### SPMeta2.Reverse in details 
 
 SPMeta2.Reverse provides a simple API to generate SPMeta2 models from the existing SharePoint sites. 
 As easy as that. We are aiming to reverse engineer O365, SharePoint 2016/2013 web sites and generate a valid, redeployable SPMeta2 model.
