@@ -54,7 +54,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                     list.AddRandomListView(view =>
                     {
                         (view.Value as ListViewDefinition).Url = Rnd.String() + ".aspx";
-                        (view.Value as ListViewDefinition).IsDefault = isDefault;
+                        (view.Value as ListViewDefinition).IsDefault = !isDefault;
                     });
                 });
             });

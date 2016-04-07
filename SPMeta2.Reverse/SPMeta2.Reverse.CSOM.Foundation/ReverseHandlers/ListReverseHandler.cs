@@ -61,7 +61,48 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
                 );
             context.ExecuteQuery();
 
-            result.AddRange(items.ToArray().Select(i =>
+            var filteredItems = new List<List>();
+
+            var listOptions = options.Options.Where(o => o.DefinitionClassFullName == this.ReverseType.FullName
+                                                         && o is ReverseFilterOption)
+                .Select(s => s as ReverseFilterOption)
+                .ToList();
+
+            var useFilteredList = false;
+
+            if (listOptions.Any())
+            {
+                useFilteredList = true;
+
+                foreach (var listOption in listOptions)
+                {
+                    switch (listOption.Filter.PropertyName)
+                    {
+                        case "Title":
+                            {
+                                switch (listOption.Filter.Operation)
+                                {
+                                    case "Equal":
+                                        {
+                                            var includedList =
+                                                items.FirstOrDefault(l => l.Title == listOption.Filter.PropertyValue);
+
+                                            if (includedList != null)
+                                            {
+                                                filteredItems.Add(includedList);
+                                            }
+                                        }
+                                        ;
+                                        break;
+                                }
+                            }
+                            ;
+                            break;
+                    }
+                }
+            }
+
+            result.AddRange((useFilteredList ? filteredItems.Distinct().ToArray() : items.ToArray()).Select(i =>
             {
                 return ModelHostBase.Inherit<ListReverseHost>(parentHost, h =>
                 {

@@ -22,21 +22,23 @@ namespace SPMeta2.Reverse.Services
            where TDefinition : DefinitionBase
         {
             var definitionClassName = typeof(TDefinition).FullName;
+
+            var newOption = new ReverseFilterOption();
+            newOption.DefinitionClassFullName = definitionClassName;
+
+            var parsedFilter = new ReverseOptionService().ParseOptionFilter(filterExpression);
+            newOption.Filter = parsedFilter;
+
             var existingOption = options.Options
                                         .FirstOrDefault(o =>
                                             o.DefinitionClassFullName == definitionClassName
+                                            && o.Equals(newOption)
                                             && o is ReverseFilterOption) as ReverseFilterOption;
 
             if (existingOption == null)
             {
-                existingOption = new ReverseFilterOption();
-                existingOption.DefinitionClassFullName = definitionClassName;
-
-                options.Options.Add(existingOption);
+                options.Options.Add(newOption);
             }
-
-            var parsedFilter = new ReverseOptionService().ParseOptionFilter(filterExpression);
-            existingOption.Filter = parsedFilter;
 
             return options;
         }

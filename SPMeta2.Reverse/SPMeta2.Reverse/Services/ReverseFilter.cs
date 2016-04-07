@@ -13,11 +13,23 @@ namespace SPMeta2.Reverse.Services
         public string PropertyValue { get; set; }
         public string Operation { get; set; }
 
-        public int Depth { get; set; }
-
         public override string ToString()
         {
             return string.Format("Where '{0}' {1} '{2}'", PropertyName, Operation, PropertyValue);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is ReverseFilter)
+            {
+                var tmpFilterOption = obj as ReverseFilter;
+
+                return tmpFilterOption.PropertyName == this.PropertyName
+                       && tmpFilterOption.PropertyValue == this.PropertyValue
+                       && tmpFilterOption.Operation == this.Operation;
+            }
+
+            return base.Equals(obj);
         }
     }
 }
