@@ -142,21 +142,28 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public void DeployReverseAndTestModel(ModelNode model)
         {
-            DeployReverseAndTestModel(model, null);
-        }
-
-        private void DeployReverseAndTestModel(ModelNode model, IEnumerable<Type> reverseHandlers)
-        {
-            DeployReverseAndTestModel(new ModelNode[] { model }, reverseHandlers);
+            DeployReverseAndTestModel(model, ReverseOptions.Default);
         }
 
         public void DeployReverseAndTestModel(IEnumerable<ModelNode> models)
         {
-            DeployReverseAndTestModel(models, null);
+            DeployReverseAndTestModel(models, ReverseOptions.Default);
         }
 
-        private void DeployReverseAndTestModel(IEnumerable<ModelNode> models,
-            IEnumerable<Type> reverseHandlers)
+        public void DeployReverseAndTestModel(ModelNode model, ReverseOptions options)
+        {
+            DeployReverseAndTestModel(new[] { model }, null, options);
+        }
+
+        public void DeployReverseAndTestModel(IEnumerable<ModelNode> models, ReverseOptions options)
+        {
+            DeployReverseAndTestModel(models, null, options);
+        }
+
+        private void DeployReverseAndTestModel(
+            IEnumerable<ModelNode> models,
+            IEnumerable<Type> reverseHandlers,
+            ReverseOptions options)
         {
             // calculate handlers based on the model
             // that improved tests performance avoiding non-relevant reverse
@@ -211,7 +218,7 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
                 DeployModel(deployedModel);
 
                 // reverse model
-                var reversedModel = ReverseModel(deployedModel, reverseHandlers);
+                var reversedModel = ReverseModel(deployedModel, reverseHandlers, options);
 
                 // validate model
                 var reverseRegressionService = new ReverseValidationService();
@@ -220,6 +227,7 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
                 {
                     OriginalModel = deployedModel,
                     ReversedModel = reversedModel,
+                    ReverseOptions =  options
                 }, null);
 
                 // assert model
@@ -229,7 +237,8 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
         }
 
         private ModelNode ReverseModel(ModelNode deployedModel,
-            IEnumerable<Type> reverseHandlers)
+            IEnumerable<Type> reverseHandlers,
+            ReverseOptions options)
         {
             ReverseResult reverseResut = null;
 
@@ -262,11 +271,11 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
                 }
                 else if (deployedModel.Value.GetType() == typeof(SiteDefinition))
                 {
-                    reverseResut = reverseService.ReverseSiteModel(context, ReverseOptions.Default);
+                    reverseResut = reverseService.ReverseSiteModel(context, options);
                 }
                 else if (deployedModel.Value.GetType() == typeof(WebDefinition))
                 {
-                    reverseResut = reverseService.ReverseWebModel(context, ReverseOptions.Default);
+                    reverseResut = reverseService.ReverseWebModel(context, options);
                 }
                 else if (deployedModel.Value.GetType() == typeof(ListDefinition))
                 {
@@ -362,6 +371,23 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
                 context.Credentials = new SharePointOnlineCredentials(userName, GetSecurePasswordString(userPassword));
                 action(context);
             }
+        }
+
+
+        #endregion
+
+        #region random model utils
+
+        protected TDefinition Def<TDefinition>()
+            where TDefinition : DefinitionBase
+        {
+            return Def<TDefinition>(null);
+        }
+
+        protected TDefinition Def<TDefinition>(Action<TDefinition> action)
+            where TDefinition : DefinitionBase
+        {
+            return ModelGeneratorService.GetRandomDefinition<TDefinition>(action);
         }
 
 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using SPMeta2.Reverse.Exceptions;
 
 namespace SPMeta2.Reverse.Services
 {
@@ -44,6 +45,9 @@ namespace SPMeta2.Reverse.Services
            this ReverseOptions options, int depth)
            where TDefinition : DefinitionBase
         {
+            if (depth < 0)
+                throw new SPMeta2ReverseException("depth should be >= 0");
+
             var definitionClassName = typeof(TDefinition).FullName;
             var existingOption = options.Options
                                         .FirstOrDefault(o =>

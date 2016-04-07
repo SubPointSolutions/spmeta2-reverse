@@ -16,13 +16,11 @@ using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Utils;
 using SPMeta2.Definitions;
+using SPMeta2.Reverse.Services;
+using SPMeta2.Containers.Extensions;
 
 namespace SPMeta2.Reverse.Regression.Services
 {
-
-    
-
-
     public class ReverseValidationService : ModelServiceBase
     {
         #region constructors
@@ -69,16 +67,52 @@ namespace SPMeta2.Reverse.Regression.Services
                                     .FirstOrDefault(n => ModelIdService.GetDefinitionIdentityKey(n.Value) == originalDefinitionId);
 
                 if (reversedNode == null)
+                {
+                    // check the level
+                    var level = 0;
+                    var node = originalNode;
+
+                    while (node != null)
+                    {
+                        node = allOriginalNodes.FirstOrDefault(n => n.ChildModels.Contains(node));
+                        level++;
+                    }
+
+                    var defOptions = validationModelHost.ReverseOptions;
+
+                    if (defOptions != null)
+                    {
+                        var definitionType = originalNode.Value.GetType();
+                        var depthOption = defOptions
+                                            .Options
+                                            .FirstOrDefault(o => o.DefinitionClassFullName == definitionType.FullName
+                                            && o is ReverseDepthOption) as ReverseDepthOption;
+
+                        // does it exist? no more that suggested depth
+                        if (depthOption != null)
+                        {
+                            if (depthOption.Depth < level)
+                            {
+
+                                // all good, we don't need to validate def which out of the depth leve;
+                                originalNode.RegExcludeFromValidation();
+                                continue;
+                            }
+                        }
+                    }
+
                     throw new SPMeta2ReverseException(
-                        string.Format("Cannot find node of type:[{0}] by identity id:[{1}]. Original definition is:[{2}]",
-                            originalDefinition.GetType(), originalDefinitionId, originalDefinition));
+                      string.Format("Cannot find node of type:[{0}] by identity id:[{1}]. Original definition is:[{2}]",
+                          originalDefinition.GetType(), originalDefinitionId, originalDefinition));
+                }
 
                 var definitionValidator = ResolveModelHandlerForNode(originalNode);
 
                 definitionValidator.DeployModel(new ReverseValidationModeHost
                 {
                     OriginalModel = originalNode,
-                    ReversedModel = reversedNode
+                    ReversedModel = reversedNode,
+                    ReverseOptions = validationModelHost.ReverseOptions
                 }, null);
             }
         }

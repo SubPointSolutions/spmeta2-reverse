@@ -10,9 +10,6 @@ using System.Threading.Tasks;
 namespace SPMeta2.Reverse.Services
 {
 
-
-
-
     public class ReverseOptionService
     {
         public ReverseFilter ParseOptionFilter<TDefinition>(Expression<Func<TDefinition, bool>> expressions)

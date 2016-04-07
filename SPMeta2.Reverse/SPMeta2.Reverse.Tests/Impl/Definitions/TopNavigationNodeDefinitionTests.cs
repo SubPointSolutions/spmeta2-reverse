@@ -21,8 +21,8 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         {
             var model = SPMeta2Model.NewWebModel(web =>
             {
-                web.AddTopNavigationNode(ModelGeneratorService.GetRandomDefinition<TopNavigationNodeDefinition>());
-                web.AddTopNavigationNode(ModelGeneratorService.GetRandomDefinition<TopNavigationNodeDefinition>());
+                web.AddTopNavigationNode(Def<TopNavigationNodeDefinition>());
+                web.AddTopNavigationNode(Def<TopNavigationNodeDefinition>());
             });
 
             DeployReverseAndTestModel(model);

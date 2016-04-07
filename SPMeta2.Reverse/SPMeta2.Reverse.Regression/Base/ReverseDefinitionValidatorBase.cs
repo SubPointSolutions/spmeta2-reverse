@@ -7,6 +7,7 @@ using SPMeta2.Definitions;
 using SPMeta2.ModelHandlers;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
+using SPMeta2.Reverse.Services;
 
 namespace SPMeta2.Reverse.Regression.Base
 {
@@ -14,6 +15,8 @@ namespace SPMeta2.Reverse.Regression.Base
     {
         public ModelNode OriginalModel { get; set; }
         public ModelNode ReversedModel { get; set; }
+
+        public ReverseOptions ReverseOptions { get; set; }
     }
 
     public abstract class ReverseDefinitionValidatorBase : ModelHandlerBase

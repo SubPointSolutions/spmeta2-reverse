@@ -21,8 +21,8 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
-                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
-                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
+                site.AddWeb(Def<WebDefinition>());
+                site.AddWeb(Def<WebDefinition>());
             });
 
             DeployReverseAndTestModel(model);
@@ -30,22 +30,60 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
 
         [TestMethod]
         [TestCategory("Webs")]
-        public void Can_Reverse_Webs_Hierarchy()
+        public void Can_Reverse_Webs_Hierarchy_Deep1()
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
-                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>(), w =>
+                site.AddWeb(Def<WebDefinition>(), w =>
                 {
-                    w.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
-                });
-
-                site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>(), w =>
-                {
-                    w.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
+                    w.AddWeb(Def<WebDefinition>());
                 });
             });
 
             DeployReverseAndTestModel(model);
+        }
+
+        [TestMethod]
+        [TestCategory("Webs")]
+        public void Can_Reverse_Webs_Hierarchy_Deep2()
+        {
+            var model = SPMeta2Model.NewSiteModel(site =>
+            {
+                site.AddWeb(Def<WebDefinition>(), w1 =>
+                {
+                    w1.AddWeb(Def<WebDefinition>(), w2 =>
+                    {
+                        w2.AddWeb(Def<WebDefinition>());
+                    });
+                });
+            });
+
+            DeployReverseAndTestModel(model);
+        }
+
+        [TestMethod]
+        [TestCategory("Webs")]
+        public void Can_Reverse_Webs_Hierarchy_Deep3_As_2()
+        {
+            // having 3 level web, but reverse only two levels
+            var options = ReverseOptions.Default
+                            .AddDepthOption<WebDefinition>(2);
+
+            var model = SPMeta2Model.NewSiteModel(site =>
+            {
+                site.AddWeb(Def<WebDefinition>(), w1 =>
+                {
+                    w1.AddWeb(Def<WebDefinition>(), w2 =>
+                    {
+                        w2.AddWeb(Def<WebDefinition>(), w3 =>
+                        {
+                            w3.AddWeb(Def<WebDefinition>());
+                        });
+                    });
+                });
+            });
+
+            DeployReverseAndTestModel(model, options);
         }
 
         #endregion

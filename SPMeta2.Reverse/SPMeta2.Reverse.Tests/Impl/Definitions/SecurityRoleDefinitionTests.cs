@@ -21,8 +21,8 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
-                site.AddSecurityRole(ModelGeneratorService.GetRandomDefinition<SecurityRoleDefinition>());
-                site.AddSecurityRole(ModelGeneratorService.GetRandomDefinition<SecurityRoleDefinition>());
+                site.AddSecurityRole(Def<SecurityRoleDefinition>());
+                site.AddSecurityRole(Def<SecurityRoleDefinition>());
             });
 
             DeployReverseAndTestModel(model);
