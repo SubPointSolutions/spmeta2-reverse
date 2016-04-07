@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHosts
 {
-    public class ContentTypeReverseHost : CSOMReverseHostBase
+    public class ContentTypeLinkReverseHost : ListReverseHost
     {
         public ContentType HostContentType { get; set; }
     }

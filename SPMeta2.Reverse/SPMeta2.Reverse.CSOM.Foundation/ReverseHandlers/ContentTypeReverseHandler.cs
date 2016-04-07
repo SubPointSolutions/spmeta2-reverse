@@ -58,7 +58,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             {
                 return ModelHostBase.Inherit<ContentTypeReverseHost>(parentHost, h =>
                 {
-                    h.ContentType = i;
+                    h.HostContentType = i;
                 });
             }));
 
@@ -85,7 +85,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var item = (reverseHost as ContentTypeReverseHost).ContentType;
+            var item = (reverseHost as ContentTypeReverseHost).HostContentType;
 
             var def = new ContentTypeDefinition();
 

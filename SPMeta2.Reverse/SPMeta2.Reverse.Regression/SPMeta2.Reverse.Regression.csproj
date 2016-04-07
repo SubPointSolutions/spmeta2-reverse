@@ -55,6 +55,8 @@
     <Compile Include="Services\ReverseModelIdentityService.cs" />
     <Compile Include="Services\ReverseRegressionAssertService.cs" />
     <Compile Include="Services\ReverseValidationService.cs" />
+    <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
+    <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
     <Compile Include="Validation\UserCustomActionDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeDefinitionValidator.cs" />
     <Compile Include="Validation\FeatureDefinitionValidator.cs" />

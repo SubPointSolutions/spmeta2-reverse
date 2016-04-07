@@ -60,6 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseHandlers\Base\CSOMReverseHandlerBase.cs" />
     <Compile Include="ReverseHandlers\Base\NavigationNodeDefinitionReverseHandlerBase.cs" />
+    <Compile Include="ReverseHandlers\ContentTypeLinkReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\ContentTypeFieldLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
     <Compile Include="ReverseHandlers\UserCustomActionReverseHandler.cs" />
@@ -72,6 +74,8 @@
     <Compile Include="ReverseHandlers\WebReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SiteReverseHandler.cs" />
+    <Compile Include="ReverseHosts\ContentTypeLinkReverseHost.cs" />
+    <Compile Include="ReverseHosts\ContentTypeFieldLinkReverseHost.cs" />
     <Compile Include="ReverseHosts\CSOMReverseHostBase.cs" />
     <Compile Include="ReverseHosts\ContentTypeReverseHost.cs" />
     <Compile Include="ReverseHosts\FeatureReverseHost.cs" />
