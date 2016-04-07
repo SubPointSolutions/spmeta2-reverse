@@ -26,11 +26,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 site.AddSiteFeature(BuiltInSiteFeatures.Workflows.Enable().ForceActivate().Clone<FeatureDefinition>());
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(FeatureReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         [TestMethod]
@@ -43,12 +39,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 web.AddWebFeature(BuiltInWebFeatures.WikiPageHomePage.Enable().ForceActivate().Clone<FeatureDefinition>());
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(WebReverseHandler),
-                typeof(FeatureReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         #endregion

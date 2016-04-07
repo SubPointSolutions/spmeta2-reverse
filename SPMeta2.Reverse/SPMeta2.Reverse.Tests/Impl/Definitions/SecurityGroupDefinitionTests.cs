@@ -25,11 +25,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 site.AddSecurityGroup(ModelGeneratorService.GetRandomDefinition<SecurityGroupDefinition>());
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(SecurityGroupReverseHandler)
-            });
+            DeployReverseAndTestModel(model);
         }
 
         #endregion

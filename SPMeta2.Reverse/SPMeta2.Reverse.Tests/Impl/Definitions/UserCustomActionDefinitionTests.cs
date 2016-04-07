@@ -26,11 +26,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 site.AddRandomUserCustomAction();
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(UserCustomActionReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         [TestMethod]
@@ -43,11 +39,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 site.AddRandomUserCustomAction();
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(UserCustomActionReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         [TestMethod]
@@ -60,12 +52,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 web.AddRandomUserCustomAction();
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(WebReverseHandler),
-                typeof(UserCustomActionReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         #endregion

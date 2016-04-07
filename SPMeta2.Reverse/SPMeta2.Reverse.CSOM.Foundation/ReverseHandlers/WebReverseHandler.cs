@@ -16,12 +16,6 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
     public class WebReverseHandler : CSOMReverseHandlerBase
     {
-        #region static
-
-        public static bool UseRootWebOnly { get; set; }
-
-        #endregion
-
         #region properties
         public override Type ReverseType
         {

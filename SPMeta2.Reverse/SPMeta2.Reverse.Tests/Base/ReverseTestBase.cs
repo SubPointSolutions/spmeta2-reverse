@@ -33,6 +33,9 @@ using SPMeta2.Containers.Assertion;
 using SPMeta2.Reverse.Regression.Consts;
 using System.IO;
 using System.Xml;
+using SPMeta2.Syntax.Default;
+using SPMeta2.Extensions;
+using SPMeta2.Reverse.ReverseHandlers;
 
 namespace SPMeta2.Reverse.Tests.Base
 {
@@ -92,7 +95,7 @@ namespace SPMeta2.Reverse.Tests.Base
         private static void OnReversePropertyValidated(object sender, OnPropertyValidatedEventArgs e)
         {
             var reportService = new DefaultCoverageReportService();
-            
+
             reportService.RegenerateReports(ReverseRegressionAssertService.ModelValidations);
         }
 
@@ -142,7 +145,7 @@ namespace SPMeta2.Reverse.Tests.Base
             DeployReverseAndTestModel(model, null);
         }
 
-        public void DeployReverseAndTestModel(ModelNode model, IEnumerable<Type> reverseHandlers)
+        private void DeployReverseAndTestModel(ModelNode model, IEnumerable<Type> reverseHandlers)
         {
             DeployReverseAndTestModel(new ModelNode[] { model }, reverseHandlers);
         }
@@ -152,9 +155,56 @@ namespace SPMeta2.Reverse.Tests.Base
             DeployReverseAndTestModel(models, null);
         }
 
-        public void DeployReverseAndTestModel(IEnumerable<ModelNode> models,
+        private void DeployReverseAndTestModel(IEnumerable<ModelNode> models,
             IEnumerable<Type> reverseHandlers)
         {
+            // calculate handlers based on the model
+            // that improved tests performance avoiding non-relevant reverse
+            if (reverseHandlers == null)
+            {
+                var autoReverseHandlers = new List<Type>();
+
+                var allDefinitions = models.SelectMany(
+                    m => m.Flatten().Select(n => n.Value)
+                    );
+
+                var uniqueDefinitionTypes = new List<Type>();
+
+                foreach (var def in allDefinitions)
+                {
+                    if (!uniqueDefinitionTypes.Contains(def.GetType()))
+                        uniqueDefinitionTypes.Add(def.GetType());
+                }
+
+                var allHandlers = new List<ReverseHandlerBase>();
+
+                var handlerTypes = ReflectionUtils.GetTypesFromAssemblies<CSOMReverseHandlerBase>(
+new[]{              typeof(StandardCSOMReverseService).Assembly,
+                  typeof(CSOMReverseService).Assembly})
+                                                  .ToList();
+
+
+                foreach (var type in handlerTypes)
+                {
+                    if (!allHandlers.Any(r => r.GetType() == type))
+                    {
+                        var instance = Activator.CreateInstance(type) as ReverseHandlerBase;
+
+                        allHandlers.Add(instance);
+                    }
+                }
+
+                foreach (var defType in uniqueDefinitionTypes)
+                {
+                    var neeedHandler = allHandlers.First(h => h.ReverseType == defType);
+
+                    if (!autoReverseHandlers.Contains(neeedHandler.GetType()))
+                        autoReverseHandlers.Add(neeedHandler.GetType());
+                }
+
+                reverseHandlers = autoReverseHandlers;
+            }
+
             foreach (var deployedModel in models)
             {
                 // deploy model

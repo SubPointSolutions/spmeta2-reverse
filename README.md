@@ -151,6 +151,11 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>True</td>
           <td>Supported, not tested yet</td>
         </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
+        </tr>
       </tbody>
     </table>
   </div>

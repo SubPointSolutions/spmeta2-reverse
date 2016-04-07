@@ -30,9 +30,6 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         [TestCategory("ListViews")]
         public void Can_Reverse_ListViews()
         {
-            // TODO, quick fix only
-            WebReverseHandler.UseRootWebOnly = true;
-
             var model = SPMeta2Model.NewWebModel(web =>
             {
                 web.AddRandomList(list =>
@@ -58,16 +55,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 });
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                 typeof(WebReverseHandler),
-                  typeof(ListReverseHandler),
-                 typeof(ListViewReverseHandler)
-            });
-
-            // TODO, quick fix only
-            WebReverseHandler.UseRootWebOnly = false;
+            DeployReverseAndTestModel(model);
         }
 
         // TODO, add tests to revere list view with CAML queries and so on

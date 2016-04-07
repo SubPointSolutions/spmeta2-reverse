@@ -25,11 +25,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 site.AddWeb(ModelGeneratorService.GetRandomDefinition<WebDefinition>());
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(WebReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         [TestMethod]
@@ -49,11 +45,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 });
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(WebReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         #endregion

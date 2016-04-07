@@ -38,12 +38,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 site.AddRandomContentType();
             });
 
-            DeployReverseAndTestModel(model, new[]
-            {
-                typeof(SiteReverseHandler),
-                typeof(ContentTypeReverseHandler),
-                typeof(ContentTypeFieldLinkReverseHandler),
-            });
+            DeployReverseAndTestModel(model);
         }
 
         #endregion
