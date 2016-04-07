@@ -11,6 +11,7 @@ using SPMeta2.Reverse.Services;
 using SPMeta2.Utils;
 using SPMeta2.Syntax.Default;
 using SPMeta2.ModelHosts;
+using SPMeta2.Reverse.Exceptions;
 
 namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 {
@@ -88,28 +89,43 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             foreach (var reverseFilter in reverseFilters)
             {
-                switch (reverseFilter.Filter.PropertyName)
-                {
-                    case "Title":
-                        {
-                            switch (reverseFilter.Filter.Operation)
-                            {
-                                case "Equal":
-                                    {
-                                        var includedList =
-                                            items.FirstOrDefault(l => l.Title == reverseFilter.Filter.PropertyValue);
+                var filterPropName = reverseFilter.Filter.PropertyName;
+                var filterPropValue = reverseFilter.Filter.PropertyValue;
 
-                                        if (includedList != null)
-                                        {
-                                            result.Add(includedList);
-                                        }
+                var filterOperation = reverseFilter.Filter.Operation;
+
+                switch (filterOperation)
+                {
+                    case "Equal":
+                        {
+                            var operationObjects = new List<List>();
+
+                            foreach (var list in items)
+                            {
+                                var tmpPropValue = ReflectionUtils.GetPropertyValue(list, filterPropName);
+
+                                if (tmpPropValue != null)
+                                {
+                                    if (tmpPropValue.Equals(filterPropValue))
+                                    {
+                                        operationObjects.Add(list);
                                     }
-                                    ;
-                                    break;
+                                }
                             }
+
+                            //var includedList =
+                            //    items.FirstOrDefault(l => l.Title == reverseFilter.Filter.PropertyValue);
+
+                            //if (includedList != null)
+                            //{
+                            //    result.Add(includedList);
+                            //}
                         }
-                        ;
+
                         break;
+                    default:
+                        throw new SPMeta2ReverseException(
+                            String.Format("Unsupported filter operation:[{0}]", filterOperation));
                 }
             }
 
