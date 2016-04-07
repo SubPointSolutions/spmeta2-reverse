@@ -31,6 +31,10 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         [TestCategory("Lists")]
         public void Can_Reverse_Lists()
         {
+            // only root web
+            var options = ReverseOptions.Default
+                            .AddDepthOption<WebDefinition>(0);
+
             var model = SPMeta2Model.NewWebModel(web =>
             {
                 web.AddRandomList(list =>
@@ -49,7 +53,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 });
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, options);
         }
 
         // TODO, add tests to revere lists and libraries

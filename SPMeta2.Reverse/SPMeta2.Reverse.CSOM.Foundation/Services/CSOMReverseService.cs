@@ -194,42 +194,53 @@ namespace SPMeta2.Reverse.CSOM.Foundation.Services
             else
                 _localReverseDepth[defType] = _localReverseDepth[defType] + 1;
 
-            if (ShouldReverseChildren(context))
+            var shouldReverseSelfChildren = ShouldReverseChildren(context);
+
+            var targetType = context.CurrentModelNode.Value.GetType();
+            var childHandlers = Handlers.Where(h => h.ReverseParentTypes.Any(t => t == targetType))
+                                        .ToList();
+
+            // prevent furver reverse of the same type
+            if (!shouldReverseSelfChildren)
             {
-                var targetType = context.CurrentModelNode.Value.GetType();
-                var childHandlers = Handlers.Where(h => h.ReverseParentTypes.Any(t => t == targetType));
+                var selfHandler = childHandlers.FirstOrDefault(h => h.ReverseType == defType);
 
-                foreach (var handler in childHandlers)
+                if (selfHandler != null)
                 {
-                    var hosts = handler.ReverseHosts(context.ReverseHost, context.ReverseOptions);
+                    childHandlers.Remove(selfHandler);
+                }
+            }
 
-                    var count = 1;
-                    var totalCount = hosts.Count();
+            foreach (var handler in childHandlers)
+            {
+                var hosts = handler.ReverseHosts(context.ReverseHost, context.ReverseOptions);
 
-                    foreach (var host in hosts)
+                var count = 1;
+                var totalCount = hosts.Count();
+
+                foreach (var host in hosts)
+                {
+                    var modelNode = handler.ReverseSingleHost(host, context.ReverseOptions);
+
+                    context.CurrentModelNode.ChildModels.Add(modelNode);
+
+                    InvokeOnReverseProgress(new ReverseProgressEventArgs
                     {
-                        var modelNode = handler.ReverseSingleHost(host, context.ReverseOptions);
+                        CurrentNode = modelNode,
+                        TargetType = modelNode.GetType(),
+                        ProcessedModelNodeCount = count,
+                        TotalModelNodeCount = totalCount
+                    });
 
-                        context.CurrentModelNode.ChildModels.Add(modelNode);
+                    ReverseModel(new ReverseContext
+                    {
+                        ReverseOptions = context.ReverseOptions,
+                        CurrentModelNode = modelNode,
+                        ReverseHost = host,
+                        RootModelNode = context.RootModelNode
+                    });
 
-                        InvokeOnReverseProgress(new ReverseProgressEventArgs
-                        {
-                            CurrentNode = modelNode,
-                            TargetType = modelNode.GetType(),
-                            ProcessedModelNodeCount = count,
-                            TotalModelNodeCount = totalCount
-                        });
-
-                        ReverseModel(new ReverseContext
-                        {
-                            ReverseOptions = context.ReverseOptions,
-                            CurrentModelNode = modelNode,
-                            ReverseHost = host,
-                            RootModelNode = context.RootModelNode
-                        });
-
-                        count++;
-                    }
+                    count++;
                 }
             }
 

@@ -30,6 +30,10 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         [TestCategory("ListViews")]
         public void Can_Reverse_ListViews()
         {
+            // only root web
+            var options = ReverseOptions.Default
+                            .AddDepthOption<WebDefinition>(0);
+
             var model = SPMeta2Model.NewWebModel(web =>
             {
                 web.AddRandomList(list =>
@@ -55,7 +59,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 });
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, options);
         }
 
         // TODO, add tests to revere list view with CAML queries and so on
