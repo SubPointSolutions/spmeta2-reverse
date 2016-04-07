@@ -7,6 +7,7 @@ using SPMeta2.Reverse.CSOM.Foundation.Services;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Tests.Base;
 using SPMeta2.Syntax.Default;
+using SPMeta2.Enumerations;
 
 namespace SPMeta2.Reverse.Tests.Impl.Definitions
 {
@@ -23,7 +24,15 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
             {
                 site.AddRandomContentType(ct =>
                 {
-                    ct.AddContentTypeFieldLink(ModelGeneratorService.GetRandomDefinition<ContentTypeFieldLinkDefinition>());
+                    // the definition id verification won't match on different ID/Name
+                    // both should be there
+                    var randomField = new ContentTypeFieldLinkDefinition
+                    {
+                        FieldInternalName = "CellPhone",
+                        FieldId = BuiltInFieldId.CellPhone
+                    };
+
+                    ct.AddContentTypeFieldLink(randomField);
                 });
 
                 site.AddRandomContentType();

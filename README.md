@@ -112,6 +112,45 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>False</td>
           <td>Not implemented yet</td>
         </tr>
+        <tr>
+          <td>Sealed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>ContentTypeFieldLinkDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DisplayName</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldId</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>FieldInternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
+        </tr>
       </tbody>
     </table>
   </div>
