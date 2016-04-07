@@ -28,13 +28,6 @@ namespace SPMeta2.Reverse.CSOM.Foundation.Services
         public CSOMReverseService()
         {
             RegisterReverseHandlers(typeof(FieldReverseHandler).Assembly);
-
-            //Handlers.Add(new SiteReverseHandler());
-
-            //Handlers.Add(new FieldReverseHandler());
-            //Handlers.Add(new ContentTypeReverseHandler());
-
-            //Handlers.Add(new WebReverseHandler());
         }
 
         #endregion

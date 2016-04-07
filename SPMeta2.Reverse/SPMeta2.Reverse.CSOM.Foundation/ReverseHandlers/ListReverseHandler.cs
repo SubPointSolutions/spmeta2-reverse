@@ -61,54 +61,60 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
                 );
             context.ExecuteQuery();
 
-            var filteredItems = new List<List>();
+            var resultItems = ApplyReverseFilters(items, options);
 
-            var listOptions = options.Options.Where(o => o.DefinitionClassFullName == this.ReverseType.FullName
-                                                         && o is ReverseFilterOption)
-                .Select(s => s as ReverseFilterOption)
-                .ToList();
-
-            var useFilteredList = false;
-
-            if (listOptions.Any())
-            {
-                useFilteredList = true;
-
-                foreach (var listOption in listOptions)
-                {
-                    switch (listOption.Filter.PropertyName)
-                    {
-                        case "Title":
-                            {
-                                switch (listOption.Filter.Operation)
-                                {
-                                    case "Equal":
-                                        {
-                                            var includedList =
-                                                items.FirstOrDefault(l => l.Title == listOption.Filter.PropertyValue);
-
-                                            if (includedList != null)
-                                            {
-                                                filteredItems.Add(includedList);
-                                            }
-                                        }
-                                        ;
-                                        break;
-                                }
-                            }
-                            ;
-                            break;
-                    }
-                }
-            }
-
-            result.AddRange((useFilteredList ? filteredItems.Distinct().ToArray() : items.ToArray()).Select(i =>
+            result.AddRange(resultItems.ToArray().Select(i =>
             {
                 return ModelHostBase.Inherit<ListReverseHost>(parentHost, h =>
                 {
                     h.HostList = i;
                 });
             }));
+
+            return result;
+        }
+
+        protected virtual IEnumerable<List> ApplyReverseFilters(
+            IEnumerable<List> items,
+            ReverseOptions options)
+        {
+            //no filters, returning original collection
+            if (!HasReverseFileters(options))
+                return items;
+
+            // filtering colleciton as per the filters
+            var result = new List<List>();
+            var reverseFilters = FindReverseFileters(options);
+
+            foreach (var reverseFilter in reverseFilters)
+            {
+                switch (reverseFilter.Filter.PropertyName)
+                {
+                    case "Title":
+                        {
+                            switch (reverseFilter.Filter.Operation)
+                            {
+                                case "Equal":
+                                    {
+                                        var includedList =
+                                            items.FirstOrDefault(l => l.Title == reverseFilter.Filter.PropertyValue);
+
+                                        if (includedList != null)
+                                        {
+                                            result.Add(includedList);
+                                        }
+                                    }
+                                    ;
+                                    break;
+                            }
+                        }
+                        ;
+                        break;
+                }
+            }
+
+            // prevent multiple filter match
+            result = result.Distinct().ToList();
 
             return result;
         }
