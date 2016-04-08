@@ -24,7 +24,6 @@ namespace SPMeta2.Reverse.Tests.Impl.API
             var options = ReverseOptions.Default
                                         .AddDepthOption<WebDefinition>(0);
 
-            // only lists by 'Contains' filter 
             var listDefs = GetAllDefinitionOfType<ListDefinition>(model);
 
             foreach (var listDef in listDefs)
@@ -41,21 +40,20 @@ namespace SPMeta2.Reverse.Tests.Impl.API
         public void Can_Reverse_Filter_NotEqual()
         {
             // model
-            var model = GetTestFieldModel();
+            var model = GetWebModel();
 
             // only root web
             var options = ReverseOptions.Default
                                         .AddDepthOption<WebDefinition>(0);
 
-            // only lists by 'Contains' filter 
-            var listDefs = GetAllDefinitionOfType<FieldDefinition>(model);
+            var listDefs = GetAllDefinitionOfType<WebDefinition>(model);
 
             foreach (var listDef in listDefs)
             {
                 var tmpValue = Rnd.String();
 
                 // ReverseFilterOperationType.NotEqual
-                options.AddFilterOption<ListDefinition>(l => l.Title != tmpValue);
+                options.AddFilterOption<WebDefinition>(l => l.Title != tmpValue);
             }
 
             DeployReverseAndTestModel(model, options);
@@ -72,7 +70,6 @@ namespace SPMeta2.Reverse.Tests.Impl.API
             var options = ReverseOptions.Default
                                         .AddDepthOption<WebDefinition>(0);
 
-            // only lists by 'Contains' filter 
             var listDefs = GetAllDefinitionOfType<ListDefinition>(model);
 
             foreach (var listDef in listDefs)
@@ -97,7 +94,6 @@ namespace SPMeta2.Reverse.Tests.Impl.API
             var options = ReverseOptions.Default
                                         .AddDepthOption<WebDefinition>(0);
 
-            // only lists by 'Contains' filter 
             var listDefs = GetAllDefinitionOfType<ListDefinition>(model);
 
             foreach (var listDef in listDefs)
@@ -122,7 +118,6 @@ namespace SPMeta2.Reverse.Tests.Impl.API
             var options = ReverseOptions.Default
                                         .AddDepthOption<WebDefinition>(0);
 
-            // only lists by 'Contains' filter 
             var listDefs = GetAllDefinitionOfType<ListDefinition>(model);
 
             foreach (var listDef in listDefs)
@@ -138,6 +133,18 @@ namespace SPMeta2.Reverse.Tests.Impl.API
         }
 
         #region utils
+
+        public ModelNode GetWebModel()
+        {
+            var model = SPMeta2Model.NewSiteModel(site =>
+            {
+                site.AddWeb(Def<WebDefinition>());
+                site.AddWeb(Def<WebDefinition>());
+            });
+
+            return model;
+        }
+
 
         public ModelNode GetTestFieldModel()
         {

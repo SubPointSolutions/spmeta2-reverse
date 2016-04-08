@@ -17,7 +17,7 @@ namespace SPMeta2.Reverse.Services
         {
             var filters = ParseOptionFilters(new Expression<Func<TDefinition, bool>>[] { expressions });
 
-            if(!filters.Any())
+            if (!filters.Any())
             {
                 throw new SPMeta2ReverseException("Cannot parse reverse filters. Expected more than one, got zero.");
             }
@@ -28,6 +28,9 @@ namespace SPMeta2.Reverse.Services
         public List<ReverseFilter> ParseOptionFilters<TDefinition>(IEnumerable<Expression<Func<TDefinition, bool>>> expressions)
             where TDefinition : DefinitionBase
         {
+            // TODO
+            // crazy little sketches, must be covered by unit tests
+
             var result = new List<ReverseFilter>();
 
             foreach (var exp in expressions)
@@ -79,11 +82,19 @@ namespace SPMeta2.Reverse.Services
                     //var valueExp = binaryBody.Method.Name;
 
                     var propName = propExp.Member.Name;
-                    var propValue = binaryBody.Arguments.FirstOrDefault().ToString();
+
+                    var argument = binaryBody.Arguments.FirstOrDefault();
+                    var propValue = argument.ToString();
+
+                    if (argument.NodeType == ExpressionType.MemberAccess)
+                    {
+                        var l = Expression.Lambda<Func<object>>(argument);
+                        propValue = l.Compile()().ToString();
+                    }
 
                     var operationType = (ReverseFilterOperationType)Enum.Parse(
                         typeof(ReverseFilterOperationType),
-                        binaryBody.Method.Name.ToString());
+                        binaryBody.Method.Name);
 
                     var filter = new ReverseFilter
                     {

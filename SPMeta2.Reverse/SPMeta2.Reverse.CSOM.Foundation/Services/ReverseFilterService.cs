@@ -51,30 +51,83 @@ namespace SPMeta2.Reverse.CSOM.Foundation.Services
 
                 var filterOperation = reverseFilter.Filter.Operation;
 
-                switch (filterOperation)
+                foreach (var item in items)
                 {
-                    case ReverseFilterOperationType.Equal:
-                        {
-                            foreach (var list in items)
-                            {
-                                var tmpPropValue = ReflectionUtils.GetPropertyValue(list, filterPropName);
+                    var currentPropValue = ReflectionUtils.GetPropertyValue(item, filterPropName);
 
-                                // TODO
-                                // a better check is required
-                                if (tmpPropValue != null)
+                    switch (filterOperation)
+                    {
+                        case ReverseFilterOperationType.Equal:
+                            {
+                                if (currentPropValue != null)
                                 {
-                                    if (filterPropValue.Equals(tmpPropValue))
+                                    if (filterPropValue.Equals(currentPropValue))
                                     {
-                                        result.Add(list);
+                                        result.Add(item);
                                     }
                                 }
                             }
-                        }
+                            break;
 
-                        break;
-                    default:
-                        throw new SPMeta2ReverseException(
-                            String.Format("Unsupported filter operation:[{0}]", filterOperation));
+                        case ReverseFilterOperationType.NotEqual:
+                            {
+                                if (currentPropValue != null)
+                                {
+                                    if (!filterPropValue.Equals(currentPropValue))
+                                    {
+                                        result.Add(item);
+                                    }
+                                }
+                            }
+                            break;
+
+                        case ReverseFilterOperationType.StartsWith:
+                            {
+                                if (currentPropValue != null)
+                                {
+                                    var currentPropValueString = currentPropValue.ToString();
+
+                                    if (currentPropValueString.StartsWith(filterPropValue))
+                                    {
+                                        result.Add(item);
+                                    }
+                                }
+                            }
+                            break;
+
+                        case ReverseFilterOperationType.EndsWith:
+                            {
+                                if (currentPropValue != null)
+                                {
+                                    var currentPropValueString = currentPropValue.ToString();
+
+                                    if (currentPropValueString.EndsWith(filterPropValue))
+                                    {
+                                        result.Add(item);
+                                    }
+                                }
+                            }
+                            break;
+
+                        case ReverseFilterOperationType.Contains:
+                            {
+                                if (currentPropValue != null)
+                                {
+                                    var currentPropValueString = currentPropValue.ToString();
+
+                                    if (currentPropValueString.Contains(filterPropValue))
+                                    {
+                                        result.Add(item);
+                                    }
+                                }
+                            }
+                            break;
+
+
+                        default:
+                            throw new SPMeta2ReverseException(
+                                String.Format("Unsupported filter operation:[{0}]", filterOperation));
+                    }
                 }
             }
 
