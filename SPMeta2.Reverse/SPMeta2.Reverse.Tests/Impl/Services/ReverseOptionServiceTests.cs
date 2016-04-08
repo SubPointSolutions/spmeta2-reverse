@@ -26,10 +26,16 @@ namespace SPMeta2.Reverse.Tests.Impl.Services
 
             var guid = new Guid("02482472-F002-4FB6-8EA9-6F9D799A46E8");
 
+            // equal
             expressions.Add((d => d.Title == "test"));
+
+            // not equal
             expressions.Add((d => d.Id != guid));
 
+            // starts with
             expressions.Add((d => d.Title.StartsWith("test")));
+
+            // ends with
             expressions.Add((d => d.Title.EndsWith("test")));
 
             var result = service.ParseOptionFilters(expressions);

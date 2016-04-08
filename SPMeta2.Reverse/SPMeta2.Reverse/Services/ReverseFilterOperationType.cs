@@ -9,6 +9,7 @@ namespace SPMeta2.Reverse.Services
     public enum ReverseFilterOperationType
     {
         Equal,
+        NotEqual,
         Contains,
         StartsWith,
         EndsWith
