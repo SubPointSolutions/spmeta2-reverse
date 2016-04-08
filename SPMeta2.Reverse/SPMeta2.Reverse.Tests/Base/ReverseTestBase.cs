@@ -217,28 +217,6 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
                 // deploy model
                 DeployModel(deployedModel);
 
-                // calculate reverse filters
-                var groupedDefs = deployedModel.Flatten()
-                    .Select(s => s.Value)
-                    .GroupBy(d => d.GetType());
-
-                foreach (var defType in groupedDefs)
-                {
-                    var defClassFullName = defType.Key.FullName;
-                    var defs = defType;
-
-                    // TMP, just testing yet
-                    if (defType.Key == typeof(ListDefinition))
-                    {
-                        foreach (var listDef in defs)
-                        {
-                            var listTitle = (listDef as ListDefinition).Title;
-                            options.AddFilterOption<ListDefinition>(l => l.Title == listTitle);
-                        }
-                    }
-                }
-
-
                 // reverse model
                 var reversedModel = ReverseModel(deployedModel, reverseHandlers, options);
 
@@ -412,6 +390,18 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
             return ModelGeneratorService.GetRandomDefinition<TDefinition>(action);
         }
 
+
+        #endregion
+
+        #region model filtering utils
+
+        protected virtual IEnumerable<TDefinition> GetAllDefinitionOfType<TDefinition>(ModelNode model)
+            where TDefinition : DefinitionBase
+        {
+            return model.Flatten()
+                                 .Where(n => n.Value is TDefinition)
+                                 .Select(s => s.Value as TDefinition);
+        }
 
         #endregion
     }

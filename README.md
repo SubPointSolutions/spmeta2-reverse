@@ -497,11 +497,6 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>False</td>
           <td>Not implemented yet</td>
         </tr>
-        <tr>
-          <td>WriteSecurity</td>
-          <td>False</td>
-          <td>Not implemented yet</td>
-        </tr>
       </tbody>
     </table>
   </div>

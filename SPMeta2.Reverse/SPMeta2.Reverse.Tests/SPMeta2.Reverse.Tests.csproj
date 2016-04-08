@@ -84,7 +84,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Impl\API\ReverseOptionsTests.cs" />
+    <Compile Include="Impl\API\ReverseOptionsFilterTests.cs" />
+    <Compile Include="Impl\API\ReverseOptionsSyntaxTests.cs" />
     <Compile Include="Base\ReverseTestBase.cs" />
     <Compile Include="Impl\Definitions\ContentTypeFieldLinkDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />

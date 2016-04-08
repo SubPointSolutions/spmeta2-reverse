@@ -1,19 +1,15 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SPMeta2.Reverse.Tests.API
+namespace SPMeta2.Reverse.Tests.Impl.API
 {
     [TestClass]
-    public class ReverseOptionsTests
+    public class ReverseOptionsSyntaxTests
     {
         [TestMethod]
-        [TestCategory("API.ReverseOptions")]
+        [TestCategory("API.ReverseOptions.Syntax")]
         [TestCategory("NET.Core")]
         public void CanBuildReverseDepthOptions()
         {
@@ -28,7 +24,7 @@ namespace SPMeta2.Reverse.Tests.API
         }
 
         [TestMethod]
-        [TestCategory("API.ReverseOptions")]
+        [TestCategory("API.ReverseOptions.Syntax")]
         [TestCategory("NET.Core")]
         public void CanBuildReverseFilterOptions()
         {
@@ -40,7 +36,7 @@ namespace SPMeta2.Reverse.Tests.API
         }
 
         [TestMethod]
-        [TestCategory("API.ReverseOptions")]
+        [TestCategory("API.ReverseOptions.Syntax")]
         [TestCategory("NET.Core")]
         public void CanBuildDoubledReverseOptions()
         {
@@ -58,7 +54,7 @@ namespace SPMeta2.Reverse.Tests.API
         }
 
         [TestMethod]
-        [TestCategory("API.ReverseOptions")]
+        [TestCategory("API.ReverseOptions.Syntax")]
         [TestCategory("NET.Core")]
         public void CanBuildAlternativeSyntax1ReverseOptions()
         {
@@ -71,7 +67,7 @@ namespace SPMeta2.Reverse.Tests.API
         }
 
         [TestMethod]
-        [TestCategory("API.ReverseOptions")]
+        [TestCategory("API.ReverseOptions.Syntax")]
         [TestCategory("NET.Core")]
         public void CanBuildAlternativeSyntax2ReverseOptions()
         {

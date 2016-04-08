@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPMeta2.Containers;
 using SPMeta2.Definitions;
@@ -9,6 +11,8 @@ using SPMeta2.Reverse.Tests.Base;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Enumerations;
 using Microsoft.SharePoint.Client;
+using SPMeta2.Extensions;
+using SPMeta2.Models;
 
 namespace SPMeta2.Reverse.Tests.Impl.Definitions
 {
@@ -53,10 +57,16 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
                 });
             });
 
+            // only giving list, improve the test performance
+            var listDefs = GetAllDefinitionOfType<ListDefinition>(model);
+
+            foreach (var listDef in listDefs)
+            {
+                options.AddFilterOption<ListDefinition>(l => l.Title == listDef.Title);
+            }
+
             DeployReverseAndTestModel(model, options);
         }
-
-        // TODO, add tests to revere lists and libraries
 
         #endregion
     }
