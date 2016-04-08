@@ -33,9 +33,10 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base
             return filters;
         }
 
-        protected virtual IEnumerable<List> ApplyReverseFilters(
-          IEnumerable<List> items,
+        protected virtual IEnumerable<TItemType> ApplyReverseFilters<TItemType>(
+          IEnumerable<TItemType> items,
           ReverseOptions options)
+            where TItemType :  class
         {
             //no filters, returning original collection
             if (!HasReverseFileters(options))
@@ -45,7 +46,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers.Base
             // reverse filtering logic should not be in the handler
 
             // filtering colleciton as per the filters
-            var result = new List<List>();
+            var result = new List<TItemType>();
             var reverseFilters = FindReverseFileters(options);
 
             foreach (var reverseFilter in reverseFilters)

@@ -62,9 +62,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
                 );
             context.ExecuteQuery();
 
-            var resultItems = ApplyReverseFilters(items, options);
-
-            result.AddRange(resultItems.ToArray().Select(i =>
+            result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {
                 return ModelHostBase.Inherit<ListReverseHost>(parentHost, h =>
                 {
