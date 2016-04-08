@@ -58,7 +58,9 @@ namespace SPMeta2.Reverse.Services
                         propValue = getter().ToString();
                     }
 
-                    var operationType = body.NodeType.ToString();
+                    var operationType = (ReverseFilterOperationType)Enum.Parse(
+                        typeof(ReverseFilterOperationType),
+                        body.NodeType.ToString());
 
                     var filter = new ReverseFilter
                     {
@@ -79,7 +81,9 @@ namespace SPMeta2.Reverse.Services
                     var propName = propExp.Member.Name;
                     var propValue = binaryBody.Arguments.FirstOrDefault().ToString();
 
-                    var operationType = binaryBody.Method.Name;
+                    var operationType = (ReverseFilterOperationType)Enum.Parse(
+                        typeof(ReverseFilterOperationType),
+                        binaryBody.Method.Name.ToString());
 
                     var filter = new ReverseFilter
                     {

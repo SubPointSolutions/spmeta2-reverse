@@ -11,7 +11,7 @@ namespace SPMeta2.Reverse.Services
     {
         public string PropertyName { get; set; }
         public string PropertyValue { get; set; }
-        public string Operation { get; set; }
+        public ReverseFilterOperationType Operation { get; set; }
 
         public override string ToString()
         {

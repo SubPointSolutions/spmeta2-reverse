@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SPMeta2.Reverse.Services
 {
-    public enum ReverseFilterOperation
+    public enum ReverseFilterOperationType
     {
-
+        Equal,
+        Contains,
+        StartsWith,
+        EndsWith
     }
 }

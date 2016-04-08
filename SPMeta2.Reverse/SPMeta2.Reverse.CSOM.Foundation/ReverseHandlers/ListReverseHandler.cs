@@ -75,65 +75,7 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             return result;
         }
 
-        protected virtual IEnumerable<List> ApplyReverseFilters(
-            IEnumerable<List> items,
-            ReverseOptions options)
-        {
-            //no filters, returning original collection
-            if (!HasReverseFileters(options))
-                return items;
-
-            // filtering colleciton as per the filters
-            var result = new List<List>();
-            var reverseFilters = FindReverseFileters(options);
-
-            foreach (var reverseFilter in reverseFilters)
-            {
-                var filterPropName = reverseFilter.Filter.PropertyName;
-                var filterPropValue = reverseFilter.Filter.PropertyValue;
-
-                var filterOperation = reverseFilter.Filter.Operation;
-
-                switch (filterOperation)
-                {
-                    case "Equal":
-                        {
-                            var operationObjects = new List<List>();
-
-                            foreach (var list in items)
-                            {
-                                var tmpPropValue = ReflectionUtils.GetPropertyValue(list, filterPropName);
-
-                                if (tmpPropValue != null)
-                                {
-                                    if (tmpPropValue.Equals(filterPropValue))
-                                    {
-                                        operationObjects.Add(list);
-                                    }
-                                }
-                            }
-
-                            //var includedList =
-                            //    items.FirstOrDefault(l => l.Title == reverseFilter.Filter.PropertyValue);
-
-                            //if (includedList != null)
-                            //{
-                            //    result.Add(includedList);
-                            //}
-                        }
-
-                        break;
-                    default:
-                        throw new SPMeta2ReverseException(
-                            String.Format("Unsupported filter operation:[{0}]", filterOperation));
-                }
-            }
-
-            // prevent multiple filter match
-            result = result.Distinct().ToList();
-
-            return result;
-        }
+      
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
