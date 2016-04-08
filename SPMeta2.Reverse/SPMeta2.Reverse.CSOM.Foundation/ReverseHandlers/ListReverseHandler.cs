@@ -73,8 +73,6 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
             return result;
         }
 
-      
-
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
             var web = (reverseHost as ListReverseHost).HostWeb;

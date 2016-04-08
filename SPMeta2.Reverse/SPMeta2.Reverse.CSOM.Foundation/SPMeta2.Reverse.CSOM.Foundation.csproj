@@ -88,6 +88,7 @@
     <Compile Include="ReverseHosts\UserCustomActionReverseHost.cs" />
     <Compile Include="ReverseHosts\WebReverseHost.cs" />
     <Compile Include="ReverseHosts\SiteReverseHost.cs" />
+    <Compile Include="Services\ReverseFilterService.cs" />
     <Compile Include="Services\CSOMReverseService.cs" />
     <Compile Include="Services\CSOMReverseServiceExtensions.cs" />
     <Compile Include="Services\ReverseProgressEventArgs.cs" />
