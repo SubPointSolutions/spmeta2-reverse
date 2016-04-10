@@ -91,6 +91,7 @@
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeLinkDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\NoteFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\NumberFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\TextFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\GeolocationFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\GuidFieldDefinitionTests.cs" />
