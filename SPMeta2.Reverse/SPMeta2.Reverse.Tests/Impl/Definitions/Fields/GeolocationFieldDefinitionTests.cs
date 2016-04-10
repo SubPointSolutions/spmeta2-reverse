@@ -9,37 +9,37 @@ using SPMeta2.Syntax.Default;
 namespace SPMeta2.Reverse.Tests.Impl.Definitions.Fields
 {
     [TestClass]
-    public class BooleanFieldDefinitionTests : ReverseTestBase
+    public class GeolocationFieldDefinitionTests : ReverseTestBase
     {
         #region tests
 
         [TestMethod]
-        [TestCategory("Fields.Boolean")]
-        public void Can_Reverse_Site_BooleanFields()
+        [TestCategory("Fields.Geolocation")]
+        public void Can_Reverse_Site_GeolocationFields()
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
-                site.AddBooleanField(Def<BooleanFieldDefinition>());
-                site.AddBooleanField(Def<BooleanFieldDefinition>());
+                site.AddGeolocationField(Def<GeolocationFieldDefinition>());
+                site.AddGeolocationField(Def<GeolocationFieldDefinition>());
             });
 
             DeployReverseAndTestModel(model);
         }
 
         [TestMethod]
-        [TestCategory("Fields.Boolean")]
-        public void Can_Reverse_Web_BooleanFields()
+        [TestCategory("Fields.Geolocation")]
+        public void Can_Reverse_Web_GeolocationFields()
         {
             var options = ReverseOptions.Default
                             .AddDepthOption<WebDefinition>(0);
 
             var model = SPMeta2Model.NewWebModel(web =>
             {
-                web.AddBooleanField(Def<BooleanFieldDefinition>());
-                web.AddBooleanField(Def<BooleanFieldDefinition>());
+                web.AddGeolocationField(Def<GeolocationFieldDefinition>());
+                web.AddGeolocationField(Def<GeolocationFieldDefinition>());
             });
 
-            DeployReverseAndTestModel(model,options);
+            DeployReverseAndTestModel(model, options);
         }
 
         #endregion

@@ -14,12 +14,12 @@ using SPMeta2.Definitions.Fields;
 
 namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 {
-    public class  BooleanFieldReverseHandler : FieldReverseHandler
+    public class GuidFieldReverseHandler : FieldReverseHandler
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(BooleanFieldDefinition); }
+            get { return typeof(GuidFieldDefinition); }
         }
 
         #endregion
@@ -28,7 +28,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 
         protected virtual IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
         {
-            var typedFields = context.LoadQuery(items.Where(i => i.FieldTypeKind == FieldType.Boolean));
+            var typedFields = context.LoadQuery(items.Where(i => i.FieldTypeKind == FieldType.Guid));
             context.ExecuteQuery();
 
             return typedFields;
@@ -36,12 +36,12 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 
         protected override FieldDefinition GetFieldDefinitionInstance()
         {
-            return new BooleanFieldDefinition();
+            return new GuidFieldDefinition();
         }
 
         protected override ModelNode GetFieldModelNodeInstance()
         {
-            return new BooleanFieldModelNode();
+            return new GuidFieldModelNode();
         }
 
         protected override void PostProcessFieldDefinitionInstance(FieldDefinition def, FieldReverseHost typedReverseHost, ReverseOptions options)
