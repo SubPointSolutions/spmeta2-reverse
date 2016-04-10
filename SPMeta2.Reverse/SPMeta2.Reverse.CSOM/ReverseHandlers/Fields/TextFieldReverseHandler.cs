@@ -11,15 +11,17 @@ using SPMeta2.Reverse.ReverseHosts;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Definitions.Fields;
+using SPMeta2.Utils;
+using SPMeta2.Validation.Extensions;
 
 namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 {
-    public class GuidFieldReverseHandler : FieldReverseHandler
+    public class TextFieldReverseHandler : FieldReverseHandler
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(GuidFieldDefinition); }
+            get { return typeof(TextFieldDefinition); }
         }
 
         #endregion
@@ -28,7 +30,10 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 
         protected override IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
         {
-            var typedFields = context.LoadQuery(items.Where(i => i.FieldTypeKind == FieldType.Guid));
+            var typedFields = context.LoadQuery(
+                items.Where(i => i.FieldTypeKind == FieldType.Text)
+                     .IncludeWithDefaultProperties());
+
             context.ExecuteQuery();
 
             return typedFields;
@@ -36,17 +41,22 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 
         protected override FieldDefinition GetFieldDefinitionInstance()
         {
-            return new GuidFieldDefinition();
+            return new TextFieldDefinition();
         }
 
         protected override ModelNode GetFieldModelNodeInstance()
         {
-            return new GuidFieldModelNode();
+            return new TextFieldModelNode();
         }
 
         protected override void PostProcessFieldDefinitionInstance(FieldDefinition def, FieldReverseHost typedReverseHost, ReverseOptions options)
         {
+            var context = typedReverseHost.HostClientContext;
 
+            var typedField = context.CastTo<FieldText>(typedReverseHost.Field);
+            var typedDef = def.WithAssertAndCast<TextFieldDefinition>("modelHost", m => m.RequireNotNull());
+
+            typedDef.MaxLength = typedField.MaxLength;
         }
 
         #endregion

@@ -57,6 +57,8 @@
     <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\NoteFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\TextFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GuidFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GeolocationFieldDefinitionValidator.cs" />
     <Compile Include="Validation\UserCustomActionDefinitionValidator.cs" />

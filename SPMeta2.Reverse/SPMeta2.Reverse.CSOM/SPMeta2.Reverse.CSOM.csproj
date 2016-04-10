@@ -89,6 +89,8 @@
     <Compile Include="ReverseHandlers\ContentTypeFieldLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\NoteFieldReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\TextFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\GeolocationFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\GuidFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\BooleanFieldReverseHandler.cs" />
