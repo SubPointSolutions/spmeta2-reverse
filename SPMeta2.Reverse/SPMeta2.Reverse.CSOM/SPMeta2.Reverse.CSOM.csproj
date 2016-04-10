@@ -89,6 +89,7 @@
     <Compile Include="ReverseHandlers\ContentTypeFieldLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\BooleanFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\UserCustomActionReverseHandler.cs" />
     <Compile Include="ReverseHandlers\QuickLaunchNavigationNodeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\TopNavigationNodeDefinitionReverseHandler.cs" />

@@ -1,43 +1,214 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ReverseCoverageResult>
-    <Model xsi:type="FeatureDefinition">
+    <Model xsi:type="FieldDefinition">
       <PropertyBag />
-      <Title>BasicWebParts</Title>
-      <Id>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</Id>
-      <ForceActivate>true</ForceActivate>
-      <Enable>true</Enable>
-      <Scope>Site</Scope>
+      <AddToDefaultView>false</AddToDefaultView>
+      <AddFieldOptions>DefaultValue</AddFieldOptions>
+      <RawXml />
+      <AdditionalAttributes />
+      <InternalName>iname_3554959cb55b48eb</InternalName>
+      <Title>e3c34dd5e7d94a1e8b85332f44dc695b</Title>
+      <TitleResource />
+      <Description>4de0b10b2daf409eaacf9356bf47eb48</Description>
+      <DescriptionResource />
+      <Group>646c9c72023b4cb4b0fc7704ae87510e</Group>
+      <Id>4fe6ffef-aede-4143-a408-b5398786290e</Id>
+      <FieldType>Text</FieldType>
+      <Required>false</Required>
+      <JSLink>20c0ea0b5e814d9c94d03c538a4bc2c1</JSLink>
+      <DefaultValue>fa33d848ce314e6d88aa86ebbb93f0f5</DefaultValue>
+      <Hidden>false</Hidden>
+      <ShowInDisplayForm>true</ShowInDisplayForm>
+      <ShowInEditForm>false</ShowInEditForm>
+      <ShowInListSettings>false</ShowInListSettings>
+      <ShowInNewForm>false</ShowInNewForm>
+      <ShowInVersionHistory>false</ShowInVersionHistory>
+      <ShowInViewForms>false</ShowInViewForms>
+      <AllowDeletion>false</AllowDeletion>
+      <EnforceUniqueValues xsi:nil="true" />
+      <Indexed>false</Indexed>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.FeatureDefinition</ModelFullClassName>
-    <ModelShortClassName>FeatureDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.FieldDefinition</ModelFullClassName>
+    <ModelShortClassName>FieldDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</SrcPropertyValue>
+        <SrcPropertyValue>e3c34dd5e7d94a1e8b85332f44dc695b</SrcPropertyValue>
+        <SrcPropertyName>Title</SrcPropertyName>
+        <DstPropertyValue>e3c34dd5e7d94a1e8b85332f44dc695b</DstPropertyValue>
+        <DstPropertyName>Title</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>4de0b10b2daf409eaacf9356bf47eb48</SrcPropertyValue>
+        <SrcPropertyName>Description</SrcPropertyName>
+        <DstPropertyValue>4de0b10b2daf409eaacf9356bf47eb48</DstPropertyValue>
+        <DstPropertyName>Description</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>iname_3554959cb55b48eb</SrcPropertyValue>
+        <SrcPropertyName>InternalName</SrcPropertyName>
+        <DstPropertyValue>iname_3554959cb55b48eb</DstPropertyValue>
+        <DstPropertyName>InternalName</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>Text</SrcPropertyValue>
+        <SrcPropertyName>FieldType</SrcPropertyName>
+        <DstPropertyValue>Text</DstPropertyValue>
+        <DstPropertyName>FieldType</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>fa33d848ce314e6d88aa86ebbb93f0f5</SrcPropertyValue>
+        <SrcPropertyName>DefaultValue</SrcPropertyName>
+        <DstPropertyValue>fa33d848ce314e6d88aa86ebbb93f0f5</DstPropertyValue>
+        <DstPropertyName>DefaultValue</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>Required</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>Required</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>646c9c72023b4cb4b0fc7704ae87510e</SrcPropertyValue>
+        <SrcPropertyName>Group</SrcPropertyName>
+        <DstPropertyValue>646c9c72023b4cb4b0fc7704ae87510e</DstPropertyValue>
+        <DstPropertyName>Group</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>4fe6ffef-aede-4143-a408-b5398786290e</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>00bfea71-1c5e-4a24-b310-ba51c3eb7a57</DstPropertyValue>
+        <DstPropertyValue>4fe6ffef-aede-4143-a408-b5398786290e</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>ForceActivate</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Supported, user defined</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Site</SrcPropertyValue>
-        <SrcPropertyName>Scope</SrcPropertyName>
-        <DstPropertyValue>Site</DstPropertyValue>
-        <DstPropertyName>Scope</DstPropertyName>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>Hidden</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>Hidden</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>Enable</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
-        <DstPropertyName>Enable</DstPropertyName>
+        <SrcPropertyValue />
+        <SrcPropertyName>StaticName</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>StaticName</DstPropertyName>
         <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>TitleResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>DescriptionResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>DefaultValue</SrcPropertyValue>
+        <SrcPropertyName>AddFieldOptions</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldAttributeValue]</SrcPropertyValue>
+        <SrcPropertyName>AdditionalAttributes</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>AddToDefaultView</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>AllowDeletion</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>EnforceUniqueValues</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>Indexed</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>20c0ea0b5e814d9c94d03c538a4bc2c1</SrcPropertyValue>
+        <SrcPropertyName>JSLink</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>RawXml</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyName>ShowInDisplayForm</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ShowInEditForm</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ShowInListSettings</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ShowInNewForm</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ShowInVersionHistory</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ShowInViewForms</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>ValidationFormula</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>ValidationMessage</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>
