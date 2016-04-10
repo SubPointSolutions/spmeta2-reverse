@@ -46,8 +46,6 @@ $g_Verbosity = 'quiet'
 $g_SourceUrl = $null
 $g_apiKey = $null
 
-$g_isAppVeyor = $false
-
 if($g_isAppVeyor -eq $true) 
 {
 	Write-BInfo "AppVeyor build"
