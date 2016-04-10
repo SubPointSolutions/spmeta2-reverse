@@ -14,7 +14,7 @@ namespace SPMeta2.Reverse.ReverseHandlers
     {
         public ReverseHandlerBase()
         {
-            TraceService = ServiceContainer.Instance.GetService<TraceServiceBase>();
+            TraceService = ReverseServiceContainer.Instance.GetService<TraceServiceBase>();
         }
 
         #region properties

@@ -107,7 +107,13 @@
     <Compile Include="Services\VSAssertService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="SPMeta2.Reverse.Tests.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SPMeta2.Reverse.CSOM.Foundation\SPMeta2.Reverse.CSOM.Foundation.csproj">
@@ -129,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="_coverage_reports\_m2.ContentTypeDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.ContentTypeFieldLinkDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.FeatureDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.FieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ListDefinition.def-coverage.html" />

@@ -39,6 +39,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
+            TraceService.Information((int)ReverseLogEventId.ReverseHostsStart, "Processing web reverse host start");
+
             var result = new List<WebReverseHost>();
 
             Web web = null;
@@ -80,11 +82,15 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
                 });
             }));
 
+            TraceService.Information((int)ReverseLogEventId.ReverseHostsStart, "Processing web reverse host end");
+
             return result;
         }
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
+            TraceService.Information((int)ReverseLogEventId.ReverseSingleHostStart, "Processing single web host start");
+
             var item = (reverseHost as WebReverseHost).HostWeb;
 
             var def = new WebDefinition();
@@ -108,6 +114,8 @@ namespace SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers
 
             // always web relative
             def.Url = item.Url.Split('/').Last();
+
+            TraceService.Information((int)ReverseLogEventId.ReverseSingleHostStart, "Processing single web host end");
 
             return new WebModelNode
             {
