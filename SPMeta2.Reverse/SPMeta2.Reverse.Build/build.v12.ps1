@@ -76,7 +76,7 @@ $currentPath =  Get-ScriptDirectory
 $solutionRootPath =  "$currentPath\..\"
 $msbuild_path = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe"
 
-$defaultProjects = @("SPMeta2.Reverse", "SPMeta2.Reverse.CSOM.Foundation", "SPMeta2.Reverse.CSOM.Standard" )
+$defaultProjects = @("SPMeta2.Reverse", "SPMeta2.Reverse.CSOM", "SPMeta2.Reverse.CSOM.Standard" )
 #$defaultProjects = @( "SPMeta2", "SPMeta2.Standard", "SPMeta2.SSOM")
 #$o365Projects = @("SPMeta2", "SPMeta2.Standard", "SPMeta2.CSOM", "SPMeta2.CSOM.Standard" )
 

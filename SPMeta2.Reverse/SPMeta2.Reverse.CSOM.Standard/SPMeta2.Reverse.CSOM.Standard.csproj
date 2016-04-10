@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug40\SPMeta2.Reverse.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug40\SPMeta2.Reverse.CSOM.Standard.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug45|AnyCPU'">
     <OutputPath>bin\Debug45\</OutputPath>
@@ -39,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug45\SPMeta2.Reverse.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug45\SPMeta2.Reverse.CSOM.Standard.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +49,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SPMeta2.Reverse.CSOM.Standard.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,9 +73,9 @@
     <Compile Include="Services\StandardCSOMReverseService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SPMeta2.Reverse.CSOM.Foundation\SPMeta2.Reverse.CSOM.Foundation.csproj">
-      <Project>{8366B470-81DE-403C-AA0C-BC715C9246E0}</Project>
-      <Name>SPMeta2.Reverse.CSOM.Foundation</Name>
+    <ProjectReference Include="..\SPMeta2.Reverse.CSOM\SPMeta2.Reverse.CSOM.csproj">
+      <Project>{8366b470-81de-403c-aa0c-bc715c9246e0}</Project>
+      <Name>SPMeta2.Reverse.CSOM</Name>
     </ProjectReference>
     <ProjectReference Include="..\SPMeta2.Reverse\SPMeta2.Reverse.csproj">
       <Project>{3AD69FA0-71A0-4849-AD5D-8C1049669607}</Project>

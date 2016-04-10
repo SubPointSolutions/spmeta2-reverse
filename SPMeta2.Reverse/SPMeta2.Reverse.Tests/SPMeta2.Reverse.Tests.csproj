@@ -115,13 +115,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SPMeta2.Reverse.CSOM.Foundation\SPMeta2.Reverse.CSOM.Foundation.csproj">
-      <Project>{8366B470-81DE-403C-AA0C-BC715C9246E0}</Project>
-      <Name>SPMeta2.Reverse.CSOM.Foundation</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SPMeta2.Reverse.CSOM.Standard\SPMeta2.Reverse.CSOM.Standard.csproj">
       <Project>{9f07c965-524b-4532-a407-55d6b13a4417}</Project>
       <Name>SPMeta2.Reverse.CSOM.Standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPMeta2.Reverse.CSOM\SPMeta2.Reverse.CSOM.csproj">
+      <Project>{8366b470-81de-403c-aa0c-bc715c9246e0}</Project>
+      <Name>SPMeta2.Reverse.CSOM</Name>
     </ProjectReference>
     <ProjectReference Include="..\SPMeta2.Reverse.Regression\SPMeta2.Reverse.Regression.csproj">
       <Project>{ABABA893-DC65-4DDB-844E-9C3C1C94DB55}</Project>
@@ -168,7 +168,6 @@
   </Choose>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -2,8 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPMeta2.Containers;
 using SPMeta2.Definitions;
-using SPMeta2.Reverse.CSOM.Foundation.ReverseHandlers;
-using SPMeta2.Reverse.CSOM.Foundation.Services;
+using SPMeta2.Reverse.CSOM;
+using SPMeta2.Reverse.CSOM;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Tests.Base;
 using SPMeta2.Syntax.Default;

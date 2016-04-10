@@ -340,7 +340,7 @@ function CreateNugetSpec($package, $targetFolder) {
 	$nugetPath = GetNugetExePath
 	$currentDir = GetCurrentDirectory
 
-	$nugetFolder = [System.IO.Path]::Combine($currentDir, ("packages" + $g_hardcoreVersion))
+	$nugetFolder = [System.IO.Path]::Combine($currentDir, ("packages\" + $g_hardcoreVersion))
 	$nugetFilePath =[System.IO.Path]::Combine($nugetFolder, $nupkgFileName)
 
 	[System.IO.Directory]::CreateDirectory($nugetFolder) | out-null

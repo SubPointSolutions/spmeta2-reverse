@@ -16,7 +16,10 @@ test:
 clone_folder: c:\prj\m2.reverse
 
 build_script: 
-    - ps: c:\prj\m2.reverse\SPMeta2.Reverse\SPMeta2.Reverse\SPMeta2.Reverse.Build\build.v12.ps1
+    - ps: c:\prj\m2.reverse\SPMeta2.Reverse\SPMeta2.Reverse.Build\build.v12.ps1
+
+after_test:
+    - ps: c:\prj\m2.reverse\SPMeta2.Reverse\SPMeta2.Reverse.Build\nuget.v12.ps1
 
 artifacts:
     - path: '**\*.nupkg'
