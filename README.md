@@ -1435,6 +1435,12 @@ In case you have unexpected issues or keen to see new features please contact su
           </td>
         </tr>
         <tr>
+          <td>ShowAsPercentage</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
           <td>ShowInDisplayForm</td>
           <td>False</td>
           <td>Not implemented yet</td>

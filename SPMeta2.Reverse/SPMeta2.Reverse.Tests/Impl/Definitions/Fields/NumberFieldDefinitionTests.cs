@@ -15,7 +15,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Fields
 
         [TestMethod]
         [TestCategory("Fields.Number")]
-        public void Can_Reverse_Site_TextFields()
+        public void Can_Reverse_Site_NumberFields()
         {
             var model = SPMeta2Model.NewSiteModel(site =>
             {
@@ -28,7 +28,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Fields
 
         [TestMethod]
         [TestCategory("Fields.Number")]
-        public void Can_Reverse_Web_BooleanFields()
+        public void Can_Reverse_Web_NumberFields()
         {
             var options = ReverseOptions.Default
                             .AddDepthOption<WebDefinition>(0);

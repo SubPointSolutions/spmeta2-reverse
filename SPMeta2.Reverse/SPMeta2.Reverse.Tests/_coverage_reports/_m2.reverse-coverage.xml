@@ -7,55 +7,55 @@
       <AddFieldOptions>DefaultValue</AddFieldOptions>
       <RawXml />
       <AdditionalAttributes />
-      <InternalName>iname_0e0bbebcf0ee4a11</InternalName>
-      <Title>43048c0c6c814e919e7a80156763a27d</Title>
+      <InternalName>iname_9913ee3178c647d3</InternalName>
+      <Title>79b795ab975946149964dc6aa10a192e</Title>
       <TitleResource />
-      <Description>d924e5e1585743f986587868cb1b0867</Description>
+      <Description>a942f5037966428699c1ba1a8a9ecbeb</Description>
       <DescriptionResource />
-      <Group>54a74bbb07d64b3ebe246d11bacc2e70</Group>
-      <Id>375af773-9837-453b-abee-d6119bb24e21</Id>
+      <Group>1834da0f9bfc43b3b76f740c963fd826</Group>
+      <Id>f0671827-2147-40fc-9c63-caec2033b99b</Id>
       <FieldType>Number</FieldType>
       <Required>false</Required>
-      <JSLink>05dd97c0762348828c4453c93cc884d6</JSLink>
-      <DefaultValue>5a7d7b84b5154838b54cf918db4c8c5f</DefaultValue>
-      <Hidden>true</Hidden>
-      <ShowInDisplayForm>true</ShowInDisplayForm>
-      <ShowInEditForm>false</ShowInEditForm>
-      <ShowInListSettings>false</ShowInListSettings>
-      <ShowInNewForm>false</ShowInNewForm>
+      <JSLink>15cf6dc2485c468b983238f4770c014c</JSLink>
+      <DefaultValue>4b5993cb13994761b7d850ffa1bb666f</DefaultValue>
+      <Hidden>false</Hidden>
+      <ShowInDisplayForm>false</ShowInDisplayForm>
+      <ShowInEditForm>true</ShowInEditForm>
+      <ShowInListSettings>true</ShowInListSettings>
+      <ShowInNewForm>true</ShowInNewForm>
       <ShowInVersionHistory>true</ShowInVersionHistory>
-      <ShowInViewForms>false</ShowInViewForms>
+      <ShowInViewForms>true</ShowInViewForms>
       <AllowDeletion>false</AllowDeletion>
       <EnforceUniqueValues xsi:nil="true" />
       <Indexed>false</Indexed>
-      <ValidationFormula>=[ID] * 83</ValidationFormula>
-      <ValidationMessage>validatin_msg_237de9f6346b45ea804a46f146b02286</ValidationMessage>
+      <ValidationFormula>=[ID] * 82</ValidationFormula>
+      <ValidationMessage>validatin_msg_274fe7fafc36481c93d0c420095da81e</ValidationMessage>
       <DisplayFormat>ThreeDecimals</DisplayFormat>
-      <MaximumValue>1092</MaximumValue>
-      <MinimumValue>98</MinimumValue>
-      <ShowAsPercentage>true</ShowAsPercentage>
+      <MaximumValue>1067</MaximumValue>
+      <MinimumValue>91</MinimumValue>
+      <ShowAsPercentage>false</ShowAsPercentage>
     </Model>
     <ModelFullClassName>SPMeta2.Definitions.Fields.NumberFieldDefinition</ModelFullClassName>
     <ModelShortClassName>NumberFieldDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>43048c0c6c814e919e7a80156763a27d</SrcPropertyValue>
+        <SrcPropertyValue>79b795ab975946149964dc6aa10a192e</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>43048c0c6c814e919e7a80156763a27d</DstPropertyValue>
+        <DstPropertyValue>79b795ab975946149964dc6aa10a192e</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>d924e5e1585743f986587868cb1b0867</SrcPropertyValue>
+        <SrcPropertyValue>a942f5037966428699c1ba1a8a9ecbeb</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>d924e5e1585743f986587868cb1b0867</DstPropertyValue>
+        <DstPropertyValue>a942f5037966428699c1ba1a8a9ecbeb</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>iname_0e0bbebcf0ee4a11</SrcPropertyValue>
+        <SrcPropertyValue>iname_9913ee3178c647d3</SrcPropertyValue>
         <SrcPropertyName>InternalName</SrcPropertyName>
-        <DstPropertyValue>iname_0e0bbebcf0ee4a11</DstPropertyValue>
+        <DstPropertyValue>iname_9913ee3178c647d3</DstPropertyValue>
         <DstPropertyName>InternalName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -67,9 +67,9 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>5a7d7b84b5154838b54cf918db4c8c5f</SrcPropertyValue>
+        <SrcPropertyValue>4b5993cb13994761b7d850ffa1bb666f</SrcPropertyValue>
         <SrcPropertyName>DefaultValue</SrcPropertyName>
-        <DstPropertyValue>5a7d7b84b5154838b54cf918db4c8c5f</DstPropertyValue>
+        <DstPropertyValue>4b5993cb13994761b7d850ffa1bb666f</DstPropertyValue>
         <DstPropertyName>DefaultValue</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -81,23 +81,23 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>54a74bbb07d64b3ebe246d11bacc2e70</SrcPropertyValue>
+        <SrcPropertyValue>1834da0f9bfc43b3b76f740c963fd826</SrcPropertyValue>
         <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>54a74bbb07d64b3ebe246d11bacc2e70</DstPropertyValue>
+        <DstPropertyValue>1834da0f9bfc43b3b76f740c963fd826</DstPropertyValue>
         <DstPropertyName>Group</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>375af773-9837-453b-abee-d6119bb24e21</SrcPropertyValue>
+        <SrcPropertyValue>f0671827-2147-40fc-9c63-caec2033b99b</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>375af773-9837-453b-abee-d6119bb24e21</DstPropertyValue>
+        <DstPropertyValue>f0671827-2147-40fc-9c63-caec2033b99b</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
+        <DstPropertyValue>False</DstPropertyValue>
         <DstPropertyName>Hidden</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -157,7 +157,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>05dd97c0762348828c4453c93cc884d6</SrcPropertyValue>
+        <SrcPropertyValue>15cf6dc2485c468b983238f4770c014c</SrcPropertyValue>
         <SrcPropertyName>JSLink</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -169,25 +169,25 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>ShowInDisplayForm</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInEditForm</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInListSettings</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInNewForm</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -199,19 +199,19 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInViewForms</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>=[ID] * 83</SrcPropertyValue>
+        <SrcPropertyValue>=[ID] * 82</SrcPropertyValue>
         <SrcPropertyName>ValidationFormula</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>validatin_msg_237de9f6346b45ea804a46f146b02286</SrcPropertyValue>
+        <SrcPropertyValue>validatin_msg_274fe7fafc36481c93d0c420095da81e</SrcPropertyValue>
         <SrcPropertyName>ValidationMessage</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -224,16 +224,23 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>98</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ShowAsPercentage</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>ShowAsPercentage</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>91</SrcPropertyValue>
         <SrcPropertyName>MinimumValue</SrcPropertyName>
-        <DstPropertyValue>98</DstPropertyValue>
+        <DstPropertyValue>91</DstPropertyValue>
         <DstPropertyName>MinimumValue</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>1092</SrcPropertyValue>
+        <SrcPropertyValue>1067</SrcPropertyValue>
         <SrcPropertyName>MaximumValue</SrcPropertyName>
-        <DstPropertyValue>1092</DstPropertyValue>
+        <DstPropertyValue>1067</DstPropertyValue>
         <DstPropertyName>MaximumValue</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>

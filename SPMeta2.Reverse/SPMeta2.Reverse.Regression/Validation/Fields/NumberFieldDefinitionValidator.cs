@@ -26,6 +26,9 @@ namespace SPMeta2.Reverse.Regression.Validation.Fields
 
             assert
                 .ShouldBeEqual(s => s.DisplayFormat, r => r.DisplayFormat)
+
+                .ShouldBeEqual(s => s.ShowAsPercentage, r => r.ShowAsPercentage)
+                
                 .ShouldBeEqual(s => s.MinimumValue, r => r.MinimumValue)
                 .ShouldBeEqual(s => s.MaximumValue, r => r.MaximumValue);
         }
