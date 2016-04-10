@@ -80,6 +80,7 @@
     <Compile Include="ReverseHosts\ReverseHostBase.cs" />
     <Compile Include="ReverseHosts\ReverseHostResolveContext.cs" />
     <Compile Include="ReverseServiceContainer.cs" />
+    <Compile Include="Services\KnownDefinitionService.cs" />
     <Compile Include="Services\ReverseFilter.cs" />
     <Compile Include="Services\ReverseFilterOperationType.cs" />
     <Compile Include="Services\ReverseLogEventId.cs" />

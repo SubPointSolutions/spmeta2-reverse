@@ -32,6 +32,7 @@ namespace SPMeta2.Reverse
         private void InitServices()
         {
             RegisterService(typeof(TraceServiceBase), new ReverseTraceSourceService());
+            RegisterService(typeof(KnownDefinitionService), new KnownDefinitionService());
         }
 
         #endregion
