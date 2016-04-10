@@ -90,6 +90,9 @@
     <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeLinkDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\GeolocationFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\GuidFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\BooleanFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\TopNavigationNodeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\QuickLaunchNavigationNodeDefinitionTests.cs" />

@@ -56,6 +56,9 @@
     <Compile Include="Services\ReverseValidationService.cs" />
     <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
+    <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\GuidFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\GeolocationFieldDefinitionValidator.cs" />
     <Compile Include="Validation\UserCustomActionDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeDefinitionValidator.cs" />
     <Compile Include="Validation\FeatureDefinitionValidator.cs" />
@@ -65,7 +68,7 @@
     <Compile Include="Validation\ListDefinitionValidator.cs" />
     <Compile Include="Validation\SecurityRoleDefinitionValidator.cs" />
     <Compile Include="Validation\SiteDefinitionValidator.cs" />
-    <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\BooleanFieldDefinitionValidator.cs" />
     <Compile Include="Validation\SecurityGroupDefinitionValidator.cs" />
     <Compile Include="Validation\WebDefinitionValidator.cs" />
   </ItemGroup>

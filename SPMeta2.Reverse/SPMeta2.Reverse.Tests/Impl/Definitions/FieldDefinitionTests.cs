@@ -32,13 +32,16 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions
         [TestCategory("Fields")]
         public void Can_Reverse_Web_Fields()
         {
+            var options = ReverseOptions.Default
+                            .AddDepthOption<WebDefinition>(0);
+
             var model = SPMeta2Model.NewWebModel(site =>
             {
                 site.AddRandomField();
                 site.AddRandomField();
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, options);
         }
 
         #endregion

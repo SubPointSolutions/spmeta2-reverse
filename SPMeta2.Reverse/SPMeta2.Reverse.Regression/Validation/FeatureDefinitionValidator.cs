@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SPMeta2.Containers.Assertion;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
+using SPMeta2.Reverse.Regression.Consts;
 using SPMeta2.Utils;
 
 namespace SPMeta2.Reverse.Regression.Validation
@@ -22,7 +24,24 @@ namespace SPMeta2.Reverse.Regression.Validation
 
             assert
                 .ShouldBeEqual(s => s.Id, r => r.Id)
-                .ShouldBeEqual(s => s.Scope.ToString(), r => r.Scope.ToString())
+                .SkipProperty(s => s.ForceActivate, SkipMessages.UserDefined)
+                .ShouldBeEqual((p, s, d) =>
+                {
+                    var isValid = true;
+
+                    var srcProp = s.GetExpressionValue(o => o.Scope);
+                    var dstProp = d.GetExpressionValue(o => o.Scope);
+
+                    isValid = s.Scope.ToString().ToUpper() == d.Scope.ToString().ToUpper();
+
+                    return new PropertyValidationResult
+                    {
+                        Tag = p.Tag,
+                        Src = srcProp,
+                        Dst = dstProp,
+                        IsValid = isValid
+                    };
+                })
                 .ShouldBeEqual(s => s.Enable, r => r.Enable)
                 ;
         }

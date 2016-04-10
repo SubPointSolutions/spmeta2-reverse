@@ -28,7 +28,8 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition)
+                    typeof(SiteDefinition),
+                    typeof(WebDefinition)
                 };
             }
         }
@@ -57,10 +58,9 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
                 items = siteHost.HostSite.RootWeb.Fields;
             }
 
-            context.Load(items);
-            context.ExecuteQuery();
+            var typedItems = GetTypedFields(context, items);
 
-            result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
+            result.AddRange(ApplyReverseFilters(typedItems, options).ToArray().Select(i =>
             {
                 return ModelHostBase.Inherit<FieldReverseHost>(parentHost, h =>
                 {
@@ -71,11 +71,35 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             return result;
         }
 
+        protected virtual IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
+        {
+            context.Load(items);
+            context.ExecuteQuery();
+
+            return items.ToArray();
+        }
+
+        protected virtual FieldDefinition GetFieldDefinitionInstance()
+        {
+            return new FieldDefinition();
+        }
+
+        protected virtual ModelNode GetFieldModelNodeInstance()
+        {
+            return new FieldModelNode();
+        }
+
+        protected virtual void PostProcessFieldDefinitionInstance(FieldDefinition def, FieldReverseHost typedReverseHost, ReverseOptions options)
+        {
+            // implement typed field mapping here
+        }
+
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var item = (reverseHost as FieldReverseHost).Field;
+            var typedReverseHost = (reverseHost as FieldReverseHost);
+            var item = typedReverseHost.Field;
 
-            var def = new FieldDefinition();
+            var def = GetFieldDefinitionInstance();
 
             def.Title = item.Title;
             def.Description = item.Description;
@@ -92,11 +116,14 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
 
             def.Group = item.Group;
 
-            return new FieldModelNode
-            {
-                Options = { RequireSelfProcessing = true },
-                Value = def
-            };
+            PostProcessFieldDefinitionInstance(def, typedReverseHost, options);
+
+            var modelNode = GetFieldModelNodeInstance();
+
+            modelNode.Options.RequireSelfProcessing = true;
+            modelNode.Value = def;
+
+            return modelNode;
         }
 
         #endregion
