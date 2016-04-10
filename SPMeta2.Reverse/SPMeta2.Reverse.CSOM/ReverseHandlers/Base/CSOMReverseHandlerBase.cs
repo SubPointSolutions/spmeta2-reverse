@@ -29,6 +29,11 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Base
 
         protected ReverseFilterService ReverseFilterService { get; set; }
 
+        protected KnownDefinitionService KnownDefinitionService
+        {
+            get { return ReverseServiceContainer.Instance.GetService<KnownDefinitionService>(); }
+        }
+
         #endregion
 
         #region methods

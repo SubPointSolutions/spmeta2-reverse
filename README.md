@@ -170,9 +170,14 @@ In case you have unexpected issues or keen to see new features please contact su
       <tbody>
         <tr>
           <td>Enable</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
+        </tr>
+        <tr>
+          <td>ForceActivate</td>
+          <td>True</td>
+          <td>Supported, user defined</td>
         </tr>
         <tr>
           <td>Id</td>

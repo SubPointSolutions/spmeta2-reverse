@@ -16,7 +16,7 @@ namespace SPMeta2.Reverse.Services
 
         public IEnumerable<FeatureDefinition> GetKnownWebFeatures()
         {
-            return GetKnownSiteFeatures(null);
+            return GetKnownWebFeatures(null);
         }
 
         public IEnumerable<FeatureDefinition> GetKnownWebFeatures(
