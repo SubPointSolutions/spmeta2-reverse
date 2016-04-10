@@ -132,6 +132,13 @@ if($build365 -eq $true) {
     # TODO
 }
 
+$buildProfiles += @{
+        "Name"  = "SPMeta2.Reverse.Tests NET45";
+        "ProjectNames" = @('SPMeta2.Reverse.Regression', 'SPMeta2.Reverse.Tests'); 
+        "BuildParams" = (" /p:Configuration=Debug /p:DefineConstants=NET45 " + $defaultBuildParams);
+}
+
+
 foreach($buildProfile in $buildProfiles) {
 
     $index = $buildProfiles.IndexOf($buildProfile) + 1
