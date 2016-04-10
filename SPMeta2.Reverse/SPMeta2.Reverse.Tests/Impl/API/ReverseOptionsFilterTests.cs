@@ -10,7 +10,7 @@ namespace SPMeta2.Reverse.Tests.Impl.API
     {
         [TestMethod]
         [TestCategory("API.ReverseOptions.Syntax")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void CanBuildReverseDepthOptions()
         {
             var options = ReverseOptions.Default
@@ -25,7 +25,7 @@ namespace SPMeta2.Reverse.Tests.Impl.API
 
         [TestMethod]
         [TestCategory("API.ReverseOptions.Syntax")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void CanBuildReverseFilterOptions()
         {
             var options = ReverseOptions.Default
@@ -37,7 +37,7 @@ namespace SPMeta2.Reverse.Tests.Impl.API
 
         [TestMethod]
         [TestCategory("API.ReverseOptions.Syntax")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void CanBuildDoubledReverseOptions()
         {
             // still should be 2 - perunique definition
@@ -55,7 +55,7 @@ namespace SPMeta2.Reverse.Tests.Impl.API
 
         [TestMethod]
         [TestCategory("API.ReverseOptions.Syntax")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void CanBuildAlternativeSyntax1ReverseOptions()
         {
             var options = ReverseOptions.Default
@@ -68,7 +68,7 @@ namespace SPMeta2.Reverse.Tests.Impl.API
 
         [TestMethod]
         [TestCategory("API.ReverseOptions.Syntax")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void CanBuildAlternativeSyntax2ReverseOptions()
         {
             var options = ReverseOptions.Default

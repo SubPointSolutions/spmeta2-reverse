@@ -17,7 +17,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Services
 
         [TestMethod]
         [TestCategory("Services.ReverseOptionService")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void ReverseOptionService_CanParseOptions()
         {
             var service = new ReverseOptionService();

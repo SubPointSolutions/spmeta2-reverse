@@ -21,7 +21,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Services
 
         [TestMethod]
         [TestCategory("Services.ReverseService")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void CSOMReverseService_Has_Handlers()
         {
             var service = new CSOMReverseService();
@@ -31,7 +31,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Services
 
         [TestMethod]
         [TestCategory("Services.ReverseService")]
-        [TestCategory("NET.Core")]
+        [TestCategory("CI.Core")]
         public void StandardCSOMReverseService_Has_Handlers()
         {
             var service = new StandardCSOMReverseService();
