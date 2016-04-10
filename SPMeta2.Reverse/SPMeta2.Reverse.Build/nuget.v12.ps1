@@ -84,6 +84,13 @@ Write-BInfo "g_SourceUrl:[$g_SourceUrl]"
 
 # override 'g_' here if any
 
+function ProcessReversePackageProperties($package) {
+	
+	$package.ProjectUrl = "https://github.com/SubPointSolutions/spmeta2-reverse"
+	$package.IconUrl = "https://github.com/SubPointSolutions/spmeta2-reverse"
+
+}
+
 function CreateReverseCorePackage() {
     
     $asm = @()
@@ -92,6 +99,8 @@ function CreateReverseCorePackage() {
     $asm += "SPMeta2.Reverse.xml";
 	
 	$package = GetPackagePrototype
+
+	ProcessReversePackageProperties $package
 
     #$package.Assemblies35 = $asm;
 	$package.Assemblies45 = $asm;
@@ -103,6 +112,12 @@ function CreateReverseCorePackage() {
 	$package.Description = "SPMeta2 Reverse common infrastructure. Provides based interfaces, services and reverse handlers.";
 	$package.Summary = "SPMeta2 Reverse common infrastructure."
 	
+    $spMetaCore = GetDependencyPrototype
+	$spMetaCore.Id = "SPMeta2.Core"
+	$spMetaCore.Version = "1.2.60"
+
+	$package.Dependencies += $spMetaCore
+
 	CreatePackage $package $spRuntime
 }
 
@@ -114,6 +129,8 @@ function CreateReverseCSOMPackage() {
     $asm += "SPMeta2.Reverse.CSOM.xml";
 
 	$package = GetPackagePrototype
+
+	ProcessReversePackageProperties $package
 
     #$package.Assemblies35 = $asm;
 	$package.Assemblies45 = $asm;
@@ -143,6 +160,8 @@ function CreateReverseCSOMStandardPackage() {
 
 	$package = GetPackagePrototype
 
+	ProcessReversePackageProperties $package
+
     #$package.Assemblies35 = $asm;
 	$package.Assemblies45 = $asm;
     #$package.Assemblies40 = $asm;
@@ -158,6 +177,12 @@ function CreateReverseCSOMStandardPackage() {
 	$spMetaCore.Version = $version
 
 	$package.Dependencies += $spMetaCore
+
+    $spMetaStandard = GetDependencyPrototype
+	$spMetaStandard.Id = "SPMeta2.Core.Standard"
+	$spMetaStandard.Version = "1.2.60"
+
+	$package.Dependencies += $spMetaStandard
 
     CreatePackage $package $spRuntime
 }
