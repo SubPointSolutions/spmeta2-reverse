@@ -25,10 +25,8 @@ namespace SPMeta2.Reverse.Regression.Validation.Fields
 
             var assert = ServiceFactory.AssertService.NewAssert(originalDefinition, reversedDefinition);
 
-            // TODO, typed field validation
-            //assert
-            //    .ShouldBeEqual(s => s.EditFormat, r => r.EditFormat)
-            //    .ShouldBeEqual(s => s.FillInChoice, r => r.FillInChoice);
+            assert
+                .ShouldBeEqual(s => s.CurrencyLocaleId, r => r.CurrencyLocaleId);
         }
     }
 }
