@@ -60,6 +60,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net45\SPMeta2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPMeta2.Standard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.Standard.1.2.60\lib\net45\SPMeta2.Standard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseHandlers\TaxonomyTermStoreReverseHandler.cs" />
+    <Compile Include="ReverseHosts\TaxonomyTermStoreReverseHost.cs" />
     <Compile Include="Services\StandardCSOMReverseService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +107,9 @@
       <Project>{3AD69FA0-71A0-4849-AD5D-8C1049669607}</Project>
       <Name>SPMeta2.Reverse</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

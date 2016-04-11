@@ -150,6 +150,7 @@
     <Content Include="_coverage_reports\_m2.ChoiceFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ContentTypeDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ContentTypeFieldLinkDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.CurrencyFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.DateTimeFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.FeatureDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.FieldDefinition.def-coverage.html" />
@@ -157,6 +158,7 @@
     <Content Include="_coverage_reports\_m2.GuidFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ListDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ListViewDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.MultiChoiceFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.NoteFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.NumberFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.QuickLaunchNavigationNodeDefinition.def-coverage.html" />

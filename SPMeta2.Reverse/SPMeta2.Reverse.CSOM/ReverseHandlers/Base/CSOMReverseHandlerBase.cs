@@ -18,7 +18,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Base
     {
         #region constructors
 
-        internal CSOMReverseHandlerBase()
+        public CSOMReverseHandlerBase()
         {
             ReverseFilterService = new ReverseFilterService();
         }
