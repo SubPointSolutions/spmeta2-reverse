@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.SharePoint.Client;
@@ -61,14 +62,22 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 
             //typedDef.NumberOfLines = typedField.NumberOfLines;
 
-            //var xml = XDocument.Parse(typedField.SchemaXml);
-            //var fieldXml = xml.Root;
+            var xml = XDocument.Parse(typedField.SchemaXml);
+            var fieldXml = xml.Root;
 
-            //var unlimValue = ConvertUtils.ToBool(fieldXml.GetAttributeValue("UnlimitedLengthInDocumentLibrary"));
-            //typedDef.UnlimitedLengthInDocumentLibrary = unlimValue.HasValue ? unlimValue.Value : false;
+            var choices = fieldXml.Descendants("CHOICE")
+                                  .Select(v => v.Value)
+                                  .ToList();
 
-            //var richTextMode = ConvertUtils.ToString(fieldXml.GetAttributeValue("RichTextMode"));
-            //typedDef.RichTextMode = richTextMode;
+            if (choices.Any())
+                typedDef.Choices = new Collection<string>(choices);
+
+            var mappings = fieldXml.Descendants("MAPPING")
+                                  .Select(v => v.Value)
+                                  .ToList();
+
+            if (mappings.Any())
+                typedDef.Mappings = new Collection<string>(mappings);
         }
 
         #endregion
