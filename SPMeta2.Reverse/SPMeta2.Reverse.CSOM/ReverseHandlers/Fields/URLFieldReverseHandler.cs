@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 using Microsoft.SharePoint.Client;
 using SPMeta2.Definitions;
 using SPMeta2.ModelHosts;
@@ -11,6 +12,7 @@ using SPMeta2.Reverse.ReverseHosts;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Definitions.Fields;
+using SPMeta2.Enumerations;
 using SPMeta2.Utils;
 
 namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
@@ -52,19 +54,11 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
             var typedField = context.CastTo<FieldUrl>(typedReverseHost.Field);
             var typedDef = def.WithAssertAndCast<URLFieldDefinition>("modelHost", m => m.RequireNotNull());
 
-            //typedDef.AppendOnly = typedField.AppendOnly;
-            //typedDef.RichText = typedField.RichText;
+            var xml = XDocument.Parse(typedField.SchemaXml);
+            var fieldXml = xml.Root;
 
-            //typedDef.NumberOfLines = typedField.NumberOfLines;
-
-            //var xml = XDocument.Parse(typedField.SchemaXml);
-            //var fieldXml = xml.Root;
-
-            //var unlimValue = ConvertUtils.ToBool(fieldXml.GetAttributeValue("UnlimitedLengthInDocumentLibrary"));
-            //typedDef.UnlimitedLengthInDocumentLibrary = unlimValue.HasValue ? unlimValue.Value : false;
-
-            //var richTextMode = ConvertUtils.ToString(fieldXml.GetAttributeValue("RichTextMode"));
-            //typedDef.RichTextMode = richTextMode;
+            var displayFormat = ConvertUtils.ToString(fieldXml.GetAttributeValue(BuiltInFieldAttributes.Format));
+            typedDef.DisplayFormat = displayFormat;
         }
 
         #endregion
