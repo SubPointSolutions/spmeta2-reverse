@@ -38,6 +38,10 @@
     <Reference Include="SPMeta2.Containers">
       <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Containers\SPMeta2.Containers.dll</HintPath>
     </Reference>
+    <Reference Include="SPMeta2.Standard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.Standard.1.2.60\lib\net45\SPMeta2.Standard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -80,6 +84,7 @@
     <Compile Include="Validation\SiteDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\BooleanFieldDefinitionValidator.cs" />
     <Compile Include="Validation\SecurityGroupDefinitionValidator.cs" />
+    <Compile Include="Validation\TaxonomyTermStoreDefinitionValidator.cs" />
     <Compile Include="Validation\WebDefinitionValidator.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -110,6 +110,7 @@
     <Compile Include="Impl\Definitions\SecurityRoleDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\SecurityGroupDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ListDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\TaxonomyTermStoreDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\WebDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
