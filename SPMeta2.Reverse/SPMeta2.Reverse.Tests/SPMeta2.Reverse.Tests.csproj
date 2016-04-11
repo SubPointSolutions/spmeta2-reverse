@@ -91,6 +91,7 @@
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeLinkDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\MultiChoiceFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\OutcomeChoiceFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\UserFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\ChoiceFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\CurrencyFieldDefinitionTests.cs" />
@@ -167,6 +168,7 @@
     <Content Include="_coverage_reports\_m2.TopNavigationNodeDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.URLFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.UserCustomActionDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.UserFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.WebDefinition.def-coverage.html" />
   </ItemGroup>
   <Choose>

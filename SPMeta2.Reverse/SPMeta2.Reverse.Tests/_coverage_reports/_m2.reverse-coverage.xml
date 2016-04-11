@@ -1,530 +1,99 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ReverseCoverageResult>
-    <Model xsi:type="FieldDefinition">
+    <Model xsi:type="OutcomeChoiceFieldDefinition">
       <PropertyBag />
       <AddToDefaultView>false</AddToDefaultView>
       <AddFieldOptions>DefaultValue</AddFieldOptions>
       <RawXml />
       <AdditionalAttributes />
-      <InternalName>iname_3a8fdde54ace40d2</InternalName>
-      <Title>cb4d5a732e3348aeb0e81eabc7168d1b</Title>
+      <InternalName>iname_80f36d9c61e44c35</InternalName>
+      <Title>5ca0b59832b64e7bba4be78bc4389f66</Title>
       <TitleResource />
-      <Description>85aa3b38f5e941f78f8242cf3ffd6d7d</Description>
+      <Description>5ce0b9b4ef97491fba916ac8bec12b0d</Description>
       <DescriptionResource />
-      <Group>127d3f7b0a9b4710b7844294f06be194</Group>
-      <Id>ad88d0eb-56db-425b-a63f-716d67942ec1</Id>
-      <FieldType>Text</FieldType>
+      <Group>2e1341ae77d641c0880f62ca72e8efd6</Group>
+      <Id>e46508d7-c1d3-4290-a33b-cb3f0213af88</Id>
+      <FieldType>OutcomeChoice</FieldType>
       <Required>true</Required>
-      <JSLink>4eb44bc94cdd4295acd778b76d4e5712</JSLink>
-      <DefaultValue>acbba8c251e448969de88ab4ee6b67ea</DefaultValue>
-      <Hidden>false</Hidden>
-      <ShowInDisplayForm>false</ShowInDisplayForm>
-      <ShowInEditForm>false</ShowInEditForm>
-      <ShowInListSettings>false</ShowInListSettings>
-      <ShowInNewForm>false</ShowInNewForm>
-      <ShowInVersionHistory>true</ShowInVersionHistory>
-      <ShowInViewForms>false</ShowInViewForms>
-      <AllowDeletion>true</AllowDeletion>
-      <EnforceUniqueValues xsi:nil="true" />
-      <Indexed>true</Indexed>
-    </Model>
-    <ModelFullClassName>SPMeta2.Definitions.FieldDefinition</ModelFullClassName>
-    <ModelShortClassName>FieldDefinition</ModelShortClassName>
-    <Properties>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>cb4d5a732e3348aeb0e81eabc7168d1b</SrcPropertyValue>
-        <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>cb4d5a732e3348aeb0e81eabc7168d1b</DstPropertyValue>
-        <DstPropertyName>Title</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>85aa3b38f5e941f78f8242cf3ffd6d7d</SrcPropertyValue>
-        <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>85aa3b38f5e941f78f8242cf3ffd6d7d</DstPropertyValue>
-        <DstPropertyName>Description</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>iname_3a8fdde54ace40d2</SrcPropertyValue>
-        <SrcPropertyName>InternalName</SrcPropertyName>
-        <DstPropertyValue>iname_3a8fdde54ace40d2</DstPropertyValue>
-        <DstPropertyName>InternalName</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Text</SrcPropertyValue>
-        <SrcPropertyName>FieldType</SrcPropertyName>
-        <DstPropertyValue>Text</DstPropertyValue>
-        <DstPropertyName>FieldType</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>acbba8c251e448969de88ab4ee6b67ea</SrcPropertyValue>
-        <SrcPropertyName>DefaultValue</SrcPropertyName>
-        <DstPropertyValue>acbba8c251e448969de88ab4ee6b67ea</DstPropertyValue>
-        <DstPropertyName>DefaultValue</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>Required</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
-        <DstPropertyName>Required</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>127d3f7b0a9b4710b7844294f06be194</SrcPropertyValue>
-        <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>127d3f7b0a9b4710b7844294f06be194</DstPropertyValue>
-        <DstPropertyName>Group</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>ad88d0eb-56db-425b-a63f-716d67942ec1</SrcPropertyValue>
-        <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>ad88d0eb-56db-425b-a63f-716d67942ec1</DstPropertyValue>
-        <DstPropertyName>Id</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>Hidden</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>StaticName</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>StaticName</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>TitleResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>DescriptionResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>DefaultValue</SrcPropertyValue>
-        <SrcPropertyName>AddFieldOptions</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldAttributeValue]</SrcPropertyValue>
-        <SrcPropertyName>AdditionalAttributes</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>AddToDefaultView</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>AllowDeletion</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>EnforceUniqueValues</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>Indexed</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>4eb44bc94cdd4295acd778b76d4e5712</SrcPropertyValue>
-        <SrcPropertyName>JSLink</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>RawXml</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInDisplayForm</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInEditForm</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInListSettings</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInNewForm</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>ShowInVersionHistory</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInViewForms</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ValidationFormula</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ValidationMessage</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-    </Properties>
-  </ReverseCoverageResult>
-  <ReverseCoverageResult>
-    <Model xsi:type="GeolocationFieldDefinition">
-      <PropertyBag />
-      <AddToDefaultView>false</AddToDefaultView>
-      <AddFieldOptions>DefaultValue</AddFieldOptions>
-      <RawXml />
-      <AdditionalAttributes />
-      <InternalName>iname_3c2c95677cf948cb</InternalName>
-      <Title>085c756b929042abadbda9bbd2569861</Title>
-      <TitleResource />
-      <Description>493614197c3248878319a81835bf2a79</Description>
-      <DescriptionResource />
-      <Group>3b43808258e24c2fbe982dba8c91dfa8</Group>
-      <Id>3f20624d-a493-4bdf-a7cb-44e3d8345be1</Id>
-      <FieldType>Geolocation</FieldType>
-      <Required>false</Required>
-      <JSLink>4965e5ba7d2149ed9fef310617677f8d</JSLink>
-      <DefaultValue>e39210f38bb344d1805e61d474aeb518</DefaultValue>
+      <JSLink>33233f139c0d472a9baf7edd937aba3f</JSLink>
+      <DefaultValue>a73f9bec32cd4e9c93d8c4e55cec7f07</DefaultValue>
       <Hidden>false</Hidden>
       <ShowInDisplayForm>true</ShowInDisplayForm>
       <ShowInEditForm>false</ShowInEditForm>
-      <ShowInListSettings>false</ShowInListSettings>
-      <ShowInNewForm>false</ShowInNewForm>
-      <ShowInVersionHistory>true</ShowInVersionHistory>
-      <ShowInViewForms>false</ShowInViewForms>
-      <AllowDeletion>true</AllowDeletion>
-      <EnforceUniqueValues xsi:nil="true" />
-      <Indexed>false</Indexed>
-      <ValidationFormula />
-      <ValidationMessage />
-    </Model>
-    <ModelFullClassName>SPMeta2.Definitions.Fields.GeolocationFieldDefinition</ModelFullClassName>
-    <ModelShortClassName>GeolocationFieldDefinition</ModelShortClassName>
-    <Properties>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>085c756b929042abadbda9bbd2569861</SrcPropertyValue>
-        <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>085c756b929042abadbda9bbd2569861</DstPropertyValue>
-        <DstPropertyName>Title</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>493614197c3248878319a81835bf2a79</SrcPropertyValue>
-        <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>493614197c3248878319a81835bf2a79</DstPropertyValue>
-        <DstPropertyName>Description</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>iname_3c2c95677cf948cb</SrcPropertyValue>
-        <SrcPropertyName>InternalName</SrcPropertyName>
-        <DstPropertyValue>iname_3c2c95677cf948cb</DstPropertyValue>
-        <DstPropertyName>InternalName</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Geolocation</SrcPropertyValue>
-        <SrcPropertyName>FieldType</SrcPropertyName>
-        <DstPropertyValue>Geolocation</DstPropertyValue>
-        <DstPropertyName>FieldType</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>e39210f38bb344d1805e61d474aeb518</SrcPropertyValue>
-        <SrcPropertyName>DefaultValue</SrcPropertyName>
-        <DstPropertyValue>e39210f38bb344d1805e61d474aeb518</DstPropertyValue>
-        <DstPropertyName>DefaultValue</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>Required</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>Required</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>3b43808258e24c2fbe982dba8c91dfa8</SrcPropertyValue>
-        <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>3b43808258e24c2fbe982dba8c91dfa8</DstPropertyValue>
-        <DstPropertyName>Group</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>3f20624d-a493-4bdf-a7cb-44e3d8345be1</SrcPropertyValue>
-        <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>3f20624d-a493-4bdf-a7cb-44e3d8345be1</DstPropertyValue>
-        <DstPropertyName>Id</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>Hidden</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>StaticName</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>StaticName</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>TitleResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
-        <SrcPropertyName>DescriptionResource</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>DefaultValue</SrcPropertyValue>
-        <SrcPropertyName>AddFieldOptions</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldAttributeValue]</SrcPropertyValue>
-        <SrcPropertyName>AdditionalAttributes</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>AddToDefaultView</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>AllowDeletion</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>EnforceUniqueValues</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>Indexed</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>4965e5ba7d2149ed9fef310617677f8d</SrcPropertyValue>
-        <SrcPropertyName>JSLink</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>RawXml</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>ShowInDisplayForm</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInEditForm</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInListSettings</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInNewForm</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>ShowInVersionHistory</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>ShowInViewForms</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ValidationFormula</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ValidationMessage</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-    </Properties>
-  </ReverseCoverageResult>
-  <ReverseCoverageResult>
-    <Model xsi:type="UserFieldDefinition">
-      <PropertyBag />
-      <AddToDefaultView>false</AddToDefaultView>
-      <AddFieldOptions>DefaultValue</AddFieldOptions>
-      <RawXml />
-      <AdditionalAttributes />
-      <InternalName>iname_4414c9d3c6f64e25</InternalName>
-      <Title>2aa4e168bf814b7381473d9080589613</Title>
-      <TitleResource />
-      <Description>a071d0a5faf8422eb84a9cf4e4cda840</Description>
-      <DescriptionResource />
-      <Group>138aff13e8c84fc38978e33f0fea54fa</Group>
-      <Id>e1e0e664-905a-46ea-870e-e4f0ee1e7b1c</Id>
-      <FieldType>User</FieldType>
-      <Required>false</Required>
-      <JSLink>7e82001607c7465bb8b988a1d2e03858</JSLink>
-      <DefaultValue>01bfb4d8a9c24bbda8f39e30f33cdd3d</DefaultValue>
-      <Hidden>true</Hidden>
-      <ShowInDisplayForm>true</ShowInDisplayForm>
-      <ShowInEditForm>true</ShowInEditForm>
-      <ShowInListSettings>false</ShowInListSettings>
+      <ShowInListSettings>true</ShowInListSettings>
       <ShowInNewForm>false</ShowInNewForm>
       <ShowInVersionHistory>false</ShowInVersionHistory>
-      <ShowInViewForms>true</ShowInViewForms>
-      <AllowDeletion>true</AllowDeletion>
+      <ShowInViewForms>false</ShowInViewForms>
+      <AllowDeletion>false</AllowDeletion>
       <EnforceUniqueValues xsi:nil="true" />
-      <Indexed>false</Indexed>
+      <Indexed>true</Indexed>
       <ValidationFormula />
       <ValidationMessage />
-      <AllowMultipleValues>false</AllowMultipleValues>
-      <AllowDisplay>false</AllowDisplay>
-      <Presence>false</Presence>
-      <SelectionGroup xsi:nil="true" />
-      <SelectionMode>PeopleOnly</SelectionMode>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.Fields.UserFieldDefinition</ModelFullClassName>
-    <ModelShortClassName>UserFieldDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.Fields.OutcomeChoiceFieldDefinition</ModelFullClassName>
+    <ModelShortClassName>OutcomeChoiceFieldDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>2aa4e168bf814b7381473d9080589613</SrcPropertyValue>
+        <SrcPropertyValue>5ca0b59832b64e7bba4be78bc4389f66</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>2aa4e168bf814b7381473d9080589613</DstPropertyValue>
+        <DstPropertyValue>5ca0b59832b64e7bba4be78bc4389f66</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>a071d0a5faf8422eb84a9cf4e4cda840</SrcPropertyValue>
+        <SrcPropertyValue>5ce0b9b4ef97491fba916ac8bec12b0d</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>a071d0a5faf8422eb84a9cf4e4cda840</DstPropertyValue>
+        <DstPropertyValue>5ce0b9b4ef97491fba916ac8bec12b0d</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>iname_4414c9d3c6f64e25</SrcPropertyValue>
+        <SrcPropertyValue>iname_80f36d9c61e44c35</SrcPropertyValue>
         <SrcPropertyName>InternalName</SrcPropertyName>
-        <DstPropertyValue>iname_4414c9d3c6f64e25</DstPropertyValue>
+        <DstPropertyValue>iname_80f36d9c61e44c35</DstPropertyValue>
         <DstPropertyName>InternalName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>User</SrcPropertyValue>
+        <SrcPropertyValue>OutcomeChoice</SrcPropertyValue>
         <SrcPropertyName>FieldType</SrcPropertyName>
-        <DstPropertyValue>User</DstPropertyValue>
+        <DstPropertyValue>OutcomeChoice</DstPropertyValue>
         <DstPropertyName>FieldType</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>01bfb4d8a9c24bbda8f39e30f33cdd3d</SrcPropertyValue>
+        <SrcPropertyValue>a73f9bec32cd4e9c93d8c4e55cec7f07</SrcPropertyValue>
         <SrcPropertyName>DefaultValue</SrcPropertyName>
-        <DstPropertyValue>01bfb4d8a9c24bbda8f39e30f33cdd3d</DstPropertyValue>
+        <DstPropertyValue>a73f9bec32cd4e9c93d8c4e55cec7f07</DstPropertyValue>
         <DstPropertyName>DefaultValue</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>Required</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyValue>True</DstPropertyValue>
         <DstPropertyName>Required</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>138aff13e8c84fc38978e33f0fea54fa</SrcPropertyValue>
+        <SrcPropertyValue>2e1341ae77d641c0880f62ca72e8efd6</SrcPropertyValue>
         <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>138aff13e8c84fc38978e33f0fea54fa</DstPropertyValue>
+        <DstPropertyValue>2e1341ae77d641c0880f62ca72e8efd6</DstPropertyValue>
         <DstPropertyName>Group</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>e1e0e664-905a-46ea-870e-e4f0ee1e7b1c</SrcPropertyValue>
+        <SrcPropertyValue>e46508d7-c1d3-4290-a33b-cb3f0213af88</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>e1e0e664-905a-46ea-870e-e4f0ee1e7b1c</DstPropertyValue>
+        <DstPropertyValue>e46508d7-c1d3-4290-a33b-cb3f0213af88</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
+        <DstPropertyValue>False</DstPropertyValue>
         <DstPropertyName>Hidden</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -566,7 +135,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>AllowDeletion</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -578,13 +147,13 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>Indexed</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>7e82001607c7465bb8b988a1d2e03858</SrcPropertyValue>
+        <SrcPropertyValue>33233f139c0d472a9baf7edd937aba3f</SrcPropertyValue>
         <SrcPropertyName>JSLink</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -602,13 +171,13 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>ShowInEditForm</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInListSettings</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -626,7 +195,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>ShowInViewForms</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -642,55 +211,6 @@
         <SrcPropertyName>ValidationMessage</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>AllowDisplay</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
-        <DstPropertyName>AllowDisplay</DstPropertyName>
-        <IsValid>false</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>AllowMultipleValues</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>AllowMultipleValues</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>Presence</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>Presence</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>SelectionGroup</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>SelectionGroup</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>SelectionGroupName</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>SelectionGroupName</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>LookupField</SrcPropertyName>
-        <DstPropertyValue />
-        <DstPropertyName>LookupField</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>PeopleOnly</SrcPropertyValue>
-        <SrcPropertyName>SelectionMode</SrcPropertyName>
-        <DstPropertyValue>PeopleAndGroups</DstPropertyValue>
-        <DstPropertyName>SelectionMode</DstPropertyName>
-        <IsValid>false</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>
