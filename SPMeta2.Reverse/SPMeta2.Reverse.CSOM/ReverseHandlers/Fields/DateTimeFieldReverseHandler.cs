@@ -52,19 +52,9 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
             var typedField = context.CastTo<FieldDateTime>(typedReverseHost.Field);
             var typedDef = def.WithAssertAndCast<DateTimeFieldDefinition>("modelHost", m => m.RequireNotNull());
 
-            //typedDef.AppendOnly = typedField.AppendOnly;
-            //typedDef.RichText = typedField.RichText;
-
-            //typedDef.NumberOfLines = typedField.NumberOfLines;
-
-            //var xml = XDocument.Parse(typedField.SchemaXml);
-            //var fieldXml = xml.Root;
-
-            //var unlimValue = ConvertUtils.ToBool(fieldXml.GetAttributeValue("UnlimitedLengthInDocumentLibrary"));
-            //typedDef.UnlimitedLengthInDocumentLibrary = unlimValue.HasValue ? unlimValue.Value : false;
-
-            //var richTextMode = ConvertUtils.ToString(fieldXml.GetAttributeValue("RichTextMode"));
-            //typedDef.RichTextMode = richTextMode;
+            typedDef.CalendarType = typedField.DateTimeCalendarType.ToString();
+            typedDef.DisplayFormat = typedField.DisplayFormat.ToString();
+            typedDef.FriendlyDisplayFormat = typedField.FriendlyDisplayFormat.ToString();
         }
 
         #endregion

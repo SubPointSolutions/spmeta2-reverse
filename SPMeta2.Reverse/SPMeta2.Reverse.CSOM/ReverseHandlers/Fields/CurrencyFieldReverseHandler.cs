@@ -56,19 +56,8 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
             var typedField = context.CastTo<FieldCurrency>(typedReverseHost.Field);
             var typedDef = def.WithAssertAndCast<CurrencyFieldDefinition>("modelHost", m => m.RequireNotNull());
 
-            //typedDef.AppendOnly = typedField.AppendOnly;
-            //typedDef.RichText = typedField.RichText;
-
-            //typedDef.NumberOfLines = typedField.NumberOfLines;
-
-            //var xml = XDocument.Parse(typedField.SchemaXml);
-            //var fieldXml = xml.Root;
-
-            //var unlimValue = ConvertUtils.ToBool(fieldXml.GetAttributeValue("UnlimitedLengthInDocumentLibrary"));
-            //typedDef.UnlimitedLengthInDocumentLibrary = unlimValue.HasValue ? unlimValue.Value : false;
-
-            //var richTextMode = ConvertUtils.ToString(fieldXml.GetAttributeValue("RichTextMode"));
-            //typedDef.RichTextMode = richTextMode;
+            if (typedField.CurrencyLocaleId > 0)
+                typedDef.CurrencyLocaleId = typedField.CurrencyLocaleId;
         }
 
         #endregion
