@@ -91,6 +91,7 @@
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeLinkDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\ChoiceFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\CurrencyFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\URLFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\DateTimeFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\NoteFieldDefinitionTests.cs" />
@@ -143,14 +144,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="_coverage_reports\_m2.BooleanFieldDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.ChoiceFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ContentTypeDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ContentTypeFieldLinkDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.DateTimeFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.FeatureDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.FieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.GeolocationFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.GuidFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ListDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.ListViewDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.NoteFieldDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.NumberFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.QuickLaunchNavigationNodeDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.reverse-coverage.html" />
     <Content Include="_coverage_reports\_m2.reverse-coverage.xml" />
@@ -158,6 +163,7 @@
     <Content Include="_coverage_reports\_m2.SecurityRoleDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.TextFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.TopNavigationNodeDefinition.def-coverage.html" />
+    <Content Include="_coverage_reports\_m2.URLFieldDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.UserCustomActionDefinition.def-coverage.html" />
     <Content Include="_coverage_reports\_m2.WebDefinition.def-coverage.html" />
   </ItemGroup>

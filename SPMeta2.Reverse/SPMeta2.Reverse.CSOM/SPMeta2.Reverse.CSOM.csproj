@@ -89,6 +89,7 @@
     <Compile Include="ReverseHandlers\ContentTypeFieldLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\CurrencyFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\URLFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\DateTimeFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\ChoiceFieldReverseHandler.cs" />

@@ -57,6 +57,7 @@
     <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\CurrencyFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\URLFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\DateTimeFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\ChoiceFieldDefinitionValidator.cs" />

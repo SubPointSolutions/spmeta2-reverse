@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ReverseCoverageResult>
-    <Model xsi:type="ChoiceFieldDefinition">
+    <Model xsi:type="CurrencyFieldDefinition">
       <PropertyBag />
       <AddToDefaultView>false</AddToDefaultView>
       <AddFieldOptions>DefaultValue</AddFieldOptions>
       <RawXml />
       <AdditionalAttributes />
-      <InternalName>iname_a4fd2de5743d401a</InternalName>
-      <Title>4aa2bb21d6474c948ea3e7684f57dc65</Title>
+      <InternalName>iname_1f8cc82ea9f84d51</InternalName>
+      <Title>fd6192badd534bf892fabbf7d5088844</Title>
       <TitleResource />
-      <Description>b7c3f048b74248c3ac19a56eca831b7e</Description>
+      <Description>013b89e4072a409bb2b265f4f838c13f</Description>
       <DescriptionResource />
-      <Group>6429fc767f6c4c079e73319c6828d95c</Group>
-      <Id>5419ac2e-4e72-46f0-a549-2e19dd1b5034</Id>
-      <FieldType>Choice</FieldType>
-      <Required>false</Required>
-      <JSLink>521a4c14ea3a4b44ae945805c71e964f</JSLink>
-      <DefaultValue>46fbd105b43b4d1fb0ffd3291e5e4e8b</DefaultValue>
-      <Hidden>true</Hidden>
-      <ShowInDisplayForm>true</ShowInDisplayForm>
-      <ShowInEditForm>false</ShowInEditForm>
+      <Group>49273ce3fc8f4a9299c049c008f4e6d8</Group>
+      <Id>d08d0bfa-3cc1-40ea-9f29-0f74b8a5391f</Id>
+      <FieldType>Currency</FieldType>
+      <Required>true</Required>
+      <JSLink>9d5601011f2c4868b76652bcd8bee3c2</JSLink>
+      <DefaultValue>f853d71a005947eead0c013c047acd3c</DefaultValue>
+      <Hidden>false</Hidden>
+      <ShowInDisplayForm>false</ShowInDisplayForm>
+      <ShowInEditForm>true</ShowInEditForm>
       <ShowInListSettings>false</ShowInListSettings>
       <ShowInNewForm>false</ShowInNewForm>
       <ShowInVersionHistory>false</ShowInVersionHistory>
@@ -28,92 +28,73 @@
       <AllowDeletion>false</AllowDeletion>
       <EnforceUniqueValues xsi:nil="true" />
       <Indexed>true</Indexed>
-      <ValidationFormula />
-      <ValidationMessage />
-      <Choices>
-        <string>a8105217</string>
-        <string>60bd7970</string>
-        <string>91d56a0b</string>
-        <string>36a771d1</string>
-        <string>1fec7b83</string>
-        <string>74377371</string>
-        <string>8c1ce625</string>
-      </Choices>
-      <Mappings>
-        <string>990fe039</string>
-        <string>5bd3a721</string>
-        <string>249af2ab</string>
-        <string>3e10b369</string>
-        <string>5c2fb185</string>
-        <string>04a8a8de</string>
-        <string>418fcaef</string>
-      </Mappings>
-      <FillInChoice>false</FillInChoice>
-      <EditFormat>Dropdown</EditFormat>
+      <ValidationFormula>=[ID] * 14</ValidationFormula>
+      <ValidationMessage>validatin_msg_95e9fbdda9ee4411b4b66a78277552a9</ValidationMessage>
+      <CurrencyLocaleId>1040</CurrencyLocaleId>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.Fields.ChoiceFieldDefinition</ModelFullClassName>
-    <ModelShortClassName>ChoiceFieldDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.Fields.CurrencyFieldDefinition</ModelFullClassName>
+    <ModelShortClassName>CurrencyFieldDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>4aa2bb21d6474c948ea3e7684f57dc65</SrcPropertyValue>
+        <SrcPropertyValue>fd6192badd534bf892fabbf7d5088844</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>4aa2bb21d6474c948ea3e7684f57dc65</DstPropertyValue>
+        <DstPropertyValue>fd6192badd534bf892fabbf7d5088844</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>b7c3f048b74248c3ac19a56eca831b7e</SrcPropertyValue>
+        <SrcPropertyValue>013b89e4072a409bb2b265f4f838c13f</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>b7c3f048b74248c3ac19a56eca831b7e</DstPropertyValue>
+        <DstPropertyValue>013b89e4072a409bb2b265f4f838c13f</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>iname_a4fd2de5743d401a</SrcPropertyValue>
+        <SrcPropertyValue>iname_1f8cc82ea9f84d51</SrcPropertyValue>
         <SrcPropertyName>InternalName</SrcPropertyName>
-        <DstPropertyValue>iname_a4fd2de5743d401a</DstPropertyValue>
+        <DstPropertyValue>iname_1f8cc82ea9f84d51</DstPropertyValue>
         <DstPropertyName>InternalName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Choice</SrcPropertyValue>
+        <SrcPropertyValue>Currency</SrcPropertyValue>
         <SrcPropertyName>FieldType</SrcPropertyName>
-        <DstPropertyValue>Choice</DstPropertyValue>
+        <DstPropertyValue>Currency</DstPropertyValue>
         <DstPropertyName>FieldType</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>46fbd105b43b4d1fb0ffd3291e5e4e8b</SrcPropertyValue>
+        <SrcPropertyValue>f853d71a005947eead0c013c047acd3c</SrcPropertyValue>
         <SrcPropertyName>DefaultValue</SrcPropertyName>
-        <DstPropertyValue>46fbd105b43b4d1fb0ffd3291e5e4e8b</DstPropertyValue>
+        <DstPropertyValue>f853d71a005947eead0c013c047acd3c</DstPropertyValue>
         <DstPropertyName>DefaultValue</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>Required</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyValue>True</DstPropertyValue>
         <DstPropertyName>Required</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>6429fc767f6c4c079e73319c6828d95c</SrcPropertyValue>
+        <SrcPropertyValue>49273ce3fc8f4a9299c049c008f4e6d8</SrcPropertyValue>
         <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>6429fc767f6c4c079e73319c6828d95c</DstPropertyValue>
+        <DstPropertyValue>49273ce3fc8f4a9299c049c008f4e6d8</DstPropertyValue>
         <DstPropertyName>Group</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>5419ac2e-4e72-46f0-a549-2e19dd1b5034</SrcPropertyValue>
+        <SrcPropertyValue>d08d0bfa-3cc1-40ea-9f29-0f74b8a5391f</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>5419ac2e-4e72-46f0-a549-2e19dd1b5034</DstPropertyValue>
+        <DstPropertyValue>d08d0bfa-3cc1-40ea-9f29-0f74b8a5391f</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
+        <DstPropertyValue>False</DstPropertyValue>
         <DstPropertyName>Hidden</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -173,7 +154,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>521a4c14ea3a4b44ae945805c71e964f</SrcPropertyValue>
+        <SrcPropertyValue>9d5601011f2c4868b76652bcd8bee3c2</SrcPropertyValue>
         <SrcPropertyName>JSLink</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -185,13 +166,13 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>ShowInDisplayForm</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInEditForm</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -221,44 +202,16 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
+        <SrcPropertyValue>=[ID] * 14</SrcPropertyValue>
         <SrcPropertyName>ValidationFormula</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
+        <SrcPropertyValue>validatin_msg_95e9fbdda9ee4411b4b66a78277552a9</SrcPropertyValue>
         <SrcPropertyName>ValidationMessage</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Dropdown</SrcPropertyValue>
-        <SrcPropertyName>EditFormat</SrcPropertyName>
-        <DstPropertyValue>Dropdown</DstPropertyValue>
-        <DstPropertyName>EditFormat</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>FillInChoice</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
-        <DstPropertyName>FillInChoice</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</SrcPropertyValue>
-        <SrcPropertyName>Choices</SrcPropertyName>
-        <DstPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</DstPropertyValue>
-        <DstPropertyName>Choices</DstPropertyName>
-        <IsValid>false</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</SrcPropertyValue>
-        <SrcPropertyName>Mappings</SrcPropertyName>
-        <DstPropertyValue>System.Collections.ObjectModel.Collection`1[System.String]</DstPropertyValue>
-        <DstPropertyName>Mappings</DstPropertyName>
-        <IsValid>false</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>
