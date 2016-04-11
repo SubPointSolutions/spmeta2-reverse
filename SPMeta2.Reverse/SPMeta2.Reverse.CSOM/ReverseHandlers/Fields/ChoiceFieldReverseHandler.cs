@@ -57,11 +57,6 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
             var typedField = context.CastTo<FieldChoice>(typedReverseHost.Field);
             var typedDef = def.WithAssertAndCast<ChoiceFieldDefinition>("modelHost", m => m.RequireNotNull());
 
-            //typedDef.AppendOnly = typedField.AppendOnly;
-            //typedDef.RichText = typedField.RichText;
-
-            //typedDef.NumberOfLines = typedField.NumberOfLines;
-
             var xml = XDocument.Parse(typedField.SchemaXml);
             var fieldXml = xml.Root;
 

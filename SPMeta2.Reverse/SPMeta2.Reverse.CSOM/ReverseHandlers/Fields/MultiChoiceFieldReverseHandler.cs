@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.SharePoint.Client;
@@ -56,19 +57,22 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
             var typedField = context.CastTo<FieldMultiChoice>(typedReverseHost.Field);
             var typedDef = def.WithAssertAndCast<MultiChoiceFieldDefinition>("modelHost", m => m.RequireNotNull());
 
-            //typedDef.AppendOnly = typedField.AppendOnly;
-            //typedDef.RichText = typedField.RichText;
+            var xml = XDocument.Parse(typedField.SchemaXml);
+            var fieldXml = xml.Root;
 
-            //typedDef.NumberOfLines = typedField.NumberOfLines;
+            var choices = fieldXml.Descendants("CHOICE")
+                                  .Select(v => v.Value)
+                                  .ToList();
 
-            //var xml = XDocument.Parse(typedField.SchemaXml);
-            //var fieldXml = xml.Root;
+            if (choices.Any())
+                typedDef.Choices = new Collection<string>(choices);
 
-            //var unlimValue = ConvertUtils.ToBool(fieldXml.GetAttributeValue("UnlimitedLengthInDocumentLibrary"));
-            //typedDef.UnlimitedLengthInDocumentLibrary = unlimValue.HasValue ? unlimValue.Value : false;
+            var mappings = fieldXml.Descendants("MAPPING")
+                                  .Select(v => v.Value)
+                                  .ToList();
 
-            //var richTextMode = ConvertUtils.ToString(fieldXml.GetAttributeValue("RichTextMode"));
-            //typedDef.RichTextMode = richTextMode;
+            if (mappings.Any())
+                typedDef.Mappings = new Collection<string>(mappings);
         }
 
         #endregion
