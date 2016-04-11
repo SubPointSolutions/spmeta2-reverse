@@ -90,6 +90,9 @@
     <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeLinkDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\ChoiceFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\URLFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\DateTimeFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\NoteFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\NumberFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\TextFieldDefinitionTests.cs" />
