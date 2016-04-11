@@ -3010,7 +3010,7 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>AllowDisplay</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
         </tr>

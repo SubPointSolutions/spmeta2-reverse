@@ -52,19 +52,15 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
             var typedField = context.CastTo<FieldUser>(typedReverseHost.Field);
             var typedDef = def.WithAssertAndCast<UserFieldDefinition>("modelHost", m => m.RequireNotNull());
 
-            //typedDef.AppendOnly = typedField.AppendOnly;
-            //typedDef.RichText = typedField.RichText;
+            typedDef.Presence = typedField.Presence;
 
-            //typedDef.NumberOfLines = typedField.NumberOfLines;
+            if (typedField.SelectionGroup > 0)
+            {
+                typedDef.SelectionGroup = typedField.SelectionGroup;
+            }
 
-            //var xml = XDocument.Parse(typedField.SchemaXml);
-            //var fieldXml = xml.Root;
-
-            //var unlimValue = ConvertUtils.ToBool(fieldXml.GetAttributeValue("UnlimitedLengthInDocumentLibrary"));
-            //typedDef.UnlimitedLengthInDocumentLibrary = unlimValue.HasValue ? unlimValue.Value : false;
-
-            //var richTextMode = ConvertUtils.ToString(fieldXml.GetAttributeValue("RichTextMode"));
-            //typedDef.RichTextMode = richTextMode;
+            typedDef.AllowDisplay = typedField.AllowDisplay;
+            typedDef.SelectionMode = typedField.SelectionMode.ToString();
         }
 
         #endregion
