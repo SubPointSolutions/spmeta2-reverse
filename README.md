@@ -706,7 +706,7 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>CalendarType</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
         </tr>
@@ -729,7 +729,7 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>DisplayFormat</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
         </tr>
@@ -746,7 +746,7 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>FriendlyDisplayFormat</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
         </tr>
