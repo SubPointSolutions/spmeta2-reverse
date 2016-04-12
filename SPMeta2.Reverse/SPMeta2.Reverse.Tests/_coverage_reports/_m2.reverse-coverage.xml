@@ -3,30 +3,105 @@
   <ReverseCoverageResult>
     <Model xsi:type="TaxonomyTermGroupDefinition">
       <PropertyBag />
-      <Name>d1fa099e59d741a48b60b67be19d6003</Name>
-      <Id>2f91ee06-9714-4723-9650-05fe36e6585c</Id>
+      <Name>909f56868d8b4f7092fe5b48b11e08aa</Name>
+      <Id>4e1f4c06-24a7-4e8c-8b35-b51b5b1a9619</Id>
       <IsSiteCollectionGroup>false</IsSiteCollectionGroup>
     </Model>
     <ModelFullClassName>SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermGroupDefinition</ModelFullClassName>
     <ModelShortClassName>TaxonomyTermGroupDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>2f91ee06-9714-4723-9650-05fe36e6585c</SrcPropertyValue>
+        <SrcPropertyValue>4e1f4c06-24a7-4e8c-8b35-b51b5b1a9619</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>2f91ee06-9714-4723-9650-05fe36e6585c</DstPropertyValue>
+        <DstPropertyValue>4e1f4c06-24a7-4e8c-8b35-b51b5b1a9619</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>d1fa099e59d741a48b60b67be19d6003</SrcPropertyValue>
+        <SrcPropertyValue>909f56868d8b4f7092fe5b48b11e08aa</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>d1fa099e59d741a48b60b67be19d6003</DstPropertyValue>
+        <DstPropertyValue>909f56868d8b4f7092fe5b48b11e08aa</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>IsSiteCollectionGroup</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+    </Properties>
+  </ReverseCoverageResult>
+  <ReverseCoverageResult>
+    <Model xsi:type="TaxonomyTermSetDefinition">
+      <PropertyBag />
+      <Name>f2650babf2dd4ff4bbb6161c0e4e7f73</Name>
+      <Id>58bce5f5-4113-4030-820d-b8172cd6b672</Id>
+      <LCID>1033</LCID>
+      <IsAvailableForTagging xsi:nil="true" />
+      <IsOpenForTermCreation xsi:nil="true" />
+      <CustomProperties />
+    </Model>
+    <ModelFullClassName>SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermSetDefinition</ModelFullClassName>
+    <ModelShortClassName>TaxonomyTermSetDefinition</ModelShortClassName>
+    <Properties>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>58bce5f5-4113-4030-820d-b8172cd6b672</SrcPropertyValue>
+        <SrcPropertyName>Id</SrcPropertyName>
+        <DstPropertyValue>58bce5f5-4113-4030-820d-b8172cd6b672</DstPropertyValue>
+        <DstPropertyName>Id</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>f2650babf2dd4ff4bbb6161c0e4e7f73</SrcPropertyValue>
+        <SrcPropertyName>Name</SrcPropertyName>
+        <DstPropertyValue>f2650babf2dd4ff4bbb6161c0e4e7f73</DstPropertyValue>
+        <DstPropertyName>Name</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Description</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Description</DstPropertyName>
+        <IsValid>false</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Contact</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Contact</DstPropertyName>
+        <IsValid>false</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>IsOpenForTermCreation</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>IsOpenForTermCreation</DstPropertyName>
+        <IsValid>false</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>IsAvailableForTagging</SrcPropertyName>
+        <DstPropertyValue>True</DstPropertyValue>
+        <DstPropertyName>IsAvailableForTagging</DstPropertyName>
+        <IsValid>false</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>CustomSortOrder</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermCustomProperty]</SrcPropertyValue>
+        <SrcPropertyName>CustomProperties</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>1033</SrcPropertyValue>
+        <SrcPropertyName>LCID</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>

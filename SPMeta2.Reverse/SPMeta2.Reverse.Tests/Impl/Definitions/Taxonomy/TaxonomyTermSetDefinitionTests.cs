@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SPMeta2.Reverse.Services;
 using SPMeta2.Reverse.Tests.Base;
 using SPMeta2.Standard.Definitions.Taxonomy;
 using SPMeta2.Standard.Syntax;
@@ -40,6 +41,12 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Taxonomy
                 Id = Rnd.Guid()
             };
 
+            // only witin a tes term group
+            // performance boost
+            var groupName = termGroup1.Name;
+            var options = ReverseOptions.Default
+                .AddFilterOption<TaxonomyTermGroupDefinition>(g => g.Name == groupName);
+
             var model = SPMeta2Model.NewSiteModel(site =>
             {
                 site.AddTaxonomyTermStore(siteTermStore, store =>
@@ -53,7 +60,7 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Taxonomy
 
             });
 
-            DeployReverseAndTestModel(model);
+            DeployReverseAndTestModel(model, options);
         }
 
         #endregion
