@@ -2540,7 +2540,7 @@ In case you have unexpected issues or keen to see new features please contact su
       <tbody>
         <tr>
           <td>Contact</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
         </tr>
@@ -2556,7 +2556,7 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>Description</td>
-          <td>False</td>
+          <td>True</td>
           <td>
           </td>
         </tr>
@@ -2568,15 +2568,13 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>IsAvailableForTagging</td>
-          <td>False</td>
-          <td>
-          </td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
         </tr>
         <tr>
           <td>IsOpenForTermCreation</td>
-          <td>False</td>
-          <td>
-          </td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
         </tr>
         <tr>
           <td>LCID</td>

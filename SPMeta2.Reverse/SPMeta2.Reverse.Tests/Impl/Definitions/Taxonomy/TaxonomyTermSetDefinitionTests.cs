@@ -32,13 +32,17 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Taxonomy
             var termSet1 = new TaxonomyTermSetDefinition
             {
                 Name = Rnd.String(),
-                Id = Rnd.Guid()
+                Id = Rnd.Guid(),
+                Contact = Rnd.String(),
+                Description = Rnd.String()
             };
 
             var termSet2 = new TaxonomyTermSetDefinition
             {
                 Name = Rnd.String(),
-                Id = Rnd.Guid()
+                Id = Rnd.Guid(),
+                Contact = Rnd.String(),
+                Description = Rnd.String()
             };
 
             // only witin a tes term group

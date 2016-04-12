@@ -26,14 +26,24 @@ namespace SPMeta2.Reverse.Regression.Validation.Taxonomy
 
                 .ShouldBeEqual(s => s.Contact, r => r.Contact)
 
-                .ShouldBeEqual(s => s.IsOpenForTermCreation, r => r.IsOpenForTermCreation)
-                .ShouldBeEqual(s => s.IsAvailableForTagging, r => r.IsAvailableForTagging)
+                //.ShouldBeEqual(s => s.IsOpenForTermCreation, r => r.IsOpenForTermCreation)
+                //.ShouldBeEqual(s => s.IsAvailableForTagging, r => r.IsAvailableForTagging)
 
                 .SkipProperty(s => s.CustomSortOrder, SkipMessages.NotImplemented)
                 .SkipProperty(s => s.CustomProperties, SkipMessages.NotImplemented)
 
                 .SkipProperty(s => s.LCID, SkipMessages.NotImplemented)
                 ;
+
+            if (originalDefinition.IsAvailableForTagging.HasValue)
+                assert.ShouldBeEqual(s => s.IsAvailableForTagging, r => r.IsAvailableForTagging);
+            else
+                assert.SkipProperty(s => s.IsAvailableForTagging, SkipMessages.Skipped);
+
+            if (originalDefinition.IsOpenForTermCreation.HasValue)
+                assert.ShouldBeEqual(s => s.IsOpenForTermCreation, r => r.IsOpenForTermCreation);
+            else
+                assert.SkipProperty(s => s.IsOpenForTermCreation, SkipMessages.Skipped);
         }
     }
 }
