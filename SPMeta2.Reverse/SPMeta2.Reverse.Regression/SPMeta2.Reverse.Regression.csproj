@@ -61,6 +61,10 @@
     <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\SummaryLinkFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\MediaFieldFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\LinkFieldFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\ImageFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\HTMLFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\OutcomeFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\MultiChoiceFieldDefinitionValidator.cs" />

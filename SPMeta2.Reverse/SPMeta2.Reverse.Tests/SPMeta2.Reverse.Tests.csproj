@@ -90,6 +90,10 @@
     <Compile Include="Impl\Definitions\ContentTypeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FeatureDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ContentTypeLinkDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\SummaryLinkFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\MediaFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\LinkFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\ImageFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\MultiChoiceFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\OutcomeChoiceFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\UserFieldDefinitionTests.cs" />

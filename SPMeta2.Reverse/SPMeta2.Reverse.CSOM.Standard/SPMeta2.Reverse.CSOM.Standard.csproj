@@ -94,11 +94,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseHandlers\Fields\SummaryLinkFieldReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\MediaFieldReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\LinkFieldReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\ImageFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\HTMLFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Taxonomy\TaxonomyTermSetReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Taxonomy\TaxonomyTermGroupReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Taxonomy\TaxonomyTermStoreReverseHandler.cs" />
-    <Compile Include="ReverseHosts\HTMLFieldReverseHost.cs" />
     <Compile Include="ReverseHosts\TaxonomyTermSetReverseHost.cs" />
     <Compile Include="ReverseHosts\TaxonomyTermGroupReverseHost.cs" />
     <Compile Include="ReverseHosts\TaxonomyTermStoreReverseHost.cs" />
