@@ -1,6 +1,6 @@
 ﻿cls
 
-$g_DefinitionName = "Property"
+$g_DefinitionName = "HTMLField"
 
 $g_Replacements = @{
 

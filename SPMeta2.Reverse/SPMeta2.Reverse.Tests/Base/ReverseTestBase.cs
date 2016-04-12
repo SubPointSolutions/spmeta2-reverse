@@ -33,6 +33,8 @@ using SPMeta2.Containers.Assertion;
 using SPMeta2.Reverse.Regression.Consts;
 using System.IO;
 using System.Xml;
+using SPMeta2.Containers.DefinitionGenerators;
+using SPMeta2.Containers.Standard.DefinitionGenerators.Taxonomy;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Extensions;
 using SPMeta2.Reverse.Exceptions;
@@ -115,8 +117,8 @@ namespace SPMeta2.Reverse.Tests.Base
 
             ModelGeneratorService = new ModelGeneratorService();
 
-            ModelGeneratorService.RegisterDefinitionGenerators(typeof(FieldDefinition).Assembly);
-            ModelGeneratorService.RegisterDefinitionGenerators(typeof(TaxonomyTermDefinition).Assembly);
+            ModelGeneratorService.RegisterDefinitionGenerators(typeof(FieldDefinitionGenerator).Assembly);
+            ModelGeneratorService.RegisterDefinitionGenerators(typeof(TaxonomyTermDefinitionGenerator).Assembly);
 
             Rnd = new DefaultRandomService();
         }
