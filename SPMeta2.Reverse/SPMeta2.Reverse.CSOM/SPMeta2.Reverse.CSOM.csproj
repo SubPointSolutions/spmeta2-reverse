@@ -115,6 +115,7 @@
     <Compile Include="ReverseHandlers\WebReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SiteReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\WelcomePageReverseHandler.cs" />
     <Compile Include="ReverseHosts\ContentTypeLinkReverseHost.cs" />
     <Compile Include="ReverseHosts\ContentTypeFieldLinkReverseHost.cs" />
     <Compile Include="ReverseHosts\CSOMReverseHostBase.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="ReverseHosts\UserCustomActionReverseHost.cs" />
     <Compile Include="ReverseHosts\WebReverseHost.cs" />
     <Compile Include="ReverseHosts\SiteReverseHost.cs" />
+    <Compile Include="ReverseHosts\WelcomePageReverseHost.cs" />
     <Compile Include="Services\ReverseFilterService.cs" />
     <Compile Include="Services\CSOMReverseService.cs" />
     <Compile Include="Services\CSOMReverseServiceExtensions.cs" />

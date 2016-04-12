@@ -123,6 +123,7 @@
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermStoreDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\WebDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\WelcomePageDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
     <Compile Include="Impl\Services\ReverseOptionServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
