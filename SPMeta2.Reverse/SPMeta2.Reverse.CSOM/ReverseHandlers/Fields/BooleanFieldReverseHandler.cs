@@ -26,7 +26,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
 
         #region methods
 
-        protected virtual IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
+        protected override IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
         {
             var typedFields = context.LoadQuery(items.Where(i => i.FieldTypeKind == FieldType.Boolean));
             context.ExecuteQuery();

@@ -38,6 +38,10 @@
     <Reference Include="SPMeta2.Containers">
       <HintPath>..\SPMeta2.Reverse.Dependencies\SPMeta2.Containers\SPMeta2.Containers.dll</HintPath>
     </Reference>
+    <Reference Include="SPMeta2.Standard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.Standard.1.2.60\lib\net45\SPMeta2.Standard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,8 +61,29 @@
     <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\SummaryLinkFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\MediaFieldFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\LinkFieldFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\ImageFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\HTMLFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\OutcomeFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\MultiChoiceFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\CurrencyFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\UserFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\URLFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\DateTimeFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\ChoiceFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\NoteFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\NumberFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\TextFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GuidFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GeolocationFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\WelcomePageDefinitionValidator.cs" />
+    <None Include="Validation\%24Name%24DefinitionValidator.cs.tmpl" />
+    <Compile Include="Validation\FolderDefinitionValidator.cs" />
+    <Compile Include="Validation\PropertyDefinitionValidator.cs" />
+    <Compile Include="Validation\Taxonomy\TaxonomyTermSetDefinitionValidator.cs" />
+    <Compile Include="Validation\Taxonomy\TaxonomyTermGroupDefinitionValidator.cs" />
     <Compile Include="Validation\UserCustomActionDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeDefinitionValidator.cs" />
     <Compile Include="Validation\FeatureDefinitionValidator.cs" />
@@ -70,6 +95,7 @@
     <Compile Include="Validation\SiteDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\BooleanFieldDefinitionValidator.cs" />
     <Compile Include="Validation\SecurityGroupDefinitionValidator.cs" />
+    <Compile Include="Validation\Taxonomy\TaxonomyTermStoreDefinitionValidator.cs" />
     <Compile Include="Validation\WebDefinitionValidator.cs" />
   </ItemGroup>
   <ItemGroup>

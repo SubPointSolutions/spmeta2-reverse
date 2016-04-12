@@ -33,8 +33,11 @@ using SPMeta2.Containers.Assertion;
 using SPMeta2.Reverse.Regression.Consts;
 using System.IO;
 using System.Xml;
+using SPMeta2.Containers.DefinitionGenerators;
+using SPMeta2.Containers.Standard.DefinitionGenerators.Taxonomy;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Extensions;
+using SPMeta2.Reverse.Exceptions;
 using SPMeta2.Reverse.ReverseHandlers;
 
 namespace SPMeta2.Reverse.Tests.Base
@@ -114,8 +117,8 @@ namespace SPMeta2.Reverse.Tests.Base
 
             ModelGeneratorService = new ModelGeneratorService();
 
-            ModelGeneratorService.RegisterDefinitionGenerators(typeof(FieldDefinition).Assembly);
-            ModelGeneratorService.RegisterDefinitionGenerators(typeof(TaxonomyTermDefinition).Assembly);
+            ModelGeneratorService.RegisterDefinitionGenerators(typeof(FieldDefinitionGenerator).Assembly);
+            ModelGeneratorService.RegisterDefinitionGenerators(typeof(TaxonomyTermDefinitionGenerator).Assembly);
 
             Rnd = new DefaultRandomService();
         }
@@ -152,15 +155,22 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public void DeployReverseAndTestModel(ModelNode model, ReverseOptions options)
         {
-            DeployReverseAndTestModel(new[] { model }, null, options);
+            InternalDeployReverseAndTestModel(new[] { model }, null, options);
         }
+
+        public void DeployReverseAndTestModel(ModelNode model, ReverseOptions options,
+            IEnumerable<Type> modelHandlers)
+        {
+            InternalDeployReverseAndTestModel(new[] { model }, modelHandlers, options);
+        }
+
 
         public void DeployReverseAndTestModel(IEnumerable<ModelNode> models, ReverseOptions options)
         {
-            DeployReverseAndTestModel(models, null, options);
+            InternalDeployReverseAndTestModel(models, null, options);
         }
 
-        private void DeployReverseAndTestModel(
+        private void InternalDeployReverseAndTestModel(
             IEnumerable<ModelNode> models,
             IEnumerable<Type> reverseHandlers,
             ReverseOptions options)
@@ -203,7 +213,13 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
 
                 foreach (var defType in uniqueDefinitionTypes)
                 {
-                    var neeedHandler = allHandlers.First(h => h.ReverseType == defType);
+                    var neeedHandler = allHandlers.FirstOrDefault(h => h.ReverseType == defType);
+
+                    if (neeedHandler == null)
+                    {
+                        throw new SPMeta2ReverseException(
+                            string.Format("Can't find reverse handler for definition type:[{0}]", defType));
+                    }
 
                     if (!autoReverseHandlers.Contains(neeedHandler.GetType()))
                         autoReverseHandlers.Add(neeedHandler.GetType());

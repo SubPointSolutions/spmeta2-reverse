@@ -200,6 +200,192 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>ChoiceFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Choices</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EditFormat</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>FillInChoice</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Mappings</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>ContentTypeDefinition</h4>
     <table>
       <thead>
@@ -317,6 +503,354 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>Required</td>
           <td>True</td>
           <td>Supported, not tested yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>CurrencyFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>CurrencyLocaleId</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>DateTimeFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>CalendarType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DisplayFormat</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>FriendlyDisplayFormat</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
         </tr>
       </tbody>
     </table>
@@ -519,6 +1053,24 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>FolderDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>GeolocationFieldDefinition</h4>
     <table>
       <thead>
@@ -682,6 +1234,522 @@ In case you have unexpected issues or keen to see new features please contact su
   </div>
   <div>
     <h4>GuidFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>HTMLFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AppendOnly</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>NumberOfLines</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RichText</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RichTextMode</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>UnlimitedLengthInDocumentLibrary</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>ImageFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>LinkFieldDefinition</h4>
     <table>
       <thead>
         <td>Property</td>
@@ -1123,6 +2191,918 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>MediaFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>MultiChoiceFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Choices</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>FillInChoice</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Mappings</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>NoteFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AppendOnly</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>NumberOfLines</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RichText</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RichTextMode</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>UnlimitedLengthInDocumentLibrary</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>NumberFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DisplayFormat</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>MaximumValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>MinimumValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowAsPercentage</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>OutcomeChoiceFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>PropertyDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Key</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Overwrite</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Value</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>QuickLaunchNavigationNodeDefinition</h4>
     <table>
       <thead>
@@ -1247,6 +3227,455 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>SummaryLinkFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>TaxonomyTermGroupDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>IsSiteCollectionGroup</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>TaxonomyTermSetDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Contact</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>CustomProperties</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>CustomSortOrder</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>IsAvailableForTagging</td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
+        </tr>
+        <tr>
+          <td>IsOpenForTermCreation</td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
+        </tr>
+        <tr>
+          <td>LCID</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>TaxonomyTermStoreDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
+        </tr>
+        <tr>
+          <td>UseDefaultSiteCollectionTermStore</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>TextFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>MaxLength</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>TopNavigationNodeDefinition</h4>
     <table>
       <thead>
@@ -1282,6 +3711,174 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>True</td>
           <td>
           </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>URLFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DisplayFormat</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
         </tr>
       </tbody>
     </table>
@@ -1390,6 +3987,210 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>UserFieldDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AddFieldOptions</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AdditionalAttributes</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AddToDefaultView</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDeletion</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>AllowDisplay</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>AllowMultipleValues</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DefaultValue</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>DescriptionResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>EnforceUniqueValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>FieldType</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hidden</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Indexed</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>InternalName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>JSLink</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>LookupField</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Presence</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>RawXml</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Required</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>SelectionGroup</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>SelectionGroupName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>SelectionMode</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ShowInDisplayForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInEditForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInListSettings</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInNewForm</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInVersionHistory</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ShowInViewForms</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>StaticName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>TitleResource</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationFormula</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ValidationMessage</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>WebDefinition</h4>
     <table>
       <thead>
@@ -1458,6 +4259,24 @@ In case you have unexpected issues or keen to see new features please contact su
         </tr>
         <tr>
           <td>WebTemplate</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4>WelcomePageDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Url</td>
           <td>True</td>
           <td>
           </td>
