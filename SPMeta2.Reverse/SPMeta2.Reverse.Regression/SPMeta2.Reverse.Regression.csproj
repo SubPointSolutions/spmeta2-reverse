@@ -79,6 +79,7 @@
     <Compile Include="Validation\Fields\GuidFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GeolocationFieldDefinitionValidator.cs" />
     <Compile Include="Validation\ModuleFileDefinitionValidator.cs" />
+    <Compile Include="Validation\Taxonomy\TaxonomyTermDefinitionValidator.cs" />
     <Compile Include="Validation\WelcomePageDefinitionValidator.cs" />
     <None Include="Validation\%24Name%24DefinitionValidator.cs.tmpl" />
     <Compile Include="Validation\FolderDefinitionValidator.cs" />

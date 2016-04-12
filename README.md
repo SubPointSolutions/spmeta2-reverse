@@ -3510,11 +3510,6 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>Supported, not tested yet</td>
         </tr>
         <tr>
-          <td>IsOpenForTermCreation</td>
-          <td>True</td>
-          <td>Supported, not tested yet</td>
-        </tr>
-        <tr>
           <td>LCID</td>
           <td>False</td>
           <td>Not implemented yet</td>

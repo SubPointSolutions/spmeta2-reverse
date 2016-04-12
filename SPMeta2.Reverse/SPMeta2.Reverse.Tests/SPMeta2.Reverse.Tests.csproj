@@ -112,6 +112,7 @@
     <Compile Include="Impl\Definitions\Fields\HTMLFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ModuleFileDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\PropertyDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermSetDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermGroupDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />
