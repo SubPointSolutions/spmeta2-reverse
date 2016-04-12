@@ -3,15 +3,15 @@
   <ReverseCoverageResult>
     <Model xsi:type="FolderDefinition">
       <PropertyBag />
-      <Name>634cb5444d464fcdb0aef9ea1c317015</Name>
+      <Name>e0a61d4211064addacecf9cf6550eb96</Name>
     </Model>
     <ModelFullClassName>SPMeta2.Definitions.FolderDefinition</ModelFullClassName>
     <ModelShortClassName>FolderDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>634cb5444d464fcdb0aef9ea1c317015</SrcPropertyValue>
+        <SrcPropertyValue>e0a61d4211064addacecf9cf6550eb96</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>634cb5444d464fcdb0aef9ea1c317015</DstPropertyValue>
+        <DstPropertyValue>e0a61d4211064addacecf9cf6550eb96</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -20,24 +20,24 @@
   <ReverseCoverageResult>
     <Model xsi:type="ListDefinition">
       <PropertyBag />
-      <Title>72fd5ead42384b5aa9a517d883bf9b4c</Title>
+      <Title>b3f23386adac4e7583191fc89c7a6c70</Title>
       <TitleResource />
       <IrmEnabled xsi:nil="true" />
       <IrmExpire xsi:nil="true" />
       <IrmReject xsi:nil="true" />
-      <DraftVersionVisibility>Author</DraftVersionVisibility>
-      <Description>8d016da41ca04304ad4766951391a1c6</Description>
+      <DraftVersionVisibility>Reader</DraftVersionVisibility>
+      <Description>63fd537ae635465d858e54499666d32a</Description>
       <DescriptionResource />
-      <CustomUrl>7f25b6031e3341ff806feaae7074cafe</CustomUrl>
+      <CustomUrl>65d50d6720424ad4a80eeaf836dc7ac3</CustomUrl>
       <TemplateType>101</TemplateType>
-      <ContentTypesEnabled>false</ContentTypesEnabled>
+      <ContentTypesEnabled>true</ContentTypesEnabled>
       <NeedBreakRoleInheritance>false</NeedBreakRoleInheritance>
       <NeedToCopyRoleAssignmets xsi:nil="true" />
       <EnableAttachments xsi:nil="true" />
       <EnableFolderCreation xsi:nil="true" />
       <EnableMinorVersions xsi:nil="true" />
-      <EnableModeration>true</EnableModeration>
-      <EnableVersioning>true</EnableVersioning>
+      <EnableModeration xsi:nil="true" />
+      <EnableVersioning xsi:nil="true" />
       <ForceCheckout xsi:nil="true" />
       <Hidden>false</Hidden>
       <NoCrawl xsi:nil="true" />
@@ -51,23 +51,23 @@
     <ModelShortClassName>ListDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>72fd5ead42384b5aa9a517d883bf9b4c</SrcPropertyValue>
+        <SrcPropertyValue>b3f23386adac4e7583191fc89c7a6c70</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>72fd5ead42384b5aa9a517d883bf9b4c</DstPropertyValue>
+        <DstPropertyValue>b3f23386adac4e7583191fc89c7a6c70</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>8d016da41ca04304ad4766951391a1c6</SrcPropertyValue>
+        <SrcPropertyValue>63fd537ae635465d858e54499666d32a</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>8d016da41ca04304ad4766951391a1c6</DstPropertyValue>
+        <DstPropertyValue>63fd537ae635465d858e54499666d32a</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>7f25b6031e3341ff806feaae7074cafe</SrcPropertyValue>
+        <SrcPropertyValue>65d50d6720424ad4a80eeaf836dc7ac3</SrcPropertyValue>
         <SrcPropertyName>CustomUrl</SrcPropertyName>
-        <DstPropertyValue>7f25b6031e3341ff806feaae7074cafe</DstPropertyValue>
+        <DstPropertyValue>65d50d6720424ad4a80eeaf836dc7ac3</DstPropertyValue>
         <DstPropertyName>CustomUrl</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -86,9 +86,9 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ContentTypesEnabled</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyValue>True</DstPropertyValue>
         <DstPropertyName>ContentTypesEnabled</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -124,7 +124,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Author</SrcPropertyValue>
+        <SrcPropertyValue>Reader</SrcPropertyValue>
         <SrcPropertyName>DraftVersionVisibility</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -148,13 +148,13 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue />
         <SrcPropertyName>EnableModeration</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue />
         <SrcPropertyName>EnableVersioning</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -226,18 +226,56 @@
       <PropertyBag />
       <DefaultValues />
       <Values />
-      <FileName>b70ee8176a0a40eab0e2dae64e117c43.txt</FileName>
-      <Content>NDY5MTIzNTVhNDczNGI0NmE5NmJjM2Y1NTlhMzMzNjA=</Content>
+      <FileName>be4e5412c6bf42868a1fe58dfd8d8c75.txt</FileName>
+      <Content>NGI1NTBiMGUwYzAzNDJkMDhkMWUyNWEyMzhkNTI3OTA=</Content>
       <Overwrite>true</Overwrite>
     </Model>
     <ModelFullClassName>SPMeta2.Definitions.ModuleFileDefinition</ModelFullClassName>
     <ModelShortClassName>ModuleFileDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>b70ee8176a0a40eab0e2dae64e117c43.txt</SrcPropertyValue>
+        <SrcPropertyValue>be4e5412c6bf42868a1fe58dfd8d8c75.txt</SrcPropertyValue>
         <SrcPropertyName>FileName</SrcPropertyName>
-        <DstPropertyValue>b70ee8176a0a40eab0e2dae64e117c43.txt</DstPropertyValue>
+        <DstPropertyValue>be4e5412c6bf42868a1fe58dfd8d8c75.txt</DstPropertyValue>
         <DstPropertyName>FileName</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Title</SrcPropertyName>
+        <DstPropertyValue />
+        <DstPropertyName>Title</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>ContentTypeId</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>ContentTypeName</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldValue]</SrcPropertyValue>
+        <SrcPropertyName>Values</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldValue]</SrcPropertyValue>
+        <SrcPropertyName>DefaultValues</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Byte[]</SrcPropertyValue>
+        <SrcPropertyName>Content</SrcPropertyName>
+        <DstPropertyValue>System.Byte[]</DstPropertyValue>
+        <DstPropertyName>Content</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>

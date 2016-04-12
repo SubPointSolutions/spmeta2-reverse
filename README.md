@@ -2362,10 +2362,42 @@ In case you have unexpected issues or keen to see new features please contact su
       </thead>
       <tbody>
         <tr>
+          <td>Content</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>ContentTypeId</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>ContentTypeName</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>DefaultValues</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
           <td>FileName</td>
           <td>True</td>
           <td>
           </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Values</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
         </tr>
       </tbody>
     </table>
