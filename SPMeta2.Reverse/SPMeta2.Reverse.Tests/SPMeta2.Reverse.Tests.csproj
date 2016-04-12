@@ -103,6 +103,9 @@
     <Compile Include="Impl\Definitions\Fields\GeolocationFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\GuidFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\BooleanFieldDefinitionTests.cs" />
+    <None Include="Impl\Definitions\%24Name%24DefinitionTests.cs.tmpl" />
+    <Compile Include="Impl\Definitions\FolderDefinition.cs" />
+    <Compile Include="Impl\Definitions\PropertyDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermSetDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermGroupDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />

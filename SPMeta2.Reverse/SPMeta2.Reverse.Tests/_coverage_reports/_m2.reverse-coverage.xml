@@ -1,141 +1,223 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ReverseCoverageResult>
-    <Model xsi:type="TaxonomyTermGroupDefinition">
+    <Model xsi:type="FolderDefinition">
       <PropertyBag />
-      <Name>7b7ab2e40ee54797b3105a1f11a24450</Name>
-      <Id>05b7aea9-8a39-48ef-97c3-c1e07b929efe</Id>
-      <IsSiteCollectionGroup>false</IsSiteCollectionGroup>
+      <Name>d7a6d11ced24498caa6ab0366c006f9e</Name>
     </Model>
-    <ModelFullClassName>SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermGroupDefinition</ModelFullClassName>
-    <ModelShortClassName>TaxonomyTermGroupDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.FolderDefinition</ModelFullClassName>
+    <ModelShortClassName>FolderDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>05b7aea9-8a39-48ef-97c3-c1e07b929efe</SrcPropertyValue>
-        <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>05b7aea9-8a39-48ef-97c3-c1e07b929efe</DstPropertyValue>
-        <DstPropertyName>Id</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>7b7ab2e40ee54797b3105a1f11a24450</SrcPropertyValue>
+        <SrcPropertyValue>d7a6d11ced24498caa6ab0366c006f9e</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>7b7ab2e40ee54797b3105a1f11a24450</DstPropertyValue>
+        <DstPropertyValue>d7a6d11ced24498caa6ab0366c006f9e</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
-        <SrcPropertyName>IsSiteCollectionGroup</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>
   <ReverseCoverageResult>
-    <Model xsi:type="TaxonomyTermSetDefinition">
+    <Model xsi:type="ListDefinition">
       <PropertyBag />
-      <Name>a05c54cb5aa94484bb690e64cd5aebde</Name>
-      <Description>ffd613b769ca44268ff09624532aea5f</Description>
-      <Id>f4c5755a-35cc-401f-b0ee-dd552af43be8</Id>
-      <LCID>1033</LCID>
-      <IsAvailableForTagging xsi:nil="true" />
-      <IsOpenForTermCreation xsi:nil="true" />
-      <Contact>2d5015d68e0c43b8aa12b57a205790e6</Contact>
-      <CustomProperties />
+      <Title>0cb06be11dbc47bd9ec4f70537c59bb6</Title>
+      <TitleResource />
+      <IrmEnabled xsi:nil="true" />
+      <IrmExpire xsi:nil="true" />
+      <IrmReject xsi:nil="true" />
+      <DraftVersionVisibility>Author</DraftVersionVisibility>
+      <Description>d21fc6f02d7d4331871c94462de11115</Description>
+      <DescriptionResource />
+      <CustomUrl>cdc73d2630564ecc8b464acbd4d76f3a</CustomUrl>
+      <TemplateType>101</TemplateType>
+      <ContentTypesEnabled>false</ContentTypesEnabled>
+      <NeedBreakRoleInheritance>false</NeedBreakRoleInheritance>
+      <NeedToCopyRoleAssignmets xsi:nil="true" />
+      <EnableAttachments xsi:nil="true" />
+      <EnableFolderCreation xsi:nil="true" />
+      <EnableMinorVersions xsi:nil="true" />
+      <EnableModeration>true</EnableModeration>
+      <EnableVersioning>true</EnableVersioning>
+      <ForceCheckout xsi:nil="true" />
+      <Hidden>false</Hidden>
+      <NoCrawl xsi:nil="true" />
+      <OnQuickLaunch xsi:nil="true" />
+      <MajorVersionLimit xsi:nil="true" />
+      <MajorWithMinorVersionsLimit xsi:nil="true" />
+      <IndexedRootFolderPropertyKeys />
+      <WriteSecurity xsi:nil="true" />
     </Model>
-    <ModelFullClassName>SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermSetDefinition</ModelFullClassName>
-    <ModelShortClassName>TaxonomyTermSetDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.ListDefinition</ModelFullClassName>
+    <ModelShortClassName>ListDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>f4c5755a-35cc-401f-b0ee-dd552af43be8</SrcPropertyValue>
-        <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>f4c5755a-35cc-401f-b0ee-dd552af43be8</DstPropertyValue>
-        <DstPropertyName>Id</DstPropertyName>
+        <SrcPropertyValue>0cb06be11dbc47bd9ec4f70537c59bb6</SrcPropertyValue>
+        <SrcPropertyName>Title</SrcPropertyName>
+        <DstPropertyValue>0cb06be11dbc47bd9ec4f70537c59bb6</DstPropertyValue>
+        <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>a05c54cb5aa94484bb690e64cd5aebde</SrcPropertyValue>
-        <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>a05c54cb5aa94484bb690e64cd5aebde</DstPropertyValue>
-        <DstPropertyName>Name</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>ffd613b769ca44268ff09624532aea5f</SrcPropertyValue>
+        <SrcPropertyValue>d21fc6f02d7d4331871c94462de11115</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>ffd613b769ca44268ff09624532aea5f</DstPropertyValue>
+        <DstPropertyValue>d21fc6f02d7d4331871c94462de11115</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>2d5015d68e0c43b8aa12b57a205790e6</SrcPropertyValue>
-        <SrcPropertyName>Contact</SrcPropertyName>
-        <DstPropertyValue>2d5015d68e0c43b8aa12b57a205790e6</DstPropertyValue>
-        <DstPropertyName>Contact</DstPropertyName>
+        <SrcPropertyValue>cdc73d2630564ecc8b464acbd4d76f3a</SrcPropertyValue>
+        <SrcPropertyName>CustomUrl</SrcPropertyName>
+        <DstPropertyValue>cdc73d2630564ecc8b464acbd4d76f3a</DstPropertyValue>
+        <DstPropertyName>CustomUrl</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>101</SrcPropertyValue>
+        <SrcPropertyName>TemplateType</SrcPropertyName>
+        <DstPropertyValue>101</DstPropertyValue>
+        <DstPropertyName>TemplateType</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>Hidden</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>Hidden</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>ContentTypesEnabled</SrcPropertyName>
+        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyName>ContentTypesEnabled</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue />
-        <SrcPropertyName>CustomSortOrder</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermCustomProperty]</SrcPropertyValue>
-        <SrcPropertyName>CustomProperties</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>1033</SrcPropertyValue>
-        <SrcPropertyName>LCID</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>IsAvailableForTagging</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Supported, not tested yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>IsOpenForTermCreation</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Supported, not tested yet</Message>
-      </ReverseCoveragePropertyResult>
-    </Properties>
-  </ReverseCoverageResult>
-  <ReverseCoverageResult>
-    <Model xsi:type="TaxonomyTermStoreDefinition">
-      <PropertyBag />
-      <Name />
-      <Id xsi:nil="true" />
-      <UseDefaultSiteCollectionTermStore>true</UseDefaultSiteCollectionTermStore>
-    </Model>
-    <ModelFullClassName>SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermStoreDefinition</ModelFullClassName>
-    <ModelShortClassName>TaxonomyTermStoreDefinition</ModelShortClassName>
-    <Properties>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>Id</SrcPropertyName>
+        <SrcPropertyName>OnQuickLaunch</SrcPropertyName>
         <DstPropertyValue />
-        <DstPropertyName>Id</DstPropertyName>
+        <DstPropertyName>OnQuickLaunch</DstPropertyName>
         <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>TitleResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ValueForUICulture]</SrcPropertyValue>
+        <SrcPropertyName>DescriptionResource</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>TemplateName</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>DocumentTemplateUrl</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>Author</SrcPropertyValue>
+        <SrcPropertyName>DraftVersionVisibility</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>EnableAttachments</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>EnableFolderCreation</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>EnableMinorVersions</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>UseDefaultSiteCollectionTermStore</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
-        <DstPropertyName>UseDefaultSiteCollectionTermStore</DstPropertyName>
+        <SrcPropertyName>EnableModeration</SrcPropertyName>
         <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyName>EnableVersioning</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue />
-        <SrcPropertyName>Name</SrcPropertyName>
+        <SrcPropertyName>ForceCheckout</SrcPropertyName>
         <IsValid>true</IsValid>
-        <Message>Supported, not tested yet</Message>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.IndexedPropertyValue]</SrcPropertyValue>
+        <SrcPropertyName>IndexedRootFolderPropertyKeys</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>IrmEnabled</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>IrmExpire</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>IrmReject</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>MajorVersionLimit</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>MajorWithMinorVersionsLimit</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>NoCrawl</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Url</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>WriteSecurity</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>

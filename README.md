@@ -1053,6 +1053,24 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>FolderDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>GeolocationFieldDefinition</h4>
     <table>
       <thead>

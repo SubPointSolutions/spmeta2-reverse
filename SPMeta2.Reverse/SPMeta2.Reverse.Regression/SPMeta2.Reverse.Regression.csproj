@@ -73,6 +73,9 @@
     <Compile Include="Validation\Fields\TextFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GuidFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\GeolocationFieldDefinitionValidator.cs" />
+    <None Include="Validation\%24Name%24DefinitionValidator.cs.tmpl" />
+    <Compile Include="Validation\FolderDefinitionValidator.cs" />
+    <Compile Include="Validation\PropertyDefinitionValidator.cs" />
     <Compile Include="Validation\Taxonomy\TaxonomyTermSetDefinitionValidator.cs" />
     <Compile Include="Validation\Taxonomy\TaxonomyTermGroupDefinitionValidator.cs" />
     <Compile Include="Validation\UserCustomActionDefinitionValidator.cs" />
