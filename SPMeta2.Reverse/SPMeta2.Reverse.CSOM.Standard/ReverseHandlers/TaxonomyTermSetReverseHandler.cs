@@ -18,12 +18,12 @@ using SPMeta2.Utils;
 
 namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
 {
-    public class TaxonomyTermGroupReverseHandler : CSOMReverseHandlerBase
+    public class TaxonomyTermSetReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(TaxonomyTermGroupDefinition); }
+            get { return typeof(TaxonomyTermSetDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -32,7 +32,7 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(TaxonomyTermStoreDefinition)
+                    typeof(TaxonomyTermGroupDefinition)
                 };
             }
         }
@@ -44,25 +44,25 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
-            var result = new List<TaxonomyTermGroupReverseHost>();
+            var result = new List<TaxonomyTermSetReverseHost>();
 
-            var typedHost = parentHost.WithAssertAndCast<TaxonomyTermStoreReverseHost>("reverseHost", value => value.RequireNotNull());
+            var typedHost = parentHost.WithAssertAndCast<TaxonomyTermGroupReverseHost>("reverseHost", value => value.RequireNotNull());
 
             var context = typedHost.HostClientContext;
 
             var site = typedHost.HostSite;
-            var store = typedHost.HostTermStore;
+            var termGroup = typedHost.HostTermGroup;
 
-            var items = store.Groups;
+            var items = termGroup.TermSets;
 
             context.Load(items);
             context.ExecuteQuery();
 
             result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {
-                return ModelHostBase.Inherit<TaxonomyTermGroupReverseHost>(parentHost, h =>
+                return ModelHostBase.Inherit<TaxonomyTermSetReverseHost>(parentHost, h =>
                 {
-                    h.HostTermGroup = i;
+                    h.HostTermSet = i;
                 });
             }));
 
@@ -71,19 +71,22 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var typedHost = (reverseHost as TaxonomyTermGroupReverseHost);
-            var item = typedHost.HostTermGroup;
+            var typedHost = (reverseHost as TaxonomyTermSetReverseHost);
+            var item = typedHost.HostTermSet;
 
-            var def = new TaxonomyTermGroupDefinition();
+            var def = new TaxonomyTermSetDefinition();
 
             def.Id = item.Id;
+
             def.Name = item.Name;
+            def.Description = item.Description;
 
-            // TODO, M2
-            // https://github.com/SubPointSolutions/spmeta2/issues/827
-            //def.Descrption = item.Description;
+            def.Contact = item.Contact;
 
-            return new TaxonomyTermGroupModelNode
+            def.IsAvailableForTagging = item.IsAvailableForTagging;
+            def.IsOpenForTermCreation = item.IsOpenForTermCreation;
+
+            return new TaxonomyTermSetModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def

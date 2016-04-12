@@ -103,7 +103,8 @@
     <Compile Include="Impl\Definitions\Fields\GeolocationFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\GuidFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\BooleanFieldDefinitionTests.cs" />
-    <Compile Include="Impl\Definitions\TaxonomyTermGroupDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermSetDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermGroupDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\TopNavigationNodeDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\QuickLaunchNavigationNodeDefinitionTests.cs" />
@@ -111,7 +112,7 @@
     <Compile Include="Impl\Definitions\SecurityRoleDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\SecurityGroupDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ListDefinitionTests.cs" />
-    <Compile Include="Impl\Definitions\TaxonomyTermStoreDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermStoreDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\WebDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
