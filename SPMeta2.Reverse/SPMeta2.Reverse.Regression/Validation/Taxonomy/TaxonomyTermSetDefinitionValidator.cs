@@ -32,7 +32,7 @@ namespace SPMeta2.Reverse.Regression.Validation.Taxonomy
                 .SkipProperty(s => s.CustomSortOrder, SkipMessages.NotImplemented)
                 .SkipProperty(s => s.CustomProperties, SkipMessages.NotImplemented)
 
-                .SkipProperty(s => s.LCID, SkipMessages.LCID)
+                .SkipProperty(s => s.LCID, SkipMessages.NotImplemented)
                 ;
         }
     }

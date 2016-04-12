@@ -35,6 +35,7 @@ using System.IO;
 using System.Xml;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Extensions;
+using SPMeta2.Reverse.Exceptions;
 using SPMeta2.Reverse.ReverseHandlers;
 
 namespace SPMeta2.Reverse.Tests.Base
@@ -203,7 +204,13 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
 
                 foreach (var defType in uniqueDefinitionTypes)
                 {
-                    var neeedHandler = allHandlers.First(h => h.ReverseType == defType);
+                    var neeedHandler = allHandlers.FirstOrDefault(h => h.ReverseType == defType);
+
+                    if (neeedHandler == null)
+                    {
+                        throw new SPMeta2ReverseException(
+                            string.Format("Can't find reverse handler for definition type:[{0}]", defType));
+                    }
 
                     if (!autoReverseHandlers.Contains(neeedHandler.GetType()))
                         autoReverseHandlers.Add(neeedHandler.GetType());
