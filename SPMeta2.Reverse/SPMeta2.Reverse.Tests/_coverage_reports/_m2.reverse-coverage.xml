@@ -3,15 +3,15 @@
   <ReverseCoverageResult>
     <Model xsi:type="FolderDefinition">
       <PropertyBag />
-      <Name>729ce46dbe054c7d81f0babec459a314</Name>
+      <Name>634cb5444d464fcdb0aef9ea1c317015</Name>
     </Model>
     <ModelFullClassName>SPMeta2.Definitions.FolderDefinition</ModelFullClassName>
     <ModelShortClassName>FolderDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>729ce46dbe054c7d81f0babec459a314</SrcPropertyValue>
+        <SrcPropertyValue>634cb5444d464fcdb0aef9ea1c317015</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>729ce46dbe054c7d81f0babec459a314</DstPropertyValue>
+        <DstPropertyValue>634cb5444d464fcdb0aef9ea1c317015</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -20,17 +20,17 @@
   <ReverseCoverageResult>
     <Model xsi:type="ListDefinition">
       <PropertyBag />
-      <Title>10b7bf353cb348d5ad376a62c754ef35</Title>
+      <Title>72fd5ead42384b5aa9a517d883bf9b4c</Title>
       <TitleResource />
       <IrmEnabled xsi:nil="true" />
       <IrmExpire xsi:nil="true" />
       <IrmReject xsi:nil="true" />
-      <DraftVersionVisibility>Approver</DraftVersionVisibility>
-      <Description>8e837299043746eaaaa75673fb9e72ef</Description>
+      <DraftVersionVisibility>Author</DraftVersionVisibility>
+      <Description>8d016da41ca04304ad4766951391a1c6</Description>
       <DescriptionResource />
-      <CustomUrl>5ae958b1e5ce4a768b605beac160a9e0</CustomUrl>
+      <CustomUrl>7f25b6031e3341ff806feaae7074cafe</CustomUrl>
       <TemplateType>101</TemplateType>
-      <ContentTypesEnabled>true</ContentTypesEnabled>
+      <ContentTypesEnabled>false</ContentTypesEnabled>
       <NeedBreakRoleInheritance>false</NeedBreakRoleInheritance>
       <NeedToCopyRoleAssignmets xsi:nil="true" />
       <EnableAttachments xsi:nil="true" />
@@ -51,23 +51,23 @@
     <ModelShortClassName>ListDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>10b7bf353cb348d5ad376a62c754ef35</SrcPropertyValue>
+        <SrcPropertyValue>72fd5ead42384b5aa9a517d883bf9b4c</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>10b7bf353cb348d5ad376a62c754ef35</DstPropertyValue>
+        <DstPropertyValue>72fd5ead42384b5aa9a517d883bf9b4c</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>8e837299043746eaaaa75673fb9e72ef</SrcPropertyValue>
+        <SrcPropertyValue>8d016da41ca04304ad4766951391a1c6</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>8e837299043746eaaaa75673fb9e72ef</DstPropertyValue>
+        <DstPropertyValue>8d016da41ca04304ad4766951391a1c6</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>5ae958b1e5ce4a768b605beac160a9e0</SrcPropertyValue>
+        <SrcPropertyValue>7f25b6031e3341ff806feaae7074cafe</SrcPropertyValue>
         <SrcPropertyName>CustomUrl</SrcPropertyName>
-        <DstPropertyValue>5ae958b1e5ce4a768b605beac160a9e0</DstPropertyValue>
+        <DstPropertyValue>7f25b6031e3341ff806feaae7074cafe</DstPropertyValue>
         <DstPropertyName>CustomUrl</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -86,9 +86,9 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>True</SrcPropertyValue>
+        <SrcPropertyValue>False</SrcPropertyValue>
         <SrcPropertyName>ContentTypesEnabled</SrcPropertyName>
-        <DstPropertyValue>True</DstPropertyValue>
+        <DstPropertyValue>False</DstPropertyValue>
         <DstPropertyName>ContentTypesEnabled</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -124,7 +124,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Approver</SrcPropertyValue>
+        <SrcPropertyValue>Author</SrcPropertyValue>
         <SrcPropertyName>DraftVersionVisibility</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -222,18 +222,22 @@
     </Properties>
   </ReverseCoverageResult>
   <ReverseCoverageResult>
-    <Model xsi:type="WelcomePageDefinition">
+    <Model xsi:type="ModuleFileDefinition">
       <PropertyBag />
-      <Url>Shared Documents</Url>
+      <DefaultValues />
+      <Values />
+      <FileName>b70ee8176a0a40eab0e2dae64e117c43.txt</FileName>
+      <Content>NDY5MTIzNTVhNDczNGI0NmE5NmJjM2Y1NTlhMzMzNjA=</Content>
+      <Overwrite>true</Overwrite>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.WelcomePageDefinition</ModelFullClassName>
-    <ModelShortClassName>WelcomePageDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.ModuleFileDefinition</ModelFullClassName>
+    <ModelShortClassName>ModuleFileDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>Shared Documents</SrcPropertyValue>
-        <SrcPropertyName>Url</SrcPropertyName>
-        <DstPropertyValue>Shared Documents</DstPropertyValue>
-        <DstPropertyName>Url</DstPropertyName>
+        <SrcPropertyValue>b70ee8176a0a40eab0e2dae64e117c43.txt</SrcPropertyValue>
+        <SrcPropertyName>FileName</SrcPropertyName>
+        <DstPropertyValue>b70ee8176a0a40eab0e2dae64e117c43.txt</DstPropertyValue>
+        <DstPropertyName>FileName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>

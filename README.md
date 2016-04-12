@@ -2353,6 +2353,24 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>ModuleFileDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FileName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>MultiChoiceFieldDefinition</h4>
     <table>
       <thead>

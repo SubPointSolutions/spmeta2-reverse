@@ -1,11 +1,11 @@
 ﻿cls
 
-$g_DefinitionName = "WelcomePage"
+$g_DefinitionName = "ModuleFile"
 
 $g_Replacements = @{
 
     Name =$g_DefinitionName;
-    ParentName ="Web";
+    ParentName ="Folder";
 }
 
 
