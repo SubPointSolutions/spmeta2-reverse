@@ -153,15 +153,22 @@ namespace SPMeta2.Reverse.Tests.Base
 
         public void DeployReverseAndTestModel(ModelNode model, ReverseOptions options)
         {
-            DeployReverseAndTestModel(new[] { model }, null, options);
+            InternalDeployReverseAndTestModel(new[] { model }, null, options);
         }
+
+        public void DeployReverseAndTestModel(ModelNode model, ReverseOptions options,
+            IEnumerable<Type> modelHandlers)
+        {
+            InternalDeployReverseAndTestModel(new[] { model }, modelHandlers, options);
+        }
+
 
         public void DeployReverseAndTestModel(IEnumerable<ModelNode> models, ReverseOptions options)
         {
-            DeployReverseAndTestModel(models, null, options);
+            InternalDeployReverseAndTestModel(models, null, options);
         }
 
-        private void DeployReverseAndTestModel(
+        private void InternalDeployReverseAndTestModel(
             IEnumerable<ModelNode> models,
             IEnumerable<Type> reverseHandlers,
             ReverseOptions options)
