@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.SharePoint.Client.Taxonomy;
 using SPMeta2.Definitions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
@@ -19,12 +18,12 @@ using SPMeta2.Utils;
 
 namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
 {
-    public class TaxonomyTermStoreReverseHandler : CSOMReverseHandlerBase
+    public class TaxonomyTermGroupReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(TaxonomyTermStoreDefinition); }
+            get { return typeof(TaxonomyTermGroupDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -33,7 +32,7 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition)
+                    typeof(TaxonomyTermStoreDefinition)
                 };
             }
         }
@@ -45,26 +44,25 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
 
         public override IEnumerable<ReverseHostBase> ReverseHosts(ReverseHostBase parentHost, ReverseOptions options)
         {
-            var result = new List<TaxonomyTermStoreReverseHost>();
+            var result = new List<TaxonomyTermGroupReverseHost>();
 
-            var typedHost = parentHost.WithAssertAndCast<SiteReverseHost>("reverseHost", value => value.RequireNotNull());
+            var typedHost = parentHost.WithAssertAndCast<TaxonomyTermStoreReverseHost>("reverseHost", value => value.RequireNotNull());
 
             var context = typedHost.HostClientContext;
+
             var site = typedHost.HostSite;
+            var store = typedHost.HostTermStore;
 
-            var session = TaxonomySession.GetTaxonomySession(context);
-            var termStore = session.GetDefaultSiteCollectionTermStore();
+            var items = store.Groups;
 
-            context.Load(site);
-            context.Load(termStore);
-
+            context.Load(items);
             context.ExecuteQuery();
 
-            result.AddRange(ApplyReverseFilters(new[] { site }, options).ToArray().Select(i =>
+            result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {
-                return ModelHostBase.Inherit<TaxonomyTermStoreReverseHost>(parentHost, h =>
+                return ModelHostBase.Inherit<TaxonomyTermGroupReverseHost>(parentHost, h =>
                 {
-                    h.HostTermStore = termStore;
+                    h.HostTermGroup = i;
                 });
             }));
 
@@ -73,12 +71,17 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
 
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
-            var typedHost = (reverseHost as TaxonomyTermStoreReverseHost);
-            var item = typedHost.HostSite;
+            var typedHost = (reverseHost as TaxonomyTermGroupReverseHost);
+            var item = typedHost.HostTermGroup;
 
-            var def = new TaxonomyTermStoreDefinition();
+            var def = new TaxonomyTermGroupDefinition();
 
-            def.UseDefaultSiteCollectionTermStore = true;
+            def.Id = item.Id;
+            def.Name = item.Name;
+
+            // TODO, M2
+            // https://github.com/SubPointSolutions/spmeta2/issues/827
+            //def.Descrption = item.Description;
 
             return new TaxonomyTermStoreModelNode
             {

@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ReverseCoverageResult>
+    <Model xsi:type="TaxonomyTermGroupDefinition">
+      <PropertyBag />
+      <Name>d1fa099e59d741a48b60b67be19d6003</Name>
+      <Id>2f91ee06-9714-4723-9650-05fe36e6585c</Id>
+      <IsSiteCollectionGroup>false</IsSiteCollectionGroup>
+    </Model>
+    <ModelFullClassName>SPMeta2.Standard.Definitions.Taxonomy.TaxonomyTermGroupDefinition</ModelFullClassName>
+    <ModelShortClassName>TaxonomyTermGroupDefinition</ModelShortClassName>
+    <Properties>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>2f91ee06-9714-4723-9650-05fe36e6585c</SrcPropertyValue>
+        <SrcPropertyName>Id</SrcPropertyName>
+        <DstPropertyValue>2f91ee06-9714-4723-9650-05fe36e6585c</DstPropertyValue>
+        <DstPropertyName>Id</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>d1fa099e59d741a48b60b67be19d6003</SrcPropertyValue>
+        <SrcPropertyName>Name</SrcPropertyName>
+        <DstPropertyValue>d1fa099e59d741a48b60b67be19d6003</DstPropertyValue>
+        <DstPropertyName>Name</DstPropertyName>
+        <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyName>IsSiteCollectionGroup</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Not implemented yet</Message>
+      </ReverseCoveragePropertyResult>
+    </Properties>
+  </ReverseCoverageResult>
+  <ReverseCoverageResult>
     <Model xsi:type="TaxonomyTermStoreDefinition">
       <PropertyBag />
       <Name />
@@ -23,6 +55,12 @@
         <DstPropertyValue>True</DstPropertyValue>
         <DstPropertyName>UseDefaultSiteCollectionTermStore</DstPropertyName>
         <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue />
+        <SrcPropertyName>Name</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Supported, not tested yet</Message>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>

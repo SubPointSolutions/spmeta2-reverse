@@ -94,7 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseHandlers\TaxonomyTermGroupReverseHandler.cs" />
     <Compile Include="ReverseHandlers\TaxonomyTermStoreReverseHandler.cs" />
+    <Compile Include="ReverseHosts\TaxonomyTermGroupReverseHost.cs" />
     <Compile Include="ReverseHosts\TaxonomyTermStoreReverseHost.cs" />
     <Compile Include="Services\StandardCSOMReverseService.cs" />
   </ItemGroup>

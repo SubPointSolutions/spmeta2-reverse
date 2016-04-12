@@ -2501,6 +2501,35 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>TaxonomyTermGroupDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>IsSiteCollectionGroup</td>
+          <td>False</td>
+          <td>Not implemented yet</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>TaxonomyTermStoreDefinition</h4>
     <table>
       <thead>
@@ -2514,6 +2543,11 @@ In case you have unexpected issues or keen to see new features please contact su
           <td>True</td>
           <td>
           </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>True</td>
+          <td>Supported, not tested yet</td>
         </tr>
         <tr>
           <td>UseDefaultSiteCollectionTermStore</td>

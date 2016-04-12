@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SPMeta2.Definitions;
+﻿using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
-using SPMeta2.Utils;
 using SPMeta2.Reverse.Regression.Consts;
 using SPMeta2.Standard.Definitions.Taxonomy;
+using SPMeta2.Utils;
 
-namespace SPMeta2.Reverse.Regression.Validation
+namespace SPMeta2.Reverse.Regression.Validation.Taxonomy
 {
     public class TaxonomyTermStoreDefinitionValidator : TypedReverseDefinitionValidatorBase<TaxonomyTermStoreDefinition>
     {
