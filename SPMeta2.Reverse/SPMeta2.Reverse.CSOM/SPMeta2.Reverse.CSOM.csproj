@@ -104,6 +104,7 @@
     <Compile Include="ReverseHandlers\Fields\BooleanFieldReverseHandler.cs" />
     <None Include="ReverseHandlers\%24Name%24ReverseHandler.cs.tmpl" />
     <Compile Include="ReverseHandlers\FolderReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\Fields\LookupFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\MasterPageReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ModuleFileReverseHandler.cs" />
     <Compile Include="ReverseHandlers\PropertyReverseHandler.cs" />

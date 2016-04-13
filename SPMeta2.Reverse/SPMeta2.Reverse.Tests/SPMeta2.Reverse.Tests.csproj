@@ -113,6 +113,7 @@
     <None Include="Impl\Definitions\%24Name%24DefinitionTests.cs.tmpl" />
     <Compile Include="Impl\Definitions\FolderDefinition.cs" />
     <Compile Include="Impl\Definitions\Fields\HTMLFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\LookupFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\MasterPageDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\ModuleFileDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\PropertyDefinitionTests.cs" />
