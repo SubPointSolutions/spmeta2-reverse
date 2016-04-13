@@ -207,6 +207,10 @@ new[]{              typeof(StandardCSOMReverseService).Assembly,
                     {
                         var instance = Activator.CreateInstance(type) as ReverseHandlerBase;
 
+                        if (instance == null)
+                            throw new SPMeta2ReverseException(
+                                string.Format("Can't create reverse handle of type:[{0}]", type));
+
                         allHandlers.Add(instance);
                     }
                 }

@@ -60,6 +60,9 @@ namespace SPMeta2.Reverse.Regression.Services
                 if (!originalNode.Options.RequireSelfProcessing)
                     continue;
 
+                if (originalNode.RegIsExcludedFromValidation())
+                    continue;
+
                 var originalDefinition = originalNode.Value;
 
                 var originalDefinitionId = ModelIdService.GetDefinitionIdentityKey(originalDefinition);
