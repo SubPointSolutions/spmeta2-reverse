@@ -3,42 +3,42 @@
   <ReverseCoverageResult>
     <Model xsi:type="FolderDefinition">
       <PropertyBag />
-      <Name>1c3a08a19c7643e383c343c1b231cd7e</Name>
+      <Name>05a28af55db142f49d4442a8b05fcb70</Name>
     </Model>
     <ModelFullClassName>SPMeta2.Definitions.FolderDefinition</ModelFullClassName>
     <ModelShortClassName>FolderDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>1c3a08a19c7643e383c343c1b231cd7e</SrcPropertyValue>
+        <SrcPropertyValue>05a28af55db142f49d4442a8b05fcb70</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>1c3a08a19c7643e383c343c1b231cd7e</DstPropertyValue>
+        <DstPropertyValue>05a28af55db142f49d4442a8b05fcb70</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>
   <ReverseCoverageResult>
-    <Model xsi:type="WikiPageDefinition">
+    <Model xsi:type="WebPartPageDefinition">
       <PropertyBag />
       <DefaultValues />
       <Values />
-      <Title>6d5aeb3808d5468a93831ce89255230a</Title>
-      <FileName>88be59d336cb4518ad4fa0bf98490fc3.aspx</FileName>
+      <Title>8a4b4d2e9eb2480da3e7f43450f8f403</Title>
+      <FileName>78c8efb305e848699f9b3302c1629456.aspx</FileName>
       <NeedOverride>true</NeedOverride>
-      <Content>94c41ff413174fb79b57b84d71382a30</Content>
+      <PageLayoutTemplate>1</PageLayoutTemplate>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.WikiPageDefinition</ModelFullClassName>
-    <ModelShortClassName>WikiPageDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.WebPartPageDefinition</ModelFullClassName>
+    <ModelShortClassName>WebPartPageDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>88be59d336cb4518ad4fa0bf98490fc3.aspx</SrcPropertyValue>
+        <SrcPropertyValue>78c8efb305e848699f9b3302c1629456.aspx</SrcPropertyValue>
         <SrcPropertyName>FileName</SrcPropertyName>
-        <DstPropertyValue>88be59d336cb4518ad4fa0bf98490fc3.aspx</DstPropertyValue>
+        <DstPropertyValue>78c8efb305e848699f9b3302c1629456.aspx</DstPropertyValue>
         <DstPropertyName>FileName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>6d5aeb3808d5468a93831ce89255230a</SrcPropertyValue>
+        <SrcPropertyValue>8a4b4d2e9eb2480da3e7f43450f8f403</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -62,10 +62,50 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>94c41ff413174fb79b57b84d71382a30</SrcPropertyValue>
-        <SrcPropertyName>Content</SrcPropertyName>
-        <DstPropertyValue>&lt;div class="ExternalClassD6B71FD86DDA453D8ED5310441F70150"&gt;94c41ff413174fb79b57b84d71382a30&lt;/div&gt;</DstPropertyValue>
-        <DstPropertyName>Content</DstPropertyName>
+        <SrcPropertyValue />
+        <SrcPropertyName>CustomPageLayout</SrcPropertyName>
+        <DstPropertyValue>&lt;%-- _lcid="1030" _version="15.0.4420" _dal="1" --%&gt;
+&lt;%-- _LocalBinding --%&gt;
+&lt;%@ Page language="C#" MasterPageFile="~masterurl/default.master"    Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage,Microsoft.SharePoint,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c"  %&gt; &lt;%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; &lt;%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; &lt;%@ Import Namespace="Microsoft.SharePoint" %&gt; &lt;%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; &lt;%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderPageTitle" runat="server"&gt;
+	&lt;SharePoint:ListItemProperty Property="BaseName" maxlength="40" runat="server"/&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server"&gt;
+	&lt;meta name="GENERATOR" content="Microsoft SharePoint" /&gt;
+	&lt;meta name="ProgId" content="SharePoint.WebPartPage.Document" /&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+	&lt;meta name="CollaborationServer" content="SharePoint Team Web Site" /&gt;
+	&lt;SharePoint:ScriptBlock runat="server"&gt;
+	var navBarHelpOverrideKey = "WSSEndUser";
+	&lt;/SharePoint:ScriptBlock&gt;
+&lt;SharePoint:StyleBlock runat="server"&gt;
+body #s4-leftpanel {
+	display:none;
+}
+.s4-ca {
+	margin-left:0px;
+}
+&lt;/SharePoint:StyleBlock&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderSearchArea" runat="server"&gt;
+	&lt;SharePoint:DelegateControl runat="server"
+		ControlId="SmallSearchInputBox" /&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderPageDescription" runat="server"&gt;
+	&lt;SharePoint:ProjectProperty Property="Description" runat="server"/&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server"&gt;
+  &lt;div class="ms-hide"&gt;
+	&lt;WebPartPages:WebPartZone runat="server" title="loc:TitleBar" id="TitleBar" AllowLayoutChange="false" AllowPersonalization="false" Style="display:none;" /&gt;
+  &lt;/div&gt;
+  &lt;table class="ms-core-tableNoSpace ms-webpartPage-root" width="100%"&gt;
+				&lt;tr&gt;
+					&lt;td id="_invisibleIfEmpty" name="_invisibleIfEmpty" valign="top" width="100%"&gt; &lt;WebPartPages:WebPartZone runat="server" Title="loc:FullPage" ID="FullPage" FrameType="TitleBarOnly"/&gt; &lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;SharePoint:ScriptBlock runat="server"&gt;if(typeof(MSOLayout_MakeInvisibleIfEmpty) == "function") {MSOLayout_MakeInvisibleIfEmpty();}&lt;/SharePoint:ScriptBlock&gt;
+		&lt;/table&gt;
+&lt;/asp:Content&gt;</DstPropertyValue>
+        <DstPropertyName>CustomPageLayout</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
@@ -74,6 +114,12 @@
         <DstPropertyValue>True</DstPropertyValue>
         <DstPropertyName>NeedOverride</DstPropertyName>
         <IsValid>true</IsValid>
+      </ReverseCoveragePropertyResult>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>1</SrcPropertyValue>
+        <SrcPropertyName>PageLayoutTemplate</SrcPropertyName>
+        <IsValid>true</IsValid>
+        <Message>Supported, user defined</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
         <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldValue]</SrcPropertyValue>

@@ -113,6 +113,7 @@
     <Compile Include="ReverseHandlers\ListReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SecurityRoleReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SecurityGroupReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\WebPartPageReverseHandler.cs" />
     <Compile Include="ReverseHandlers\WebReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SiteReverseHandler.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="ReverseHosts\SecurityGroupReverseHost.cs" />
     <Compile Include="ReverseHosts\ListReverseHost.cs" />
     <Compile Include="ReverseHosts\UserCustomActionReverseHost.cs" />
+    <Compile Include="ReverseHosts\WebPartPageReverseHost.cs" />
     <Compile Include="ReverseHosts\WebReverseHost.cs" />
     <Compile Include="ReverseHosts\SiteReverseHost.cs" />
     <Compile Include="ReverseHosts\WelcomePageReverseHost.cs" />

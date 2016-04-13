@@ -1,6 +1,6 @@
 ﻿cls
 
-$g_DefinitionName = "WikiPage"
+$g_DefinitionName = "WebPartPage"
 
 $g_Replacements = @{
 
