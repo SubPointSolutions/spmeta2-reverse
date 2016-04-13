@@ -104,6 +104,7 @@
     <Compile Include="ReverseHandlers\Fields\BooleanFieldReverseHandler.cs" />
     <None Include="ReverseHandlers\%24Name%24ReverseHandler.cs.tmpl" />
     <Compile Include="ReverseHandlers\FolderReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\MasterPageReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ModuleFileReverseHandler.cs" />
     <Compile Include="ReverseHandlers\PropertyReverseHandler.cs" />
     <Compile Include="ReverseHandlers\SandboxSolutionReverseHandler.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="ReverseHosts\FeatureReverseHost.cs" />
     <None Include="ReverseHosts\%24Name%24ReverseHost.cs.tmpl" />
     <Compile Include="ReverseHosts\FolderReverseHost.cs" />
+    <Compile Include="ReverseHosts\MasterPageReverseHost.cs" />
     <Compile Include="ReverseHosts\ModuleFileReverseHost.cs" />
     <Compile Include="ReverseHosts\NavigationNodeReverseHost.cs" />
     <Compile Include="ReverseHosts\FieldReverseHost.cs" />
