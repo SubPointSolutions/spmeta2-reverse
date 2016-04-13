@@ -1,11 +1,11 @@
 ﻿cls
 
-$g_DefinitionName = "WebPartPage"
+$g_DefinitionName = "SandboxSolution"
 
 $g_Replacements = @{
 
     Name =$g_DefinitionName;
-    ParentName ="List";
+    ParentName ="Site";
 }
 
 

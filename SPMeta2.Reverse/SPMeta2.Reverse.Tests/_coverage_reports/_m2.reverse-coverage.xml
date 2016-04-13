@@ -1,137 +1,36 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfReverseCoverageResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ReverseCoverageResult>
-    <Model xsi:type="FolderDefinition">
+    <Model xsi:type="SandboxSolutionDefinition">
       <PropertyBag />
-      <Name>05a28af55db142f49d4442a8b05fcb70</Name>
+      <FileName>24708d13a67d4e57b40a58053f1b1315.wsp</FileName>
+      <Content>TVNDRgAAAABwGAAAAAAAACwAAAAAAAAAAwEBAAoAAAAAAAAAfAMAAAEAAQDrAwAAAAAAAAAAf0YibiAAbWFuaWZlc3QueG1sAAAiAADrAwAAAAB/RiFuIABTUE1ldGEyLkNvbnRhaW5lcnMuU2FuZGJveFNvbHV0aW9uQ29udGFpbmVyLmRsbAAdAQAA6yUAAAAAf0YibiAAU1BNZXRhMi5Db250YWluZXJzLlNhbmRib3hTb2x1dGlvbkNvbnRhaW5lcl9TaXRlRmVhdHVyZVxGZWF0dXJlLnhtbAAGAgAACCcAAAAAf0YibiAAU1BNZXRhMi5Db250YWluZXJzLlNhbmRib3hTb2x1dGlvbkNvbnRhaW5lcl9XZWJGZWF0dXJlXEZlYXR1cmUueG1sAFACAAAOKQAAAAB/RiJuIABTUE1ldGEyLkNvbnRhaW5lcnMuU2FuZGJveFNvbHV0aW9uQ29udGFpbmVyX1dlYkZlYXR1cmVcQ3VzdG9tZXJMaXN0XEVsZW1lbnRzLnhtbAA+CwAAXisAAAAAf0YibiAAU1BNZXRhMi5Db250YWluZXJzLlNhbmRib3hTb2x1dGlvbkNvbnRhaW5lcl9XZWJGZWF0dXJlXEN1c3RvbWVyTGlzdFxTY2hlbWEueG1sAFUBAACcNgAAAAB/RiJuIABTUE1ldGEyLkNvbnRhaW5lcnMuU2FuZGJveFNvbHV0aW9uQ29udGFpbmVyX1dlYkZlYXR1cmVcQ3VzdG9tZXJMaXN0SW5zdGFuY2VcRWxlbWVudHMueG1sALsBAADxNwAAAAB/RiJuIABTUE1ldGEyLkNvbnRhaW5lcnMuU2FuZGJveFNvbHV0aW9uQ29udGFpbmVyX1dlYlBhcnRzXEZlYXR1cmUueG1sAO4CAACsOQAAAAB/RiJuIABTUE1ldGEyLkNvbnRhaW5lcnMuU2FuZGJveFNvbHV0aW9uQ29udGFpbmVyX1dlYlBhcnRzXENvbnRhaW5lcldlYlBhcnRcQ29udGFpbmVyV2ViUGFydC53ZWJwYXJ0AKUBAACaPAAAAAB/RiJuIABTUE1ldGEyLkNvbnRhaW5lcnMuU2FuZGJveFNvbHV0aW9uQ29udGFpbmVyX1dlYlBhcnRzXENvbnRhaW5lcldlYlBhcnRcRWxlbWVudHMueG1sAHxtOBXsFD8+Q0vsOwmQHNV1r2dmZ1crtEaLQNeCWyNwLUJz7jnSrKTVHtKgvdgZHeCNVz3df3Yb9XQP3T17oCJZbJkjDhgQoVTg4rCLoshRJpSrMLg4lJiySVnBsTEKpFQBhyJyBcfGlOMARuT9390zPYcsVoDiit2ref3/e++/69+/v37xnWcTW+dyCj9DdEPW1J5ANBQJ8EQVNUlWp3oCBTMb7A5s3bKsMZHSlIKJPDzyq0ZPYNo085vCYUOcJjnBCOVkUdcMLWuGRC0XNqYFneQ1WTXDAd4pmZR6AiQudEbj8e5gpCsbC7Z3kHhQIO1twTiJt2WFzkw0mslgCVp8jBYf0zWpIJp7ivZ1oIFoDs8neg2D5DKKTAyWL2Hm+SFNFEzGnxobJqYQC/VpqinIKooJpQRVymhzjlVFSkhSlADfT/KKNp8jqpkW9Cli9gR2KFpGUBzZfQI6HLA1os6UkCVUhK4pRhFbjuedsosyZyPvOI11Qv828n0FxSzopEclBVMXlI38WAH9F3eR+bR2gKg9QrRbjMXEjrZoJNbZEesI8CNCjhh5QSSLi8RekhkTdNMoMduYAJ+ezxMqtSewIcCHS3EI1whEIux4btVYuKLKEoNEoA4NC6qcJYZZLFeBP7v6nEzJJrElTdjvEDbektmfkB6MzTlSwyqllpJEuEYosU5sIZgZvuYO8AKAD38ffgjwbbCebXDmZwF/TZ99qgm+teTYum9zQ8fWpadlg8/r2pQu5HhRUFXN5DOE1wsqL6t8/2iKz2kSCS1b1nipLWNsAGCI88IPHl6z25H7GnjWLeWWAqzCTIOF+6dOBHzRsPNZ2mPZTR+/2yjEf24th37t/zJlpf9K7+KLPXMoN2U7vMpXw8n9AOdRcgdAy0eISfHhi6azpwHzO135kEnmTHy/dJHt1yrL7goR+0O6oYtg27bNdnRNOR+it4V0omiiZSu1mcniq/i2V5r5WKf13smK1MHJAMC+ZoAlFXxjvBXaMz1/deDlvfe8sPq11w//e1f/e/rL9y08Ff3+88sPBe7OXHVKPnwwcbg+cfedDdyLN911V3Jn52+y797zVs+HTzz+7q82L4xfovhODT+854UDvvX33fSlnc++sfnVk+knT3Y/7su99NZdu71v3Hp1yzsTbf9zx5Y//68TXz//R8/MP/zTI/+66/nh+38Lr684PnjDyUMXRDi4AO3gAJaDZ2ODR8Nc4xXcCgTg3wAXRDwQtMKzHIwLkdbo8d+A3D6/R8O6aNRWIgC/jqi8toqll14B9RuwTO2ynuqyq2uXpQ3cS8t6G/16G/IYq2mhNZTR04py/Ev99VbWr/93JR1L+s/zNzj0/+TK6BtmwONp9dH24fGc8jdhwliLhNYWRmX6V1r9HONiWXsxAm/rJdQPOzZe1gzrKnl8rZ91mGh8l9o8noNok4+hAx7vDTRTpPsZ3eem08yGDZ7WddQigA2D4PG2Bizn6miJDZ/D1GdYitnbZ8sBz0EaZE8rFvM3NkPremrZpazkQY5RsKv5Wy9DTLDBylxRp/d6IA8W2wbYnrpyO0dbBVh9ZKYd5862SFs0DswbhXYXtGL9nwL8Bb7fQsXrU6aOyx2DjRNYaAitWL87Bd9tssaQ9Tt2J/tpH8b8IfR+/XZcEtj9AFm5vRd+nWP96L3L2uAi1iah1e6atDujq1Yk8Be0uzbnonNWe2FcnD3KPQtfQ/g6fA9hEzrUCD/n3kT4Hc9DnkZ40/MSwg8YXOOlMM7gOIMHGLyJwYcYfMX7lBclMPg+w6zwUdjvi/p2wT4f1Xyzb8rXCI8gbIL6urcRtte11PlhVx1wTTDFMAsI/fCXiPHDMwweq6O2/bLuTUw3+2n6Yj+V0+2n1o75KZ74qS8HGTyMsAn+2k/lPM0wP0EIdhQopH/nwybYhbVF0z74D7TOB++w6DR79iKMea6BH7JR756GS9A6Dn7JcjfCBu5CjOvGdVaun+Wm7dwktwZzL9g5neMx6idZ7rvcIe5SzJ0XcHKXo8YIy93UcCsXRjt32LmvcW2YG7Nz3+S6oR6m7Nw/cAnM5a3cquOooQEOWjLhN9yVmLuN5Q7BKW4Mx94jAcuWBg/PehMHOm1QMM/gQhF64CssfZcLHmHwXkY94rkcjqNdUQbjDPYymGTwKgavZlBgUGbwOoQE5ln6RgZvZfBOhNfCQwgT8ChQP/6OcT6JcBV3FFJ1t3MvYPoIt5xRj8K9dY8g/ht1f4Pwibo2bLlUzs/gRN2T3NuY/h7iP6g7xr0Cfv+PuXfhEHecwdc5jqMSlthyaJSWcFv8YRwOdvjbYDm31/9rbjVHta/jqMzLGYwyGEeYxNgdhku4dQxeDps5wGj0cRci3MV1Ikxx9yO+jXuPC8GXQPKGMNa3eEI4f/wI4VpoRvx6Bq9gsI3hN4MXOfsYJsXg52EtYg7AAEID+1oIDsLnvduY3m3wDbif62XpPvgK8ifRhqwnyfQmmSVJZkkSLRzz7Gf8+xm/AF7uLW6BYRYY5kaGeZCln2P451j6NZZ+jaWBozw8g9sY3M/gYe5x7hnuBHeSe5vzsF6V8vwJwoxHwJbSgK2cw2h7Md3IethShL4Fp/9Z7zw87yutuSzsneztxvXCCa4a9yZXzCSGcfemkC2wyG0YVO47FiXgtLsXSM0bJslRBlcytDtJX87epVgcqktVsMKQkCEKKNb0gVvVPChJ1SRTRGeZsoKQJrm8IpjOJgm0/GQSMbIomzA5ub0gK5JNcgusoLjFl5PSOiGQVGVTFhT5+qKWgRlBAdzHTpZkEt2cB6MaRblc8otslbiQaGo65AxR0xXZiSQqwj1zr46z6KhKzYAxYYpMDmmCxKyipQ1IlKvccgB9EMQDiBqUiSJBokJXFUOFyZWmmWzPjpERTV0BMpfXiUH30JDV9JxgAgajQICgW6pEdKeCxguqKedIyN5wowKwNv+DuL0hs5p+oNdEvZmCSYpFSFYhIm134Oxx07KpkBKjg+4nhqjLecpaTcRayspTBV04HTmXF9T5aoJ9LFKrRH5el6ema5DSuiCRnOB2pljKOlio9tIODA0zhjhF9BlZJAZ2z9we2ZAzbn93FGSpWrId0mrCoKyQKqKttl8WplTNMGXRgH6SKUxNCWWqLBxWEw4vaE2FsTRoKFx3W4sIFuJxoghzLGWUxNkFWbBNOSMrsukK+SJGHscSKklTsTtQ+xRIa5qC7EkkVbnahxz9Wq5oNOwgKAhHCYlSSuxOd6Z9tHIgGZBk7JDbdW3WKI9TBSFlYiHWLZkYlujN55X5lDmP1GlCzBT2NKvP98OQjJUuKI6WJI6FBtF7RQypgf2/V5IYRkoVMqOZa7EzWEPATgwOdUSQJKv37yBmv2AK1H2gie0y63uOx0WHS3Zjc2uLYdiszs7sSdNdtJ1PGiMFRRnVB3J57PI4utZwHbH9soFhmqeHVeX4Wh2yDy2Y0nRXvY9hTWsqHUvLJbvwVERKxKGHznUrFVwlmKDjykqFKRjDlIbzKKzG0CHGxFFnCn96ibJwdBlOwc4vgSwCZHCDQmBLEcvbfwkmeksZzk2TkOZWz6MCS82mKlmlcmG75O+SWovm/MHCOx9dsIWtdOJ06Y/mcnlkz5HTu8/WZ6uawzUrGpaMwG4Ywj/cHVx3vfRA+tT2xwfvPZaej+6Hhse2Tv7Z8p80bvL6m5fgJqt5WXODj4fmJXU8xzU3eHngfDzX0lTHe5qamjDbhFmOJhpooqHhiesn9qxuf+1Wxr/cz3u4lublHn+Tx9/gbYUm/DFGD6UvH154EHA3TdeEd9O9KN2mYn481RulSz26J5vdO3dn+Ae3/e39lyW00XcLq44rK/iH3g/enD5yZOiDX/Ue7fy3luXiHY2vn7wNdo6Si4/++oEHjz2+diT3z1vF9CM3r8zfMXLJF7mj3xy8/fpHXy7MvLjlq0d3/OMJv2/H9l3ff+TVb103cjs5b8dP37jlxBceuO/FL6/5avRfvtjz/s8ee3Xdh28ltad//OrzdWyNie5yTU0aB8Jw8esDzksFARdQBUnWQqXvCCGcMekYNTBnEpVOOgYbeu3BR6ODepHXXveV0RuiMesUHuOCgV/mq8dKYNGSG5zjBkrIsQjn/PWe5iXNS2hMWxrqvc0FmqPmtqxiDPNYNS114GlpafLWcy1+8Da1NNFkk48dBtRzDT7gPE11TPYKDj5jjX18caUDPAdrK5C8a2gD3IHAsjQ9bnbGNqxKavDCQxfiBtteObkEruOgpRJbLjHJwZrQyEC6uCza6HyimGkPdXCQblpRJLlG32Zahi9SeOSNcHDFYiZWWIk7/+Lahv/7R3k+Fol2AG4G4VKhu7stHhG6g7EI/aYUa+8KCnGxLRjrbu+OZIlAskInwHkc1EedOsQ6q2eVhgnr9JbupyDtuWivLuRHNHVgTiTM6/Q0nVysCnbOrmmHaEHUBBowsZL2jP7U8y37vnDc/0ryphsffoz/+Rt3UJ6+TRO7cco0Jox8UCIzEymtoItkYpzkNYrLUfcn7DBMLCIcE1rm2gm2CFpMqVBeyizmYPuTeR7sLKWf6aw+q648ny49k32a3q8ow2i8tdkghO0N6fPhZSjn/HPvzf+Xh2PBW1V11G8NZZEaeOfbwb5tAM95S5TnvO0I9+DiYxLhAIxjKgmjMIL5JMJBTNPnad8vTllyuDKZW+2cr/qzCPQzrj04W+ooR2YzJp3xszjHA5uUaKk0UgXEGkgXcG6Vkao6rcrHe6kM99KoWtJv2UlapPjXjrNzhH1i2oh4h7+f7htBZHLyZXpSuKYbRiqd12NAz4w0ti4RmEa6MjGAniFRKyWUrcEc5jSUWijKqS5D66HBpX+PLamkN4pSI8UftTeC/M6aSMe3gCVHEOaAfGp2hpBXYefqO6EZ9Q+x9RjV3MfWYvMsYlMwDfQ7WDWOh0fZWimG1kcBh1S4hfkxavPIth9OHNRz5s8cq39rvS5hGRH5StH89Oq9ndV7ud7K2q+s+25Wphc5DOTMsfXlPEb1TOX++PyBPBHre9gPO/8Yij/EZzFXvey7JIu/6cWOQBd1q4Wnl3R4W2GA7xVNeQa3K6NqP67aC4rZExjsHUoNIEWZFeaNQQ0X0EnVMAVF6Qmkx3cjhV4ra4tJYmeGSMFILN4dbM+KQlDoimWDJJ6JixGpMxuJCwGendWgeagysKV4ZQY9/n0NDu5EP35sMvF4l9DeGQt2k2wm2N4uZoPxmBgJtnd0ka4OsTvaFe8uxgY12tfrBhRCb8FV3c2qwLsuM/UVDFPLEX1INkxmh4qbHZvdqLgS9dGknKE0PUM+XckUq5DyO1I1XDrbVuAYtuhm4LiwLhjk+zWeXpwSpwV1ivDmNOHZ9wley7IM3TvzgnPwyGeIos2G+GSWl01e0ojBCucEU5xm7FlNkbDNqLSULYFGgl7ToicfWIrkNvKCyhNd13R+VlYUXhPFAianicr4i6wGvcoV4oNBx1wqyTl3Lt1ytC4CuuMeKBHpTUEMYaQjEnFhtwsGsShu7Kh6VUEWDwwJBVWcthtviZoiaKVszm+XTQx1NFpGuq6AFYTi2qNuga7jh9Ma6Drb6AkMz1vRwr4l049omuriTOaEKZQTnkSRWsE0wtGOsExxRlg2p4gayqtTgTBrTk7DWGR7YrpZW9qkzaKTxQMt113Y4hBS5g8/yOq9Tyd2N7AHhX5Ztz5Q9QQuHScGO3owNhWxmwP8bh3HCSrDCJdLdNfR2TXwBB3j6GG/037omEbv1KLU0jVZN3acZPlkP2qci0QD7ou0lnu89UHOqk/6KaH88mm5oDMqiEVcg0m4hm0J9rXRZSnLs/IHs0JHZzuJZIMRsQtHUSETD2a6O9uCkWhXF+mUJCnW3nVDwG7+9LtFwO4nrPYC5U3TVTX0hGMj48G6Gcd2jVUlOQO5dXRE9X/Uiphpw1ImtgmxTPuwMDdE1CkTe1mso8MdhjKXE3tkMuvyn2ZZu6AJFkbHw53p4SEUq2XoBz0kOhanhUxBEXQLZbVJd7Wyj2KCbgtBQ1VJ0CV3rSLTPkMZktUDfHHCY6K35HB2DM0ZSiJsM7jLjGuzQ3IOh0j6fcuJ35a2SCLsUNzc1LyKui7VN20yVvCoEhbAEW2YqAW2erA53NLCNcUlrioQfb5c/qiOjXp7ObJa7TAOFFmZYFh6DZGo1qhhx7KmBdSGatGJcKUFiTGBHseayCgzsRXuV5Jte3olaYTM9qqqhuM0G+cCrvnXacqts4axUZAklczSOefy8ko9vfQRzS3ZOK1oVdsnqzMYaS179eRQMpU+Ww07tdm09tHUjI4MpCd3jg4PVOhKhE8fSas5/I4+FC3vQ/Z3h2s0lXV0evB5htFCY99d5ZlJazSYzM0asiQKOUWW+mLtmwNOx3H3y+qeamFqsKaIWciPCXSsyNPJboJGg6ZCgpGfC1jTIptFas2MU/TbiSzSuXGrTmZ6Ym32lNOrKHQENywp52RQuDLFMKIiY72b9jrGCF1rJMI26ZyNIOdq7Ej2/9+MEb/Pvbh/YLB391D6bPuwlSmtETQ9514iYNZuuXanpRi7zVMMzdo9p6pnZUu0msNAuKYeesHDpcTJfrJKcMR36bBzH1cFtsxi9BJh12oxEaZr0HO6G0u4N6w119jlPe3MG5biFsgeaWpvhZzndOvwas6aOxbHctuZsNubj7MlOdcHHezS5ZkOM+KCmI1kO+LBNlESg+3RWCYodLZ3Yaq7Q5LaRSmeESsOes72NKPi8ugizyIqS1ciQrMkk2f/o+5TOJ2Y/d/erWAFYRiG/krZWekHWHaTIejVq2w4dLDZ0k7Evzdtmtl2UxzIjitburTJS/t48RJWtOyfftpI/3f29kAOdvFVDkZ6CGfHM/ypq3A0sGJLN0oG0Nd0Sup+a0mSQ20MwFqenrt2o1c2gk98R1iXLKE4R8upUGzR1FHhVyTBuIXXt94hiXG6jyyfk2Jrlq6y4DTHl3kDyElnBwBCtc2QvhMWh6GgT5cP/gvug9MFexC2i6A/81yFE6kTmTXqeLV4alknOr6eIMfLVl4Mf6jszReABSyEM1Lf2ZvTA/rZFJaY4ioBMqsWoHPfVLrUT+8knqdoa9HVQsu7ytjRco5U8GJCoK2pQKOOP6kmLw==</Content>
+      <SolutionId>e9a61998-07f2-45e9-ae43-9e93fa6b11bb</SolutionId>
+      <Activate>true</Activate>
     </Model>
-    <ModelFullClassName>SPMeta2.Definitions.FolderDefinition</ModelFullClassName>
-    <ModelShortClassName>FolderDefinition</ModelShortClassName>
+    <ModelFullClassName>SPMeta2.Definitions.SandboxSolutionDefinition</ModelFullClassName>
+    <ModelShortClassName>SandboxSolutionDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>05a28af55db142f49d4442a8b05fcb70</SrcPropertyValue>
-        <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>05a28af55db142f49d4442a8b05fcb70</DstPropertyValue>
-        <DstPropertyName>Name</DstPropertyName>
+        <SrcPropertyValue>e9a61998-07f2-45e9-ae43-9e93fa6b11bb</SrcPropertyValue>
+        <SrcPropertyName>SolutionId</SrcPropertyName>
+        <DstPropertyValue>e9a61998-07f2-45e9-ae43-9e93fa6b11bb</DstPropertyValue>
+        <DstPropertyName>SolutionId</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
-    </Properties>
-  </ReverseCoverageResult>
-  <ReverseCoverageResult>
-    <Model xsi:type="WebPartPageDefinition">
-      <PropertyBag />
-      <DefaultValues />
-      <Values />
-      <Title>8a4b4d2e9eb2480da3e7f43450f8f403</Title>
-      <FileName>78c8efb305e848699f9b3302c1629456.aspx</FileName>
-      <NeedOverride>true</NeedOverride>
-      <PageLayoutTemplate>1</PageLayoutTemplate>
-    </Model>
-    <ModelFullClassName>SPMeta2.Definitions.WebPartPageDefinition</ModelFullClassName>
-    <ModelShortClassName>WebPartPageDefinition</ModelShortClassName>
-    <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>78c8efb305e848699f9b3302c1629456.aspx</SrcPropertyValue>
+        <SrcPropertyValue>24708d13a67d4e57b40a58053f1b1315.wsp</SrcPropertyValue>
         <SrcPropertyName>FileName</SrcPropertyName>
-        <DstPropertyValue>78c8efb305e848699f9b3302c1629456.aspx</DstPropertyValue>
+        <DstPropertyValue>24708d13a67d4e57b40a58053f1b1315-v1.0.wsp</DstPropertyValue>
         <DstPropertyName>FileName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>8a4b4d2e9eb2480da3e7f43450f8f403</SrcPropertyValue>
-        <SrcPropertyName>Title</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ContentTypeId</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>ContentTypeName</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldValue]</SrcPropertyValue>
-        <SrcPropertyName>DefaultValues</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue />
-        <SrcPropertyName>CustomPageLayout</SrcPropertyName>
-        <DstPropertyValue>&lt;%-- _lcid="1030" _version="15.0.4420" _dal="1" --%&gt;
-&lt;%-- _LocalBinding --%&gt;
-&lt;%@ Page language="C#" MasterPageFile="~masterurl/default.master"    Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage,Microsoft.SharePoint,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c"  %&gt; &lt;%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; &lt;%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; &lt;%@ Import Namespace="Microsoft.SharePoint" %&gt; &lt;%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; &lt;%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;
-&lt;asp:Content ContentPlaceHolderId="PlaceHolderPageTitle" runat="server"&gt;
-	&lt;SharePoint:ListItemProperty Property="BaseName" maxlength="40" runat="server"/&gt;
-&lt;/asp:Content&gt;
-&lt;asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server"&gt;
-	&lt;meta name="GENERATOR" content="Microsoft SharePoint" /&gt;
-	&lt;meta name="ProgId" content="SharePoint.WebPartPage.Document" /&gt;
-	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-	&lt;meta name="CollaborationServer" content="SharePoint Team Web Site" /&gt;
-	&lt;SharePoint:ScriptBlock runat="server"&gt;
-	var navBarHelpOverrideKey = "WSSEndUser";
-	&lt;/SharePoint:ScriptBlock&gt;
-&lt;SharePoint:StyleBlock runat="server"&gt;
-body #s4-leftpanel {
-	display:none;
-}
-.s4-ca {
-	margin-left:0px;
-}
-&lt;/SharePoint:StyleBlock&gt;
-&lt;/asp:Content&gt;
-&lt;asp:Content ContentPlaceHolderId="PlaceHolderSearchArea" runat="server"&gt;
-	&lt;SharePoint:DelegateControl runat="server"
-		ControlId="SmallSearchInputBox" /&gt;
-&lt;/asp:Content&gt;
-&lt;asp:Content ContentPlaceHolderId="PlaceHolderPageDescription" runat="server"&gt;
-	&lt;SharePoint:ProjectProperty Property="Description" runat="server"/&gt;
-&lt;/asp:Content&gt;
-&lt;asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server"&gt;
-  &lt;div class="ms-hide"&gt;
-	&lt;WebPartPages:WebPartZone runat="server" title="loc:TitleBar" id="TitleBar" AllowLayoutChange="false" AllowPersonalization="false" Style="display:none;" /&gt;
-  &lt;/div&gt;
-  &lt;table class="ms-core-tableNoSpace ms-webpartPage-root" width="100%"&gt;
-				&lt;tr&gt;
-					&lt;td id="_invisibleIfEmpty" name="_invisibleIfEmpty" valign="top" width="100%"&gt; &lt;WebPartPages:WebPartZone runat="server" Title="loc:FullPage" ID="FullPage" FrameType="TitleBarOnly"/&gt; &lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;SharePoint:ScriptBlock runat="server"&gt;if(typeof(MSOLayout_MakeInvisibleIfEmpty) == "function") {MSOLayout_MakeInvisibleIfEmpty();}&lt;/SharePoint:ScriptBlock&gt;
-		&lt;/table&gt;
-&lt;/asp:Content&gt;</DstPropertyValue>
-        <DstPropertyName>CustomPageLayout</DstPropertyName>
-        <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
         <SrcPropertyValue>True</SrcPropertyValue>
-        <SrcPropertyName>NeedOverride</SrcPropertyName>
+        <SrcPropertyName>Activate</SrcPropertyName>
         <DstPropertyValue>True</DstPropertyValue>
-        <DstPropertyName>NeedOverride</DstPropertyName>
+        <DstPropertyName>Activate</DstPropertyName>
         <IsValid>true</IsValid>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>1</SrcPropertyValue>
-        <SrcPropertyName>PageLayoutTemplate</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Supported, user defined</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldValue]</SrcPropertyValue>
-        <SrcPropertyName>Values</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
-      </ReverseCoveragePropertyResult>
-      <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.FieldValue]</SrcPropertyValue>
-        <SrcPropertyName>DefaultValues</SrcPropertyName>
-        <IsValid>true</IsValid>
-        <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>

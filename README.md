@@ -3193,6 +3193,36 @@ In case you have unexpected issues or keen to see new features please contact su
     </table>
   </div>
   <div>
+    <h4>SandboxSolutionDefinition</h4>
+    <table>
+      <thead>
+        <td>Property</td>
+        <td>Support</td>
+        <td>Comments</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Activate</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>FileName</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>SolutionId</td>
+          <td>True</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
     <h4>SecurityGroupDefinition</h4>
     <table>
       <thead>
