@@ -1,11 +1,11 @@
 ﻿cls
 
-$g_DefinitionName = "ModuleFile"
+$g_DefinitionName = "WikiPage"
 
 $g_Replacements = @{
 
     Name =$g_DefinitionName;
-    ParentName ="Folder";
+    ParentName ="List";
 }
 
 

@@ -24,9 +24,7 @@ namespace SPMeta2.Reverse.Regression.Validation.Taxonomy
 
                 .ShouldBeEqual(s => s.Description, r => r.Description)
 
-                //.ShouldBeEqual(s => s.IsOpenForTermCreation, r => r.IsOpenForTermCreation)
-                //.ShouldBeEqual(s => s.IsAvailableForTagging, r => r.IsAvailableForTagging)
-
+                .SkipProperty(s => s.LocalCustomProperties, SkipMessages.NotImplemented)
                 .SkipProperty(s => s.CustomSortOrder, SkipMessages.NotImplemented)
                 .SkipProperty(s => s.CustomProperties, SkipMessages.NotImplemented)
 

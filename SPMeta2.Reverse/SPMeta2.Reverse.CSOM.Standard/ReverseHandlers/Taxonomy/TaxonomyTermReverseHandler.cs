@@ -80,7 +80,7 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers.Taxonomy
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
             var typedHost = (reverseHost as TaxonomyTermReverseHost);
-            var item = typedHost.HostTermSet;
+            var item = typedHost.HostTerm;
 
             var def = new TaxonomyTermDefinition();
 

@@ -51,6 +51,13 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Taxonomy
                 Description = Rnd.String()
             };
 
+            var term3 = new TaxonomyTermDefinition
+            {
+                Name = Rnd.String(),
+                Id = Rnd.Guid(),
+                Description = Rnd.String()
+            };
+
             // only witin a tes term group
             // performance boost
             var groupName = termGroup1.Name;
@@ -65,7 +72,10 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.Taxonomy
                     {
                         group.AddTaxonomyTermSet(termSet1, termSet =>
                         {
-                            termSet.AddTaxonomyTerm(term1);
+                            termSet.AddTaxonomyTerm(term1, t =>
+                            {
+                                t.AddTaxonomyTerm(term3);
+                            });
                             termSet.AddTaxonomyTerm(term2);
                         });
 
