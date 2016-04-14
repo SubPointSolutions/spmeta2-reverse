@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SPMeta2.Reverse.Exceptions;
 using SPMeta2.Reverse.Services;
 using SPMeta2.Utils;
+using Microsoft.SharePoint.Client;
 
 namespace SPMeta2.Reverse.CSOM.Services
 {
@@ -53,7 +54,26 @@ namespace SPMeta2.Reverse.CSOM.Services
 
                 foreach (var item in items)
                 {
-                    var currentPropValue = ReflectionUtils.GetPropertyValue(item, filterPropName);
+                    // huge TODO
+                    // a separate service to handle mappings
+
+                    object currentPropValue = null;
+
+                    if (item is File)
+                    {
+                        if (filterPropName == "FileName")
+                        {
+                            currentPropValue = (item as File).Name;
+                        }
+                        else
+                        {
+                            currentPropValue = ReflectionUtils.GetPropertyValue(item, filterPropName);
+                        }
+                    }
+                    else
+                    {
+                        currentPropValue = ReflectionUtils.GetPropertyValue(item, filterPropName);
+                    }
 
                     switch (filterOperation)
                     {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.SharePoint.Client;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Definitions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
@@ -29,7 +30,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
         protected override IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
         {
             var typedFields = context.LoadQuery(items.Where(i => i.FieldTypeKind == FieldType.Geolocation));
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             return typedFields;
         }

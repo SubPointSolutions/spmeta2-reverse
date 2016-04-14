@@ -107,10 +107,19 @@
     <Compile Include="Impl\Definitions\Fields\GeolocationFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\GuidFieldDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Fields\BooleanFieldDefinitionTests.cs" />
+    <None Include="Content\Apps\SPMeta2.Containers.SandboxSolutionContainer.wsp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Impl\Definitions\%24Name%24DefinitionTests.cs.tmpl" />
     <Compile Include="Impl\Definitions\FolderDefinition.cs" />
     <Compile Include="Impl\Definitions\Fields\HTMLFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\LookupFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\MasterPageDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\ModuleFileDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\PropertyDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\SandboxSolutionDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Fields\TaxonomyFieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermSetDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermGroupDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\UserCustomActionDefinitionTests.cs" />
@@ -123,7 +132,9 @@
     <Compile Include="Impl\Definitions\Taxonomy\TaxonomyTermStoreDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\WebDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\FieldDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\WebPartPageDefinitionTests.cs" />
     <Compile Include="Impl\Definitions\WelcomePageDefinitionTests.cs" />
+    <Compile Include="Impl\Definitions\WikiPageDefinitionTests.cs" />
     <Compile Include="Impl\Services\CSOMReverseServiceTests.cs" />
     <Compile Include="Impl\Services\ReverseOptionServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

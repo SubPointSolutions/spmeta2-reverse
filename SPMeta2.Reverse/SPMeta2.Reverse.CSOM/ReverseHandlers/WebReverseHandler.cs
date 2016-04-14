@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.SharePoint.Client;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.ReverseHosts;
 using SPMeta2.Reverse.ReverseHosts;
@@ -59,7 +60,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             //    context.Load(web, w => w.ServerRelativeUrl);
             //    context.Load(rootWeb, w => w.ServerRelativeUrl);
 
-            //    context.ExecuteQuery();
+            //    context.ExecuteQueryWithTrace();
             //}
 
             //var isRootWeb = web.ServerRelativeUrl == rootWeb.ServerRelativeUrl;
@@ -72,7 +73,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             var items = web.Webs;
 
             context.Load(items);
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {
@@ -98,7 +99,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             if (!item.IsPropertyAvailable("Title"))
             {
                 item.Context.Load(item);
-                item.Context.ExecuteQuery();
+                item.Context.ExecuteQueryWithTrace();
             }
 
             def.Title = item.Title;

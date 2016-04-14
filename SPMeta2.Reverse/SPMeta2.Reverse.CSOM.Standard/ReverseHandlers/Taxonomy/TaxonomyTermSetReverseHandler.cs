@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Definitions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
@@ -56,7 +57,7 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
             var items = termGroup.TermSets;
 
             context.Load(items);
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {

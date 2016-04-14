@@ -12,6 +12,7 @@ using SPMeta2.Utils;
 using SPMeta2.Syntax.Default;
 using SPMeta2.ModelHosts;
 using System.Xml.Linq;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Reverse.Exceptions;
 
 namespace SPMeta2.Reverse.CSOM.ReverseHandlers
@@ -63,7 +64,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             var items = hostFolder.Folders;
 
             context.Load(items);
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {

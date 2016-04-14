@@ -1,11 +1,11 @@
 ﻿cls
 
-$g_DefinitionName = "WelcomePage"
+$g_DefinitionName = "TaxonomyField"
 
 $g_Replacements = @{
 
     Name =$g_DefinitionName;
-    ParentName ="Web";
+    ParentName ="Site";
 }
 
 

@@ -148,6 +148,12 @@ function CreateReverseCSOMPackage() {
 
 	$package.Dependencies += $spMetaCore
 
+	$m2CSOMFoundation = GetDependencyPrototype
+	$m2CSOMFoundation.Id = "SPMeta2.CSOM.Foundation"
+	$m2CSOMFoundation.Version = "1.2.60"
+
+	$package.Dependencies += $m2CSOMFoundation
+
     CreatePackage $package $spRuntime
 }
 

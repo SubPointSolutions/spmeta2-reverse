@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.SharePoint.Client;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.ReverseHosts;
 using SPMeta2.Reverse.ReverseHosts;
@@ -74,7 +75,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
         protected virtual IEnumerable<Field> GetTypedFields(ClientContext context, FieldCollection items)
         {
             context.Load(items);
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             return items.ToArray();
         }

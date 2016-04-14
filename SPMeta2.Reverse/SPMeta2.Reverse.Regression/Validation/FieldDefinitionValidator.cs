@@ -26,7 +26,7 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .ShouldBeEqual(s => s.Description, r => r.Description)
                 .ShouldBeEqual(s => s.InternalName, r => r.InternalName)
                 .ShouldBeEqual(s => s.FieldType, r => r.FieldType)
-                .ShouldBeEqual(s => s.DefaultValue, r => r.DefaultValue)
+                
                 .ShouldBeEqual(s => s.Required, r => r.Required)
                 .ShouldBeEqual(s => s.Group, r => r.Group)
                 .ShouldBeEqual(s => s.Id, r => r.Id)
@@ -56,6 +56,11 @@ namespace SPMeta2.Reverse.Regression.Validation
                 .SkipProperty(s => s.ValidationFormula, SkipMessages.NotImplemented)
                 .SkipProperty(s => s.ValidationMessage, SkipMessages.NotImplemented)
                 ;
+
+            if (!string.IsNullOrEmpty(originalDefinition.DefaultValue))
+                assert.ShouldBeEqual(s => s.DefaultValue, r => r.DefaultValue);
+            else
+                assert.SkipProperty(s => s.DefaultValue, SkipMessages.Skipped);
         }
     }
 }

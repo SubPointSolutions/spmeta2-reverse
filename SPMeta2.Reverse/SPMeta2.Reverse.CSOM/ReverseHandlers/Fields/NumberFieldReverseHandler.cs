@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.SharePoint.Client;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Definitions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
@@ -36,7 +37,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Fields
                 items.Where(i => i.FieldTypeKind == FieldType.Number)
                      .IncludeWithDefaultProperties());
 
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             return typedFields;
         }
