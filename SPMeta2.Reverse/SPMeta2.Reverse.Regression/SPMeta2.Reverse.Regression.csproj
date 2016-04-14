@@ -69,6 +69,7 @@
     <Compile Include="Validation\Fields\OutcomeFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\MultiChoiceFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\CurrencyFieldDefinitionValidator.cs" />
+    <Compile Include="Validation\Fields\TaxonomyFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\UserFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\URLFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\DateTimeFieldDefinitionValidator.cs" />
