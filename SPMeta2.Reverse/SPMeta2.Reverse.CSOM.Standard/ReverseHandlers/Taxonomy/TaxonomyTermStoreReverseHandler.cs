@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.SharePoint.Client.Taxonomy;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Definitions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
@@ -58,7 +59,7 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers
             context.Load(site);
             context.Load(termStore);
 
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             result.AddRange(ApplyReverseFilters(new[] { site }, options).ToArray().Select(i =>
             {

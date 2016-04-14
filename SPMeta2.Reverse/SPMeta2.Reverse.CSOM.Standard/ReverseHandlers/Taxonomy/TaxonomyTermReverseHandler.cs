@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.SharePoint.Client.Taxonomy;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.ReverseHandlers.Base;
@@ -64,7 +65,7 @@ namespace SPMeta2.Reverse.CSOM.Standard.ReverseHandlers.Taxonomy
             }
 
             context.Load(items);
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             result.AddRange(ApplyReverseFilters(items, options).ToArray().Select(i =>
             {

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using Microsoft.SharePoint.Client;
+using SPMeta2.CSOM.Extensions;
 using SPMeta2.Enumerations;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.ReverseHosts;
@@ -80,7 +81,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             }
 
             context.Load(items);
-            context.ExecuteQuery();
+            context.ExecuteQueryWithTrace();
 
             // feature collection will have only activate features
             // we need to add up OOTB, known features to mark deactivated features
