@@ -28,15 +28,17 @@ var siteModel = siteModelResult.Model;
 var webModel = webModelResult.Model;
 
 ```
-Stay tuned, releasing alpha soon. 
+Stay tuned, releasing fiest versions Feb, 2016. 
 
 #### Feature requests, support and contributions
 In case you have unexpected issues or keen to see new features please contact support on SPMeta2 Yammer or here at github:
 
-* https://www.yammer.com/spmeta2feedback
+* [https://www.yammer.com/spmeta2feedback](https://www.yammer.com/spmeta2feedback)
+* [https://twitter.com/spmeta2](https://twitter.com/spmeta2)
+
 
 ### Current coverage support per definition
-[Detailed coverage report](https://github.com/SubPointSolutions/spmeta2-reverse/M2.Reverse.Coverage.Status.md)
+[Detailed coverage report](https://github.com/SubPointSolutions/spmeta2-reverse/blob/master/M2.Reverse.Coverage.Status.md)
 
 * BooleanFieldDefinition
 * ChoiceFieldDefinition

@@ -38,6 +38,6 @@ In case you have unexpected issues or keen to see new features please contact su
 
 
 ### Current coverage support per definition
-[Detailed coverage report](https://github.com/SubPointSolutions/spmeta2-reverse/M2.Reverse.Coverage.Status.md)
+[Detailed coverage report](https://github.com/SubPointSolutions/spmeta2-reverse/blob/master/M2.Reverse.Coverage.Status.md)
 
 [[COVERAGE-DEFINITIONS]]
