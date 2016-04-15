@@ -58,7 +58,9 @@ namespace SPMeta2.Reverse.Tests.Services
             var finalReportFileName = "_m2.reverse-coverage.html";
 
             SaveFinalReport(reportsFolder, finalReportFileName);
-            PatchReadmeFile(readMeFolder, reportsFolder, finalReportFileName);
+
+            PatchReadmeFile(readMeFolder, reportsFolder, finalReportFileName, uniqueResults);
+            PatchStatusFile(readMeFolder, reportsFolder, finalReportFileName);
         }
 
         private List<ReverseCoverageResult> MapUniqueResults(List<ModelValidationResult> validationResults)
@@ -124,7 +126,21 @@ namespace SPMeta2.Reverse.Tests.Services
             System.IO.File.WriteAllText(reportsFolder + "/" + fileName, xml);
         }
 
-        private void PatchReadmeFile(string readMeFolder, string reportsFolder, string reportFileName)
+        private void PatchStatusFile(string readMeFolder, string reportsFolder, string reportFileName)
+        {
+            var reportContent = System.IO.File.ReadAllText(reportsFolder + "/" + reportFileName);
+            reportContent = MakeHTMLLookGreat(reportContent);
+
+            // updating readme
+            var readMeContent = System.IO.File.ReadAllText(readMeFolder + "/M2.Reverse.Coverage.Status-template.md");
+
+            readMeContent = readMeContent.Replace("[[COVERAGE-REPORT]]", reportContent);
+
+            System.IO.File.WriteAllText(readMeFolder + "/M2.Reverse.Coverage.Status.md", readMeContent);
+        }
+
+        private void PatchReadmeFile(string readMeFolder, string reportsFolder, string reportFileName,
+            List<ReverseCoverageResult> results)
         {
             var reportContent = System.IO.File.ReadAllText(reportsFolder + "/" + reportFileName);
             reportContent = MakeHTMLLookGreat(reportContent);
@@ -132,7 +148,17 @@ namespace SPMeta2.Reverse.Tests.Services
             // updating readme
             var readMeContent = System.IO.File.ReadAllText(readMeFolder + "/README-TEMPLATE.md");
 
-            readMeContent = readMeContent.Replace("[[COVERAGE-REPORT]]", reportContent);
+            var defNames = Directory.GetFiles(reportsFolder, "*.def-coverage.html")
+                .Select(f => Path.GetFileName(f))
+                .Select(f => f.Split('.')[1])
+                .OrderBy(f => f);
+
+            reportContent = string.Empty;
+
+            foreach (var defName in defNames)
+                reportContent += String.Format("* {0}{1}", defName, Environment.NewLine);
+
+            readMeContent = readMeContent.Replace("[[COVERAGE-DEFINITIONS]]", reportContent);
 
             System.IO.File.WriteAllText(readMeFolder + "/README.md", readMeContent);
         }
