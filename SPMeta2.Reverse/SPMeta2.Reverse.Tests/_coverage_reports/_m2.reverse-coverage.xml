@@ -7,25 +7,25 @@
       <AddFieldOptions>DefaultValue</AddFieldOptions>
       <RawXml />
       <AdditionalAttributes />
-      <InternalName>iname_cc8d149dfe8545e2</InternalName>
-      <Title>b8db1bb5908b4549820faece4637f610</Title>
+      <InternalName>iname_e2caf683a6b143d7</InternalName>
+      <Title>c247b564a63c48a2b7af484eaf9d03a5</Title>
       <TitleResource />
-      <Description>c40538d40409489fba7457e46c81d112</Description>
+      <Description>cb9449e287d143cd9a55e19ef763d913</Description>
       <DescriptionResource />
-      <Group>aaec47e5a1074adfa16da828b6f31803</Group>
-      <Id>a2b78da5-5e67-4f81-81eb-290e611bf6fc</Id>
+      <Group>57383004fddf4b7caa2f5f9e4868d22c</Group>
+      <Id>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</Id>
       <FieldType>Boolean</FieldType>
       <Required>true</Required>
-      <JSLink>adf349ee4986450db863db1d9dce431f</JSLink>
-      <DefaultValue>1</DefaultValue>
-      <Hidden>false</Hidden>
+      <JSLink>16b194a65b194f06b5a32c8fd29c4bc7</JSLink>
+      <DefaultValue>0</DefaultValue>
+      <Hidden>true</Hidden>
       <ShowInDisplayForm>false</ShowInDisplayForm>
       <ShowInEditForm>false</ShowInEditForm>
       <ShowInListSettings>true</ShowInListSettings>
       <ShowInNewForm>true</ShowInNewForm>
-      <ShowInVersionHistory>false</ShowInVersionHistory>
-      <ShowInViewForms>false</ShowInViewForms>
-      <AllowDeletion>false</AllowDeletion>
+      <ShowInVersionHistory>true</ShowInVersionHistory>
+      <ShowInViewForms>true</ShowInViewForms>
+      <AllowDeletion>true</AllowDeletion>
       <EnforceUniqueValues xsi:nil="true" />
       <Indexed>false</Indexed>
       <ValidationFormula />
@@ -35,23 +35,23 @@
     <ModelShortClassName>BooleanFieldDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>b8db1bb5908b4549820faece4637f610</SrcPropertyValue>
+        <SrcPropertyValue>c247b564a63c48a2b7af484eaf9d03a5</SrcPropertyValue>
         <SrcPropertyName>Title</SrcPropertyName>
-        <DstPropertyValue>b8db1bb5908b4549820faece4637f610</DstPropertyValue>
+        <DstPropertyValue>c247b564a63c48a2b7af484eaf9d03a5</DstPropertyValue>
         <DstPropertyName>Title</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>c40538d40409489fba7457e46c81d112</SrcPropertyValue>
+        <SrcPropertyValue>cb9449e287d143cd9a55e19ef763d913</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>c40538d40409489fba7457e46c81d112</DstPropertyValue>
+        <DstPropertyValue>cb9449e287d143cd9a55e19ef763d913</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>iname_cc8d149dfe8545e2</SrcPropertyValue>
+        <SrcPropertyValue>iname_e2caf683a6b143d7</SrcPropertyValue>
         <SrcPropertyName>InternalName</SrcPropertyName>
-        <DstPropertyValue>iname_cc8d149dfe8545e2</DstPropertyValue>
+        <DstPropertyValue>iname_e2caf683a6b143d7</DstPropertyValue>
         <DstPropertyName>InternalName</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -70,23 +70,23 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>aaec47e5a1074adfa16da828b6f31803</SrcPropertyValue>
+        <SrcPropertyValue>57383004fddf4b7caa2f5f9e4868d22c</SrcPropertyValue>
         <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>aaec47e5a1074adfa16da828b6f31803</DstPropertyValue>
+        <DstPropertyValue>57383004fddf4b7caa2f5f9e4868d22c</DstPropertyValue>
         <DstPropertyName>Group</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>a2b78da5-5e67-4f81-81eb-290e611bf6fc</SrcPropertyValue>
+        <SrcPropertyValue>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>a2b78da5-5e67-4f81-81eb-290e611bf6fc</DstPropertyValue>
+        <DstPropertyValue>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>Hidden</SrcPropertyName>
-        <DstPropertyValue>False</DstPropertyValue>
+        <DstPropertyValue>True</DstPropertyValue>
         <DstPropertyName>Hidden</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -128,7 +128,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>AllowDeletion</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -146,7 +146,7 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>adf349ee4986450db863db1d9dce431f</SrcPropertyValue>
+        <SrcPropertyValue>16b194a65b194f06b5a32c8fd29c4bc7</SrcPropertyValue>
         <SrcPropertyName>JSLink</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -182,13 +182,13 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInVersionHistory</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>False</SrcPropertyValue>
+        <SrcPropertyValue>True</SrcPropertyValue>
         <SrcPropertyName>ShowInViewForms</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Not implemented yet</Message>
@@ -206,9 +206,9 @@
         <Message>Not implemented yet</Message>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>1</SrcPropertyValue>
+        <SrcPropertyValue>0</SrcPropertyValue>
         <SrcPropertyName>DefaultValue</SrcPropertyName>
-        <DstPropertyValue>1</DstPropertyValue>
+        <DstPropertyValue>0</DstPropertyValue>
         <DstPropertyName>DefaultValue</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -217,15 +217,15 @@
   <ReverseCoverageResult>
     <Model xsi:type="ContentTypeDefinition">
       <PropertyBag />
-      <Id>05ac66f0-9f89-481b-9aee-e282d4fe9b52</Id>
-      <Name>5b59193459394e6d8ffa89548aa4c415</Name>
+      <Id>c3c39a87-815a-4444-8280-8bdd3b06bb07</Id>
+      <Name>187d8d84d6df4f09945744c2c7626eec</Name>
       <NameResource />
-      <Description>b7a8b7805c2749939f5c76fff3648aa9</Description>
+      <Description>ad747814fa3b41dc841c69296dbac465</Description>
       <DescriptionResource />
-      <Group>0f9a641d0e9d4e07a79ce6c567c58b8e</Group>
+      <Group>7ec06396d2d5468396cba60da77b57e6</Group>
       <Hidden>false</Hidden>
       <ParentContentTypeId>0x01</ParentContentTypeId>
-      <JSLink>43e0c16a874f42a3aa5194dbca0808af</JSLink>
+      <JSLink>5ed027e63e2d426b9e6507594a8ca8f9</JSLink>
       <ReadOnly xsi:nil="true" />
       <Sealed xsi:nil="true" />
     </Model>
@@ -233,23 +233,23 @@
     <ModelShortClassName>ContentTypeDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>5b59193459394e6d8ffa89548aa4c415</SrcPropertyValue>
+        <SrcPropertyValue>187d8d84d6df4f09945744c2c7626eec</SrcPropertyValue>
         <SrcPropertyName>Name</SrcPropertyName>
-        <DstPropertyValue>5b59193459394e6d8ffa89548aa4c415</DstPropertyValue>
+        <DstPropertyValue>187d8d84d6df4f09945744c2c7626eec</DstPropertyValue>
         <DstPropertyName>Name</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>b7a8b7805c2749939f5c76fff3648aa9</SrcPropertyValue>
+        <SrcPropertyValue>ad747814fa3b41dc841c69296dbac465</SrcPropertyValue>
         <SrcPropertyName>Description</SrcPropertyName>
-        <DstPropertyValue>b7a8b7805c2749939f5c76fff3648aa9</DstPropertyValue>
+        <DstPropertyValue>ad747814fa3b41dc841c69296dbac465</DstPropertyValue>
         <DstPropertyName>Description</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>0f9a641d0e9d4e07a79ce6c567c58b8e</SrcPropertyValue>
+        <SrcPropertyValue>7ec06396d2d5468396cba60da77b57e6</SrcPropertyValue>
         <SrcPropertyName>Group</SrcPropertyName>
-        <DstPropertyValue>0f9a641d0e9d4e07a79ce6c567c58b8e</DstPropertyValue>
+        <DstPropertyValue>7ec06396d2d5468396cba60da77b57e6</DstPropertyValue>
         <DstPropertyName>Group</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -261,9 +261,9 @@
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>05ac66f0-9f89-481b-9aee-e282d4fe9b52</SrcPropertyValue>
+        <SrcPropertyValue>c3c39a87-815a-4444-8280-8bdd3b06bb07</SrcPropertyValue>
         <SrcPropertyName>Id</SrcPropertyName>
-        <DstPropertyValue>05ac66f0-9f89-481b-9aee-e282d4fe9b52</DstPropertyValue>
+        <DstPropertyValue>c3c39a87-815a-4444-8280-8bdd3b06bb07</DstPropertyValue>
         <DstPropertyName>Id</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -321,7 +321,7 @@
   <ReverseCoverageResult>
     <Model xsi:type="ContentTypeFieldLinkDefinition">
       <PropertyBag />
-      <FieldId>a2b78da5-5e67-4f81-81eb-290e611bf6fc</FieldId>
+      <FieldId>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</FieldId>
       <Required xsi:nil="true" />
       <Hidden xsi:nil="true" />
     </Model>
@@ -329,9 +329,9 @@
     <ModelShortClassName>ContentTypeFieldLinkDefinition</ModelShortClassName>
     <Properties>
       <ReverseCoveragePropertyResult>
-        <SrcPropertyValue>a2b78da5-5e67-4f81-81eb-290e611bf6fc</SrcPropertyValue>
+        <SrcPropertyValue>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</SrcPropertyValue>
         <SrcPropertyName>FieldId</SrcPropertyName>
-        <DstPropertyValue>a2b78da5-5e67-4f81-81eb-290e611bf6fc</DstPropertyValue>
+        <DstPropertyValue>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</DstPropertyValue>
         <DstPropertyName>FieldId</DstPropertyName>
         <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
@@ -358,6 +358,33 @@
         <SrcPropertyName>Required</SrcPropertyName>
         <IsValid>true</IsValid>
         <Message>Supported, not tested yet</Message>
+      </ReverseCoveragePropertyResult>
+    </Properties>
+  </ReverseCoverageResult>
+  <ReverseCoverageResult>
+    <Model xsi:type="UniqueContentTypeFieldsOrderDefinition">
+      <PropertyBag />
+      <Fields>
+        <FieldLinkValue>
+          <Id>dd3a9ca0-b87e-4f6f-9c2a-6be1c6493f84</Id>
+        </FieldLinkValue>
+        <FieldLinkValue>
+          <Id>1895f07f-e343-4af1-8c24-9a8f50042164</Id>
+        </FieldLinkValue>
+        <FieldLinkValue>
+          <Id>29aaae03-3bf9-4d71-bf1b-0e0c8a8160eb</Id>
+        </FieldLinkValue>
+      </Fields>
+    </Model>
+    <ModelFullClassName>SPMeta2.Definitions.ContentTypes.UniqueContentTypeFieldsOrderDefinition</ModelFullClassName>
+    <ModelShortClassName>UniqueContentTypeFieldsOrderDefinition</ModelShortClassName>
+    <Properties>
+      <ReverseCoveragePropertyResult>
+        <SrcPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ContentTypes.FieldLinkValue]</SrcPropertyValue>
+        <SrcPropertyName>Fields</SrcPropertyName>
+        <DstPropertyValue>System.Collections.Generic.List`1[SPMeta2.Definitions.ContentTypes.FieldLinkValue]</DstPropertyValue>
+        <DstPropertyName>Fields</DstPropertyName>
+        <IsValid>true</IsValid>
       </ReverseCoveragePropertyResult>
     </Properties>
   </ReverseCoverageResult>

@@ -77,6 +77,7 @@ In case you have unexpected issues or keen to see new features please contact su
 * TaxonomyTermStoreDefinition
 * TextFieldDefinition
 * TopNavigationNodeDefinition
+* UniqueContentTypeFieldsOrderDefinition
 * URLFieldDefinition
 * UserCustomActionDefinition
 * UserFieldDefinition

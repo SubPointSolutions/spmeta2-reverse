@@ -18,12 +18,12 @@ using SPMeta2.Utils;
 
 namespace SPMeta2.Reverse.CSOM.ReverseHandlers.ContentTypes
 {
-    public class UniqueContentTypeFieldOrderReverseHandler : CSOMReverseHandlerBase
+    public class HideContentTypeFieldLinksReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(UniqueContentTypeFieldsOrderDefinition); }
+            get { return typeof(HideContentTypeFieldLinksDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -75,9 +75,10 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.ContentTypes
         {
             var item = (reverseHost as ContentTypeReverseHost).HostContentType;
 
-            var def = new UniqueContentTypeFieldsOrderDefinition();
+            var def = new HideContentTypeFieldLinksDefinition();
 
-            foreach (var fieldLink in item.FieldLinks)
+            foreach (var fieldLink in item.FieldLinks.ToArray()
+                                                     .Where(l => l.Hidden))
             {
                 def.Fields.Add(new FieldLinkValue
                 {
@@ -85,7 +86,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.ContentTypes
                 });
             }
 
-            return new UniqueContentTypeFieldsOrderModelNode
+            return new HideContentTypeFieldLinksModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def
