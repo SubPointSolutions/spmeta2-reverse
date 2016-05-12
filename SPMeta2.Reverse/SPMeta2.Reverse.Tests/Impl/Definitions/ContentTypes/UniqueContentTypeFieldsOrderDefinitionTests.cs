@@ -34,6 +34,8 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.ContentTypes
             options.AddFilterOption<ContentTypeDefinition>(l => l.Name == c1.Name);
             options.AddFilterOption<FieldDefinition>(l => l.InternalName == f1.InternalName);
 
+            //ContentTypeFieldLinkDefinition
+
             var model = SPMeta2Model.NewSiteModel(site =>
             {
                 site.AddField(f1);
@@ -42,6 +44,10 @@ namespace SPMeta2.Reverse.Tests.Impl.Definitions.ContentTypes
 
                 site.AddContentType(c1, contentType =>
                 {
+                    contentType.AddContentTypeFieldLink(f1);
+                    contentType.AddContentTypeFieldLink(f2);
+                    contentType.AddContentTypeFieldLink(f3);
+
                     contentType.AddUniqueContentTypeFieldsOrder(new UniqueContentTypeFieldsOrderDefinition
                     {
                         Fields = new List<FieldLinkValue>()

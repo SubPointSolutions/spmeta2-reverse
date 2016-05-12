@@ -37,6 +37,12 @@ namespace SPMeta2.Reverse.Regression.Services
                     .OrderBy(s => s)
                     .ToList();
 
+                if (def is ContentTypeFieldLinkDefinition)
+                {
+                    identityKeyNames.Clear();
+                    identityKeyNames.Add("FieldId");
+                }
+
                 // url gets transformed by SharePoint to the full one
                 // so that lookup by identity won't work
                 // rely only on title for the time being

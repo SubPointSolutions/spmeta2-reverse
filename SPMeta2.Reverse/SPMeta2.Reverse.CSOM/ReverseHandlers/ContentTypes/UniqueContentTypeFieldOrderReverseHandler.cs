@@ -54,7 +54,8 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.ContentTypes
             var item = contentType;
 
             context.Load(item);
-            //context.Load(item, i => i.Fields);
+            
+            context.Load(item, i => i.Fields);
             context.Load(item, i => i.FieldLinks);
 
             context.ExecuteQueryWithTrace();
