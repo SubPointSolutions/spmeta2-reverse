@@ -44,6 +44,7 @@ In case you have unexpected issues or keen to see new features please contact su
 * ChoiceFieldDefinition
 * ContentTypeDefinition
 * ContentTypeFieldLinkDefinition
+* ContentTypeLinkDefinition
 * CurrencyFieldDefinition
 * DateTimeFieldDefinition
 * FeatureDefinition

@@ -92,6 +92,7 @@
     <Compile Include="ReverseHandlers\ContentTypeLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeFieldLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\ContentTypes\HideContentTypeLinksReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypes\HideContentTypeFieldLinksReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypes\UniqueContentTypeFieldOrderReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
