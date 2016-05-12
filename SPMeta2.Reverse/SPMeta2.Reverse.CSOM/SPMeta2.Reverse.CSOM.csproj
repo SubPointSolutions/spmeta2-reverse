@@ -92,6 +92,7 @@
     <Compile Include="ReverseHandlers\ContentTypeLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeFieldLinkReverseHandler.cs" />
     <Compile Include="ReverseHandlers\ContentTypeReverseHandler.cs" />
+    <Compile Include="ReverseHandlers\ContentTypes\UniqueContentTypeFieldOrderReverseHandler.cs" />
     <Compile Include="ReverseHandlers\FeatureReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\OutcomeChoiceFieldReverseHandler.cs" />
     <Compile Include="ReverseHandlers\Fields\MultiChoiceFieldReverseHandler.cs" />
@@ -163,6 +164,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

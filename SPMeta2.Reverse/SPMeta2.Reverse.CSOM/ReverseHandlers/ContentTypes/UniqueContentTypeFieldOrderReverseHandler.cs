@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.SharePoint.Client;
 using SPMeta2.CSOM.Extensions;
 using SPMeta2.Definitions;
+using SPMeta2.Definitions.ContentTypes;
 using SPMeta2.ModelHosts;
 using SPMeta2.Models;
 using SPMeta2.Reverse.CSOM.ReverseHosts;
@@ -15,14 +16,14 @@ using SPMeta2.Reverse.Services;
 using SPMeta2.Syntax.Default;
 using SPMeta2.Utils;
 
-namespace SPMeta2.Reverse.CSOM.ReverseHandlers
+namespace SPMeta2.Reverse.CSOM.ReverseHandlers.ContentTypes
 {
-    public class ContentTypeReverseHandler : CSOMReverseHandlerBase
+    public class UniqueContentTypeFieldOrderReverseHandler : CSOMReverseHandlerBase
     {
         #region properties
         public override Type ReverseType
         {
-            get { return typeof(ContentTypeDefinition); }
+            get { return typeof(UniqueContentTypeFieldsOrderDefinition); }
         }
 
         public override IEnumerable<Type> ReverseParentTypes
@@ -31,7 +32,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             {
                 return new[]
                 {
-                    typeof(SiteDefinition)
+                    typeof(ContentTypeDefinition)
                 };
             }
         }
@@ -45,17 +46,20 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
         {
             var result = new List<ContentTypeReverseHost>();
 
-            var typedHost = parentHost.WithAssertAndCast<SiteReverseHost>("reverseHost", value => value.RequireNotNull());
+            var typedHost = parentHost.WithAssertAndCast<ContentTypeReverseHost>("reverseHost", value => value.RequireNotNull());
 
-            var site = typedHost.HostSite;
+            var contentType = typedHost.HostContentType;
             var context = typedHost.HostClientContext;
 
-            var items = site.RootWeb.ContentTypes;
+            var item = contentType;
 
-            context.Load(items);
+            context.Load(item);
+            //context.Load(item, i => i.Fields);
+            context.Load(item, i => i.FieldLinks);
+
             context.ExecuteQueryWithTrace();
 
-            result.AddRange(ApplyReverseFilters(items.ToArray().Where(i => ShouldReverse(i)), options).Select(i =>
+            result.AddRange(ApplyReverseFilters(new[] { item }, options).ToArray().Select(i =>
             {
                 return ModelHostBase.Inherit<ContentTypeReverseHost>(parentHost, h =>
                 {
@@ -66,52 +70,21 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             return result;
         }
 
-        private bool ShouldReverse(ContentType ct)
-        {
-            return ExtractContentTypeIdAsGuid(ct).HasValue;
-        }
-
-        private Guid? ExtractContentTypeIdAsGuid(ContentType ct)
-        {
-            var id = ct.StringId.Split(new string[] { "00" }, StringSplitOptions.None);
-
-            if (id.Length > 0)
-            {
-                var guid = id.Last();
-                return ConvertUtils.ToGuid(guid);
-            }
-
-            return null;
-        }
-
         public override ModelNode ReverseSingleHost(object reverseHost, ReverseOptions options)
         {
             var item = (reverseHost as ContentTypeReverseHost).HostContentType;
 
-            var def = new ContentTypeDefinition();
+            var def = new UniqueContentTypeFieldsOrderDefinition();
 
-            def.Name = item.Name;
-            def.Hidden = item.Hidden;
-            def.Group = item.Group;
-
-            def.ReadOnly = item.ReadOnly;
-            def.Sealed = item.Sealed;
-
-            def.Description = item.Description;
-
-            var id = ExtractContentTypeIdAsGuid(item);
-
-            if (id.HasValue)
+            foreach (var fieldLink in item.FieldLinks)
             {
-                def.Id = id.Value;
-
-                // 32 - GUID + 2 as '00' glue
-                def.ParentContentTypeId = item.StringId.Substring(0, item.StringId.Length - 34);
+                def.Fields.Add(new FieldLinkValue
+                {
+                    Id = fieldLink.Id
+                });
             }
 
-            def.Group = item.Group;
-
-            return new ContentTypeModelNode
+            return new ContentTypeFieldLinkModelNode
             {
                 Options = { RequireSelfProcessing = true },
                 Value = def

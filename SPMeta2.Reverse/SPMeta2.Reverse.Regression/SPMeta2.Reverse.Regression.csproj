@@ -60,6 +60,7 @@
     <Compile Include="Services\ReverseValidationService.cs" />
     <Compile Include="Validation\ContentTypeLinkDefinitionValidator.cs" />
     <Compile Include="Validation\ContentTypeFieldLinkDefinitionValidator.cs" />
+    <Compile Include="Validation\ContentTypes\UniqueContentTypeFieldsOrderDefinitionValidator.cs" />
     <Compile Include="Validation\FieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\SummaryLinkFieldDefinitionValidator.cs" />
     <Compile Include="Validation\Fields\MediaFieldFieldDefinitionValidator.cs" />
