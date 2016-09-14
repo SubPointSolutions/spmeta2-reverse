@@ -2,6 +2,7 @@ clone_folder: c:\prj
 
 build_script:
 	- ps: c:\prj\build\build.ps1
+
 test:
   assemblies:
     - '**\*.Tests.dll'
