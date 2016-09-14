@@ -1,6 +1,11 @@
 clone_folder: c:\prj
 build_script:
 	- ps: c:\prj\build\build.ps1
-test: off
+test:
+  assemblies:
+    - '**\*.Tests.dll'
+  categories:
+    only:
+      - CI.Core
 artifacts:
     - path: '**\*.nupkg'
