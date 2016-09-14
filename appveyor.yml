@@ -6,4 +6,4 @@ build_script:
     - ps: c:\prj\SPMeta2.Reverse\Build\build.ps1
 
 artifacts:
-    - path: '**\*.nupkg'
+    - path: '**\packages\*.nupkg'
