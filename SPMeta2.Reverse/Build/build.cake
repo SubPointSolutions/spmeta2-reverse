@@ -285,8 +285,8 @@ Task("NuGet-Publishing")
             Information(string.Format("Publishing NuGet package [{0}]...", packageFileName));
 
             NuGetPush(packageFilePath, new NuGetPushSettings {
-                Source = "https://www.myget.org/F/subpointsolutions-staging/api/v2/package",
-                ApiKey = "15e84e5c-3ede-43bf-a2d0-90afd936bdb6"
+                Source = EnvironmentVariable("spmeta2-reverse-nuget-source")​,
+                ApiKey = EnvironmentVariable("spmeta2-reverse-nuget-key")​
             });
             
         } else {
