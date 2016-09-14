@@ -189,7 +189,7 @@ Task("Validate-Environment")
 {
     foreach(var name in environmentVariables)
     {
-        Information(string.Format("HasEnvironmentVariable? - [{0}]", name));
+        Information(string.Format("HasEnvironmentVariable - [{0}]", name));
         if(!HasEnvironmentVariable("spmeta2-reverse-nuget-source")) {
             Information(string.Format("Cannot find environment variable:[{0}]", name));
             throw new ArgumentException(string.Format("Cannot find environment variable:[{0}]", name));
@@ -281,12 +281,16 @@ Task("NuGet-Publishing")
         var packageFileName = string.Format("{0}.{1}.nupkg", nuspec.Id, nuspec.Version);
         var packageFilePath = string.Format("{0}/{1}", nuGetPackagesDirectory, packageFileName);
         
+		var nugetSource = EnvironmentVariable("spmeta2-reverse-nuget-source");
+		var nugetKey = EnvironmentVariable("spmeta2-reverse-nuget-key");
+
         if(System.IO.File.Exists(packageFilePath)) {
-            Information(string.Format("Publishing NuGet package [{0}]...", packageFileName));
+            
+			Information(string.Format("Publishing NuGet package [{0}]...", packageFileName));
 
             NuGetPush(packageFilePath, new NuGetPushSettings {
-                Source = EnvironmentVariable("spmeta2-reverse-nuget-source")​,
-                ApiKey = EnvironmentVariable("spmeta2-reverse-nuget-key")​
+                Source = nugetSource,
+                ApiKey = nugetKey
             });
             
         } else {
