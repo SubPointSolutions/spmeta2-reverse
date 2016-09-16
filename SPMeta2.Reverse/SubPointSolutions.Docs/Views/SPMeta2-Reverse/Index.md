@@ -12,7 +12,7 @@ TileDescription: 'A library to provide reverse engineering of the existing Share
 
 SPMeta2.Reverse provides a simple API to generate SPMeta2 models from the existing SharePoint sites. As easy as that. We are aiming to reverse engineer O365, SharePoint 2016/2013 web sites and generate a valid, redeployable SPMeta2 model.
 
-Auto merge CI - 4, added appveyor full build on cake
+Auto merge CI - 5, added appveyor full build on cake
 
 ### Reverse API
 

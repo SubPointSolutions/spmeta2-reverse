@@ -17,6 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.Tests", "SP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_3rd party", "_3rd party", "{C1109EB9-33BE-4934-B48B-1C104183753C}"
 	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
 		..\M2.Reverse.Coverage.Status-template.md = ..\M2.Reverse.Coverage.Status-template.md
 		..\M2.Reverse.Coverage.Status.md = ..\M2.Reverse.Coverage.Status.md
 		..\README-TEMPLATE.md = ..\README-TEMPLATE.md

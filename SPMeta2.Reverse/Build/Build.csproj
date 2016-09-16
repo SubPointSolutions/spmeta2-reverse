@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="appveyor.yml" />
     <None Include="build.cake" />
     <None Include="build.ps1" />
     <Compile Include="Properties\AssemblyInfo.cs" />
