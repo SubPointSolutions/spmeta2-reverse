@@ -1,0 +1,191 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link href="/content/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/content/syntaxhighlighter/shcore.css" rel="stylesheet">
+    <link href="/content/syntaxhighlighter/shcoredefault.css" rel="stylesheet">
+
+    <link href="/content/s.docs.default.css" rel="stylesheet">
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-75856437-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body>
+
+
+    
+
+<style>
+    .font-17 {
+        font-size: 17px;
+    }
+</style>
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                Documentation (beta)
+            </a>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container sd-body-content">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            
+
+<style>
+    /*h3 {
+        text-align: center;
+    }*/
+</style><h3>Build better SharePoint apps faster with M2 ecosystem, tools and products</h3>
+<p>We offer a powerful set of APIs and products to build apps on top of SharePoint platform. Here is a quick guide on how to get started:</p>
+<ul>
+<li>Read our docs - they are organized by the library or product</li>
+<li>Create new app - guides and articles have samples</li>
+<li>Share your ideas and suggestions at <a href="https://www.yammer.com/spmeta2feedback" target="_blank">Yammer Network</a> or Twitter <a href="https://twitter.com/subpointsocial" target="_blank">@SubPointSocial</a>, <a href="https://twitter.com/spmeta2" target="_blank">@SPMeta2</a></li>
+</ul>
+<p>In case you have unexpected issues please contact support on Yammer network or GitHub:</p>
+<ul>
+<li><a href="https://www.yammer.com/spmeta2feedback" target="_blank">https://www.yammer.com/spmeta2feedback</a></li>
+<li><a href="https://github.com/subpointsolutions/spmeta2" target="_blank">htps://github.com/SubPointSolutions/spmeta2</a></li>
+</ul>
+
+
+        </div>
+    </div>
+    <div class="row">
+        
+
+    <hr>
+
+    <div class="col-md-4 m-landing-project-cnt" m2-order="8">
+        <div class="panel panel-default ">
+            <div class="panel-heading">
+                <a href="/spmeta2-reverse">
+                    M2 Reverse
+                </a>
+            </div>
+            <div class="panel-body m-landing-project-links-cnt" tile-path="SPMeta2-Reverse">
+                A library to provide reverse engineering of the existing SharePoint sites into SPMeta2 models.
+
+                    <ul>
+                            <li>
+                                <a href="/spmeta2-reverse">
+                                    M2 Reverse Home
+                                </a>
+                            </li>
+                    </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</div>
+
+<div class="container sps-footer">
+    <div class="row">
+        <hr>
+        <footer class="text-center">
+            <p>Copyright © <a hre="http://subpointsolutions.com" target="_blank">SubPoint Solutions</a> 2016.
+                Built with "<a href="https://github.com/slider23/bootstrap-theme-github" target="_blank">Github theme for twitter bootstrap 3"</a>, <a href="http://wyam.io" target="_blank">Wyam</a> and <a href="https://netlify.com" target="_blank">Netlify</a>.
+   updated <a target="_blank" href="https://ci.appveyor.com/project/subpointsupport/spmeta2-docs">Fri, 16 Sep 2016 18:01:25 GMT</a> from <a href="https://github.com/subpointsolutions/subpointsolutions-docs" target="_blank">github repo</a>.</p>
+        </footer>
+    </div>
+</div>
+
+
+    <script src="/scripts/jquery-1.9.1.min.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+
+    <script src="/scripts/syntaxhighlighter/shcore.js"></script>
+    <script src="/scripts/syntaxhighlighter/shbrushcsharp.js"></script>
+    <script src="/scripts/syntaxhighlighter/shbrushxml.js"></script>
+    <script src="/scripts/syntaxhighlighter/shbrushjscript.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+
+
+    
+
+    
+
+
+    <script>
+
+        (function ($) {
+
+            $(document).ready(function () {
+
+                $('code.language-cs')
+                    .addClass('brush: csharp;');
+
+                $('code.language-xml')
+                    .addClass('brush: xml;');
+
+                $('code.language-js')
+                    .addClass('brush: js;');
+
+                SyntaxHighlighter.defaults['quick-code'] = false;
+                SyntaxHighlighter.config.tagName = 'code';
+                SyntaxHighlighter.all();
+            });
+
+            $(document).ready(function () {
+                $("body").bind("keydown", function (event) {
+
+                    console.log(event);
+
+                    if (event.ctrlKey && event.keyCode == 37) {
+
+                        if ($('a.m-btn-prev').size() > 0) {
+                            var href = $('a.m-btn-prev').attr('href');
+
+                            window.location.href = href;
+                        }
+                    }
+
+                    if (event.ctrlKey && event.keyCode == 39) {
+                        if ($('a.m-btn-next').size() > 0) {
+                            var href = $('a.m-btn-next').attr('href');
+
+                            window.location.href = href;
+                        }
+                    }
+                });
+            });
+
+        }(jQuery));
+
+    </script>
+
+
+
+</body></html>

@@ -17,7 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.Tests", "SP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_3rd party", "_3rd party", "{C1109EB9-33BE-4934-B48B-1C104183753C}"
 	ProjectSection(SolutionItems) = preProject
-		..\appveyor.yml = ..\appveyor.yml
 		..\M2.Reverse.Coverage.Status-template.md = ..\M2.Reverse.Coverage.Status-template.md
 		..\M2.Reverse.Coverage.Status.md = ..\M2.Reverse.Coverage.Status.md
 		..\README-TEMPLATE.md = ..\README-TEMPLATE.md
@@ -35,6 +34,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.CSOM", "SPMeta2.Reverse.CSOM\SPMeta2.Reverse.CSOM.csproj", "{8366B470-81DE-403C-AA0C-BC715C9246E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{B3120EE2-6E68-4846-B6AD-A434BBC6A887}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{5D8323F2-DA83-41F1-A894-6BA17A5AC1F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubPointSolutions.Docs", "SubPointSolutions.Docs\SubPointSolutions.Docs.csproj", "{B30F6CA8-3E96-4734-B6B1-A61F201099E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +101,14 @@ Global
 		{B3120EE2-6E68-4846-B6AD-A434BBC6A887}.Debug45|Any CPU.Build.0 = Debug|Any CPU
 		{B3120EE2-6E68-4846-B6AD-A434BBC6A887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3120EE2-6E68-4846-B6AD-A434BBC6A887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Debug40|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Debug40|Any CPU.Build.0 = Debug|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Debug45|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Debug45|Any CPU.Build.0 = Debug|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,5 +122,6 @@ Global
 		{ABABA893-DC65-4DDB-844E-9C3C1C94DB55} = {156026B7-E53B-4A44-903D-A826625A4F1B}
 		{8366B470-81DE-403C-AA0C-BC715C9246E0} = {4E2FBF89-CD9A-48E1-A851-86A0E6352C23}
 		{B3120EE2-6E68-4846-B6AD-A434BBC6A887} = {C1109EB9-33BE-4934-B48B-1C104183753C}
+		{B30F6CA8-3E96-4734-B6B1-A61F201099E4} = {5D8323F2-DA83-41F1-A894-6BA17A5AC1F1}
 	EndGlobalSection
 EndGlobal
