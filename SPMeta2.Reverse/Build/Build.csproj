@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="build-new.ps1" />
+    <None Include="build-new.cake" />
     <None Include="build.json" />
     <None Include="build.cake" />
     <None Include="build.ps1" />
