@@ -1,0 +1,32 @@
+﻿{
+    "defaultSolutionDirectory": "./../",
+    "defaultSolutionFilePath": "./../SPMeta2.Reverse.sln",
+
+    "customProjectBuildProfiles": [ ],
+
+    "defaultNuGetPackagesDirectory": "./build-artifact-nuget-packages",
+    "defaultChocolateyPackagesDirectory": "./build-artifact-cli-packages",
+    "defaultNuspecVersion": "0.1.0",
+    
+    "defaultDocsViewFolder" : "SubPointSolutions.Docs/Views/SPMeta2-Reverse",
+    "defaultDocsRepoFolder" : "m2-rv",
+    "defaultDocsBranch" : "wyam-dev",
+    "defaultDocsFileExtensions" : [
+        "*.md",
+        "*.cs",
+        "*.cshtml"
+    ],
+    
+    "defaultTestCategories": [
+        "CI.Core"
+    ],
+    "customNuspecs": [],
+    "customChocolateySpecs": [
+        
+    ],
+    "defaultTestAssemblyPaths": [
+       
+    ],
+    "defaultBuildDirs": [ ],
+    "defaultEnvironmentVariables": [ ]
+}
