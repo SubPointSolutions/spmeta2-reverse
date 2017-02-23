@@ -160,6 +160,12 @@ if(-Not $SkipToolPackageRestore.IsPresent) {
 
     # Check for changes in packages.config and remove installed tools if true.
     [string] $md5Hash = MD5HashFile($PACKAGES_CONFIG)
+
+	Write-Verbose -Message "md5 hash:[$md5Hash]"
+	Write-Verbose -Message ("file exists hash:" + (Test-Path $PACKAGES_CONFIG_MD5) + "")
+	Write-Verbose -Message "nuget path:[$NUGET_EXE]"
+	
+
     if((!(Test-Path $PACKAGES_CONFIG_MD5)) -Or
       ($md5Hash -ne (Get-Content $PACKAGES_CONFIG_MD5 ))) {
         Write-Verbose -Message "Missing or changed package.config hash..."
