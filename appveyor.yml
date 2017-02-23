@@ -3,7 +3,7 @@ test: off
 clone_folder: c:\prj
 
 build_script: 
-    - ps: c:\prj\SPMeta2.Reverse\Build\build-new.ps1 -Verbose
+    - ps: c:\prj\SPMeta2.Reverse\Build\build-new.ps1 -Verbose -Target "Default-CI"
     - ps: c:\prj\SPMeta2.Reverse\Build\build.ps1 -Verbosity Minimal -Target "Default-Appveyor"
 
 artifacts:
