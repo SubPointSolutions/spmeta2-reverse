@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Definitions.ContentTypes;
