@@ -54,7 +54,7 @@ defaultActionBuild
             };
 
             var buildParametersString = String.Empty;
-            var solutionDirectoryParam = "/p:SolutionDir=" + "\"" + defaultSolutionDirectory + "\"";
+            var solutionDirectoryParam = "/p:SolutionDir=" + defaultSolutionDirectory;
 
             buildParametersString += " " + solutionDirectoryParam;
             buildParametersString += " " + String.Join(" ", buildParameters);

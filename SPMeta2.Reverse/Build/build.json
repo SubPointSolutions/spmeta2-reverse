@@ -19,50 +19,6 @@
 
     "customProjectBuildProfiles": [
         {
-            "ProfileName": "SP2010 + NET35",
-            "ProjectFiles": [
-                "SPMeta2.Reverse/SPMeta2.Reverse.csproj",
-
-                "SPMeta2.Reverse.CSOM/SPMeta2.Reverse.CSOM.csproj",
-                "SPMeta2.Reverse.CSOM.Standard/SPMeta2.Reverse.CSOM.Standard.csproj"
-            ],
-            "BuildParameters": [
-                "/p:spRuntime=14",
-                "/p:Configuration=Debug35",
-                "/p:DefineConstants=NET35",
-
-                "/t:Build",
-                "/p:Platform=AnyCPU",
-                "/p:WarningLevel=0",
-                "/verbosity:quiet",
-                "/clp:ErrorsOnly",
-                "/nologo"
-            ]
-        },
-
-        {
-            "ProfileName": "SP2013 + NET40",
-            "ProjectFiles": [
-                "SPMeta2.Reverse/SPMeta2.Reverse.csproj",
-
-                "SPMeta2.Reverse.CSOM/SPMeta2.Reverse.CSOM.csproj",
-                "SPMeta2.Reverse.CSOM.Standard/SPMeta2.Reverse.CSOM.Standard.csproj"
-            ],
-            "BuildParameters": [
-                "/p:spRuntime=15",
-                "/p:Configuration=Debug40",
-                "/p:DefineConstants=NET40",
-
-                "/t:Build",
-                "/p:Platform=AnyCPU",
-                "/p:WarningLevel=0",
-                "/verbosity:quiet",
-                "/clp:ErrorsOnly",
-                "/nologo"
-            ]
-        },
-
-        {
             "ProfileName": "SP2013 + NET45",
             "ProjectFiles": [
                 "SPMeta2.Reverse/SPMeta2.Reverse.csproj",
@@ -85,39 +41,13 @@
         },
 
         {
-            "ProfileName": "SharePoint Online (O365) + NET40",
+            "ProfileName": "Reverse Tests",
             "ProjectFiles": [
-                "SPMeta2.Reverse/SPMeta2.Reverse.csproj",
-
-                "SPMeta2.Reverse.CSOM/SPMeta2.Reverse.CSOM.csproj",
-                "SPMeta2.Reverse.CSOM.Standard/SPMeta2.Reverse.CSOM.Standard.csproj"
+                "SPMeta2.Reverse.Tests/SPMeta2.Reverse.Tests.csproj"
             ],
             "BuildParameters": [
-                "/p:spRuntime=15",
-                "/p:Configuration=Debug45",
-                "/p:DefineConstants=NET45",
 
-                "/t:Build",
-                "/p:Platform=AnyCPU",
-                "/p:WarningLevel=0",
-                "/verbosity:quiet",
-                "/clp:ErrorsOnly",
-                "/nologo"
-            ]
-        },
-
-        {
-            "ProfileName": "SharePoint Online (O365) + NET45",
-            "ProjectFiles": [
-                "SPMeta2.Reverse/SPMeta2.Reverse.csproj",
-
-                "SPMeta2.Reverse.CSOM/SPMeta2.Reverse.CSOM.csproj",
-                "SPMeta2.Reverse.CSOM.Standard/SPMeta2.Reverse.CSOM.Standard.csproj"
-            ],
-            "BuildParameters": [
-                "/p:spRuntime=365",
-                "/p:Configuration=Debug45",
-                "/p:DefineConstants=NET45",
+                "/p:Configuration=Debug",
 
                 "/t:Build",
                 "/p:Platform=AnyCPU",
@@ -160,20 +90,6 @@
             ],
             "Files": [
                 {
-                    "Target": "lib/net35",
-                    "TargetFiles": [
-                        "bin/debug35/SPMeta2.Reverse.dll",
-                        "bin/debug35/SPMeta2.Reverse.xml"
-                    ]
-                },
-                {
-                    "Target": "lib/net40",
-                    "TargetFiles": [
-                        "bin/debug40/SPMeta2.Reverse.dll",
-                        "bin/debug40/SPMeta2.Reverse.xml"
-                    ]
-                },
-                {
                     "Target": "lib/net45",
                     "TargetFiles": [
                         "bin/debug45/SPMeta2.Reverse.dll",
@@ -184,7 +100,8 @@
         },
 
         {
-            "Id": "SPMeta2.Reverse.CSOM",
+            "CustomProjectFolder" : "SPMeta2.Reverse.CSOM",
+            "Id": "SPMeta2.Reverse.CSOM-v15",
             "Version": "0.1.0-beta1",
             "Dependencies": [ ],
             "LicenseUrl": "http://docs.subpointsolutions.com/spmeta2-reverse/license",
@@ -209,31 +126,18 @@
             ],
             "Files": [
                 {
-                    "Target": "lib/net35",
-                    "TargetFiles": [
-                        "bin/debug35/SPMeta2.Reverse.CSOM.dll",
-                        "bin/debug35/SPMeta2.Reverse.CSOM.xml"
-                    ]
-                },
-                {
-                    "Target": "lib/net40",
-                    "TargetFiles": [
-                        "bin/debug40/SPMeta2.Reverse.CSOM.dll",
-                        "bin/debug40/SPMeta2.Reverse.CSOM.xml"
-                    ]
-                },
-                {
                     "Target": "lib/net45",
                     "TargetFiles": [
-                        "bin/debug45/SPMeta2.Reverse.CSOM.dll",
-                        "bin/debug45/SPMeta2.Reverse.CSOM.xml"
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.dll",
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.xml"
                     ]
                 }
             ]
         },
 
         {
-            "Id": "SPMeta2.Reverse.CSOM.Standard",
+            "CustomProjectFolder" : "SPMeta2.Reverse.CSOM.Standard",
+            "Id": "SPMeta2.Reverse.CSOM.Standard-v15",
             "Version": "0.1.0-beta1",
             "Dependencies": [ ],
             "LicenseUrl": "http://docs.subpointsolutions.com/spmeta2-reverse/license",
@@ -252,30 +156,16 @@
             ],
             "Dependencies": [
                 {
-                    "Id": "SPMeta2.Reverse.CSOM",
+                    "Id": "SPMeta2.Reverse.CSOM-v15",
                     "Version": "0.1.0-beta1"
                 }
             ],
-            "Files": [ 
-                {
-                    "Target": "lib/net35",
-                    "TargetFiles": [
-                        "bin/debug35/SPMeta2.Reverse.CSOM.Standard.dll",
-                        "bin/debug35/SPMeta2.Reverse.CSOM.Standard.xml"
-                    ]
-                },
-                {
-                    "Target": "lib/net40",
-                    "TargetFiles": [
-                       "bin/debug40/SPMeta2.Reverse.CSOM.Standard.dll",
-                       "bin/debug40/SPMeta2.Reverse.CSOM.Standard.xml"
-                    ]
-                },
+            "Files": [
                 {
                     "Target": "lib/net45",
                     "TargetFiles": [
-                       "bin/debug45/SPMeta2.Reverse.CSOM.Standard.dll",
-                       "bin/debug45/SPMeta2.Reverse.CSOM.Standard.xml"
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.Standard.dll",
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.Standard.xml"
                     ]
                 }
             ]

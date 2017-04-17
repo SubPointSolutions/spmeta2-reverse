@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!-- m2 build start -->
   <PropertyGroup Condition="('$(Configuration)|$(Platform)' == 'Debug35|AnyCPU') and ('$(spRuntime)' != '')">
-    <OutputPath>bin\Debug35\</OutputPath>
+    <OutputPath>bin\Debug35-$(spRuntime)\</OutputPath>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -12,10 +12,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug35\SPMeta2.Reverse.CSOM.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug35-$(spRuntime)\SPMeta2.Reverse.CSOM.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="('$(Configuration)|$(Platform)' == 'Debug40|AnyCPU') and ('$(spRuntime)' != '')">
-    <OutputPath>bin\Debug40\</OutputPath>
+    <OutputPath>bin\Debug40-$(spRuntime)\</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -27,7 +27,7 @@
     <DocumentationFile>bin\Debug40-$(spRuntime)\SPMeta2.Reverse.CSOM.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="('$(Configuration)|$(Platform)' == 'Debug45|AnyCPU') and ('$(spRuntime)' != '')">
-    <OutputPath>bin\Debug45\</OutputPath>
+    <OutputPath>bin\Debug45-$(spRuntime)\</OutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DebugSymbols>true</DebugSymbols>
@@ -37,7 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug45\SPMeta2.Reverse.CSOM.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug45-$(spRuntime)\SPMeta2.Reverse.CSOM.XML</DocumentationFile>
   </PropertyGroup>
   <!-- m2 build end -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -89,23 +89,128 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug45|AnyCPU'">
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(spRuntime)'=='14'">
+   
+  <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2010 - 14.0.4762.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2010 - 14.0.4762.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      </Reference>
+
+   <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net35\SPMeta2.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+      <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.CSOM.Foundation-v14.1.2.60\lib\net35\SPMeta2.CSOM.dll</HintPath>
+        <Private>True</Private>
+      </Reference>    
+
+  <Reference  Include="SPMeta2.Reverse, Version=1.0.0.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
+        <HintPath>..\SPMeta2.Reverse\bin\debug35\SPMeta2.Reverse.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+</ItemGroup>
+
+<ItemGroup Condition="'$(spRuntime)'=='' And '$(Configuration)'=='Debug'">
+
+   <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      </Reference>
+
+   <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net45\SPMeta2.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+      <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.60\lib\net45\SPMeta2.CSOM.dll</HintPath>
+        <Private>True</Private>
+      </Reference>    
+
+  <Reference  Include="SPMeta2.Reverse, Version=1.0.0.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
+        <HintPath>..\SPMeta2.Reverse\bin\debug\SPMeta2.Reverse.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+</ItemGroup>
+
+<ItemGroup Condition="'$(spRuntime)'=='15' And '$(Configuration)'=='Debug40'">
+
+  <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      </Reference>
+
+       <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net40\SPMeta2.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+      <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.60\lib\net40\SPMeta2.CSOM.dll</HintPath>
+        <Private>True</Private>
+      </Reference>    
+
+  <Reference  Include="SPMeta2.Reverse, Version=1.0.0.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
+        <HintPath>..\SPMeta2.Reverse\bin\debug40-15\SPMeta2.Reverse.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+</ItemGroup>
+
+<ItemGroup Condition="'$(spRuntime)'=='15' And '$(Configuration)'=='Debug45'">
+
+   <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+        <SpecificVersion>True</SpecificVersion>
+        <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      </Reference>
+
+       <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net45\SPMeta2.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+      <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+        <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.60\lib\net45\SPMeta2.CSOM.dll</HintPath>
+        <Private>True</Private>
+      </Reference>    
+
+  <Reference  Include="SPMeta2.Reverse, Version=1.0.0.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
+        <HintPath>..\SPMeta2.Reverse\bin\debug45\SPMeta2.Reverse.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+
+</ItemGroup>
+
   <ItemGroup>
-    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SPMeta2.Reverse.Dependencies\SharePoint\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPMeta2.Core.1.2.60\lib\net45\SPMeta2.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.60\lib\net45\SPMeta2.CSOM.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

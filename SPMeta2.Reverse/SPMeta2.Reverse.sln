@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse", "SPMeta2.Reverse\SPMeta2.Reverse.csproj", "{3AD69FA0-71A0-4849-AD5D-8C1049669607}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.CSOM.Standard", "SPMeta2.Reverse.CSOM.Standard\SPMeta2.Reverse.CSOM.Standard.csproj", "{9F07C965-524B-4532-A407-55D6B13A4417}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8366B470-81DE-403C-AA0C-BC715C9246E0} = {8366B470-81DE-403C-AA0C-BC715C9246E0}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reverse", "Reverse", "{A7A8C119-B49C-482C-811A-2D07CF090ECC}"
 EndProject
@@ -33,6 +36,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.Regression", "SPMeta2.Reverse.Regression\SPMeta2.Reverse.Regression.csproj", "{ABABA893-DC65-4DDB-844E-9C3C1C94DB55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Reverse.CSOM", "SPMeta2.Reverse.CSOM\SPMeta2.Reverse.CSOM.csproj", "{8366B470-81DE-403C-AA0C-BC715C9246E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3AD69FA0-71A0-4849-AD5D-8C1049669607} = {3AD69FA0-71A0-4849-AD5D-8C1049669607}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{B3120EE2-6E68-4846-B6AD-A434BBC6A887}"
 EndProject

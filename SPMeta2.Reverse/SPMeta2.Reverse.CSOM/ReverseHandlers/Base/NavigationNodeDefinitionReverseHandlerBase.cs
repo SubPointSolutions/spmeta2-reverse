@@ -93,7 +93,10 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers.Base
             }
 
             def.Url = UrlUtility.RemoveStartingSlash(nodeServerRelativeUrl);
+
+#if !NET35
             def.IsExternal = item.IsExternal;
+#endif
 
             if (def is QuickLaunchNavigationNodeDefinition)
             {
