@@ -1,0 +1,182 @@
+﻿{
+    "defaultSolutionDirectory": "./../",
+    "defaultSolutionFilePath": "./../SPMeta2.Reverse.sln",
+
+    "customProjectBuildProfiles": [ ],
+
+    "defaultNuGetPackagesDirectory": "./build-artifact-nuget-packages",
+    "defaultChocolateyPackagesDirectory": "./build-artifact-cli-packages",
+    "defaultNuspecVersion": "0.1.0",
+
+    "defaultDocsViewFolder": "SubPointSolutions.Docs/Views/SPMeta2-Reverse",
+    "defaultDocsRepoFolder": "m2-rv",
+    "defaultDocsBranch": "wyam-dev",
+    "defaultDocsFileExtensions": [
+        "*.md",
+        "*.cs",
+        "*.cshtml"
+    ],
+
+    "customProjectBuildProfiles": [
+        {
+            "ProfileName": "SP2013 + NET45",
+            "ProjectFiles": [
+                "SPMeta2.Reverse/SPMeta2.Reverse.csproj",
+
+                "SPMeta2.Reverse.CSOM/SPMeta2.Reverse.CSOM.csproj",
+                "SPMeta2.Reverse.CSOM.Standard/SPMeta2.Reverse.CSOM.Standard.csproj"
+            ],
+            "BuildParameters": [
+                "/p:spRuntime=15",
+                "/p:Configuration=Debug45",
+                "/p:DefineConstants=NET45",
+
+                "/t:Build",
+                "/p:Platform=AnyCPU",
+                "/p:WarningLevel=0",
+                "/verbosity:quiet",
+                "/clp:ErrorsOnly",
+                "/nologo"
+            ]
+        },
+
+        {
+            "ProfileName": "Reverse Tests",
+            "ProjectFiles": [
+                "SPMeta2.Reverse.Tests/SPMeta2.Reverse.Tests.csproj"
+            ],
+            "BuildParameters": [
+
+                "/p:Configuration=Debug",
+
+                "/t:Build",
+                "/p:Platform=AnyCPU",
+                "/p:WarningLevel=0",
+                "/verbosity:quiet",
+                "/clp:ErrorsOnly",
+                "/nologo"
+            ]
+        }
+    ],
+
+    "defaultTestCategories": [
+        "CI.Core"
+    ],
+    "customNuspecs": [
+
+        {
+            "Id": "SPMeta2.Reverse",
+            "Version": "0.1.0-beta1",
+            "Dependencies": [ ],
+            "LicenseUrl": "http://docs.subpointsolutions.com/spmeta2-reverse/license",
+            "ProjectUrl": "https://github.com/SubPointSolutions/spmeta2-reverse",
+            "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+            "Description": "Provides common infrastructure and services.",
+            "Copyright": "Copyright 2016",
+            "Tags": [
+                "SPMeta2",
+                "Provision",
+                "SharePoint",
+                "Office365Dev",
+                "Office365",
+                "metapack",
+                "nuget"
+            ],
+            "Dependencies": [
+                {
+                    "Id": "SPMeta2.Core",
+                    "Version": "1.2.60"
+                }
+            ],
+            "Files": [
+                {
+                    "Target": "lib/net45",
+                    "TargetFiles": [
+                        "bin/debug45/SPMeta2.Reverse.dll",
+                        "bin/debug45/SPMeta2.Reverse.xml"
+                    ]
+                }
+            ]
+        },
+
+        {
+            "CustomProjectFolder" : "SPMeta2.Reverse.CSOM",
+            "Id": "SPMeta2.Reverse.CSOM-v15",
+            "Version": "0.1.0-beta1",
+            "Dependencies": [ ],
+            "LicenseUrl": "http://docs.subpointsolutions.com/spmeta2-reverse/license",
+            "ProjectUrl": "https://github.com/SubPointSolutions/spmeta2-reverse",
+            "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+            "Description": "SharePoint Foundation CSOM based implementation for reversing SPMeta2 models",
+            "Copyright": "Copyright 2016",
+            "Tags": [
+                "SPMeta2",
+                "Provision",
+                "SharePoint",
+                "Office365Dev",
+                "Office365",
+                "metapack",
+                "nuget"
+            ],
+            "Dependencies": [
+                {
+                    "Id": "SPMeta2.Reverse",
+                    "Version": "0.1.0-beta1"
+                }
+            ],
+            "Files": [
+                {
+                    "Target": "lib/net45",
+                    "TargetFiles": [
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.dll",
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.xml"
+                    ]
+                }
+            ]
+        },
+
+        {
+            "CustomProjectFolder" : "SPMeta2.Reverse.CSOM.Standard",
+            "Id": "SPMeta2.Reverse.CSOM.Standard-v15",
+            "Version": "0.1.0-beta1",
+            "Dependencies": [ ],
+            "LicenseUrl": "http://docs.subpointsolutions.com/spmeta2-reverse/license",
+            "ProjectUrl": "https://github.com/SubPointSolutions/spmeta2-reverse",
+            "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+            "Description": "SharePoint Standard+ CSOM based implementation for reversing SPMeta2 models",
+            "Copyright": "Copyright 2016",
+            "Tags": [
+                "SPMeta2",
+                "Provision",
+                "SharePoint",
+                "Office365Dev",
+                "Office365",
+                "metapack",
+                "nuget"
+            ],
+            "Dependencies": [
+                {
+                    "Id": "SPMeta2.Reverse.CSOM-v15",
+                    "Version": "0.1.0-beta1"
+                }
+            ],
+            "Files": [
+                {
+                    "Target": "lib/net45",
+                    "TargetFiles": [
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.Standard.dll",
+                        "bin/debug45-15/SPMeta2.Reverse.CSOM.Standard.xml"
+                    ]
+                }
+            ]
+        }
+    ],
+    "customChocolateySpecs": [
+
+    ],
+    "defaultTestAssemblyPaths": [
+        "SPMeta2.Reverse.Tests/bin/debug/SPMeta2.Reverse.Tests.dll"
+    ],
+    "defaultBuildDirs": [ ],
+    "defaultEnvironmentVariables": [ ]
+}

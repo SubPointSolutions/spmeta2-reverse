@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using SPMeta2.Attributes.Identity;
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Exceptions;
@@ -36,6 +36,18 @@ namespace SPMeta2.Reverse.Regression.Services
                     .Select(p => p.Name)
                     .OrderBy(s => s)
                     .ToList();
+
+                if (def is ContentTypeFieldLinkDefinition)
+                {
+                    identityKeyNames.Clear();
+                    identityKeyNames.Add("FieldId");
+                }
+
+                if (def is ContentTypeLinkDefinition)
+                {
+                    identityKeyNames.Clear();
+                    identityKeyNames.Add("ContentTypeName");
+                }
 
                 // url gets transformed by SharePoint to the full one
                 // so that lookup by identity won't work

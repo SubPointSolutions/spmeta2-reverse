@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using Microsoft.SharePoint.Client;
 using SPMeta2.CSOM.Extensions;
 using SPMeta2.Definitions;
@@ -55,7 +55,7 @@ namespace SPMeta2.Reverse.CSOM.ReverseHandlers
             context.Load(items);
             context.ExecuteQueryWithTrace();
 
-            result.AddRange(items.ToArray().Where(i => ShouldReverse(i)).Select(i =>
+            result.AddRange(ApplyReverseFilters(items.ToArray().Where(i => ShouldReverse(i)), options).Select(i =>
             {
                 return ModelHostBase.Inherit<ContentTypeReverseHost>(parentHost, h =>
                 {

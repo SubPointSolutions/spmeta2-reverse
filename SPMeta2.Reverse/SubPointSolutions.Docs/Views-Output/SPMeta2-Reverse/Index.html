@@ -1,0 +1,304 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2 Reverse Home</title>
+
+    <link href="/content/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/content/syntaxhighlighter/shcore.css" rel="stylesheet">
+    <link href="/content/syntaxhighlighter/shcoredefault.css" rel="stylesheet">
+
+    <link href="/content/s.docs.default.css" rel="stylesheet">
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-75856437-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body>
+
+
+    
+
+<style>
+    .font-17 {
+        font-size: 17px;
+    }
+</style>
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                Documentation (beta)
+                    <span class="glyphicon glyphicon-chevron-right">
+            </span></a>
+        </div>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle font-17" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        M2 Reverse<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="/spmeta2-reverse/index.html">
+                                    M2 Reverse
+                                </a>
+                            </li>
+
+                        <!---
+        <li><a href="/spmeta2-spec">SPMeta2 Spec</a></li>
+        <li><a href="/spmeta2-nuget">SPMeta2 NuGet</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="/reSP">reSP</a></li>
+            -->
+                    </ul>
+                </li>
+            </ul>
+
+    </div>
+</div>
+
+<div class="container body-content sd-body-content">
+
+    <div class="row">
+        
+
+
+
+<div class="sub-nav" m-current-subfolder="">
+
+
+
+    <h2>
+            <a href="/spmeta2-reverse/index.html">
+                M2 Reverse Home
+            </a> <span>-</span> <span style="font-size: 18px;">M2 Reverse Home</span>
+        
+    </h2>
+
+    <ul>
+            <li>
+                <a m-subgroup="" class="active" href="/spmeta2-reverse/index.html">
+                    M2 Reverse Home
+                </a>
+            </li>
+
+    </ul>
+</div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            
+
+<style>
+    /*h3 {
+        text-align: center;
+    }*/
+</style><h2>SPMeta2 Reverse</h2>
+<p>SPMeta2.Reverse provides a simple API to generate SPMeta2 models from the existing SharePoint sites. As easy as that. We are aiming to reverse engineer O365, SharePoint 2016/2013 web sites and generate a valid, redeployable SPMeta2 model.</p>
+<p>Auto merge CI - 5, added appveyor full build on cake</p>
+<h3>Reverse API</h3>
+<p>The project is still in alpha with source code avialable at github:</p>
+<ul>
+<li><a href="https://github.com/subpointsolutions/spmeta2-reverse" target="_blank">https://github.com/SubPointSolutions/spmeta2-reverse</a></li>
+</ul>
+<p>Reverse API should be made simple, so here is how we see it happening:</p>
+<pre><code class="language-cs">// SharePoint CSOM context - O365/SP2016/SP2013
+var context = ..; 
+
+// create the magic reverse service
+var service = new CSOMReverseService();
+
+// reverse the SharePoint site and web into M2 model
+var siteModelResult = service.ReverseSiteModel(context, ReverseOptions.Default);
+var webModelResult = service.ReverseWebModel(context, ReverseOptions.Default);
+
+// here we go, your M2 models backed for you
+// deploy later to other SharePoint site, farm or serialize and keep it for the future
+var siteModel = siteModelResult.Model;
+var webModel = webModelResult.Model;
+</code></pre>
+<p>Stay tuned, we'll be updating document with more samples once stables reverse API id released.</p>
+<h3>Feature requests, support and contributions</h3>
+<p>In case you have unexpected issues or keen to see new features please contact support on SPMeta2 Yammer or here at github:</p>
+<ul>
+<li><a href="https://www.yammer.com/spmeta2feedback" target="_blank">https://www.yammer.com/spmeta2feedback</a></li>
+<li><a href="https://twitter.com/spmeta2" target="_blank">https://twitter.com/spmeta2</a></li>
+</ul>
+<p>Current coverage support per definition</p>
+<p><a href="https://github.com/subpointsolutions/spmeta2-reverse/blob/master/m2.reverse.coverage.status.md" target="_blank">Detailed coverage report</a></p>
+<ul>
+<li>BooleanFieldDefinition</li>
+<li>ChoiceFieldDefinition</li>
+<li>ContentTypeDefinition</li>
+<li>ContentTypeFieldLinkDefinition</li>
+<li>CurrencyFieldDefinition</li>
+<li>DateTimeFieldDefinition</li>
+<li>FeatureDefinition</li>
+<li>FieldDefinition</li>
+<li>FolderDefinition</li>
+<li>GeolocationFieldDefinition</li>
+<li>GuidFieldDefinition</li>
+<li>HTMLFieldDefinition</li>
+<li>ImageFieldDefinition</li>
+<li>LinkFieldDefinition</li>
+<li>ListDefinition</li>
+<li>ListViewDefinition</li>
+<li>LookupFieldDefinition</li>
+<li>MasterPageDefinition</li>
+<li>MediaFieldDefinition</li>
+<li>ModuleFileDefinition</li>
+<li>MultiChoiceFieldDefinition</li>
+<li>NoteFieldDefinition</li>
+<li>NumberFieldDefinition</li>
+<li>OutcomeChoiceFieldDefinition</li>
+<li>PropertyDefinition</li>
+<li>QuickLaunchNavigationNodeDefinition</li>
+<li>SandboxSolutionDefinition</li>
+<li>SecurityGroupDefinition</li>
+<li>SecurityRoleDefinition</li>
+<li>SummaryLinkFieldDefinition</li>
+<li>TaxonomyFieldDefinition</li>
+<li>TaxonomyTermDefinition</li>
+<li>TaxonomyTermGroupDefinition</li>
+<li>TaxonomyTermSetDefinition</li>
+<li>TaxonomyTermStoreDefinition</li>
+<li>TextFieldDefinition</li>
+<li>TopNavigationNodeDefinition</li>
+<li>URLFieldDefinition</li>
+<li>UserCustomActionDefinition</li>
+<li>UserFieldDefinition</li>
+<li>WebDefinition</li>
+<li>WebPartPageDefinition</li>
+<li>WelcomePageDefinition</li>
+<li>WikiPageDefinition</li>
+</ul>
+
+
+
+            
+
+
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            
+
+<div class="sd-sidebar panel panel-default hidden-print hidden-xs hidden-sm affix1">
+    <ul class="nav ">
+                <style>
+                    .sd-sidebar {
+                        display: none;
+                    }
+                </style>
+
+    </ul>
+
+
+
+</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container sps-footer">
+    <div class="row">
+        <hr>
+        <footer class="text-center">
+            <p>Copyright © <a hre="http://subpointsolutions.com" target="_blank">SubPoint Solutions</a> 2016.
+                Built with "<a href="https://github.com/slider23/bootstrap-theme-github" target="_blank">Github theme for twitter bootstrap 3"</a>, <a href="http://wyam.io" target="_blank">Wyam</a> and <a href="https://netlify.com" target="_blank">Netlify</a>.
+   updated <a target="_blank" href="https://ci.appveyor.com/project/subpointsupport/spmeta2-docs">Fri, 16 Sep 2016 18:01:25 GMT</a> from <a href="https://github.com/subpointsolutions/subpointsolutions-docs" target="_blank">github repo</a>.</p>
+        </footer>
+    </div>
+</div>
+
+
+    <script src="/scripts/jquery-1.9.1.min.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+
+    <script src="/scripts/syntaxhighlighter/shcore.js"></script>
+    <script src="/scripts/syntaxhighlighter/shbrushcsharp.js"></script>
+    <script src="/scripts/syntaxhighlighter/shbrushxml.js"></script>
+    <script src="/scripts/syntaxhighlighter/shbrushjscript.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+
+
+    
+
+    
+
+
+    <script>
+
+        (function ($) {
+
+            $(document).ready(function () {
+
+                $('code.language-cs')
+                    .addClass('brush: csharp;');
+
+                $('code.language-xml')
+                    .addClass('brush: xml;');
+
+                $('code.language-js')
+                    .addClass('brush: js;');
+
+                SyntaxHighlighter.defaults['quick-code'] = false;
+                SyntaxHighlighter.config.tagName = 'code';
+                SyntaxHighlighter.all();
+            });
+
+            $(document).ready(function () {
+                $("body").bind("keydown", function (event) {
+
+                    console.log(event);
+
+                    if (event.ctrlKey && event.keyCode == 37) {
+
+                        if ($('a.m-btn-prev').size() > 0) {
+                            var href = $('a.m-btn-prev').attr('href');
+
+                            window.location.href = href;
+                        }
+                    }
+
+                    if (event.ctrlKey && event.keyCode == 39) {
+                        if ($('a.m-btn-next').size() > 0) {
+                            var href = $('a.m-btn-next').attr('href');
+
+                            window.location.href = href;
+                        }
+                    }
+                });
+            });
+
+        }(jQuery));
+
+    </script>
+
+
+
+</body></html>

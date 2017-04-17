@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using SPMeta2.Definitions;
 using SPMeta2.Reverse.Regression.Base;
 using SPMeta2.Syntax.Default;
@@ -23,11 +23,21 @@ namespace SPMeta2.Reverse.Regression.Validation
             var assert = ServiceFactory.AssertService.NewAssert(originalDefinition, reversedDefinition);
 
             assert
-                .ShouldBeEqual(s => s.FieldInternalName, r => r.FieldInternalName)
+                //.ShouldBeEqual(s => s.FieldInternalName, r => r.FieldInternalName)
                 .ShouldBeEqual(s => s.FieldId, r => r.FieldId)
-
                 .SkipProperty(s => s.DisplayName, SkipMessages.NotImplemented)
                 ;
+
+            // field is is the main one
+            // FieldInternalName depends on the test/ case
+            if (!string.IsNullOrEmpty(originalDefinition.FieldInternalName))
+            {
+                assert.ShouldBeEqual(s => s.FieldInternalName, r => r.FieldInternalName);
+            }
+            else
+            {
+                assert.SkipProperty(s => s.FieldInternalName, SkipMessages.Skipped);
+            }
 
             if (originalDefinition.Hidden.HasValue)
             {
