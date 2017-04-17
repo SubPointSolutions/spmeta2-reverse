@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="github-release-notes.chtml" />
     <None Include="_build_35.json" />
     <None Include="build.ps1" />
     <None Include="build.cake" />
