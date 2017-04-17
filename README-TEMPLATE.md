@@ -1,8 +1,13 @@
 # SPMeta2.Reverse
 A library to provide reverse engineering of the existing SharePoint sites into SPMeta2 models.
 
+
 ### Build status
-[![Build status](https://ci.appveyor.com/api/projects/status/73pbufcanckaxnqi?svg=true)](https://ci.appveyor.com/project/SubPointSupport/spmeta2-reverse)
+| Branch  | Status |
+| ------------- | ------------- |
+| dev   | [![Build status](https://ci.appveyor.com/api/projects/status/73pbufcanckaxnqi/branch/dev?svg=true)](https://ci.appveyor.com/project/SubPointSupport/spmeta2-reverse/branch/dev)  |
+| beta  | [![Build status](https://ci.appveyor.com/api/projects/status/73pbufcanckaxnqi/branch/beta?svg=true)](https://ci.appveyor.com/project/SubPointSupport/spmeta2-reverse/branch/beta)  |
+| master| [![Build status](https://ci.appveyor.com/api/projects/status/73pbufcanckaxnqi/branch/master?svg=true)](https://ci.appveyor.com/project/SubPointSupport/spmeta2-reverse/branch/master) |
 
 ### SPMeta2.Reverse in details
 

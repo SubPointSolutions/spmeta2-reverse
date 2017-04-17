@@ -160,9 +160,28 @@ if(-Not $SkipToolPackageRestore.IsPresent) {
 
     # Check for changes in packages.config and remove installed tools if true.
     [string] $md5Hash = MD5HashFile($PACKAGES_CONFIG)
+
+	
+	Write-Verbose -Message "packages config hash:[$PACKAGES_CONFIG]"
+	Write-Verbose -Message "md5 hash:[$md5Hash]"
+	Write-Verbose -Message ("file exists:" + (Test-Path $PACKAGES_CONFIG_MD5) + "")
+	Write-Verbose -Message "nuget path:[$NUGET_EXE]"
+	
+
+	<#
+	somehow MD5 sum is changed over github -> appveyor flow for m2 reverse prj
+	disabling it for the itme bein
+
     if((!(Test-Path $PACKAGES_CONFIG_MD5)) -Or
       ($md5Hash -ne (Get-Content $PACKAGES_CONFIG_MD5 ))) {
         Write-Verbose -Message "Missing or changed package.config hash..."
+        Remove-Item * -Recurse -Exclude packages.config,nuget.exe
+    }
+
+	#>
+
+	 if((!(Test-Path $PACKAGES_CONFIG_MD5)))  {
+        Write-Verbose -Message "Missing  package.config hash..."
         Remove-Item * -Recurse -Exclude packages.config,nuget.exe
     }
 
